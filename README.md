@@ -33,7 +33,7 @@ The UA Ontology Stack makes use of ten Domain ontologies:
 ### Application Frameworks
 
 Application frameworks can be built on top of the UA Ontology Stack.
-The current application frameworks are included in this repo:
+The following application frameworks are included in this repo:
 
 * DoD TEMP Framework
 
