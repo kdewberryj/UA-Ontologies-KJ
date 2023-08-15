@@ -1,0 +1,17 @@
+vocabulary bundle <http://siedepartment.com/SIE_Domain/bundle#> as ^bundle {
+	
+	extends <http://siedepartment.com/SIE_Core/bundle#>
+	
+	includes <http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#>
+	includes <http://siedepartment.com/SIE_Domain/SIE_Requirements#>
+	includes <http://siedepartment.com/SIE_Domain/SIE_ProjectManagement#>
+	includes <http://siedepartment.com/SIE_Domain/SIE_Test#>
+	includes <http://siedepartment.com/SIE_Domain/SIE_Software#>
+	includes <http://siedepartment.com/SIE_Domain/SIE_ModelingAndSimulation#>
+	includes <http://siedepartment.com/SIE_Domain/SIE_Mission#>
+	includes <http://siedepartment.com/SIE_Domain/SIE_DataManagement#>
+	includes <http://siedepartment.com/SIE_Domain/SIE_Acquisition#>
+	includes <http://siedepartment.com/SIE_Domain/SIE_Materials#>
+	
+	
+}

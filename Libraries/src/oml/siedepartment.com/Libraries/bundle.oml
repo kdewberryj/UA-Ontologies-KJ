@@ -1,0 +1,15 @@
+@dc:description "A description bundle that bundles together all libraries"
+description bundle <http://siedepartment.com/Libraries/bundle#> as ^bundle {
+	
+	uses <http://siedepartment.com/SIE_Foundation/bundle#>
+	uses <http://siedepartment.com/SIE_Core/bundle#>
+	uses <http://siedepartment.com/SIE_Domain/bundle#>
+	
+	uses <http://purl.org/dc/elements/1.1/> as dc
+	
+	// All libraries bundled together
+	includes <http://siedepartment.com/Libraries/Dimensions#>
+	includes <http://siedepartment.com/Libraries/Units#>
+	includes <http://siedepartment.com/Libraries/SoftwareTools#>
+	
+}

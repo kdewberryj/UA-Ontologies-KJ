@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_b2TB0CAvEe6I6fjk9lGlaA" version="15.0.0.202209061200">
+  <semanticResources>src/oml/siedepartment.com/Libraries/bundle.oml</semanticResources>
+  <semanticResources>src/oml/siedepartment.com/Libraries/Units.oml</semanticResources>
+  <semanticResources>src/oml/siedepartment.com/Libraries/Dimensions.oml</semanticResources>
+  <semanticResources>build/oml/purl.org/dc/elements/1.1.oml</semanticResources>
+  <semanticResources>build/oml/siedepartment.com/SIE_Core/SIE_Measurement.oml</semanticResources>
+  <semanticResources>build/oml/www.w3.org/2000/01/rdf-schema.oml</semanticResources>
+  <semanticResources>build/oml/siedepartment.com/SIE_Foundation/SIE_Foundation.oml</semanticResources>
+  <semanticResources>build/oml/www.w3.org/2001/XMLSchema.oml</semanticResources>
+  <semanticResources>build/oml/siedepartment.com/SIE_Core/SIE_Information.oml</semanticResources>
+  <semanticResources>build/oml/siedepartment.com/SIE_Foundation/bundle.oml</semanticResources>
+  <semanticResources>build/oml/siedepartment.com/SIE_Core/bundle.oml</semanticResources>
+  <semanticResources>build/oml/siedepartment.com/SIE_Domain/bundle.oml</semanticResources>
+  <semanticResources>src/oml/siedepartment.com/Libraries/SoftwareTools.oml</semanticResources>
+  <semanticResources>build/oml/siedepartment.com/SIE_Domain/SIE_Software.oml</semanticResources>
+  <semanticResources>build/oml/siedepartment.com/SIE_Core/SIE_Agent.oml</semanticResources>
+</viewpoint:DAnalysis>

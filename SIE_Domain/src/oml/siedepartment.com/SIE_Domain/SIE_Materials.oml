@@ -1,0 +1,46 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A vocabulary to capture materials information"
+@dc:hasVersion "0.1"
+vocabulary <http://siedepartment.com/SIE_Domain/SIE_Materials#> as SIE_Materials {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Imports ///////
+	
+	
+	// Import standard vocabularies	
+	
+    extends <http://purl.org/dc/elements/1.1/> as dc
+    //extends <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    //extends <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Import relevant vocabularies
+    
+    //extends <http://siedepartment.com/SIE_Foundation/SIE_Foundation#> as foundation
+	
+	//extends <http://siedepartment.com/SIE_Core/SIE_Information#> as info
+	//extends <http://siedepartment.com/SIE_Core/SIE_Agent#> as agent
+	//extends <http://siedepartment.com/SIE_Core/SIE_Event#> as event
+	//extends <http://siedepartment.com/SIE_Core/SIE_Measurement#> as meas
+	//extends <http://siedepartment.com/SIE_Core/SIE_Provenance#> as prov
+	
+	//extends <http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#> as sa
+	//extends <http://siedepartment.com/SIE_Domain/SIE_Mission#> as mission
+	//extends <http://siedepartment.com/SIE_Domain/SIE_Requirements#> as req
+	//extends <http://siedepartment.com/SIE_Domain/SIE_Test#> as test
+	//extends <http://siedepartment.com/SIE_Domain/SIE_Software#> as sw
+		
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Definitions ///////
+	
+	///// Aspects
+	
+			
+	
+	///// Concepts
+	
+	
+}
