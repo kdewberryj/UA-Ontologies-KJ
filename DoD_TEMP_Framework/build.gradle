@@ -3,7 +3,7 @@
  */
 ext.title = 'DoD_TEMP_Framework'
 description = 'This project is a collection of the TEMP ontologies'
-group = 'com.siedepartment'
+group = 'com.uaontologies'
 version = '1.0.0'
 
 /* 
@@ -36,7 +36,7 @@ ext.dataset = [
     // Name of dataset (matches one used in .fuseki.ttl file)
     name: 'DoD_TEMP_Framework',
     // Root ontology IRI of the dataset
-    rootOntologyIri: 'http://siedepartment.com/DoD_TEMP_Framework/bundle',
+    rootOntologyIri: 'http://uaontologies.com/DoD_TEMP_Framework/bundle',
 ]
 
 /*
@@ -60,9 +60,9 @@ configurations {
 ext { 
     coreVersion = '3.+'
     //imceVersion = '+'
-    SIEFoundationVersion = '+'
-    SIECoreVersion = '+'
-    SIEDomainVersion = '+'
+    UAFoundationVersion = '+'
+    UACoreVersion = '+'
+    UADomainVersion = '+'
 }
 
 /*
@@ -71,9 +71,9 @@ ext {
 dependencies {
     oml "io.opencaesar.ontologies:core-vocabularies:$coreVersion"
     //oml "io.opencaesar.ontologies:imce-vocabularies:$imceVersion"
-    oml "com.siedepartment:SIE_Foundation:$SIEFoundationVersion"
-    oml "com.siedepartment:SIE_Core:$SIECoreVersion"
-    oml "com.siedepartment:SIE_Domain:$SIEDomainVersion"
+    oml "com.uaontologies:UA_Foundation:$UAFoundationVersion"
+    oml "com.uaontologies:UA_Core:$UACoreVersion"
+    oml "com.uaontologies:UA_Domain:$UADomainVersion"
 }
 
 /*

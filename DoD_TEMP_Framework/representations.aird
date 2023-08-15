@@ -52,39 +52,32 @@
     <semanticResources>build/oml/iso.org/iso-80000-3.4.oml</semanticResources>
     <semanticResources>build/oml/iso.org/iso-80000-4.1.oml</semanticResources>
     <semanticResources>build/oml/iso.org/iso-80000-4.26.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Domain/SIE_SystemArchitecture.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Foundation/SIE_Foundation.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Core/SIE_Event.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Core/SIE_Information.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Domain/SIE_Mission.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Core/SIE_Agent.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Domain/bundle.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Core/bundle.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Foundation/bundle.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Core/SIE_Measurement.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Core/SIE_Provenance.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Domain/SIE_DataManagement.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Domain/SIE_Software.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Domain/SIE_Test.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Domain/SIE_Requirements.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Domain/SIE_DesignOfExperiments.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Domain/SIE_ModelingAndSimulation.oml</semanticResources>
-    <semanticResources>src/oml/siedepartment.com/DoD_TEMP_Framework/TEMP_Decision.oml</semanticResources>
-    <semanticResources>src/oml/siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting.oml</semanticResources>
-    <semanticResources>src/oml/siedepartment.com/DoD_TEMP_Framework/TEMP_Organization.oml</semanticResources>
-    <semanticResources>src/oml/siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility.oml</semanticResources>
-    <semanticResources>src/oml/siedepartment.com/DoD_TEMP_Framework/TEMP_TEOversight.oml</semanticResources>
-    <semanticResources>src/oml/siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks.oml</semanticResources>
-    <semanticResources>src/oml/siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy.oml</semanticResources>
-    <semanticResources>src/oml/siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure.oml</semanticResources>
-    <semanticResources>src/oml/siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramTeams.oml</semanticResources>
-    <semanticResources>src/oml/siedepartment.com/DoD_TEMP_Framework/bundle.oml</semanticResources>
     <semanticResources>build/oml/bipm.org/jcgm/vim4.oml</semanticResources>
     <semanticResources>build/oml/bipm.org/jcgm/vim4-terminological-analysis.oml</semanticResources>
     <semanticResources>build/oml/bipm.org/jcgm/vim4.1-systems-diagram.oml</semanticResources>
     <semanticResources>build/oml/opencaesar.io/viewpoint.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Domain/SIE_ProjectManagement.oml</semanticResources>
-    <semanticResources>build/oml/siedepartment.com/SIE_Domain/SIE_Acquisition.oml</semanticResources>
+    <semanticResources>src/oml/uaontologies.com/DoD_TEMP_Framework/TEMP_Decision.oml</semanticResources>
+    <semanticResources>src/oml/uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting.oml</semanticResources>
+    <semanticResources>src/oml/uaontologies.com/DoD_TEMP_Framework/TEMP_Organization.oml</semanticResources>
+    <semanticResources>src/oml/uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility.oml</semanticResources>
+    <semanticResources>src/oml/uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight.oml</semanticResources>
+    <semanticResources>src/oml/uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks.oml</semanticResources>
+    <semanticResources>src/oml/uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy.oml</semanticResources>
+    <semanticResources>src/oml/uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure.oml</semanticResources>
+    <semanticResources>src/oml/uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams.oml</semanticResources>
+    <semanticResources>src/oml/uaontologies.com/DoD_TEMP_Framework/bundle.oml</semanticResources>
+    <semanticResources>build/oml/uaontologies.com/UA_Domain/UA_Mission.oml</semanticResources>
+    <semanticResources>build/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml</semanticResources>
+    <semanticResources>build/oml/uaontologies.com/UA_Domain/UA_SystemArchitecture.oml</semanticResources>
+    <semanticResources>build/oml/uaontologies.com/UA_Core/UA_Event.oml</semanticResources>
+    <semanticResources>build/oml/uaontologies.com/UA_Core/UA_Information.oml</semanticResources>
+    <semanticResources>build/oml/uaontologies.com/UA_Core/UA_Agent.oml</semanticResources>
+    <semanticResources>build/oml/uaontologies.com/UA_Core/UA_Measurement.oml</semanticResources>
+    <semanticResources>build/oml/uaontologies.com/UA_Core/bundle.oml</semanticResources>
+    <semanticResources>build/oml/uaontologies.com/UA_Domain/UA_Requirements.oml</semanticResources>
+    <semanticResources>build/oml/uaontologies.com/UA_Domain/UA_ProjectManagement.oml</semanticResources>
+    <semanticResources>build/oml/uaontologies.com/UA_Core/UA_Provenance.oml</semanticResources>
+    <semanticResources>build/oml/uaontologies.com/UA_Foundation/bundle.oml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_yskvMLemEe2lwLSUq3AU3A">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_2glMULemEe2lwLSUq3AU3A" name="temp_ear Viewer" repPath="#_2gP1ILemEe2lwLSUq3AU3A" changeId="eb1c38d3-dd93-4c4c-b065-98d15630c647">
