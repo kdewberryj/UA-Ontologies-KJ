@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#"
+     xml:base="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization"/>
+        <owl:imports rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Test"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A vocabulary to capture reporting concepts required for TEMP</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ProduceSystemEvaluation -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ProduceSystemEvaluation">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canInput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Test#TestResult"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#TestAgency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#TestAgency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=ProduceSystemEvaluation=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Produce System Evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ReviewSystemEvaluationModel -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ReviewSystemEvaluationModel">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canInput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DoDMSCoordinationOffice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DoDMSCoordinationOffice"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=ReviewSystemEvaluationModel=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Review System Evaluation Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ReviewSystemEvaluationReport -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ReviewSystemEvaluationReport">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canInput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationReport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationReport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DefenceTechnicalInfoCenter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DefenceTechnicalInfoCenter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=ReviewSystemEvaluationReport=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Review System Evaluation Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluation -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluation">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information#DescriptiveInformationEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#contains"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Test#TestResult"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An [=SystemEvaluation=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>System Evaluation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationModel -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationModel">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information#Model"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#hasGenericDependent"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An [=SystemEvaluationModel=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>System Evaluation Model</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationModelReview -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationModelReview">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#FunctionOccurrence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasInput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ReviewSystemEvaluationModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ReviewSystemEvaluationModel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An [=SystemEvaluationModelReview=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>System Evaluation Model Review</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationProduction -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationProduction">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#FunctionOccurrence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasInput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Test#TestResult"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ProduceSystemEvaluation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ProduceSystemEvaluation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=SystemEvaluationProduction=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>System Evaluation Production</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationReport -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationReport">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information#Document"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#hasGenericDependent"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An [=SystemEvaluationReport=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>System Evaluation Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationReportReview -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationReportReview">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#FunctionOccurrence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasInput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationReport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationReport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ReviewSystemEvaluationReport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ReviewSystemEvaluationReport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An [=SystemEvaluationReportReview=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>System Evaluation Report Review</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#TETestUndertaking -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#TETestUndertaking">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#FunctionOccurrence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasInput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#TEFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Test#TestResult"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#UndertakeTETest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#UndertakeTETest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=TETestUndertaking=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>TE Test Undertaking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#UndertakeTETest -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#UndertakeTETest">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canInput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#TEFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Test#TestResult"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#TestAgency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#TestAgency"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=UndertakeTETest=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Undertake TE Test</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,93 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture Part _ of the example TEMP"
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/DoD_Example/Part4#> as part4 {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    //uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    //uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    //uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    //uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    //uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	//uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	//uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    
+    //uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#> as temp_tps
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#> as temp_tpf
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#> as temp_resp
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> as temp_tpt
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_dec
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as temp_teo
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#> as temp_ear
+    
+    // Extends other descriptions
+
+    extends <http://uaontologies.com/DoD_Example/Part1#> as part1
+    //extends <http://uaontologies.com/DoD_Example/Part2#> as part2
+    extends <http://uaontologies.com/DoD_Example/Part3#> as part3
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	//// PART 4 - RESOURCE SUMMARY
+	
+	//////////////////////////// Description Definitions //////////////////////////////	
+
+	// Section 4.1
+	
+	ci Representative_LMMDR_Quality : foundation:Quality [
+		foundation:specificallyDependentOn part3:RepresentativeAsset
+	]
+	
+	ci Capabaility1 : foundation:Function [
+		foundation:specificallyDependentOn part3:RepresentativeAsset
+	]
+	
+	ci Test5 : test:Test [
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ci TestLocation1 : test:TestSite [
+		event:isSiteOf Test5
+	]
+	
+	ci OrgSite : agent:Organization [
+		foundation:occupies TestLocation1
+	]
+	
+	ci ProvideEquipment : foundation:Function [
+		foundation:specificallyDependentOn OrgSite
+		sa:canOutput GS1
+		sa:canOutput Player
+		sa:canOutput part3:RepresentativeAsset
+	]
+	
+	ci GS1 : sa:System
+	
+	ci Player : foundation:Object
+	
+	}

@@ -1,0 +1,74 @@
+{ "head": {
+    "vars": [ "Requirement" , "Text" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#CS_Req1" } ,
+        "Text": { "type": "literal" , "value": "The Rover shall be resistant to cybersecurity risks of type A" }
+      } ,
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#CS_Req2" } ,
+        "Text": { "type": "literal" , "value": "The Rover shall be resistant to cybersecurity risks of type B" }
+      } ,
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#KPP_1" } ,
+        "Text": { "type": "literal" , "value": "The system shall provide function 1 to a performance level of w" }
+      } ,
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#KPP_2" } ,
+        "Text": { "type": "literal" , "value": "The system shall provide function 2 to a performance level of x" }
+      } ,
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#KSA_1" } ,
+        "Text": { "type": "literal" , "value": "The system shall provide function 3 to a performance level of y" }
+      } ,
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#KSA_2" } ,
+        "Text": { "type": "literal" , "value": "The system shall provide function 4 to a performance level of z" }
+      } ,
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#Requirement_Cost" } ,
+        "Text": { "type": "literal" , "value": "The server shall cost no more than 1000 USD" }
+      } ,
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#Requirement_DiskSpace" } ,
+        "Text": { "type": "literal" , "value": "The server shall have a minimum of 400 Gb disk space" }
+      } ,
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#TPM1" } ,
+        "Text": { "type": "literal" , "value": "The system shall provide function 1 with a technical performance measurement of x" }
+      } ,
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#TPM2" } ,
+        "Text": { "type": "literal" , "value": "The system shall provide function 1 with a technical performance measurement of x" }
+      } ,
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#TPM3" } ,
+        "Text": { "type": "literal" , "value": "The system shall provide function 1 with a technical performance measurement of x" }
+      } ,
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#TPM4" } ,
+        "Text": { "type": "literal" , "value": "The system shall provide function 1 with a technical performance measurement of x" }
+      } ,
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_Comms" } ,
+        "Text": { "type": "literal" , "value": "The Rover shall be capable of transmitting 100Mb/s to the Mars Orbiter..." }
+      } ,
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_Vibration" } ,
+        "Text": { "type": "literal" , "value": "The Rover shall withstand vibration of at least..." }
+      } ,
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#IOTE2_Criteria" }
+      } ,
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#LUT_EntranceCriteria" }
+      } ,
+      { 
+        "Requirement": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_MBTSA" } ,
+        "Text": { "type": "literal" , "value": "Mean time between failures shall be greater than 10000 hours with a confidence value of 99%" }
+      }
+    ]
+  }
+}

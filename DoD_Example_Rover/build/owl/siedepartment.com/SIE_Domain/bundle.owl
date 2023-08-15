@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://siedepartment.com/SIE_Domain/bundle#"
+     xml:base="http://siedepartment.com/SIE_Domain/bundle"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://siedepartment.com/SIE_Domain/bundle">
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Core/bundle"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Acquisition"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_DataManagement"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Materials"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Mission"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_ModelingAndSimulation"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_ProjectManagement"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Requirements"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Software"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Test"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#VocabularyBundle"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://siedepartment.com/SIE_Core/SIE_Agent#ProcessOwner -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Agent#ProcessOwner">
+        <owl:disjointWith rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Test#Tester"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://siedepartment.com/SIE_Core/SIE_Information#Describes -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Information#Describes">
+        <owl:disjointWith rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information#Prescribes"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://siedepartment.com/SIE_Core/SIE_Information#DescriptiveInformationEntity -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Information#DescriptiveInformationEntity">
+        <owl:disjointWith rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information#PrescriptiveInformationEntity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://siedepartment.com/SIE_Core/SIE_Information#Document -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Information#Document">
+        <owl:disjointWith rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information#Model"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://siedepartment.com/SIE_Core/SIE_Measurement#HasApplicableDimension -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Measurement#HasApplicableDimension">
+        <owl:disjointWith rdf:resource="http://siedepartment.com/SIE_Core/SIE_Measurement#MeasurementOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://siedepartment.com/SIE_Core/SIE_Measurement#Quantity -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Measurement#Quantity">
+        <owl:disjointWith rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#Architecture"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://siedepartment.com/SIE_Domain/SIE_ModelingAndSimulation#Analysis -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_ModelingAndSimulation#Analysis">
+        <owl:disjointWith rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Test#Test"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://siedepartment.com/SIE_Domain/SIE_Requirements#FunctionalRequirement -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Requirements#FunctionalRequirement">
+        <owl:disjointWith rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Requirements#QuantitativeRequirement"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://siedepartment.com/SIE_Domain/SIE_Requirements#PerformanceRequirement -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Requirements#PerformanceRequirement">
+        <owl:disjointWith rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Requirements#PhysicalRequirement"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://siedepartment.com/SIE_Domain/SIE_Software#OperatingSystem -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Software#OperatingSystem">
+        <owl:disjointWith rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Software#SoftwareAgent"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#ExecutedBy -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#ExecutedBy">
+        <owl:disjointWith rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Test#HasTestSubject"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://siedepartment.com/SIE_Foundation/SIE_Foundation#ImmaterialEntity -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#ImmaterialEntity">
+        <owl:disjointWith rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#MaterialEntity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://siedepartment.com/SIE_Foundation/SIE_Foundation#Quality -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Quality">
+        <owl:disjointWith rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#RealizableEntity"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Agent#BelongsTo"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Agent#HasInput"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Agent#HasOrganziationalContext"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Agent#HasOutput"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Agent#HasPlannedTemporalRegion"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Agent#ResponsibleFor"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Event#HasParticipant"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Event#ManifestsIn"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Event#OccursAt"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Event#OccursBefore"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Event#OccursOn"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Information#IsAbout"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Measurement#HasDimension"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Measurement#HasUnit"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Provenance#ApprovedBy"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Provenance#GeneratedBy"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Acquisition#HasAcquisitionItem"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Acquisition#HasAcquisitionPurchaser"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Acquisition#HasAcquisitionVendor"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_DataManagement#HasAccess"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_DataManagement#HasDigitalLocation"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_DataManagement#SupportsRepository"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Mission#HasEnvironment"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Mission#ParticipatesInMission"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Requirements#DerivesRequirement"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Requirements#Refines"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Requirements#Satisfies"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Requirements#Verifies"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Software#HasEntitySource"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Software#HasSoftwareVendor"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#CanInput"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#CanOutput"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#ConnectsTo"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#HasItemFlow"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Test#HasTestCondition"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Test#TriggersTest"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Contains"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#GenericallyDependentOn"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Occupies"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#SpecificallyDependentOn"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Agent#ManagedProcess"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Acquisition#Acquisition"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#FunctionOccurrence"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Agent#Organization"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Agent#Person"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Object"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#ObjectAggregate"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Agent#Plan"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Agent#Procedure"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Requirements#Constraint"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Requirements#Objective"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Requirements#Requirement"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Test#PlannedTestCondition"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Test#SitePlan"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Test#TestEquipmentPlan"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Information#InformationArtifact"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#Interface"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#System"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Information#InformationEntity"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Software#Software"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Role"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Measurement#ConfidenceInterval"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Measurement#SimpleMeasurement"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Test#ActualTestCondition"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Test#SiteData"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Test#TestEquipmentData"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Measurement#Dimension"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Test#TestCondition"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Occurrent"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Measurement#Measurement"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Core/SIE_Measurement#Unit"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_ModelingAndSimulation#AnalysisResult"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#ArchitectureDescription"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Test#TestResult"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_DataManagement#DigitalLocation"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Energy"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Site"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_Mission#Mission"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Domain/SIE_ProjectManagement#Program"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Process"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#TemporalRegion"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#GenericallyDependentContinuant"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#IndependentContinuant"/>
+            <rdf:Description rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#SpecificallyDependentContinuant"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+
+

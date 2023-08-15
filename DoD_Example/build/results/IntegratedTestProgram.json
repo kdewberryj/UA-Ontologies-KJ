@@ -1,0 +1,28 @@
+{ "head": {
+    "vars": [ "MDAP" , "IntegratedTestProgram" , "TestProgram" , "StartDate" , "EndDate" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "MDAP": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#LMMDRProgram" } ,
+        "IntegratedTestProgram": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#LMMDRTEProgram" } ,
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#LMMDRDTEProgram1" }
+      } ,
+      { 
+        "MDAP": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#LMMDRProgram" } ,
+        "IntegratedTestProgram": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#LMMDRTEProgram" } ,
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#LMMDRDTEProgram2" }
+      } ,
+      { 
+        "MDAP": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#LMMDRProgram" } ,
+        "IntegratedTestProgram": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#LMMDRTEProgram" } ,
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#LMMDRLTEProgram" }
+      } ,
+      { 
+        "MDAP": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#LMMDRProgram" } ,
+        "IntegratedTestProgram": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#LMMDRTEProgram" } ,
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#LMMDROverallOTEProgram" }
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{ "head": {
+    "vars": [ "Unit" , "Dimension" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#kilogram" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Mass" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#metre" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Length" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#percentage" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Efficiency" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#second" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Time" }
+      }
+    ]
+  }
+}

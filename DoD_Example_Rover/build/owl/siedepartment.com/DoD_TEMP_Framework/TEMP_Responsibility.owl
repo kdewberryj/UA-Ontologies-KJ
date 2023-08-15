@@ -1,0 +1,791 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#"
+     xml:base="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization"/>
+        <owl:imports rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks"/>
+        <owl:imports rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Test"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A vocabulary to capture responsibility concepts required for TEMP</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#isMonitoredBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#isMonitoredBy">
+        <owl:inverseOf rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#monitors"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdfs:label>is monitored by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#isOverseenBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#isOverseenBy">
+        <owl:inverseOf rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#oversees"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdfs:label>is overseen by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#isReviewedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#isReviewedBy">
+        <owl:inverseOf rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#reviews"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdfs:label>is reviewed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#monitors -->
+
+
+    <owl:ObjectProperty rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#monitors">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+        <rdfs:range rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#IntegratedTestProgram"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <rdfs:label>monitors</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#oversees -->
+
+
+    <owl:ObjectProperty rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#oversees">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+        <rdfs:range rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#MajorDefenceAcquisitionProgram"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <rdfs:label>oversees</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#reviews -->
+
+
+    <owl:ObjectProperty rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#reviews">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+        <rdfs:range rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#IntegratedTestProgram"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <rdfs:label>reviews</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveDTEFramework -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveDTEFramework">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#USDRE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canInput"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#DevelopmentalEvaluationFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canOutput"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#DevelopmentalEvaluationFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#USDRE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=ApproveDTEFramework=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Approve DTE Framework</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveLFTEFramework -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveLFTEFramework">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canInput"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#LiveFireTestProgramFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canOutput"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#LiveFireTestProgramFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=ApproveLFTEFramework=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Approve LFTE Framework</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveOTEFramework -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveOTEFramework">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canInput"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#OperationalEvaluationFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canOutput"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#OperationalEvaluationFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=ApproveOTEFramework=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Approve OTE Framework</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#DTEFrameworkApproval -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#DTEFrameworkApproval">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEFrameworkApproval"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasInput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#DevelopmentalEvaluationFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#DevelopmentalEvaluationFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveDTEFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveDTEFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=DTEFrameworkApproval=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>DTE Framework Approval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#GenerateTEOversightList -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#GenerateTEOversightList">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightList"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=GenerateTEOversightList=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Generate TE Oversight List</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#LFTEFrameworkApproval -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#LFTEFrameworkApproval">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEFrameworkApproval"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasInput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#LiveFireTestProgramFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#LiveFireTestProgramFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveLFTEFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveLFTEFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=OTEFrameworkApproval=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>LFTE Framework Approval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#Monitors -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#Monitors">
+        <dc:description>[=Monitors=] is a </dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+        <rdfs:label>Monitors</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#OTEFrameworkApproval -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#OTEFrameworkApproval">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEFrameworkApproval"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasInput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#OperationalEvaluationFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#OperationalEvaluationFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveOTEFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveOTEFramework"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=OTEFrameworkApproval=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>OTE Framework Approval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#Oversees -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#Oversees">
+        <dc:description>[=Oversees=] is a </dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+        <rdfs:label>Oversees</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ProduceTEProcedure -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ProduceTEProcedure">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Test#TestProcedure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=ProduceTEProcedure=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Produce TE Procedure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ProduceTEReport -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ProduceTEReport">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEReport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=ProduceTEReport=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Produce TE Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#Reviews -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#Reviews">
+        <dc:description>[=Reviews=] is a </dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+        <rdfs:label>Reviews</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEFrameworkApproval -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEFrameworkApproval">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#FunctionOccurrence"/>
+        <dc:description>A [=TEFrameworkApproval=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>TE Framework Approval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightList -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightList">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information#DescriptiveInformationEntity"/>
+        <dc:description>A [=TEOversightList=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>TE Oversight List</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightListGeneration -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightListGeneration">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#FunctionOccurrence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightList"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#GenerateTEOversightList"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#GenerateTEOversightList"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=TEProcedureProduction=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>TE Oversight List Generation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEProcedureProduction -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEProcedureProduction">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#FunctionOccurrence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Test#TestProcedure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ProduceTEProcedure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ProduceTEProcedure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=TEProcedureProduction=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>TE Procedure Production</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEReport -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEReport">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information#DescriptiveInformationEntity"/>
+        <dc:description>A [=TEReport=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>TE Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEReportProduction -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEReportProduction">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#FunctionOccurrence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#TEReport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ProduceTEReport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event#isManifestationOf"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#ProduceTEReport"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=TEReportProduction=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>TE Report Production</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="urn:swrl:var#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>monitors derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#Monitors"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#monitors"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>oversees derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#Oversees"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#oversees"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>reviews derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#Reviews"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#reviews"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+
+

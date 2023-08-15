@@ -1,0 +1,669 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture Part 3 of the example TEMP"
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/DoD_Example_Rover/Part3#> as part3 {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    //uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	//uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    
+    //uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#> as temp_tps
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#> as temp_tpf
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#> as temp_resp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> as temp_tpt
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_dec
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as temp_teo
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#> as temp_ear
+    
+    // Extends other descriptions
+    
+    extends <http://uaontologies.com/DoD_Example_Rover/Part1#> as part1
+    extends <http://uaontologies.com/DoD_Example_Rover/Part2#> as part2
+    extends <http://uaontologies.com/UA_Libraries/Dimensions#> as dim
+    extends <http://uaontologies.com/UA_Libraries/Units#> as units
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	//// PART 3 - TEST AND EVALUATION STRATEGY
+	
+	//////////////////////////// Description Definitions //////////////////////////////	
+
+	// Section 3.1
+	
+	ci MakePhaseCDecision : foundation:Function [
+		foundation:specificallyDependentOn part1:Rover_MDA
+		event:manifestsIn PhaseCDecisionMade
+	]
+	
+	ci PhaseCDecisionMade : sa:FunctionOccurrence
+	
+	ci Rover_MobilityTorqueTest : test:Test [
+		test:hasTestSubject part1:Rover_Mobility
+	]
+	
+	ci Rover_PayloadTest : test:Test [
+		test:hasTestSubject part1:Rover_System
+	]
+	
+	ci TorqueTestData : test:TestResult [
+		info:describes Rover_MobilityTorqueTest
+	]
+	
+	ci PayloadTestData : test:TestResult [
+		info:describes Rover_PayloadTest
+	]
+	
+	ci ORG1_TestReport : info:DescriptiveInformationEntity [
+		foundation:hasName "Mobility Torque Test Data"
+		foundation:contains TorqueTestData
+		info:describes Rover_MobilityTorqueTest
+	]
+	
+	ci ORG2_TestReport : info:DescriptiveInformationEntity [
+		foundation:hasName "Payload Test Data"
+		foundation:contains PayloadTestData
+		info:describes Rover_MobilityTorqueTest
+	]
+	
+	ci IOTE2_Criteria : temp_tps:EntranceCriteria [
+		info:prescribes part2:Rover_OTEProgram_Phase1
+	]
+	
+	ci PhaseCDecision : temp_dec:KeyDecision [
+		info:prescribes part2:PhaseC
+		temp_dec:isInformedBy ORG1_TestReport
+		temp_dec:isInformedBy ORG2_TestReport
+	]
+	
+	ref ci part2:PhaseC [
+		event:occursOn PhaseC_TemporalRegion
+	]
+	
+	ci PhaseC_TemporalRegion : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-04-20T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-04-25T12:00:00"^^xsd:dateTime
+	] 
+	
+	ci ProduceRoverEvaluation : temp_ear:ProduceSystemEvaluation [
+		event:manifestsIn RoverEvaluationProduction
+		foundation:specificallyDependentOn part2:Rover_OTA
+		sa:canInput part2:VibrationTest_Result
+		sa:canInput part2:CommsTest_Result
+		sa:canOutput RoverEvaluationResult
+	]
+	
+	ci RoverEvaluationProduction : temp_ear:SystemEvaluationProduction [
+		agent:hasInput part2:VibrationTest_Result
+		agent:hasInput part2:CommsTest_Result
+		agent:hasOutput RoverEvaluationResult
+	]
+	
+	ci RoverEvaluationResult : temp_ear:SystemEvaluation [
+		foundation:contains part2:VibrationTest_Result
+		foundation:contains part2:CommsTest_Result
+		info:describes part1:Rover_System
+	]
+	
+	// Two DevPhases defined in Part2
+	
+	ci ArchitectureSelection : temp_dec:Milestone [
+		event:occursOn ArchitectureSelection_TimePeriod
+	]
+	
+	ci ArchitectureSelection_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-06-01T16:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-06-07T10:00:00"^^xsd:dateTime
+	]
+	
+	ci MakeArchitectureSelectionDecision : foundation:Function [
+		foundation:specificallyDependentOn part1:Rover_MDA
+		event:manifestsIn ArchitectureSelectionDecisionMade
+	]
+	
+	ci ArchitectureSelectionDecisionMade : sa:FunctionOccurrence
+	
+	ci ArchitectureSelectionDecision : temp_dec:KeyDecision [
+		info:prescribes ArchitectureSelection
+	]
+	
+	ci FullRateProductionDecision : temp_dec:KeyDecision [
+		info:prescribes FullRateProductionDecisionPoint
+	]
+	
+	ci FullRateProductionDecisionPoint : temp_dec:KeyDecisionPoint [
+		event:occursOn FullRateProductionDecision_TimePeriod
+	]
+	
+	ci FullRateProductionDecision_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-08-01T12:00:00"^^xsd:dateTime
+	]
+	
+	ci Rover_ProgramObjective : temp_tpp:TestProgramObjective [
+		info:prescribes part1:Rover_Program
+		req:hasObjectiveText "Acquire a Rover from JPL that satisfies the user requirements"
+	]
+	
+	ref ci part2:TargetAcquisitionTest [
+		test:hasTestCondition TargetAcquisitionTest_Lighting
+		test:hasTestCondition TargetAcquisitionTest_AtmosphericDust
+	]
+	
+	ci TargetAcquisitionTest_Lighting : test:TestCondition
+	
+	ci TargetAcquisitionTest_Lighting_Planned : test:PlannedTestCondition [
+		info:prescribes TargetAcquisitionTest_Lighting
+	]
+		
+	ci TargetAcquisitionTest_AtmosphericDust : test:TestCondition
+	
+	ci TargetAcquisitionTest_AtmosphericDust_Planned : test:PlannedTestCondition [
+		info:prescribes TargetAcquisitionTest_AtmosphericDust
+	]
+	
+	ci TargetAcquisitionTester : test:Tester [
+		test:triggersTest part2:TargetAcquisitionTest
+		agent:isRoleOf Person4
+	]
+	
+	ci LowPowerTester : test:Tester [
+		test:triggersTest part2:LowPowerTest
+		agent:isRoleOf Person4
+	]
+	
+	ci Person4 : agent:Person [
+		foundation:hasName "Lisa Simpson"
+	]
+	
+	ci TATD1 : info:Document [
+		foundation:hasName "Target Acquisition Test Procedure"
+	]
+	
+	ci TargetAcquisitionTest_Procedure : test:TestProcedure [
+		foundation:contains TargetAcquisitionTest_Lighting_Planned
+		foundation:contains TargetAcquisitionTest_AtmosphericDust_Planned
+		foundation:genericallyDependentOn TATD1
+		info:prescribes part2:TargetAcquisitionTest
+	]
+	
+	ci CooperativeVulnerabilityEvaluation_TestProcedure : test:TestProcedure [
+		info:prescribes CooperativeVulnerabilityEvaluation
+	]
+	
+	ci FutureTestTimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-10-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-10-31T12:00:00"^^xsd:dateTime
+	]
+	
+	ci CooperativeVulnerabilityEvaluation_Plan : agent:Plan [
+		foundation:contains CooperativeVulnerabilityEvaluation_TestProcedure
+		agent:hasPlannedTemporalRegion FutureTestTimePeriod
+		info:prescribes CooperativeVulnerabilityEvaluation
+	]
+	
+	ci CooperativeVulnerabilityEvaluation : test:Test [
+		test:hasTestSubject part1:Rover_System
+	]
+	
+	ref ci part2:Rover_DTEProgram_Phase2 [
+		temp_tpp:comprisesTest CooperativeVulnerabilityEvaluation
+	]
+	
+	
+	// Section 3.2.1
+	
+	ci CuriosityRoverProgram_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2005-05-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2011-07-01T12:00:00"^^xsd:dateTime
+	]
+	
+	ci CuriosityRoverProgram : pm:Program [
+		event:occursOn CuriosityRoverProgram_TimePeriod
+	]
+	
+	ci CuriosityRoverProgram_OTE : temp_tps:OperationalTEProgram
+	ci CuriosityRoverProgram_DTE : temp_tps:DevelopmentalTEProgram
+	ci CuriosityRoverProgram_LFTE : temp_tps:LiveFireTEProgram
+	
+	ci CuriosityRoverProgram_IntegratedTestProgram : temp_tpp:IntegratedTestProgram [
+		foundation:contains CuriosityRoverProgram_OTE
+		foundation:contains CuriosityRoverProgram_DTE
+		foundation:contains CuriosityRoverProgram_LFTE
+		temp_tpp:comprisesTest CuriosityRoverProgram_Test1
+		temp_tpp:comprisesTest CuriosityRoverProgram_Test2
+	]
+	
+	ci CuriosityRoverProgram_Test1 : test:Test [
+		event:occursOn CuriosityRoverProgram_Test1TimePeriod
+		test:hasTestCondition CuriosityRoverProgram_TestCondition1
+		test:hasTestSubject part1:Rover_System
+	]
+	
+	ci CuriosityRoverProgram_Test1TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2022-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2022-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	ci CuriosityRoverProgram_TestCondition1 : test:TestCondition
+	
+	ci CuriosityRoverProgram_Test2 : test:Test [
+		event:occursOn CuriosityRoverProgram_Test2TimePeriod
+		test:hasTestCondition CuriosityRoverProgram_TestCondition2
+		test:hasTestSubject part1:Rover_System
+	]
+	
+	ci CuriosityRoverProgram_Test2TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	ci CuriosityRoverProgram_TestCondition2 : test:TestCondition
+	
+	
+	// Section 3.2.2
+	
+	ci DeploymentTestTimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2021-09-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2021-09-11T12:00:00"^^xsd:dateTime
+	]
+	
+	ci MobilityDeploymentTest : test:Test [
+		test:hasTestSubject Rover_Prototype
+		event:occursOn DeploymentTestTimePeriod
+	]
+	
+	ci AntennaDeploymentTest : test:Test [
+		test:hasTestSubject Rover_Prototype
+		event:occursOn DeploymentTestTimePeriod
+	]
+	
+	ci PayloadDeploymentTest : test:Test [
+		test:hasTestSubject Rover_Prototype
+		event:occursOn DeploymentTestTimePeriod
+	]
+	
+	ci TerrainTraversalExercise : test:Test [
+		test:hasTestSubject Rover_Prototype
+		event:occursOn DeploymentTestTimePeriod
+	]
+	
+	ref ci part2:Rover_IOTEProgram_Phase2 [
+		temp_tpp:comprisesTest MobilityDeploymentTest
+		temp_tpp:comprisesTest AntennaDeploymentTest
+		temp_tpp:comprisesTest PayloadDeploymentTest
+		temp_tpp:comprisesTest TerrainTraversalExercise
+	]
+	
+	ci Rover_PrototypeAcquisition : acq:Acquisition [
+		acq:hasAcquisitionItem Rover_Prototype
+		acq:hasAcquisitionVendor part2:JPL
+		acq:hasAcquisitionPurchaser part1:NASA
+	]
+	
+	ci Rover_Prototype : sa:System
+		
+	ci Rover_FDIR : foundation:Function [
+		foundation:specificallyDependentOn part1:Rover_System
+		foundation:contains DetectFault
+		foundation:contains IsolateFault
+		foundation:contains RecoverFault
+	]
+	
+	
+	// Section 3.2.4
+	
+	ci DetectFault : foundation:Function [
+		foundation:specificallyDependentOn part1:Rover_System
+	]
+	
+	ci IsolateFault : foundation:Function [
+		foundation:specificallyDependentOn part1:Rover_System
+	]
+	
+	ci RecoverFault : foundation:Function [
+		foundation:specificallyDependentOn part1:Rover_System
+	]
+	
+	ci FDIRTest : test:Test [
+		test:hasTestSubject Rover_FDIR
+	]
+	
+	
+	// Section 3.2.6
+	
+	ci TechRiskAssessment1 : temp_dec:RiskAssessment [
+		info:describes part2:Rover_TEProgram
+		foundation:isContainedIn Rover_IDSK
+	]
+	
+	
+	// Section 3.2.7
+	
+	ci Terrain : test:TestCondition
+	ci Atmosphere : test:TestCondition
+	ci MinimumHours : test:TestCondition
+	
+	ci LMMDR_Replica1 : sa:System // define as many as needed
+	
+	ci Rover_ReliabilityDemo1 : test:Test [
+		event:occursOn DeploymentTestTimePeriod
+		test:hasTestSubject Rover_Prototype
+		event:hasParticipant part1:MarsOrbiter
+		event:hasParticipant part1:MarsLander
+		test:hasTestCondition Terrain
+		test:hasTestCondition Atmosphere
+		test:hasTestCondition MinimumHours
+		req:verifies Requirement_MBTSA
+	]
+	
+	ci Rover_ReliabilityDemo2_Procedure : test:TestProcedure [
+		info:prescribes Rover_ReliabilityDemo2
+	]
+	
+	ci Rover_ReliabilityDemo2_Plan : agent:Plan [
+		foundation:contains Rover_ReliabilityDemo2_Procedure
+		agent:hasPlannedTemporalRegion Rover_ReliabilityDemo2_TimePeriod
+		info:prescribes Rover_ReliabilityDemo2
+	]
+	
+	ci Rover_ReliabilityDemo2_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	ci Rover_ReliabilityDemo2 : test:Test [
+		test:hasTestSubject part1:Rover_System
+		event:hasParticipant part1:MarsOrbiter
+		event:hasParticipant part1:MarsLander
+		test:hasTestCondition Terrain
+		test:hasTestCondition Atmosphere
+		test:hasTestCondition MinimumHours
+		req:verifies Requirement_MBTSA
+		event:occursOn Rover_ReliabilityDemo2_TimePeriod
+	]
+	
+	ci MBTSA_Doc : info:Document [
+		foundation:hasName "Reliability Test Results"
+	]
+	
+	ci Rover_System_Reliability : foundation:Quality [
+		foundation:specificallyDependentOn part1:Rover_System
+	]
+	
+	ci Requirement_MBTSA : req:PerformanceRequirement [
+		req:hasRequirementText "Mean time between failures shall be greater than 10000 hours with a confidence value of 99%"
+		info:prescribes Rover_System_Reliability
+		foundation:genericallyDependentOn MBTSA_Doc
+	]
+	
+	ci ReliabilityCA1 : temp_dec:RecommendedCorrectiveAction [
+		foundation:isContainedIn Rover_IDSK
+		info:prescribes part2:Rover_TEProgram
+	]
+	
+	ci ReliabilityDemo1_Result : test:TestResult [
+		info:describes Rover_ReliabilityDemo1
+		foundation:contains ReliabilityCA1
+	]
+	
+	ci PhaseCReliabilityDecision : temp_dec:KeyDecision [
+		info:prescribes PhaseCReliability
+		temp_dec:isInformedBy ReliabilityDemo1_Result
+	]
+	
+	ci ReliabilityDoc : info:Document [
+		foundation:hasName "Reliability Test Procedures"
+		foundation:hasGenericDependent ReliabilityModel_Initial
+		foundation:hasGenericDependent ReliabilityModel_Final
+	]
+	
+	ci PhaseCReliability : temp_dec:Milestone
+	
+	ci ReliabilityModel_Initial : test:TestProcedure [
+		info:prescribes Rover_ReliabilityDemo1
+	]
+	
+	ci ReliabilityModel_Final : test:TestProcedure [
+		info:prescribes Rover_ReliabilityDemo2
+	]
+	
+	
+	// Section 3.3
+	
+	ci Rover_DTEProgram_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	ref ci part2:Rover_DTEProgram_Phase1 [
+		event:occursOn Rover_DTEProgram_TimePeriod
+	]
+	
+	ci Rover_DTE1Objective : temp_tpp:TestProgramObjective [
+		info:prescribes part2:Rover_DTEProgram_Phase1
+		req:hasObjectiveText "The purpose of the DTE 1 Program is to..."
+	]
+	
+	ref ci part2:Rover_DTEProgram_Phase2 [
+		event:occursOn Rover_DTEProgram_TimePeriod
+	]
+	
+	ci DTE2Objective : temp_tpp:TestProgramObjective [
+		info:prescribes part2:Rover_DTEProgram_Phase2
+		req:hasObjectiveText "The purpose of the DTE 2 Program is to..."
+	]
+	
+	ci VibrationTestSite : foundation:Site
+	ci CommsTestSite : foundation:Site
+	
+	ref ci part2:VibrationTest [
+		event:occursAt VibrationTestSite
+	]
+	
+	ref ci part2:CommsTest [
+		event:occursAt CommsTestSite
+	]
+
+	ref ci part2:VibrationTest : test:Test [
+		req:verifies Requirement_Vibration
+		test:hasTestSubject part1:Rover_System
+	]
+	
+	ref ci part2:CommsTest : test:Test [
+		req:verifies Requirement_Comms
+		test:hasTestSubject part1:Rover_Comms
+	]
+	
+	ci VibrationTestPlan : test:TestProcedure [
+		foundation:genericallyDependentOn DevTestMemo
+		info:prescribes part2:VibrationTest
+	]
+	
+	ci CommsTestPlan : test:TestProcedure [
+		foundation:genericallyDependentOn DevTestMemo
+		info:prescribes part2:CommsTest
+	]
+	
+	ci DevTestMemo : info:Document [
+		foundation:hasName "Development Test Procedures"
+	]
+	
+	ci ReqDoc1 : info:Document [
+		foundation:hasName "System Requirements Document"
+	]
+	
+	ci Requirement_Vibration : req:Requirement [
+		req:hasRequirementText "The Rover shall withstand vibration of at least..."
+		foundation:genericallyDependentOn ReqDoc1
+		info:prescribes part1:Rover_System
+	]
+	
+	ci Requirement_Comms : req:Requirement [
+		req:hasRequirementText "The Rover shall be capable of transmitting 100Mb/s to the Mars Orbiter..."
+		foundation:genericallyDependentOn ReqDoc1
+		info:prescribes part1:Rover_System
+	]
+	
+	
+	// Section 3.3.1
+	
+	// More test definitions - conditions, external systems.
+	
+	
+	// Section 3.3.2
+	
+	ci Develop_Rover_TEMP : temp_tpt:DevelopTEMP [
+		sa:canOutput part1:Rover_TEMP
+		foundation:specificallyDependentOn part2:Rover_WIPT_Role
+		event:manifestsIn Rover_TEMP_Development
+	]
+	
+	ci Rover_TEMP_Development : temp_tpt:TEMPDevelopment [
+		agent:hasOutput part1:Rover_TEMP
+	]
+	
+	ci LUT : temp_tps:LiveFireTEProgram
+	
+	ci LUT_EntranceCriteria : temp_tps:EntranceCriteria [
+		info:prescribes LUT		
+	]
+	
+	ci Rover_Efficiency : meas:Quantity [
+		foundation:specificallyDependentOn part1:Rover_System
+		meas:hasDimension dim:Efficiency
+	]
+	
+	ci Rover_Efficiency_Measurement : meas:SimpleMeasurement [
+		meas:hasUnit units:percentage
+		meas:measurementOf Rover_Efficiency
+	]
+	
+	ci MOE : meas:SimpleMeasurement [
+		foundation:genericallyDependentOn MOE_Document
+		meas:measurementOf part1:Rover_Performance
+		meas:hasUnit units:percentage
+	]
+	
+	ci MOE_Document : info:Document [
+		req:satisfies LUT_EntranceCriteria
+	]
+	
+	// Rest of this section is a repeated pattern.
+	
+	
+	// Section 3.3.2.1
+	
+	// This section contains all repeated patterns. 
+	
+	
+	// Section 3.3
+	
+	ci Model1 : info:Model
+	
+	ci Rover_Model1 : info:DescriptiveInformationEntity [
+		info:describes part1:Rover_System
+		foundation:genericallyDependentOn Model1
+	]
+	
+	
+	
+	
+	// Section 3.5
+	
+	// Same patterns demonstrated in previous examples
+	
+	
+	// Section 3.6
+	
+	// mostly repetitive
+	
+	ci RoverModel2 : info:Model
+	
+	ci LMMDR_Model2 : info:DescriptiveInformationEntity [
+		info:describes part1:Rover_System
+		foundation:genericallyDependentOn RoverModel2
+	]
+	
+	ci ReliabilitySimulation1 : ms:Simulation [
+		event:hasParticipant RoverModel2
+	]
+	
+	ci Rover_IDSK : temp_tpt:IDSK [
+		foundation:isContainedIn part1:Rover_TEMP
+		foundation:contains part2:RecommendedCorrectiveAction1
+		foundation:contains part2:RecommendedCorrectiveAction2
+		info:prescribes part2:Rover_TEProgram
+	]
+	
+	ci COI1 : temp_dec:OperationalIssue [
+		foundation:isContainedIn Rover_IDSK
+		temp_dec:informs DecisionE
+		info:describes part1:Rover_System
+	]
+	
+	ci DecisionE : temp_dec:KeyDecision [
+		info:prescribes MilestoneE
+	]
+	
+	ci MilestoneE : temp_dec:Milestone
+	
+	
+	// Section 3.7
+	
+	// Haven't got certification yet
+	
+	
+	// Section 3.8
+	
+	ci EngineeringTest1Objective : test:TestObjective [
+		info:prescribes EngineeringTest1
+		req:hasObjectiveText "The purpose of the Engineering Test 1 is to..."
+	]
+	
+	ci EngineeringTest1Procedure : test:TestProcedure [
+		info:prescribes EngineeringTest1
+		foundation:contains EngineeringTest1Objective
+	]
+	
+	ci EngineeringTest1 : test:Test [
+		event:occursAt EngineeringTest1Site
+		test:hasTestCondition EngineeringTest1Condition
+		test:hasTestSubject part1:Rover_System
+	]
+	
+	ci EngineeringTest1Site : test:TestSite
+	
+	ci EngineeringTest1Condition : test:TestCondition
+	
+
+	
+	}

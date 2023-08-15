@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://siedepartment.com/DoD_Example/Part4#"
+     xml:base="http://siedepartment.com/DoD_Example/Part4"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:SIE_Event="http://siedepartment.com/SIE_Core/SIE_Event#"
+     xmlns:SIE_Foundation="http://siedepartment.com/SIE_Foundation/SIE_Foundation#"
+     xmlns:SIE_SystemArchitecture="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#">
+    <owl:Ontology rdf:about="http://siedepartment.com/DoD_Example/Part4">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://siedepartment.com/DoD_Example/Part3"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Core/SIE_Event"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Test"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A description to capture Part _ of the example TEMP</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Description"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://siedepartment.com/SIE_Core/SIE_Event#isSiteOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://siedepartment.com/SIE_Core/SIE_Event#isSiteOf"/>
+    
+
+
+    <!-- http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canOutput -->
+
+
+    <owl:ObjectProperty rdf:about="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#canOutput"/>
+    
+
+
+    <!-- http://siedepartment.com/SIE_Foundation/SIE_Foundation#occupies -->
+
+
+    <owl:ObjectProperty rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#occupies"/>
+    
+
+
+    <!-- http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://siedepartment.com/DoD_Example/Part4#Capabaility1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://siedepartment.com/DoD_Example/Part4#Capabaility1">
+        <rdf:type rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Function"/>
+        <SIE_Foundation:specificallyDependentOn rdf:resource="http://siedepartment.com/DoD_Example/Part3#RepresentativeAsset"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://siedepartment.com/DoD_Example/Part4#GS1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://siedepartment.com/DoD_Example/Part4#GS1">
+        <rdf:type rdf:resource="http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://siedepartment.com/DoD_Example/Part4#OrgSite -->
+
+
+    <owl:NamedIndividual rdf:about="http://siedepartment.com/DoD_Example/Part4#OrgSite">
+        <rdf:type rdf:resource="http://siedepartment.com/SIE_Core/SIE_Agent#Organization"/>
+        <SIE_Foundation:occupies rdf:resource="http://siedepartment.com/DoD_Example/Part4#TestLocation1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://siedepartment.com/DoD_Example/Part4#Player -->
+
+
+    <owl:NamedIndividual rdf:about="http://siedepartment.com/DoD_Example/Part4#Player">
+        <rdf:type rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Object"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://siedepartment.com/DoD_Example/Part4#ProvideEquipment -->
+
+
+    <owl:NamedIndividual rdf:about="http://siedepartment.com/DoD_Example/Part4#ProvideEquipment">
+        <rdf:type rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Function"/>
+        <SIE_SystemArchitecture:canOutput rdf:resource="http://siedepartment.com/DoD_Example/Part3#RepresentativeAsset"/>
+        <SIE_SystemArchitecture:canOutput rdf:resource="http://siedepartment.com/DoD_Example/Part4#GS1"/>
+        <SIE_SystemArchitecture:canOutput rdf:resource="http://siedepartment.com/DoD_Example/Part4#Player"/>
+        <SIE_Foundation:specificallyDependentOn rdf:resource="http://siedepartment.com/DoD_Example/Part4#OrgSite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://siedepartment.com/DoD_Example/Part4#Representative_LMMDR_Quality -->
+
+
+    <owl:NamedIndividual rdf:about="http://siedepartment.com/DoD_Example/Part4#Representative_LMMDR_Quality">
+        <rdf:type rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Quality"/>
+        <SIE_Foundation:specificallyDependentOn rdf:resource="http://siedepartment.com/DoD_Example/Part3#RepresentativeAsset"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://siedepartment.com/DoD_Example/Part4#Test5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://siedepartment.com/DoD_Example/Part4#Test5">
+        <rdf:type rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Test#Test"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://siedepartment.com/DoD_Example/Part4#TestLocation1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://siedepartment.com/DoD_Example/Part4#TestLocation1">
+        <rdf:type rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Test#TestSite"/>
+        <SIE_Event:isSiteOf rdf:resource="http://siedepartment.com/DoD_Example/Part4#Test5"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+
+
