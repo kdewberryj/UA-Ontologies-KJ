@@ -1,0 +1,633 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#"
+     xml:base="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Agent"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Event"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Information"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A vocabulary to capture decision concepts required for TEMP</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#identifiesDataRequirement -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#identifiesDataRequirement">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirementIdentifier"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirement"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <rdfs:label>identifies data requirement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#informs -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#informs">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Information#InformationEntity"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <rdfs:label>informs</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isIdentifiedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isIdentifiedBy">
+        <owl:inverseOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#identifiesDataRequirement"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdfs:label>is identified by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isInformedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isInformedBy">
+        <owl:inverseOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#informs"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdfs:label>is informed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#ChiefEngineer -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#ChiefEngineer">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirementIdentifier"/>
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Role"/>
+        <dc:description>An [=ChiefEngineer=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Chief Engineer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirement -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirement">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isIdentifiedBy"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirementIdentifier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#IDSK"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An [=DataRequirement=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Data Requirement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirementIdentifier -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirementIdentifier">
+        <dc:description>A [=DataRequirementIdentifier=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Aspect"/>
+        <rdfs:label>Data Requirement Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#IdentifiesDataRequirement -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#IdentifiesDataRequirement">
+        <dc:description>[=IdentifiesDataRequirement=] is a </dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+        <rdfs:label>IdentifiesDataRequirement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Informs -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Informs">
+        <dc:description>[=Informs=] is a </dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+        <rdfs:label>Informs</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=KeyDecision=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Key Decision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+                <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An [=KeyDecisionPoint=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>KeyDecisionPoint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyIntegrationPoint -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyIntegrationPoint">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint"/>
+        <dc:description>An [=KeyIntegrationPoint=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Key Integration Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MDADecisionMade -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MDADecisionMade">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MakeMDADecision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+                <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MakeMDADecision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=MDADecisionMade=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>MDA Decision Made</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MakeMDADecision -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MakeMDADecision">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#MilestoneDecisionAuthority"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#MilestoneDecisionAuthority"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=MakeMDADecision=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Make MDA Decision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MakePMDecision -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MakePMDecision">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#ProgramManager"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#ProgramManager"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=MakePMDecision=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Make PM Decision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Milestone -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Milestone">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint"/>
+        <dc:description>An [=Milestone=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Milestone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#OperationalIssue -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#OperationalIssue">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#IDSK"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An [=OperationalIssue=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Operational Issue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#PMDecisionMade -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#PMDecisionMade">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MakePMDecision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+                <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MakePMDecision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=PMDecisionMade=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>PM Decision Made</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#RecommendedCorrectiveAction -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#RecommendedCorrectiveAction">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#IDSK"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An [=RecommendedCorrectiveAction=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Recommended Corrective Action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#RiskAssessment -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#RiskAssessment">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#IDSK"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An [=RiskAssessment=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Risk Assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#TechnicalReadinessDecision -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#TechnicalReadinessDecision">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint"/>
+        <dc:description>An [=TechnicalReadinessDecision=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Technical Readiness Decision</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#OperationalTestAgency -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#OperationalTestAgency">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirementIdentifier"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#WIPT -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#WIPT">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirementIdentifier"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#ProgramManager -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#ProgramManager">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirementIdentifier"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#ChiefDevelopmentalTester -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#ChiefDevelopmentalTester">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirementIdentifier"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="urn:swrl:var#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>identifiesDataRequirement derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#IdentifiesDataRequirement"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#identifiesDataRequirement"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>informs derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Informs"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#informs"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+
+
