@@ -1,0 +1,19 @@
+@dc:description "A vocabulary bundle for closed-world reasoning about TEMP Frameworks"
+vocabulary bundle <http://siedepartment.com/DoD_TEMP_Framework/bundle#> as ^bundle {
+	
+	extends <http://siedepartment.com/SIE_Core/bundle#>
+	
+	includes <http://purl.org/dc/elements/1.1/> as dc
+	
+	// The TEMP bundle includes the individual TEMP vocabularies
+	includes <http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#>
+	includes <http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#>
+	includes <http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#>
+	includes <http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#>
+	includes <http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#>
+	includes <http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#>
+	includes <http://siedepartment.com/DoD_TEMP_Framework/TEMP_Decision#>
+	includes <http://siedepartment.com/DoD_TEMP_Framework/TEMP_TEOversight#>
+	includes <http://siedepartment.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#>
+	
+}

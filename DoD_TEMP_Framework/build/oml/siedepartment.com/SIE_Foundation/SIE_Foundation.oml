@@ -1,0 +1,204 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A vocabulary to capture the foundation terminology required by the SIE Disruption Lab. Note that this is essentially a simplified version of gUFO."
+@dc:hasVersion "0.1"
+vocabulary <http://siedepartment.com/SIE_Foundation/SIE_Foundation#> as foundation {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Imports ///////
+	
+	
+	// Import standard vocabularies	
+	
+    extends <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    extends <http://www.w3.org/2001/XMLSchema#> as xsd 
+    
+   	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Definitions ///////
+	
+	
+	///// Aspects
+	
+	@rdfs:label "Contained Element"
+	aspect ContainedElement
+	
+	@rdfs:label "Container"
+	aspect Container
+	
+	@rdfs:label "SDC Carrier"
+	aspect SDCCarrier
+		
+	
+	///// Concepts
+	
+	@rdfs:label "IdentifiedEntity"
+	concept IdentifiedEntity
+	
+	@rdfs:label "Occurrent"
+	concept Occurrent :> IdentifiedEntity, ContainedElement
+	
+	@rdfs:label "Continuant"
+	concept Continuant :> IdentifiedEntity
+	
+	@rdfs:label "Temporal Region"
+	concept TemporalRegion :> Occurrent, Container, ContainedElement [
+		restricts all relation contains to TemporalRegion
+		restricts all relation isContainedIn to TemporalRegion  
+	]
+	
+	@rdfs:label "Process"
+	concept Process :> Occurrent, Container, ContainedElement [
+		restricts all relation contains to Process
+		restricts all relation isContainedIn to Process 
+	]
+	
+	@rdfs:label "Independent Continuant"
+	concept IndependentContinuant :> Continuant, SDCCarrier
+	
+	@rdfs:label "Specifically Dependent Continuant"
+	concept SpecificallyDependentContinuant :> Continuant [
+		restricts some relation specificallyDependentOn to SDCCarrier
+	]
+	
+	@rdfs:label "Generically Dependent Continuant"
+	concept GenericallyDependentContinuant :> Continuant
+	
+	@rdfs:label "Realizable Entity"
+	concept RealizableEntity :> SpecificallyDependentContinuant
+	
+	@rdfs:label "Quality"
+	concept Quality :> SpecificallyDependentContinuant
+	
+	@rdfs:label "Disposition"
+	concept Disposition :> RealizableEntity
+	
+	@rdfs:label "Function"
+	concept Function :> Disposition, Container, ContainedElement [
+		restricts all relation contains to Function
+		restricts all relation isContainedIn to Function  
+	]
+	
+	@rdfs:label "Material Entity"
+	concept MaterialEntity :> IndependentContinuant, ContainedElement
+	
+	@rdfs:label "Object Aggregate"
+	concept ObjectAggregate :> MaterialEntity, Container [
+		restricts all relation contains to MaterialEntity
+		restricts all relation isContainedIn to ObjectAggregate  
+	]
+	
+	@rdfs:label "Object"
+	concept Object :> MaterialEntity
+	
+	@rdfs:label "Immaterial Entity"
+	concept ImmaterialEntity :> IndependentContinuant
+	
+	@rdfs:label "Site"
+	concept Site :> ImmaterialEntity
+	
+	@rdfs:label "Energy"
+	concept Energy :> ImmaterialEntity
+	
+	@rdfs:label "Role"
+	concept Role :> GenericallyDependentContinuant, Container, ContainedElement, SDCCarrier [
+		restricts all relation contains to Role
+		restricts all relation isContainedIn to Role  
+	]
+	
+	
+	
+	///// Relations
+	
+	@rdfs:label "Contains"
+	@dc:description "[=Contains=] is a..."
+	relation entity Contains [
+		from Container
+		to ContainedElement
+		@rdfs:label "contains"
+		forward contains
+		@rdfs:label "is contained in"
+		reverse isContainedIn
+		asymmetric
+		irreflexive
+	]
+	
+	@rdfs:label "Specifically Dependent On"
+	@dc:description "[=SpecificallyDependentOn=] is a..."
+	relation entity SpecificallyDependentOn [
+		from SpecificallyDependentContinuant
+		to SDCCarrier
+		@rdfs:label "specifically dependent on"
+		forward specificallyDependentOn
+		@rdfs:label "has specific dependent"
+		reverse hasSpecificDependent
+		asymmetric
+		irreflexive
+	]
+	
+	@rdfs:label "Generically Dependent On"
+	@dc:description "[=GenericallyDependentOn=] is a..."
+	relation entity GenericallyDependentOn [
+		from GenericallyDependentContinuant
+		to IndependentContinuant
+		@rdfs:label "generically dependent on"
+		forward genericallyDependentOn
+		@rdfs:label "has generic dependent"
+		reverse hasGenericDependent
+		asymmetric
+		irreflexive
+	]
+	
+	@rdfs:label "Occupies"
+	@dc:description "[=Occupies=] is a..."
+	relation entity Occupies [
+		from MaterialEntity
+		to Site
+		@rdfs:label "occupies"
+		forward occupies
+		@rdfs:label "is occupied by"
+		reverse isOccupiedBy
+		asymmetric
+		irreflexive
+	]
+	
+	
+	
+	///// Scalar Properties
+	
+	@rdfs:label "has name"
+	@dc:description "[=hasName=] ..."
+	scalar property hasName [
+		domain IdentifiedEntity
+		range xsd:string
+	]
+	
+	@rdfs:label "has ID"
+	@dc:description "[=hasID=] ..."
+	scalar property hasID [
+		domain IdentifiedEntity
+		range xsd:string
+	]
+	
+	@rdfs:label "has begin instant"
+	@dc:description "[=hasBeginInstant=] ..."
+	scalar property hasBeginInstant [
+		domain TemporalRegion
+		range xsd:dateTime
+	]
+	
+	@rdfs:label "has end instant"
+	@dc:description "[=hasEndInstant=] ..."
+	scalar property hasEndInstant [
+		domain TemporalRegion
+		range xsd:dateTime
+	]
+	
+	///// Rules
+
+	
+	
+	}

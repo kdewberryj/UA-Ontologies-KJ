@@ -1,0 +1,5 @@
+vocabulary bundle <http://siedepartment.com/SIE_Foundation/bundle#> as ^bundle {
+	
+	includes <http://siedepartment.com/SIE_Foundation/SIE_Foundation#>
+	
+}

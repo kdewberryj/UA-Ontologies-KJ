@@ -1,0 +1,121 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A vocabulary to capture organization concepts required for TEMP"
+@dc:hasVersion "0.1"
+vocabulary <http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Imports ///////
+	
+	
+	// Import standard vocabularies	
+	
+    extends <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    //extends <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Import relevant vocabularies
+    
+	extends <http://siedepartment.com/SIE_Foundation/SIE_Foundation#> as foundation
+    
+    extends <http://siedepartment.com/SIE_Core/SIE_Information#> as info
+    //extends <http://siedepartment.com/SIE_Core/SIE_Event#> as event
+    extends <http://siedepartment.com/SIE_Core/SIE_Agent#> as agent
+    //extends <http://siedepartment.com/SIE_Core/SIE_Measurement#> as meas
+    //extends <http://siedepartment.com/SIE_Core/SIE_Provenance#> as prov
+    
+    //extends <http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#> as sa
+	//extends <http://siedepartment.com/SIE_Domain/SIE_Mission#> as mission
+	extends <http://siedepartment.com/SIE_Domain/SIE_Requirements#> as req
+	extends <http://siedepartment.com/SIE_Domain/SIE_Test#> as test
+	//extends <http://siedepartment.com/SIE_Domain/SIE_Software#> as sw
+	//extends <http://siedepartment.com/SIE_Domain/SIE_DataManagement#> as dm
+	//extends <http://siedepartment.com/SIE_Domain/SIE_ModelingAndSimulation#> as ms
+	extends <http://siedepartment.com/SIE_Domain/SIE_ProjectManagement#> as pm
+	//extends <http://siedepartment.com/SIE_Domain/SIE_Acquisition#> as acq
+    
+    extends <http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Definitions ///////
+	
+	
+	///// Aspects
+	
+
+	
+	///// Concepts
+	
+	@rdfs:label "Test And Evaluation Program"
+	@dc:description "A [=TestAndEvaluationProgram=] is a..."
+	concept TestAndEvaluationProgram :> pm:Program [
+		restricts all relation foundation:contains to TestAndEvaluationProgram
+	]
+	
+	@rdfs:label "IntegratedTestProgram"
+	@dc:description "An [=IntegratedTestProgram=] is a..."
+	concept IntegratedTestProgram :> TestAndEvaluationProgram
+	
+	@rdfs:label "MajorDefenceAcquisitionProgram"
+	@dc:description "An [=MajorDefenceAcquisitionProgram=] is a..."
+	concept MajorDefenceAcquisitionProgram :> pm:Program [
+		restricts some relation foundation:contains to IntegratedTestProgram
+	]
+	
+	@rdfs:label "Test Program Objective"
+	@dc:description "A [=TestProgramObjective=] is a..."
+	concept TestProgramObjective :> req:Objective [
+		restricts some relation info:prescribes to pm:Program
+	]
+	
+	
+	///// Relations
+	
+	@rdfs:label "Undertakes"
+	@dc:description "[=Undertake=] is a "
+	relation entity Undertake [
+		from agent:Organization
+		to pm:Program
+		@rdfs:label "undertakes"
+		forward undertakes
+		@rdfs:label "is undertaken by"
+		reverse isUndertakenBy
+		asymmetric
+		irreflexive
+	]
+	
+	@rdfs:label "Conducts"
+	@dc:description "[=Conducts=] is a "
+	relation entity Conducts [
+		from temp_org:DoDComponent
+		to IntegratedTestProgram
+		@rdfs:label "conducts"
+		forward conducts
+		@rdfs:label "is conducted by"
+		reverse isConductedBy
+		asymmetric
+		irreflexive
+	]
+	
+	@rdfs:label "Comprises Test"
+	@dc:description "[=ComprisesTest=] is a "
+	relation entity ComprisesTest [
+		from TestAndEvaluationProgram
+		to test:Test
+		@rdfs:label "comprises test"
+		forward comprisesTest
+		@rdfs:label "is part of of program"
+		reverse isPartOfProgram
+		asymmetric
+		irreflexive
+	]
+	
+	
+	
+	///// Scalar Properties
+	
+	
+	}

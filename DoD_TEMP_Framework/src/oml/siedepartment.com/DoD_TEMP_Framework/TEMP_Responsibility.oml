@@ -1,0 +1,237 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A vocabulary to capture responsibility concepts required for TEMP"
+@dc:hasVersion "0.1"
+vocabulary <http://siedepartment.com/DoD_TEMP_Framework/TEMP_Responsibility#> as temp_resp {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Imports ///////
+	
+	
+	// Import standard vocabularies	
+	
+    extends <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    //extends <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Import relevant vocabularies
+    
+    extends <http://siedepartment.com/SIE_Foundation/SIE_Foundation#> as foundation
+    
+    extends <http://siedepartment.com/SIE_Core/SIE_Information#> as info
+    extends <http://siedepartment.com/SIE_Core/SIE_Event#> as event
+    extends <http://siedepartment.com/SIE_Core/SIE_Agent#> as agent
+    //extends <http://siedepartment.com/SIE_Core/SIE_Measurement#> as meas
+    //extends <http://siedepartment.com/SIE_Core/SIE_Provenance#> as prov
+    
+    extends <http://siedepartment.com/SIE_Domain/SIE_SystemArchitecture#> as sa
+	//extends <http://siedepartment.com/SIE_Domain/SIE_Mission#> as mission
+	//extends <http://siedepartment.com/SIE_Domain/SIE_Requirements#> as req
+	extends <http://siedepartment.com/SIE_Domain/SIE_Test#> as test
+	//extends <http://siedepartment.com/SIE_Domain/SIE_Software#> as sw
+	//extends <http://siedepartment.com/SIE_Domain/SIE_DataManagement#> as dm
+	//extends <http://siedepartment.com/SIE_Domain/SIE_ModelingAndSimulation#> as ms
+	//extends <http://siedepartment.com/SIE_Domain/SIE_ProjectManagement#> as pm
+	//extends <http://siedepartment.com/SIE_Domain/SIE_Acquisition#> as acq
+    
+    extends <http://siedepartment.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	extends <http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp
+	//extends <http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#> as temp_tps
+	extends <http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#> as temp_tpf
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Definitions ///////
+	
+	
+	///// Aspects
+	
+
+	
+		
+	///// Concepts
+	
+	
+	@rdfs:label "Produce TE Procedure"
+	@dc:description "A [=ProduceTEProcedure=] is a..."
+	concept ProduceTEProcedure :> foundation:Function [
+		restricts all relation foundation:specificallyDependentOn to temp_org:DOTE
+		restricts some relation foundation:specificallyDependentOn to temp_org:DOTE
+		restricts all relation sa:canOutput to test:TestProcedure
+	]
+	
+	@rdfs:label "TE Procedure Production"
+	@dc:description "A [=TEProcedureProduction=] is a..."
+	concept TEProcedureProduction :> sa:FunctionOccurrence [
+		restricts all relation event:isManifestationOf to ProduceTEProcedure
+		restricts some relation event:isManifestationOf to ProduceTEProcedure
+		restricts some relation agent:hasOutput to test:TestProcedure 
+	]
+	
+	@rdfs:label "TE Framework Approval"
+	@dc:description "A [=TEFrameworkApproval=] is a..."
+	concept TEFrameworkApproval :> sa:FunctionOccurrence	
+	
+	@rdfs:label "Approve DTE Framework"
+	@dc:description "A [=ApproveDTEFramework=] is a..."
+	concept ApproveDTEFramework :> foundation:Function [
+		restricts all relation foundation:specificallyDependentOn to temp_org:USDRE
+		restricts some relation foundation:specificallyDependentOn to temp_org:USDRE
+		restricts all relation sa:canOutput to temp_tpf:DevelopmentalEvaluationFramework
+		restricts all relation sa:canInput to temp_tpf:DevelopmentalEvaluationFramework
+	]
+	
+	@rdfs:label "DTE Framework Approval"
+	@dc:description "A [=DTEFrameworkApproval=] is a..."
+	concept DTEFrameworkApproval :> TEFrameworkApproval [
+		restricts all relation event:isManifestationOf to ApproveDTEFramework
+		restricts some relation event:isManifestationOf to ApproveDTEFramework
+		restricts some relation agent:hasOutput to temp_tpf:DevelopmentalEvaluationFramework
+		restricts some relation agent:hasInput to temp_tpf:DevelopmentalEvaluationFramework 
+	]
+	
+	@rdfs:label "Approve OTE Framework"
+	@dc:description "A [=ApproveOTEFramework=] is a..."
+	concept ApproveOTEFramework :> foundation:Function [
+		restricts all relation foundation:specificallyDependentOn to temp_org:DOTE
+		restricts some relation foundation:specificallyDependentOn to temp_org:DOTE
+		restricts all relation sa:canOutput to temp_tpf:OperationalEvaluationFramework
+		restricts all relation sa:canInput to temp_tpf:OperationalEvaluationFramework
+	]
+	
+	@rdfs:label "OTE Framework Approval"
+	@dc:description "A [=OTEFrameworkApproval=] is a..."
+	concept OTEFrameworkApproval :> TEFrameworkApproval [
+		restricts all relation event:isManifestationOf to ApproveOTEFramework
+		restricts some relation event:isManifestationOf to ApproveOTEFramework
+		restricts some relation agent:hasOutput to temp_tpf:OperationalEvaluationFramework
+		restricts some relation agent:hasInput to temp_tpf:OperationalEvaluationFramework 
+	]
+	
+	@rdfs:label "Approve LFTE Framework"
+	@dc:description "A [=ApproveLFTEFramework=] is a..."
+	concept ApproveLFTEFramework :> foundation:Function [
+		restricts all relation foundation:specificallyDependentOn to temp_org:DOTE
+		restricts some relation foundation:specificallyDependentOn to temp_org:DOTE
+		restricts all relation sa:canOutput to temp_tpf:LiveFireTestProgramFramework
+		restricts all relation sa:canInput to temp_tpf:LiveFireTestProgramFramework
+	]
+	
+	@rdfs:label "LFTE Framework Approval"
+	@dc:description "A [=OTEFrameworkApproval=] is a..."
+	concept LFTEFrameworkApproval :> TEFrameworkApproval [
+		restricts all relation event:isManifestationOf to ApproveLFTEFramework
+		restricts some relation event:isManifestationOf to ApproveLFTEFramework
+		restricts some relation agent:hasOutput to temp_tpf:LiveFireTestProgramFramework
+		restricts some relation agent:hasInput to temp_tpf:LiveFireTestProgramFramework 
+	]
+	
+	@rdfs:label "Generate TE Oversight List"
+	@dc:description "A [=GenerateTEOversightList=] is a..."
+	concept GenerateTEOversightList :> foundation:Function [
+		restricts all relation foundation:specificallyDependentOn to temp_org:DOTE
+		restricts some relation foundation:specificallyDependentOn to temp_org:DOTE
+		restricts all relation sa:canOutput to TEOversightList
+	]
+	
+	@rdfs:label "TE Oversight List Generation"
+	@dc:description "A [=TEProcedureProduction=] is a..."
+	concept TEOversightListGeneration :> sa:FunctionOccurrence [
+		restricts all relation event:isManifestationOf to GenerateTEOversightList
+		restricts some relation event:isManifestationOf to GenerateTEOversightList
+		restricts some relation agent:hasOutput to TEOversightList 
+	]
+	
+	@rdfs:label "TE Oversight List"
+	@dc:description "A [=TEOversightList=] is a..."
+	concept TEOversightList :> info:DescriptiveInformationEntity
+	
+	@rdfs:label "Produce TE Report"
+	@dc:description "A [=ProduceTEReport=] is a..."
+	concept ProduceTEReport :> foundation:Function [
+		restricts all relation foundation:specificallyDependentOn to temp_org:DOTE
+		restricts some relation foundation:specificallyDependentOn to temp_org:DOTE
+		restricts all relation sa:canOutput to TEReport
+	]
+	
+	@rdfs:label "TE Report Production"
+	@dc:description "A [=TEReportProduction=] is a..."
+	concept TEReportProduction :> sa:FunctionOccurrence [
+		restricts all relation event:isManifestationOf to ProduceTEReport
+		restricts some relation event:isManifestationOf to ProduceTEReport
+		restricts some relation agent:hasOutput to TEReport 
+	]
+	
+	@rdfs:label "TE Report"
+	@dc:description "A [=TEReport=] is a..."
+	concept TEReport :> info:DescriptiveInformationEntity
+	
+	
+			
+					
+	
+	///// Relation entities
+	
+	@rdfs:label "Oversees"
+	@dc:description "[=Oversees=] is a "
+	relation entity Oversees [
+		from temp_org:DOTE
+		to temp_tpp:MajorDefenceAcquisitionProgram
+		@rdfs:label "oversees"
+		forward oversees
+		@rdfs:label "is overseen by"
+		reverse isOverseenBy
+		asymmetric
+		irreflexive
+	]
+	
+	@rdfs:label "Monitors"
+	@dc:description "[=Monitors=] is a "
+	relation entity Monitors [
+		from temp_org:DOTE
+		to temp_tpp:IntegratedTestProgram
+		@rdfs:label "monitors"
+		forward monitors
+		@rdfs:label "is monitored by"
+		reverse isMonitoredBy
+		asymmetric
+		irreflexive
+	]
+	
+	@rdfs:label "Reviews"
+	@dc:description "[=Reviews=] is a "
+	relation entity Reviews [
+		from temp_org:DOTE
+		to temp_tpp:IntegratedTestProgram
+		@rdfs:label "reviews"
+		forward reviews
+		@rdfs:label "is reviewed by"
+		reverse isReviewedBy
+		asymmetric
+		irreflexive
+	]
+	
+	
+		
+	///// Scalar Properties
+
+	
+		
+	///// Redefine Concepts
+	
+
+
+	///// Rules
+	
+	//@rdfs:comment "By default, TE Frameworks are assumed to be unapproved"
+	//rule r1-ApprovalStatus-Default [
+	//	temp_tpf:TEFramework(a) -> temp_tpf:hasApprovalStatus(a,"Unapproved")
+	//]
+		
+	//@rdfs:comment "If TE Framework is the output of an approval process, then we can infer it has been approved"
+	//rule r2-ApprovalOutput-infers-Approval [
+	//	temp_tpf:TEFramework(x) ^ TEFrameworkApproval(y) ^ org:hasOutput(y, x) -> temp_tpf:hasApprovalStatus(x,"Approved")
+	//]
+	
+}
