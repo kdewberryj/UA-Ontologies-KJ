@@ -1,0 +1,124 @@
+{ "head": {
+    "vars": [ "IE" , "IA" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#CS_Req1" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#CSD1" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#CS_Req2" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#CSD1" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#DebrisThreatDescription" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#TD1" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#KPP_1" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#KPPD1" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#KPP_2" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#KPPD1" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#KSA_1" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#KPPD1" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#KSA_2" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#KPPD1" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#RadiationThreatDescription" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#TD1" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#SEProcedure" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#SED1" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_Comms" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#ReqDoc1" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_Vibration" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#ReqDoc1" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#CommsTestPlan" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#DevTestMemo" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#LMMDR_Model2" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#RoverModel2" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#MOE" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#MOE_Document" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#CommsTest_Result" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#Dev_TIR" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#VibrationTest_Result" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#Dev_TIR" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityModel_Final" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityDoc" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityModel_Initial" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityDoc" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_MBTSA" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#MBTSA_Doc" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#RecommendedCorrectiveAction1" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#CorrectiveActionDatabase" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#RecommendedCorrectiveAction2" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#CorrectiveActionDatabase" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Model1" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#Model1" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_Procedure" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#TATD1" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#VibrationTestPlan" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#DevTestMemo" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#LowPowerTest_Result" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#Op_TIR" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#MATDEV_OTRS" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#Document_MATDEV_OTRS" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#Rover_WIPT_Info" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#Rover_WIPT_Charter" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#TEMPReviewProcedure" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#TEMPD1" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#TargetAcquisitionTest_Result" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#Op_TIR" }
+      }
+    ]
+  }
+}

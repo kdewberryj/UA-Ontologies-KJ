@@ -1,0 +1,348 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture Part _ of the example TEMP"
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/DoD_Example/Part2#> as part2 {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    //uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    //uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    //uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	//uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    
+    uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#> as temp_tps
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#> as temp_tpf
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#> as temp_resp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> as temp_tpt
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_dec
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as temp_teo
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#> as temp_ear
+    
+    // Extends other descriptions
+    
+    extends <http://uaontologies.com/DoD_Example/Part1#> as part1 
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	//// PART 2 - TEST PROGRAM MANAGEMENT AND SCHEDULE
+	
+	//////////////////////////// Description Definitions //////////////////////////////	
+
+	// Section 2.1
+	
+	ci DOTE1 : temp_org:DOTE [
+		temp_teo:managesTEOL TEOversightList1
+	]
+	
+	ci TEOversightList1 : temp_resp:TEOversightList [
+		foundation:contains OTEProgramDefinition
+		info:describes LMMDRTEProgram
+	]
+	
+	ci OTEProgramDefinition : temp_teo:TEProgramDefinition [
+		info:describes LMMDROTEProgram
+	]
+	
+	ci LMMDRTEProgram : temp_tpp:IntegratedTestProgram [
+		foundation:isContainedIn part1:LMMDRProgram
+		foundation:contains LMMDRDTEProgram1
+		foundation:contains LMMDRDTEProgram2
+		foundation:contains LMMDROverallOTEProgram
+		foundation:contains LMMDRLTEProgram
+	]
+	
+	ref ci part1:LMMDR_TEMP [
+		info:prescribes LMMDRTEProgram
+	]
+	
+	ci CapstoneDevelopmentTest : test:Test [
+		event:hasParticipant Soldiers
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ci Soldiers : foundation:ObjectAggregate
+	
+	ci LMMDRDTEProgram1 : temp_tps:DevelopmentalTEProgram [
+		temp_tpp:comprisesTest CapstoneDevelopmentTest
+	]
+	ci LMMDRDTEProgram2 : temp_tps:DevelopmentalTEProgram
+	ci LMMDRIOTEProgram1 : temp_tps:InitialOperationalTEProgram
+	ci LMMDRIOTEProgram2 : temp_tps:InitialOperationalTEProgram
+	ci LMMDROTEProgram : temp_tps:OperationalTEProgram
+	ci LMMDRLTEProgram : temp_tps:LiveFireTEProgram
+	
+	ci LMMDROverallOTEProgram : temp_tps:OperationalTEProgram [
+		foundation:contains LMMDRIOTEProgram1
+		foundation:contains LMMDRIOTEProgram2
+		foundation:contains LMMDROTEProgram
+	]
+	
+	ci PdM : temp_tps:ProgramManager [
+		temp_tps:manages LMMDRDTEProgram1
+		temp_tps:manages LMMDRDTEProgram2
+	]
+	
+	ci Person1 : agent:Person [
+		agent:hasRole PdM
+	]
+	
+	ci Organization1 : agent:Organization [
+		temp_tpp:undertakes LMMDRDTEProgram1
+		temp_tpp:undertakes LMMDRDTEProgram2
+	]
+	
+	ci OTC : agent:Organization [
+		temp_tpp:undertakes LMMDRIOTEProgram1
+		temp_tpp:undertakes LMMDRIOTEProgram1
+		temp_tpp:undertakes LMMDROTEProgram
+	]
+	
+	ci ApproveOTEFramework1 : temp_resp:ApproveOTEFramework [
+		foundation:specificallyDependentOn DOTE1
+		event:manifestsIn IOTE1FrameworkApproval
+		event:manifestsIn IOTE2FrameworkApproval
+		event:manifestsIn OTEFrameworkApproval
+	]
+	
+	ci IOTE1FrameworkApproval : temp_resp:OTEFrameworkApproval [
+		agent:hasInput IOTE1Framework
+		agent:hasOutput IOTE1Framework
+	]
+	
+	ci IOTE2FrameworkApproval : temp_resp:OTEFrameworkApproval [
+		agent:hasInput IOTE2Framework
+		agent:hasOutput IOTE2Framework
+	]
+	
+	ci OTEFrameworkApproval : temp_resp:OTEFrameworkApproval [
+		agent:hasInput OTEFramework
+		agent:hasOutput OTEFramework
+	]
+	
+	ci IOTE1Framework : temp_tpf:OperationalEvaluationFramework [
+		info:prescribes LMMDRIOTEProgram1
+		foundation:isContainedIn part1:LMMDR_TEMP
+	]
+	
+	ci IOTE2Framework : temp_tpf:OperationalEvaluationFramework [
+		info:prescribes LMMDRIOTEProgram2
+		foundation:isContainedIn part1:LMMDR_TEMP
+	]
+	
+	ci OTEFramework : temp_tpf:OperationalEvaluationFramework [
+		info:prescribes LMMDROTEProgram
+		foundation:isContainedIn part1:LMMDR_TEMP
+	]
+	
+	ci OTEObjective : temp_tpp:TestProgramObjective [
+		info:prescribes LMMDROverallOTEProgram
+		req:hasObjectiveText "Evaluate the Mission Capability"
+	]
+	
+	// Section 2.1.1
+	
+	ci LTO : agent:Organization
+	ci LDTO : agent:Organization
+	ci OTA : agent:Organization
+	ci LMMDR_WIPT : agent:Organization [
+		foundation:contains LTO
+		foundation:contains LDTO
+		foundation:contains OTA
+	]
+	
+	ci LTO_Role : temp_org:LeadTestOrganization [
+		foundation:genericallyDependentOn LTO
+		temp_tpt:isDesignatedBy PdM
+	]
+	
+	ci LDTO_Role : temp_org:LeadDevelopmentalTestOrganization [
+		foundation:genericallyDependentOn LDTO
+		temp_tpt:isDesignatedBy PdM
+	]
+	
+	ci OTA_Role : temp_org:OperationalTestAgency [
+		foundation:genericallyDependentOn OTA
+		temp_tpt:isDesignatedBy PdM
+	]
+	
+	ci LMMDR_WIPT_Role : temp_org:WIPT [
+		foundation:genericallyDependentOn LMMDR_WIPT
+		foundation:contains LTO_Role
+		foundation:contains LDTO_Role
+		foundation:contains OTA_Role
+	]
+	
+	ci LMMDR_WIPT_Charter : info:Document
+	
+	ci LMMDR_WIPT_Info : info:PrescriptiveInformationEntity [
+		foundation:genericallyDependentOn LMMDR_WIPT_Charter
+		info:prescribes LMMDR_WIPT_Role
+	]
+	
+	ci TEWG1 : agent:Organization
+	
+	ci TEWG2 : agent:Organization
+	
+	ci Develop_LMMDR_ITS : temp_tpt:DevelopITS [
+		sa:canOutput LMMDR_ITS
+		foundation:specificallyDependentOn LMMDR_WIPT_Role
+	]
+	
+	ci LMMDR_ITS : temp_tpt:IntegratedTestSchedule [
+		temp_tpt:schedules LMMDRTEProgram
+	]
+	
+	ci MATDEV : foundation:Role
+	
+	ci LMMDR_CDT : temp_tpt:ChiefDevelopmentalTester [
+		temp_tpt:chairsWIPT LMMDR_WIPT_Role
+		temp_tpt:isDesignatedBy PdM
+	]
+	
+	ci Person2 : agent:Person [
+		agent:hasRole MATDEV
+		agent:hasRole LMMDR_CDT
+	]
+	
+	ci Produce_MATDEV_OTRS : foundation:Function [
+		sa:canOutput MATDEV_OTRS
+		foundation:specificallyDependentOn MATDEV
+	]
+	
+	ci MATDEV_OTRS : info:Document
+	
+	ci CBTDEV : foundation:Role //this role is not defined in the TEMP - what level do we need to capture?
+	
+	ci CustomerEvaluator : foundation:Role //this role is not defined in the TEMP - what level do we need to capture?
+	
+	// Section 2.2
+	
+	ci DevTest1 : test:Test [
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ci DevTest2 : test:Test [
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ci OpTest1 : test:Test [
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ci OpTest2 : test:Test [
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ref ci LMMDRDTEProgram2 [
+		temp_tpp:comprisesTest DevTest1
+		temp_tpp:comprisesTest DevTest2
+	]
+	
+	ref ci LMMDROTEProgram [
+		temp_tpp:comprisesTest OpTest1
+		temp_tpp:comprisesTest OpTest2
+	]
+	
+	ci DevTest1_Result : test:TestResult [
+		info:describes DevTest1
+		foundation:genericallyDependentOn Dev_TIR
+	]
+	
+	ci DevTest2_Result : test:TestResult [
+		info:describes DevTest2
+		foundation:genericallyDependentOn Dev_TIR
+	]
+	
+	ci OpTest1_Result : test:TestResult [
+		info:describes OpTest1
+		foundation:genericallyDependentOn Op_TIR
+	]
+	
+	ci OpTest2_Result : test:TestResult [
+		info:describes OpTest2
+		foundation:genericallyDependentOn Op_TIR
+	]
+	
+	ci Dev_TIR : info:Document
+	
+	ci Op_TIR : info:Document
+	
+	ci Repository1 : dm:Repository [
+		dm:isDigitalLocationOf Dev_TIR
+		dm:isDigitalLocationOf Op_TIR
+		dm:isAccessibleBy Person1
+		dm:isAccessibleBy TEWG1
+	]
+	
+	ci ExternalDataDoc : info:Document
+	
+	ci Repository2_External : dm:Repository [
+		dm:isAccessibleBy Contractor1
+		dm:isDigitalLocationOf ExternalDataDoc
+	]
+	
+	ci Contractor1 : agent:Organization
+	
+	
+	// Section 2.3
+	
+	
+	ci DeficiencyReportingSystem : sw:Software [
+		dm:supportsRepository Repository1
+	]
+	
+	ci CorrectiveActionDatabase : info:Model
+	
+	ci RecommendedCorrectiveAction1 : temp_dec:RecommendedCorrectiveAction [
+		foundation:genericallyDependentOn CorrectiveActionDatabase
+		info:prescribes LMMDRTEProgram
+	]
+	
+	ci RecommendedCorrectiveAction2 : temp_dec:RecommendedCorrectiveAction [
+		foundation:genericallyDependentOn CorrectiveActionDatabase
+		info:prescribes LMMDRTEProgram
+	]
+	
+	
+	// Section 2.4
+	
+	ci MilestoneA : temp_dec:Milestone 
+	
+	ci NormativeDocument : info:Document
+	
+	ci TEMPReviewPlan : info:PrescriptiveInformationEntity [
+		foundation:genericallyDependentOn NormativeDocument
+		info:prescribes part1:LMMDR_TEMP
+	]
+	
+	
+	
+	
+	}

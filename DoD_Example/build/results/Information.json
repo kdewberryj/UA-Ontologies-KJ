@@ -1,0 +1,104 @@
+{ "head": {
+    "vars": [ "IE" , "IA" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#CS_Req1" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#CS_Document" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#CS_Req2" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#CS_Document" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#KPP_1" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#Document_KPP" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#KPP_2" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#Document_KPP" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#KSA_1" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#Document_KPP" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#KSA_2" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#Document_KPP" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#SEPlan" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#Document_SEPlan" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#ThreatDescription" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part1#DocumentXYZ" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part3#Requirement_3" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part3#DevTestMemo" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part3#Requirement_4" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part3#DevTestMemo" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part3#DevTestPlan" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part3#DevTestMemo" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#DevTest1_Result" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#Dev_TIR" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#DevTest2_Result" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#Dev_TIR" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#RecommendedCorrectiveAction1" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#CorrectiveActionDatabase" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#RecommendedCorrectiveAction2" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#CorrectiveActionDatabase" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part3#LMMDR_Model1" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part3#Model1" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part3#LMMDR_Model2" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part3#Model2" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part3#MOE" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part3#MOE_Document" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part3#OpTestConditionInfo" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part3#OpTestMemo" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part3#Requirement_MBTSA" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part3#MBTSA_Doc" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#LMMDR_WIPT_Info" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#LMMDR_WIPT_Charter" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#OpTest1_Result" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#Op_TIR" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#OpTest2_Result" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#Op_TIR" }
+      } ,
+      { 
+        "IE": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#TEMPReviewPlan" } ,
+        "IA": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example/Part2#NormativeDocument" }
+      }
+    ]
+  }
+}

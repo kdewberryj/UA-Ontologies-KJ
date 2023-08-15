@@ -1,0 +1,9 @@
+{ "head": {
+    "vars": [ "Role" , "Agent" , "Name" ]
+  } ,
+  "results": {
+    "bindings": [
+      
+    ]
+  }
+}

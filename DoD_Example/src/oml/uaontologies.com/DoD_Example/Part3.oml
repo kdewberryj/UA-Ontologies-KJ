@@ -1,0 +1,680 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture Part _ of the example TEMP"
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/DoD_Example/Part3#> as part3 {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    //uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	//uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    
+    //uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#> as temp_tps
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#> as temp_tpf
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#> as temp_resp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> as temp_tpt
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_dec
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as temp_teo
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#> as temp_ear
+    
+    // Extends other descriptions
+    
+    extends <http://uaontologies.com/DoD_Example/Part1#> as part1
+    extends <http://uaontologies.com/DoD_Example/Part2#> as part2
+    extends <http://uaontologies.com/UA_Libraries/Dimensions#> as dim
+    extends <http://uaontologies.com/UA_Libraries/Units#> as units
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	//// PART 3 - TEST AND EVALUATION STRATEGY
+	
+	//////////////////////////// Description Definitions //////////////////////////////	
+
+	// Section 3.1
+	
+	ci MakeMilestoneADecision : foundation:Function [
+		foundation:specificallyDependentOn part1:LMMDR_MDA
+		event:manifestsIn MilestoneADecisionMade
+	]
+	
+	ci MilestoneADecisionMade : sa:FunctionOccurrence
+	
+	ci Test1 : test:Test [
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ci Test2 : test:Test [
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ci Test1Data : test:TestResult [
+		info:describes Test1
+	]
+	
+	ci Test2Data : test:TestResult [
+		info:describes Test2
+	]
+	
+	ci ORG1_TestReport : info:DescriptiveInformationEntity [
+		foundation:contains Test1Data
+		info:describes Test1
+	]
+	
+	ci ORG2_TestReport : info:DescriptiveInformationEntity [
+		foundation:contains Test2Data
+		info:describes Test2
+	]
+	
+	ci IOTE2_Criteria : temp_tps:EntranceCriteria [
+		info:prescribes part2:LMMDROTEProgram
+	]
+	
+	ci MilestoneADecision : temp_dec:KeyDecision [
+		info:prescribes part2:MilestoneA
+		temp_dec:isInformedBy ORG1_TestReport
+		temp_dec:isInformedBy ORG2_TestReport
+	]
+	
+	ref ci part2:MilestoneA [
+		event:occursOn MilestoneA_TemporalRegion
+	]
+	
+	ci MilestoneA_TemporalRegion : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-01-01T12:00:00"^^xsd:dateTime
+	] 
+	
+	ci ProduceLMMDREvaluation : temp_ear:ProduceSystemEvaluation [
+		event:manifestsIn LMMDREvaluationProduction
+		foundation:specificallyDependentOn part2:OTA_Role
+		sa:canInput part2:DevTest1_Result
+		sa:canInput part2:DevTest2_Result
+		sa:canOutput LMMDREvaluationResult
+	]
+	
+	ci LMMDREvaluationProduction : temp_ear:SystemEvaluationProduction [
+		agent:hasInput part2:DevTest1_Result
+		agent:hasInput part2:DevTest2_Result
+		agent:hasOutput LMMDREvaluationResult
+	]
+	
+	ci LMMDREvaluationResult : temp_ear:SystemEvaluation [
+		foundation:contains part2:DevTest1_Result
+		foundation:contains part2:DevTest2_Result
+		info:describes part1:LMMDRSystem
+	]
+	
+	// Two DevPhases defined in Part2
+	
+	ci MilestoneC : temp_dec:Milestone [
+		event:occursOn MilestoneC_TimePeriod
+	]
+	
+	ci MilestoneC_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	ci MakeMilestoneCDecision : foundation:Function [
+		foundation:specificallyDependentOn part1:LMMDR_MDA
+		event:manifestsIn MilestoneCDecisionMade
+	]
+	
+	ci MilestoneCDecisionMade : sa:FunctionOccurrence
+	
+	ci MilestoneCDecision : temp_dec:KeyDecision [
+		info:prescribes MilestoneC
+	]
+	
+	ci FullRateProductionDecision : temp_dec:KeyDecision [
+		info:prescribes FullRateProductionDecisionPoint
+	]
+	
+	ci FullRateProductionDecisionPoint : temp_dec:KeyDecisionPoint [
+		event:occursOn FullRateProductionDecision_TimePeriod
+	]
+	
+	ci FullRateProductionDecision_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	ci LMMDRProgramObjective : temp_tpp:TestProgramObjective [
+		info:prescribes part1:LMMDRProgram
+		req:hasObjectiveText "Acquire a mine detection system that satisfies the user requirements demonstrating measurable improvements to mission capability and operational support over previous and currently deployed mine detection systems at a fair and reasonable price to the Customer"
+	]
+	
+	ref ci part2:OpTest1 [
+		test:hasTestCondition OpTestCondition1
+		test:hasTestCondition OpTestCondition2
+	]
+	
+	ci OpTestCondition1 : test:TestCondition
+	
+	ci PlannedOpTestCondition1 : test:PlannedTestCondition [
+		info:prescribes OpTestCondition1
+	]
+		
+	ci OpTestCondition2 : test:TestCondition
+	
+	ci PlannedOpTestCondition2 : test:PlannedTestCondition [
+		info:prescribes OpTestCondition2
+	]
+	
+	ci OpTest1Tester : test:Tester [
+		test:triggersTest part2:OpTest1
+	]
+	
+	ci OpTest2Tester : test:Tester [
+		test:triggersTest part2:OpTest2
+	]
+	
+	ci OpTestMemo : info:Document 
+	
+	ci OpTestConditionInfo : test:TestProcedure [
+		foundation:contains PlannedOpTestCondition1
+		foundation:contains PlannedOpTestCondition2
+		foundation:genericallyDependentOn OpTestMemo
+		info:prescribes part2:OpTest1
+		info:prescribes part2:OpTest2
+	]
+	
+	ci CooperativeVulnerabilityEvaluation_TestProcedure : test:TestProcedure [
+		info:prescribes CooperativeVulnerabilityEvaluation
+	]
+	
+	ci FutureTestTimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	ci CooperativeVulnerabilityEvaluation_Plan : agent:Plan [
+		foundation:contains CooperativeVulnerabilityEvaluation_TestProcedure
+		agent:hasPlannedTemporalRegion FutureTestTimePeriod
+		info:prescribes CooperativeVulnerabilityEvaluation
+	]
+	
+	ci CooperativeVulnerabilityEvaluation : test:Test [
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ci IndependentRealisticXYZTest_TestProcedure : test:TestProcedure [
+		info:prescribes IndependentRealisticXYZTest
+	]
+	
+	ci IndependentRealisticXYZTest_Procedure : agent:Plan [
+		foundation:contains IndependentRealisticXYZTest_TestProcedure
+		agent:hasPlannedTemporalRegion FutureTestTimePeriod
+		info:prescribes IndependentRealisticXYZTest	
+	]
+	
+	ci IndependentRealisticXYZTest : test:Test [
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ref ci part2:LMMDRDTEProgram2 [
+		temp_tpp:comprisesTest CooperativeVulnerabilityEvaluation
+		temp_tpp:comprisesTest IndependentRealisticXYZTest
+	]
+	
+	
+	// Section 3.2.1
+	
+	ci PastProgramTimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2022-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2022-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	ci MR_Project : pm:Program [
+		event:occursOn PastProgramTimePeriod
+	]
+	
+	ci MR_OTE : temp_tps:OperationalTEProgram
+	ci MR_DTE : temp_tps:DevelopmentalTEProgram
+	ci MR_LFTE : temp_tps:LiveFireTEProgram
+	
+	ci MR_IntegratedTestProgram : temp_tpp:IntegratedTestProgram [
+		foundation:contains MR_OTE
+		foundation:contains MR_DTE
+		foundation:contains MR_LFTE
+		temp_tpp:comprisesTest MR_Test1
+		temp_tpp:comprisesTest MR_Test2
+	]
+	
+	ci MRSystem : sa:System
+	
+	ci MR_Test1 : test:Test [
+		event:occursOn MR_Test1Duration
+		test:hasTestCondition MR_TestCondition1
+		test:hasTestSubject MRSystem
+	]
+	
+	ci MR_Test1Duration : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2022-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2022-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	ci MR_TestCondition1 : test:TestCondition
+	
+	ci MR_Test2 : test:Test [
+		event:occursOn MR_Test2Duration
+		test:hasTestCondition MR_TestCondition2
+		test:hasTestSubject MRSystem
+	]
+	
+	ci MR_Test2Duration : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	ci MR_TestCondition2 : test:TestCondition
+	
+	
+	// Section 3.2.2
+	
+	ci GroupTestTimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	ci CLEvent1 : test:Test [
+		test:hasTestSubject RepresentativeAsset
+		event:occursOn GroupTestTimePeriod
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ci CLEvent2 : test:Test [
+		test:hasTestSubject RepresentativeAsset
+		event:occursOn GroupTestTimePeriod
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ci ForwardOperationalAssessment : test:Test [
+		test:hasTestSubject RepresentativeAsset
+		event:occursOn GroupTestTimePeriod
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ci MissionRehearsalExercise : test:Test [
+		test:hasTestSubject RepresentativeAsset
+		event:occursOn GroupTestTimePeriod
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ref ci part2:LMMDRIOTEProgram2 [
+		temp_tpp:comprisesTest CLEvent1
+		temp_tpp:comprisesTest CLEvent2
+		temp_tpp:comprisesTest ForwardOperationalAssessment
+		temp_tpp:comprisesTest MissionRehearsalExercise
+	]
+	
+	ci Acquisition1 : acq:Acquisition [
+		acq:hasAcquisitionItem RepresentativeAsset
+		acq:hasAcquisitionVendor Vendor1
+		acq:hasAcquisitionPurchaser part1:Customer
+	]
+	
+	ci RepresentativeAsset : sa:System
+	
+	ci Vendor1 : agent:Organization
+		
+	ci ThreatResponseFunction1 : foundation:Function [
+		foundation:specificallyDependentOn part1:LMMDRSystem
+	]
+	
+	
+	// Section 3.2.4
+	
+	ci ThreatResponseFunction1.1 : foundation:Function [
+		foundation:specificallyDependentOn part1:LMMDRSystem
+	]
+	
+	ci ThreatResponseFunction1.2 : foundation:Function [
+		foundation:specificallyDependentOn part1:LMMDRSystem
+	]
+	
+	ci ThreatResponseFunction1.3 : foundation:Function [
+		foundation:specificallyDependentOn part1:LMMDRSystem
+	]
+	
+	ci Event1 : test:Test [
+		test:hasTestSubject ThreatResponseFunction1
+	]
+	
+	
+	// Section 3.2.6
+	
+	ci TechRiskAssessment1 : temp_dec:RiskAssessment [
+		info:describes part2:LMMDRTEProgram
+		foundation:isContainedIn LMMDR_IDSK
+	]
+	
+	
+	// Section 3.2.7
+	
+	ci Aspect1 : test:TestCondition
+	ci Aspect2 : test:TestCondition
+	ci MinimumHours : test:TestCondition
+	
+	ci LMMDR_Replica1 : sa:System // define as many as needed
+	
+	ci ReliabilityDemo1 : test:Test [
+		event:occursOn GroupTestTimePeriod
+		test:hasTestSubject LMMDR_Replica1
+		event:hasParticipant part1:ExternalSystem1
+		event:hasParticipant part1:ExternalSystem2
+		test:hasTestCondition Aspect1
+		test:hasTestCondition Aspect2
+		test:hasTestCondition MinimumHours
+		req:verifies Requirement_MBTSA
+	]
+	
+	ci ReliabilityDemo2_Procedure : test:TestProcedure [
+		info:prescribes ReliabilityDemo2
+	]
+	
+	ci ReliabilityDemo2_Plan : agent:Plan [
+		foundation:contains ReliabilityDemo2_Procedure
+		agent:hasPlannedTemporalRegion FutureTestTimePeriod
+		info:prescribes ReliabilityDemo2
+	]
+	
+	ci ReliabilityDemo2_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	ci ReliabilityDemo2 : test:Test [
+		test:hasTestSubject part1:LMMDRSystem
+		event:hasParticipant part1:ExternalSystem1
+		event:hasParticipant part1:ExternalSystem2
+		test:hasTestCondition Aspect1
+		test:hasTestCondition Aspect2
+		test:hasTestCondition MinimumHours
+		req:verifies Requirement_MBTSA
+		event:occursOn ReliabilityDemo2_TimePeriod
+	]
+	
+	ci MBTSA_Doc : info:Document
+	
+	ci LMMDRSystem_Reliability : foundation:Quality [
+		foundation:specificallyDependentOn part1:LMMDRSystem
+	]
+	
+	ci Requirement_MBTSA : req:PerformanceRequirement [
+		req:hasRequirementText "Mean time between failures shall be greater than 10000 hours with a confidence value of 99%"
+		info:prescribes LMMDRSystem_Reliability
+		foundation:genericallyDependentOn MBTSA_Doc
+	]
+	
+	ci ReliabilityCA1 : temp_dec:RecommendedCorrectiveAction [
+		foundation:isContainedIn LMMDR_IDSK
+		info:prescribes part2:LMMDRTEProgram
+	]
+	
+	ci ReliabilityDemo1_Result : test:TestResult [
+		info:describes ReliabilityDemo1
+		foundation:contains ReliabilityCA1
+	]
+	
+	ci ProgramMilestoneDecision : temp_dec:KeyDecision [
+		info:prescribes ProgramMilestone
+		temp_dec:isInformedBy ReliabilityDemo1_Result
+	]
+	
+	ci ProgramMilestone : temp_dec:Milestone
+	
+	ci ModelA : test:TestProcedure [
+		info:prescribes ReliabilityDemo1
+	]
+	
+	ci ModelB : test:TestProcedure [
+		info:prescribes ReliabilityDemo2
+	]
+	
+	
+	// Section 3.3
+	
+	ci GroupProgramTimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	ref ci part2:LMMDRDTEProgram1 [
+		event:occursOn GroupProgramTimePeriod
+	]
+	
+	ci DTE1Objective : temp_tpp:TestProgramObjective [
+		info:prescribes part2:LMMDRDTEProgram1
+		req:hasObjectiveText "The purpose of the DTE 1 Program is to..."
+	]
+	
+	ref ci part2:LMMDRDTEProgram2 [
+		event:occursOn GroupProgramTimePeriod
+	]
+	
+	ci DTE2Objective : temp_tpp:TestProgramObjective [
+		info:prescribes part2:LMMDRDTEProgram2
+		req:hasObjectiveText "The purpose of the DTE 2 Program is to..."
+	]
+	
+	ci ORGTestCenter1 : foundation:Site
+	ci ORGTestCenter2 : foundation:Site
+	
+	ref ci part2:DevTest1 [
+		event:occursAt ORGTestCenter1
+	]
+	
+	ref ci part2:DevTest2 [
+		event:occursAt ORGTestCenter2
+	]
+	
+	ci DevTestCondition3 : test:TestCondition
+	
+	ci DevTestCondition4 : test:TestCondition
+	
+	ci DevTest3 : test:Test [
+		test:hasTestCondition DevTestCondition3
+		req:verifies Requirement_3
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ci DevTest4 : test:Test [
+		test:hasTestCondition DevTestCondition4
+		req:verifies Requirement_4
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ci DevTestPlan : test:TestProcedure [
+		foundation:genericallyDependentOn DevTestMemo
+		info:prescribes DevTest3
+		info:prescribes DevTest4
+	]
+	
+	ci DevTestPlanCondition3 : test:PlannedTestCondition [
+		info:prescribes DevTestCondition3
+		foundation:isContainedIn DevTestPlan
+	]
+	
+	ci DevTestPlanCondition4 : test:PlannedTestCondition [
+		info:prescribes DevTestCondition4
+		foundation:isContainedIn DevTestPlan
+	]
+	
+	ci DevTestMemo : info:Document
+	
+	ci Requirement_3 : req:Requirement [
+		foundation:genericallyDependentOn DevTestMemo
+		info:prescribes DevTestPlan
+	]
+	
+	ci Requirement_4 : req:Requirement [
+		foundation:genericallyDependentOn DevTestMemo
+		info:prescribes DevTestPlan
+	]
+	
+	
+	// Section 3.3.1
+	
+	// More test definitions - conditions, external systems.
+	
+	
+	// Section 3.3.2
+	
+	ci Develop_LMMDR_TEMP : temp_tpt:DevelopTEMP [
+		sa:canOutput part1:LMMDR_TEMP
+		foundation:specificallyDependentOn part2:LMMDR_WIPT_Role
+		event:manifestsIn LMMDR_TEMP_Development
+	]
+	
+	ci LMMDR_TEMP_Development : temp_tpt:TEMPDevelopment [
+		agent:hasOutput part1:LMMDR_TEMP
+	]
+	
+	ci LUT : temp_tps:LiveFireTEProgram
+	
+	ci LUT_EntranceCriteria : temp_tps:EntranceCriteria [
+		info:prescribes LUT		
+	]
+	
+	ci Test4 : test:Test [
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ci LMMDR_Efficiency : meas:Quantity [
+		foundation:specificallyDependentOn part1:LMMDRSystem
+		meas:hasDimension dim:Efficiency
+	]
+	
+	ci LMMDR_Efficiency_Measurement : meas:SimpleMeasurement [
+		meas:hasUnit units:percentage
+		meas:measurementOf LMMDR_Efficiency
+	]
+	
+	ci MOE : meas:SimpleMeasurement [
+		foundation:genericallyDependentOn MOE_Document
+		meas:measurementOf part1:LMMDR_Performance
+		meas:hasUnit units:percentage
+	]
+	
+	ci MOE_Document : info:Document [
+		req:satisfies LUT_EntranceCriteria
+	]
+	
+	// Rest of this section is a repeated pattern.
+	
+	
+	// Section 3.3.2.1
+	
+	// This section contains all repeated patterns. 
+	
+	
+	// Section 3.3
+	
+	ci Model1 : info:Model
+	
+	ci LMMDR_Model1 : info:DescriptiveInformationEntity [
+		info:describes part1:LMMDRSystem
+		foundation:genericallyDependentOn Model1
+	]
+	
+	
+	
+	
+	// Section 3.5
+	
+	// Same patterns demonstrated in previous examples
+	
+	
+	// Section 3.6
+	
+	// mostly repetitive
+	
+	ci Model2 : info:Model
+	
+	ci LMMDR_Model2 : info:DescriptiveInformationEntity [
+		info:describes part1:LMMDRSystem
+		foundation:genericallyDependentOn Model2
+	]
+	
+	ci ReliabilitySimulation1 : ms:Simulation [
+		event:hasParticipant Model2
+	]
+	
+	ci LMMDR_IDSK : temp_tpt:IDSK [
+		foundation:isContainedIn part1:LMMDR_TEMP
+		foundation:contains part2:RecommendedCorrectiveAction1
+		foundation:contains part2:RecommendedCorrectiveAction2
+		info:prescribes part2:LMMDRTEProgram
+	]
+	
+	ci COI1 : temp_dec:OperationalIssue [
+		foundation:isContainedIn LMMDR_IDSK
+		temp_dec:informs DecisionE
+		info:describes part1:LMMDRSystem
+	]
+	
+	ci DecisionE : temp_dec:KeyDecision [
+		info:prescribes MilestoneE
+	]
+	
+	ci MilestoneE : temp_dec:Milestone
+	
+	
+	// Section 3.7
+	
+	// Haven't got certification yet
+	
+	
+	// Section 3.8
+	
+	ci EngineeringTest1Objective : test:TestObjective [
+		info:prescribes EngineeringTest1
+		req:hasObjectiveText "The purpose of the Engineering Test 1 is to..."
+	]
+	
+	ci EngineeringTest1Procedure : test:TestProcedure [
+		info:prescribes EngineeringTest1
+		foundation:contains EngineeringTest1Objective
+	]
+	
+	ci EngineeringTest1 : test:Test [
+		event:occursAt EngineeringTest1Site
+		test:hasTestCondition EngineeringTest1Condition
+		test:hasTestSubject part1:LMMDRSystem
+	]
+	
+	ci EngineeringTest1Site : test:TestSite
+	
+	ci EngineeringTest1Condition : test:TestCondition
+	
+
+	
+	}

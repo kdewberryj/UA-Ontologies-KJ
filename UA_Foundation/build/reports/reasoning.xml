@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuites name="http://uaontologies.com/UA_Foundation/bundle">
+  <testsuite name="Consistency">
+    <testcase name="http://uaontologies.com/UA_Foundation/bundle"/>
+  </testsuite>
+  <testsuite name="Satisfiability">
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#RealizableEntity"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Site"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Occupies"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Contains"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Object"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Container"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentOn"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Process"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#ImmaterialEntity"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Disposition"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#SpecificallyDependentContinuant"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Energy"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Role"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#ObjectAggregate"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#SpecificallyDependentOn"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant"/>
+  </testsuite>
+</testsuites>

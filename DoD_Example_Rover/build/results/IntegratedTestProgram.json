@@ -1,0 +1,28 @@
+{ "head": {
+    "vars": [ "MDAP" , "IntegratedTestProgram" , "TestProgram" , "StartDate" , "EndDate" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "MDAP": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Program" } ,
+        "IntegratedTestProgram": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#Rover_TEProgram" } ,
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#Rover_DTEProgram_Phase1" }
+      } ,
+      { 
+        "MDAP": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Program" } ,
+        "IntegratedTestProgram": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#Rover_TEProgram" } ,
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#Rover_DTEProgram_Phase2" }
+      } ,
+      { 
+        "MDAP": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Program" } ,
+        "IntegratedTestProgram": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#Rover_TEProgram" } ,
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#Rover_OTEProgram" }
+      } ,
+      { 
+        "MDAP": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Program" } ,
+        "IntegratedTestProgram": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#Rover_TEProgram" } ,
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2#Rover_LTEProgram" }
+      }
+    ]
+  }
+}

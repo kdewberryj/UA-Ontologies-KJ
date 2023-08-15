@@ -1,0 +1,28 @@
+{ "head": {
+    "vars": [ "Test" , "TestProgram" , "datetime" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#CommsTest" } ,
+        "datetime": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2022-11-10T10:30:00" }
+      } ,
+      { 
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#CommsTest" } ,
+        "datetime": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2022-11-12T15:00:00" }
+      } ,
+      { 
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#TraversalTest" } ,
+        "datetime": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2022-09-25T12:00:00" }
+      } ,
+      { 
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1#TraversalTest" } ,
+        "datetime": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2023-10-03T12:00:00" }
+      } ,
+      { 
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2" } ,
+        "datetime": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2023-01-01T12:00:00" }
+      }
+    ]
+  }
+}

@@ -1,0 +1,2233 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/DoD_Example_Rover/bundle#"
+     xml:base="http://uaontologies.com/DoD_Example_Rover/bundle"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://uaontologies.com/DoD_Example_Rover/bundle">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part4"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/bundle"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/bundle"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/bundle"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/bundle"/>
+        <dc:description>A description bundle that describes an example ROver, based on the TEMP document example with the relevant TEMP ontologies</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#DescriptionBundle"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#CS_Req1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#CS_Req1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#CS_Req2 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#CS_Req2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#CommsTest -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#CommsTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#DebrisThreatDescription -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#DebrisThreatDescription">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#FRPDecision -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#FRPDecision">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#FRPDecisionReview_Plan -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#FRPDecisionReview_Plan">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#FRPDecisionReview_Procedure -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#FRPDecisionReview_Procedure">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#KPP_1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#KPP_1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#KPP_2 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#KPP_2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#KSA_1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#KSA_1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#KSA_2 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#KSA_2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#RadiationThreatDescription -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#RadiationThreatDescription">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#Requirement_Cost -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#Requirement_Cost">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#Requirement_DiskSpace -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#Requirement_DiskSpace">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Environment_Nominal -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Environment_Nominal">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Function1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Function1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Performance -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Performance">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Program -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Program">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#Rover_ReceiveTC -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_ReceiveTC">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#Rover_TEMP -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_TEMP">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#Rover_TransmitTM -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_TransmitTM">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Traversal -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Traversal">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#SEProcedure -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#SEProcedure">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#SystemAcceptanceTest_1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#SystemAcceptanceTest_1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#TPM1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#TPM1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#TPM2 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#TPM2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#TPM3 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#TPM3">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#TPM4 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#TPM4">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#TraversalTest -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#TraversalTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#UNIXServerCost -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#UNIXServerCost">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part1#UNIXServerDiskSpace -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part1#UNIXServerDiskSpace">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Approve_Rover_OTEFramework -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Approve_Rover_OTEFramework">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#CapstoneDevelopmentTest -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#CapstoneDevelopmentTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#CommsTest -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#CommsTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#CommsTest_Result -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#CommsTest_Result">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Develop_Rover_ITS -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Develop_Rover_ITS">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#LowPowerTest -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#LowPowerTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#LowPowerTest_Result -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#LowPowerTest_Result">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#MATDEV_OTRS -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#MATDEV_OTRS">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Produce_MATDEV_OTRS -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Produce_MATDEV_OTRS">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#RecommendedCorrectiveAction1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#RecommendedCorrectiveAction1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#RecommendedCorrectiveAction2 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#RecommendedCorrectiveAction2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_CDT -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_CDT">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#isDesignatedBy"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_IOTE_Phase1_Framework -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_IOTE_Phase1_Framework">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_IOTE_Phase1_FrameworkApproval -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_IOTE_Phase1_FrameworkApproval">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#hasInput"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#hasOutput"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_IOTE_Phase2_Framework -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_IOTE_Phase2_Framework">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_IOTE_Phase2_FrameworkApproval -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_IOTE_Phase2_FrameworkApproval">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#hasInput"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#hasOutput"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_ITS -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_ITS">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#schedules"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_LDTO -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_LDTO">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#isDesignatedBy"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_LTO -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_LTO">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#isDesignatedBy"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_OTA -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_OTA">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#isDesignatedBy"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_OTEProgramDefinition -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_OTEProgramDefinition">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_OTE_Objective -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_OTE_Objective">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_OTE_Phase1_Framework -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_OTE_Phase1_Framework">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_OTE_Phase1_FrameworkApproval -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_OTE_Phase1_FrameworkApproval">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#hasInput"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#hasOutput"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_TEOversightList -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_TEOversightList">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#isManagedBy"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_TEProgram -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_TEProgram">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_WIPT_Info -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_WIPT_Info">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_WIPT_Role -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_WIPT_Role">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#TEMPReviewProcedure -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#TEMPReviewProcedure">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#TargetAcquisitionTest -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#TargetAcquisitionTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#TargetAcquisitionTest_Result -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#TargetAcquisitionTest_Result">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#VibrationTest -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#VibrationTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#VibrationTest_Result -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#VibrationTest_Result">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#AntennaDeploymentTest -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#AntennaDeploymentTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ArchitectureSelectionDecision -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ArchitectureSelectionDecision">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#COI1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#COI1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CommsTestPlan -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CommsTestPlan">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CooperativeVulnerabilityEvaluation -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CooperativeVulnerabilityEvaluation">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CooperativeVulnerabilityEvaluation_Plan -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CooperativeVulnerabilityEvaluation_Plan">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CooperativeVulnerabilityEvaluation_TestProcedure -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CooperativeVulnerabilityEvaluation_TestProcedure">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_IntegratedTestProgram -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_IntegratedTestProgram">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_Test1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_Test1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_Test2 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_Test2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#DTE2Objective -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#DTE2Objective">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#DecisionE -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#DecisionE">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#DetectFault -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#DetectFault">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Develop_Rover_TEMP -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Develop_Rover_TEMP">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Objective -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Objective">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Procedure -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Procedure">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Site -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Site">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isSiteOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#FDIRTest -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#FDIRTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#FullRateProductionDecision -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#FullRateProductionDecision">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#IOTE2_Criteria -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#IOTE2_Criteria">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#IsolateFault -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#IsolateFault">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#LMMDR_Model2 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#LMMDR_Model2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#LUT_EntranceCriteria -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#LUT_EntranceCriteria">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#MOE -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#MOE">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#MakeArchitectureSelectionDecision -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#MakeArchitectureSelectionDecision">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#MakePhaseCDecision -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#MakePhaseCDecision">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#MobilityDeploymentTest -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#MobilityDeploymentTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ORG1_TestReport -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ORG1_TestReport">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ORG2_TestReport -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ORG2_TestReport">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#PayloadDeploymentTest -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#PayloadDeploymentTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#PayloadTestData -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#PayloadTestData">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#PhaseCDecision -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#PhaseCDecision">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#PhaseCReliabilityDecision -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#PhaseCReliabilityDecision">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ProduceRoverEvaluation -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ProduceRoverEvaluation">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canInput"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#RecoverFault -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#RecoverFault">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityCA1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityCA1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityDemo1_Result -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityDemo1_Result">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityModel_Final -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityModel_Final">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityModel_Initial -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityModel_Initial">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilitySimulation1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilitySimulation1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#hasParticipant"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_Comms -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_Comms">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_MBTSA -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_MBTSA">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_Vibration -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_Vibration">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#RoverEvaluationProduction -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#RoverEvaluationProduction">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#hasInput"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#hasOutput"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#RoverEvaluationResult -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#RoverEvaluationResult">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_DTE1Objective -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_DTE1Objective">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Efficiency -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Efficiency">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Efficiency_Measurement -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Efficiency_Measurement">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_FDIR -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_FDIR">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_IDSK -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_IDSK">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_MobilityTorqueTest -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_MobilityTorqueTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Model1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Model1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_PayloadTest -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_PayloadTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ProgramObjective -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ProgramObjective">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_PrototypeAcquisition -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_PrototypeAcquisition">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionItem"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionPurchaser"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionVendor"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2_Plan -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2_Plan">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2_Procedure -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2_Procedure">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_System_Reliability -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_System_Reliability">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_TEMP_Development -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_TEMP_Development">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#hasOutput"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_AtmosphericDust_Planned -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_AtmosphericDust_Planned">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_Lighting_Planned -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_Lighting_Planned">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_Procedure -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_Procedure">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#TechRiskAssessment1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#TechRiskAssessment1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#TerrainTraversalExercise -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#TerrainTraversalExercise">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#TorqueTestData -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#TorqueTestData">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#VibrationTestPlan -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#VibrationTestPlan">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part4#Representative_Rover_Reliability -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part4#Representative_Rover_Reliability">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part4#Representative_Rover_Traversal -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part4#Representative_Rover_Traversal">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#kilogram -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#kilogram">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#metre -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#metre">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#percentage -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#percentage">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#second -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#second">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+
+

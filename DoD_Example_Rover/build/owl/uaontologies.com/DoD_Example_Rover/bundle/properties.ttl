@@ -1,0 +1,1426 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Occupies>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Software#isSourceOfEntity>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Software#isSourceOfEntity> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Software#hasEntitySource> .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#measuredBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Information#isSubjectOf> , <http://uaontologies.com/UA_Core/UA_Information#isDescribedBy> , <http://uaontologies.com/UA_Core/UA_Measurement#measuredBy> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Measurement#measurementOf> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#PerformanceRequirement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_DataManagement#Repository>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#isPartOfProgram> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestProgramObjective>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Mission#Environment>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MDADecisionMade>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#USDRE>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#isUndertakenBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#isUndertakenBy> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#undertakes> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationProduction>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#isOutputOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Agent#isOutputOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Agent#hasOutput> .
+
+<http://uaontologies.com/UA_Domain/UA_Test#TriggersTest>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#OTEFrameworkApproval>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ArchitectureDescription>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#ProduceTEProcedure>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Foundation/UA_Foundation#contains> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#requirementDerivedFrom>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Requirements#requirementDerivedFrom> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Requirements#derivesRequirement> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Contains>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Provenance#generatedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Provenance#generatedBy> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Provenance#generates> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DevelopDEF>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#HasUnit>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DevelopIDSK>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#Organization>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Event#HasParticipant>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#ChairsWIPT>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_ProjectManagement#Program>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#InitialOperationalTEProgram>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#Agent>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#monitors>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#monitors> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#isMonitoredBy> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DOTE>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#hasTestObjective>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#hasTestObjective> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#isObjectiveOfTest> .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#isUnitOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Measurement#isUnitOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Measurement#hasUnit> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEReportProduction>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DefenceTechnicalInfoCenter>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#hasDimension>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Measurement#hasDimension> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Measurement#isDimensionOf> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Mission#Mission>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#ObjectAggregate>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Event#ManifestsIn>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentOn>
+        rdf:type  owl:Class .
+
+<http://opencaesar.io/oml#hasSource>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEFrameworkApproval>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Software#SoftwareAgent>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Test#SiteData>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Process>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_DataManagement#hasDigitalLocation>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_DataManagement#hasDigitalLocation> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_DataManagement#isDigitalLocationOf> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#chairsWIPT>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#chairsWIPT> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#chairedBy> .
+
+<http://uaontologies.com/UA_Domain/UA_DataManagement#isSupportedBySoftware>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_DataManagement#isSupportedBySoftware> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_DataManagement#supportsRepository> .
+
+<http://uaontologies.com/UA_Domain/UA_Test#HasTestSubject>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#isMonitoredBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#isMonitoredBy> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#monitors> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationModel>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_DataManagement#HasAccess>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#isOccupiedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#isOccupiedBy> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Foundation/UA_Foundation#occupies> .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#hasConfidence>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Measurement#hasConfidence> .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#CanInput>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#IdentifiesDataRequirement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Disposition>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#manages>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#manages> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#isManagedBy> .
+
+<http://uaontologies.com/UA_Core/UA_Information#Prescribes>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Energy>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#connectsToA>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#connectsToA> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#connectsToB> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#occupies>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#occupies> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Foundation/UA_Foundation#isOccupiedBy> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#Procedure>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_DataManagement#supportsRepository>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_DataManagement#supportsRepository> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_DataManagement#isSupportedBySoftware> .
+
+<http://uaontologies.com/UA_Domain/UA_Software#isSoftwareVendorOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Software#isSoftwareVendorOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Software#hasSoftwareVendor> .
+
+<http://uaontologies.com/UA_Domain/UA_Test#HasTestCondition>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#ComprisesTest>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#EntranceCriteria>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Event#isParticipantOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Event#isParticipantOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Event#hasParticipant> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#TEProgramCharacterization>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#hasBelonging>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Agent#hasBelonging> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Agent#belongsTo> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#Oversees>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Event#isManifestationOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Event#isManifestationOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Event#manifestsIn> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#LeadDevelopmentalTestOrganization>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Provenance#approvedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Provenance#approvedBy> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Provenance#approves> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#Constraint>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MakePMDecision>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Event#hasParticipant>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Event#hasParticipant> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Event#isParticipantOf> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#OperationalTestAgency>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#ImmaterialEntity>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#hasRequirementText>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Requirements#hasRequirementText> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#hasEndInstant>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#hasEndInstant> .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#Quantity>
+        rdf:type  owl:Class .
+
+owl:topObjectProperty
+        rdf:type       owl:SymmetricProperty , owl:TransitiveProperty , owl:ObjectProperty ;
+        owl:inverseOf  owl:topObjectProperty .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#IDSK>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#LFTEFrameworkApproval>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Test#TestCondition>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#NotifyMilitaryService>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#HasTestObjective>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#FullRateProduction>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#isVerifiedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Requirements#isVerifiedBy> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Requirements#verifies> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DEFDevelopment>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#chartersWIPT>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#chartersWIPT> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#charteredBy> .
+
+<http://uaontologies.com/UA_Core/UA_Event#OccursAt>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#DevelopmentalTEProgram>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Test#SitePlan>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DevelopITS>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#OperationalEvaluationFramework>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Event#hasParticipant> , <http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Test#isSubjectOfTest> .
+
+<http://uaontologies.com/UA_Domain/UA_Test#isConditionOfTest>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Test#isConditionOfTest> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Test#hasTestCondition> .
+
+<http://uaontologies.com/UA_Core/UA_Event#manifestsIn>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Event#manifestsIn> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Event#isManifestationOf> .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#isApplicableDimensionOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Information#isSubjectOf> , <http://uaontologies.com/UA_Core/UA_Information#isDescribedBy> , <http://uaontologies.com/UA_Core/UA_Measurement#isApplicableDimensionOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightListGeneration>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#isRefinedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Requirements#isRefinedBy> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Requirements#refines> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#TestConfigurationDataProduction>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#UndertakeTETest>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Event#OccursBefore>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Milestone>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Software#OperatingSystem>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#QuantitativeRequirement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionVendor>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionVendor> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Acquisition#isVendorFor> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#satisfies>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Requirements#satisfies> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Requirements#isSatisfiedBy> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#ExitCriteria>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Acquisition#isVendorFor>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Acquisition#isVendorFor> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionVendor> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#SpecificallyDependentOn>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Test#ActualTestCondition>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canBeOutputOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canBeOutputOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput> .
+
+<http://uaontologies.com/UA_Domain/UA_Software#HasEntitySource>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Function>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#isManagedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#isManagedBy> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#manages> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isIdentifiedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isIdentifiedBy> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#identifiesDataRequirement> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#Verifies>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#Document>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#Describes>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canBeInputOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canBeInputOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canInput> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#followsSchedule>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Information#isSubjectOf> , <http://uaontologies.com/UA_Core/UA_Information#isPrescribedBy> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#followsSchedule> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#schedules> .
+
+<http://uaontologies.com/UA_Domain/UA_Test#TestProcedure>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Test#isSubjectOfTest>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Event#isParticipantOf> , <http://uaontologies.com/UA_Domain/UA_Test#isSubjectOfTest> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject> .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#connectsToB>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#connectsToB> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#connectsToA> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#Refines>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#hasBeginInstant>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#hasBeginInstant> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#IsRoleOf>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#InformationArtifact>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionItem>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#TEProgramDefinition>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ProduceSystemEvaluation>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DoDMSCoordinationOffice>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DevelopOEF>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#Reviews>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#Requirement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Test#Test>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#TestAgency>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#Model>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirement>
+        rdf:type  owl:Class .
+
+owl:Thing  rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#belongsTo>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Agent#belongsTo> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Agent#hasBelonging> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#TEMPDevelopment>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Acquisition#isPurchaserFor>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Acquisition#isPurchaserFor> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionPurchaser> .
+
+<http://uaontologies.com/UA_Core/UA_Event#occursAt>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Event#occursAt> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Event#isSiteOf> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#hasObjectiveText>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Requirements#hasObjectiveText> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#Conducts>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Informs>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Event#isTemporalRegionOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Event#isTemporalRegionOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Event#occursOn> .
+
+<http://uaontologies.com/UA_Domain/UA_Mission#hasMissionParticipant>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Mission#hasMissionParticipant> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Mission#participatesIn> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ReviewSystemEvaluationModel>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#HasItemFlow>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#Dimension>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#RiskAssessment>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Acquisition#Acquisition>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#HasPlannedTemporalRegion>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#isManagedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#isManagedBy> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#managesTEOL> .
+
+<http://uaontologies.com/UA_Core/UA_Event#occursAfter>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Event#occursAfter> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Event#occursBefore> .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#HasDimension>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#prescribes>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Information#isAbout> , <http://uaontologies.com/UA_Core/UA_Information#prescribes> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Information#isPrescribedBy> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#contains>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#contains> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn> .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#CanOutput>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Event#OccursOn>
+        rdf:type  owl:Class .
+
+<http://opencaesar.io/oml#hasTarget>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ExecutedBy>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionPurchaser>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Software#hasEntitySource>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Software#hasEntitySource> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Software#isSourceOfEntity> .
+
+<http://uaontologies.com/UA_Core/UA_Provenance#generatedAt>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Provenance#generatedAt> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#verifies>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Requirements#verifies> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Requirements#isVerifiedBy> .
+
+<http://uaontologies.com/UA_Core/UA_Information#isPrescribedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Information#isSubjectOf> , <http://uaontologies.com/UA_Core/UA_Information#isPrescribedBy> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Information#prescribes> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#LFTFDevelopment>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#isConductedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#isConductedBy> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#conducts> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#MilestoneDecisionAuthority>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isInformedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isInformedBy> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#informs> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Foundation/UA_Foundation#hasSpecificDependent> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#isOverseenBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#isOverseenBy> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#oversees> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#WIPT>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#hasUnit>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Measurement#hasUnit> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Measurement#isUnitOf> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#ManagesTEOL>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#executedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Event#hasParticipant> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#executedBy> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#executes> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#HasOutput>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#ProduceTestConfigurationData>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_DataManagement#DigitalLocation>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#TEFramework>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#Designates>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Information#describes> , <http://uaontologies.com/UA_Core/UA_Information#isAbout> , <http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Measurement#isApplicableDimensionOf> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ReviewSystemEvaluationReport>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#IntegratedTestProgram>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_DataManagement#hasAccess>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_DataManagement#hasAccess> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_DataManagement#isAccessibleBy> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MakeMDADecision>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#Schedules>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canInput>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canInput> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canBeInputOf> .
+
+<http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Simulation>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#DerivesRequirement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#undertakes>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#undertakes> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#isUndertakenBy> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#refines>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Requirements#refines> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Requirements#isRefinedBy> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#WIPTRole>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#Undertake>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Provenance#approves>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Provenance#approves> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Provenance#approvedBy> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveLFTEFramework>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyIntegrationPoint>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#OperationalIssue>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#hasValue>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Measurement#hasValue> .
+
+<http://uaontologies.com/UA_Domain/UA_DataManagement#isAccessibleBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_DataManagement#isAccessibleBy> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_DataManagement#hasAccess> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEProcedureProduction>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#reviews>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#reviews> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#isReviewedBy> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#TechnicalReadinessDecision>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#hasLowerValue>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Measurement#hasLowerValue> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#GenerateTEOversightList>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#isDesignatedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#isDesignatedBy> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#designates> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#hasRole>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent> , <http://uaontologies.com/UA_Core/UA_Agent#hasRole> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Agent#isRoleOf> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#oversees>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#oversees> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#isOverseenBy> .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#hasItemFlow>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#hasItemFlow> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#itemFlowOfConnection> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#Plan>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#hasID>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#hasID> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#PhysicalRequirement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#ITSDevelopment>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#isDimensionOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Measurement#isDimensionOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Measurement#hasDimension> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#identifiesDataRequirement>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#identifiesDataRequirement> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isIdentifiedBy> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#informs>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#informs> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isInformedBy> .
+
+<http://uaontologies.com/UA_Core/UA_Event#occursOn>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Event#occursOn> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Event#isTemporalRegionOf> .
+
+<http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#AnalysisResult>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#Objective>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluation>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#HasOrganizationalContext>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#itemFlowOfConnection>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#itemFlowOfConnection> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#hasItemFlow> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#SpecificallyDependentContinuant>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#hasApprovalStatus>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#hasApprovalStatus> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#isPartOfProgram>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#isPartOfProgram> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest> .
+
+<http://uaontologies.com/UA_Core/UA_Provenance#approvedAt>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Provenance#approvedAt> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#HasInput>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DoDComponent>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Architecture>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#isPlannedTemporalRegionOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Agent#isPlannedTemporalRegionOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Agent#hasPlannedTemporalRegion> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#isSatisfiedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Requirements#isSatisfiedBy> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Requirements#satisfies> .
+
+<http://uaontologies.com/UA_Core/UA_Provenance#GeneratedBy>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#isSubjectOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Information#isSubjectOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Information#isAbout> .
+
+<http://uaontologies.com/UA_Domain/UA_Acquisition#isAcquiredBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Acquisition#isAcquiredBy> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionItem> .
+
+<http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionItem>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionItem> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Acquisition#isAcquiredBy> .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#HasApplicableDimension>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionPurchaser>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionPurchaser> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Acquisition#isPurchaserFor> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#Person>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DevelopLFTF>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#DevelopmentalEvaluationFramework>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Test#Tester>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Container>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#managesTEOL>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#managesTEOL> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#isManagedBy> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#Consumer>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Test#triggersTest>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Test#triggersTest> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Test#testIsTriggeredBy> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Site>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#PMDecisionMade>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Analysis>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName> .
+
+<http://uaontologies.com/UA_Domain/UA_Test#TestResult>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#OperationalTEProgram>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#TETestUndertaking>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#describes>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Information#isAbout> , <http://uaontologies.com/UA_Core/UA_Information#describes> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Information#isDescribedBy> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#ChiefDevelopmentalTester>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#isResponsibilityOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Agent#isResponsibilityOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Agent#responsibleFor> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#chairedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#chairedBy> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#chairsWIPT> .
+
+<http://uaontologies.com/UA_Domain/UA_Test#PlannedTestCondition>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#TEMP>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_DataManagement#isDigitalLocationOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_DataManagement#isDigitalLocationOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_DataManagement#hasDigitalLocation> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#ChiefEngineer>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#hasConstraintExpression>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Requirements#hasConstraintExpression> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#ResponsibleFor>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#isRoleOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn> , <http://uaontologies.com/UA_Core/UA_Agent#isRoleOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Agent#hasRole> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#LeadTestOrganization>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_Example_Rover/bundle/properties>
+        rdf:type         owl:Ontology ;
+        rdfs:comment     "Generated by Owl Reason 1.1.5" ;
+        owl:imports      <http://uaontologies.com/DoD_Example_Rover/bundle> ;
+        owl:versionInfo  "1692138298" .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#CharacterizeTEProgram>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#IsAbout>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#measurementOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Information#describes> , <http://uaontologies.com/UA_Core/UA_Information#isAbout> , <http://uaontologies.com/UA_Core/UA_Measurement#measurementOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Measurement#measuredBy> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#FunctionalRequirement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Software#Software>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#ConfidenceInterval>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#Measurement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#hasInput>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Agent#hasInput> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Agent#isInputOf> .
+
+<http://uaontologies.com/UA_Domain/UA_DataManagement#hasURL>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_DataManagement#hasURL> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveDTEFramework>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Mission#ParticipatesInMission>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#IntegratedTestSchedule>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#ApprovedElement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#charteredBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#charteredBy> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#chartersWIPT> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#conducts>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#conducts> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#isConductedBy> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#designates>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#designates> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#isDesignatedBy> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#derivesRequirement>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Requirements#derivesRequirement> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Requirements#requirementDerivedFrom> .
+
+<http://uaontologies.com/UA_Core/UA_Event#isSiteOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Event#isSiteOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Event#occursAt> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#VerificationMethod>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#OEFDevelopment>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DevelopTEMP>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#MilitaryServiceNotification>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Object>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#LiveFireTEProgram>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#RecommendedCorrectiveAction>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationReport>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Mission#HasEnvironment>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_DataManagement#HasDigitalLocation>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#isObjectiveOfTest>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#isObjectiveOfTest> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#hasTestObjective> .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canBeOutputOf> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveOTEFramework>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#MajorDefenceAcquisitionProgram>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Test#testIsTriggeredBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Test#testIsTriggeredBy> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Test#triggersTest> .
+
+<http://uaontologies.com/UA_Domain/UA_Test#TestEquipmentData>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#isOrganizationalContextOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Agent#isOrganizationalContextOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Agent#hasOrganziationalContext> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirementIdentifier>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#ChartersWIPT>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Mission#participatesIn>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Mission#participatesIn> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Mission#hasMissionParticipant> .
+
+owl:topDataProperty  rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationModelReview>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#executes>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Event#isParticipantOf> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#executes> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#executedBy> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#IDSKDevelopment>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationReportReview>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#responsibleFor>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Agent#responsibleFor> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Agent#isResponsibilityOf> .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#hasUpperValue>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Measurement#hasUpperValue> .
+
+<http://uaontologies.com/UA_Domain/UA_DataManagement#SupportsRepository>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#Satisfies>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#isInputOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Agent#isInputOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Agent#hasInput> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#hasOutput>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Agent#hasOutput> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Agent#isOutputOf> .
+
+<http://uaontologies.com/UA_Core/UA_Provenance#ApprovedBy>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionVendor>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#RealizableEntity>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEReport>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#DTEFrameworkApproval>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Event#occursBefore>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Event#occursBefore> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Event#occursAfter> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#Monitors>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Software#HasSoftwareVendor>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#MeasurementOf>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#hasPlannedTemporalRegion>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Agent#hasPlannedTemporalRegion> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Agent#isPlannedTemporalRegionOf> .
+
+<http://uaontologies.com/UA_Domain/UA_Software#hasSoftwareVersion>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Software#hasSoftwareVersion> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#schedules>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Information#prescribes> , <http://uaontologies.com/UA_Core/UA_Information#isAbout> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#schedules> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#followsSchedule> .
+
+<http://uaontologies.com/UA_Core/UA_Information#InformationEntity>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#ProduceTEReport>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#hasSpecificDependent>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#hasSpecificDependent> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#isReviewedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#isReviewedBy> ;
+        owl:inverseOf       <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#reviews> .
+
+<http://uaontologies.com/UA_Core/UA_Information#isAbout>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Information#isAbout> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Information#isSubjectOf> .
+
+<http://uaontologies.com/UA_Core/UA_Information#isDescribedBy>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Information#isSubjectOf> , <http://uaontologies.com/UA_Core/UA_Information#isDescribedBy> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Information#describes> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#Manages>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Acquisition#hasProcurementStatus>
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Acquisition#hasProcurementStatus> .
+
+owl:Nothing  rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#Producer>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent> .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightList>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Quality>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#Unit>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Mission#isEnvironmentOf>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Mission#isEnvironmentOf> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Mission#hasEnvironment> .
+
+<http://uaontologies.com/UA_Domain/UA_Mission#hasEnvironment>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Mission#hasEnvironment> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Mission#isEnvironmentOf> .
+
+<http://uaontologies.com/UA_Domain/UA_Test#TestSite>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#ProgramManager>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#hasOrganziationalContext>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Agent#hasOrganziationalContext> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Agent#isOrganizationalContextOf> .
+
+<http://uaontologies.com/UA_Domain/UA_Test#hasTestCondition>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Test#hasTestCondition> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Test#isConditionOfTest> .
+
+<http://uaontologies.com/UA_Domain/UA_Software#hasSoftwareVendor>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Domain/UA_Software#hasSoftwareVendor> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Domain/UA_Software#isSoftwareVendorOf> .
+
+<http://uaontologies.com/UA_Domain/UA_Test#TestObjective>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#BelongsTo>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Role>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Provenance#generates>
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  <http://uaontologies.com/UA_Core/UA_Provenance#generates> ;
+        owl:inverseOf       <http://uaontologies.com/UA_Core/UA_Provenance#generatedBy> .
+
+<http://uaontologies.com/UA_Domain/UA_Test#TestEquipmentPlan>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#LiveFireTestProgramFramework>
+        rdf:type  owl:Class .

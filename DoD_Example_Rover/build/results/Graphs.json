@@ -1,0 +1,128 @@
+{ "head": {
+    "vars": [ "Graph" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "Graph": { "type": "uri" , "value": "http://purl.org/dc/elements/1.1" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part1" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part2" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part3" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/Part4" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/bundle" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/bundle/classes" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/bundle/individuals" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_Example_Rover/bundle/properties" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/bundle" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Agent" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Event" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Measurement" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Provenance" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/bundle" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Domain/UA_Acquisition" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Domain/UA_DataManagement" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Domain/UA_Materials" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Domain/UA_Mission" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Domain/UA_ProjectManagement" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Domain/UA_Requirements" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Domain/UA_Software" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Domain/UA_SystemArchitecture" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Domain/UA_Test" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Domain/bundle" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Foundation/UA_Foundation" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Foundation/bundle" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions" }
+      } ,
+      { 
+        "Graph": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units" }
+      }
+    ]
+  }
+}

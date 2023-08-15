@@ -1,0 +1,963 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/DoD_Example/Part2#"
+     xml:base="http://uaontologies.com/DoD_Example/Part2"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:UA_Test="http://uaontologies.com/UA_Domain/UA_Test#"
+     xmlns:UA_Agent="http://uaontologies.com/UA_Core/UA_Agent#"
+     xmlns:UA_Event="http://uaontologies.com/UA_Core/UA_Event#"
+     xmlns:UA_Foundation="http://uaontologies.com/UA_Foundation/UA_Foundation#"
+     xmlns:UA_Information="http://uaontologies.com/UA_Core/UA_Information#"
+     xmlns:UA_Requirements="http://uaontologies.com/UA_Domain/UA_Requirements#"
+     xmlns:TEMP_TEOversight="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#"
+     xmlns:UA_DataManagement="http://uaontologies.com/UA_Domain/UA_DataManagement#"
+     xmlns:TEMP_TestProgramTeams="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#"
+     xmlns:UA_SystemArchitecture="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#"
+     xmlns:TEMP_TestProgramPolicy="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#"
+     xmlns:TEMP_TestProgramStructure="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#">
+    <owl:Ontology rdf:about="http://uaontologies.com/DoD_Example/Part2">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_Example/Part1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Agent"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Event"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Information"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_DataManagement"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Software"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Test"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A description to capture Part _ of the example TEMP</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Description"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#managesTEOL -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#managesTEOL"/>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest"/>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#undertakes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#undertakes"/>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#manages -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#manages"/>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#chairsWIPT -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#chairsWIPT"/>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#isDesignatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#isDesignatedBy"/>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#schedules -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#schedules"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#hasInput -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#hasInput"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#hasOutput -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#hasOutput"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#hasRole -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#hasRole"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#hasParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#hasParticipant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#manifestsIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#manifestsIn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#describes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#prescribes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_DataManagement#isAccessibleBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_DataManagement#isAccessibleBy"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_DataManagement#isDigitalLocationOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_DataManagement#isDigitalLocationOf"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_DataManagement#supportsRepository -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_DataManagement#supportsRepository"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#hasObjectiveText -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#hasObjectiveText"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part1#LMMDR_TEMP -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example/Part1#LMMDR_TEMP">
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRTEProgram"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#ApproveOTEFramework1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#ApproveOTEFramework1">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveOTEFramework"/>
+        <UA_Event:manifestsIn rdf:resource="http://uaontologies.com/DoD_Example/Part2#IOTE1FrameworkApproval"/>
+        <UA_Event:manifestsIn rdf:resource="http://uaontologies.com/DoD_Example/Part2#IOTE2FrameworkApproval"/>
+        <UA_Event:manifestsIn rdf:resource="http://uaontologies.com/DoD_Example/Part2#OTEFrameworkApproval"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example/Part2#DOTE1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#CBTDEV -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#CBTDEV">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#CapstoneDevelopmentTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#CapstoneDevelopmentTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/DoD_Example/Part2#Soldiers"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example/Part1#LMMDRSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#Contractor1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#Contractor1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#CorrectiveActionDatabase -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#CorrectiveActionDatabase">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Model"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#CustomerEvaluator -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#CustomerEvaluator">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#DOTE1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#DOTE1">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+        <TEMP_TEOversight:managesTEOL rdf:resource="http://uaontologies.com/DoD_Example/Part2#TEOversightList1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#DeficiencyReportingSystem -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#DeficiencyReportingSystem">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <UA_DataManagement:supportsRepository rdf:resource="http://uaontologies.com/DoD_Example/Part2#Repository1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#DevTest1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#DevTest1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example/Part1#LMMDRSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#DevTest1_Result -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#DevTest1_Result">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestResult"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/DoD_Example/Part2#DevTest1"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example/Part2#Dev_TIR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#DevTest2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#DevTest2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example/Part1#LMMDRSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#DevTest2_Result -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#DevTest2_Result">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestResult"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/DoD_Example/Part2#DevTest2"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example/Part2#Dev_TIR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#Dev_TIR -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#Dev_TIR">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#Develop_LMMDR_ITS -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#Develop_LMMDR_ITS">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DevelopITS"/>
+        <UA_SystemArchitecture:canOutput rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDR_ITS"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDR_WIPT_Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#ExternalDataDoc -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#ExternalDataDoc">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#IOTE1Framework -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#IOTE1Framework">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#OperationalEvaluationFramework"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRIOTEProgram1"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/DoD_Example/Part1#LMMDR_TEMP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#IOTE1FrameworkApproval -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#IOTE1FrameworkApproval">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#OTEFrameworkApproval"/>
+        <UA_Agent:hasInput rdf:resource="http://uaontologies.com/DoD_Example/Part2#IOTE1Framework"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/DoD_Example/Part2#IOTE1Framework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#IOTE2Framework -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#IOTE2Framework">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#OperationalEvaluationFramework"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRIOTEProgram2"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/DoD_Example/Part1#LMMDR_TEMP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#IOTE2FrameworkApproval -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#IOTE2FrameworkApproval">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#OTEFrameworkApproval"/>
+        <UA_Agent:hasInput rdf:resource="http://uaontologies.com/DoD_Example/Part2#IOTE2Framework"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/DoD_Example/Part2#IOTE2Framework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LDTO -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LDTO">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LDTO_Role -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LDTO_Role">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#LeadDevelopmentalTestOrganization"/>
+        <TEMP_TestProgramTeams:isDesignatedBy rdf:resource="http://uaontologies.com/DoD_Example/Part2#PdM"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example/Part2#LDTO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LMMDRDTEProgram1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LMMDRDTEProgram1">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#DevelopmentalTEProgram"/>
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/DoD_Example/Part2#CapstoneDevelopmentTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LMMDRDTEProgram2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LMMDRDTEProgram2">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#DevelopmentalTEProgram"/>
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/DoD_Example/Part2#DevTest1"/>
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/DoD_Example/Part2#DevTest2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LMMDRIOTEProgram1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LMMDRIOTEProgram1">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#InitialOperationalTEProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LMMDRIOTEProgram2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LMMDRIOTEProgram2">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#InitialOperationalTEProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LMMDRLTEProgram -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LMMDRLTEProgram">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#LiveFireTEProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LMMDROTEProgram -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LMMDROTEProgram">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#OperationalTEProgram"/>
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/DoD_Example/Part2#OpTest1"/>
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/DoD_Example/Part2#OpTest2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LMMDROverallOTEProgram -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LMMDROverallOTEProgram">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#OperationalTEProgram"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRIOTEProgram1"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRIOTEProgram2"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDROTEProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LMMDRTEProgram -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LMMDRTEProgram">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#IntegratedTestProgram"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRDTEProgram1"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRDTEProgram2"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRLTEProgram"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDROverallOTEProgram"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/DoD_Example/Part1#LMMDRProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LMMDR_CDT -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LMMDR_CDT">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#ChiefDevelopmentalTester"/>
+        <TEMP_TestProgramTeams:chairsWIPT rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDR_WIPT_Role"/>
+        <TEMP_TestProgramTeams:isDesignatedBy rdf:resource="http://uaontologies.com/DoD_Example/Part2#PdM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LMMDR_ITS -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LMMDR_ITS">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#IntegratedTestSchedule"/>
+        <TEMP_TestProgramTeams:schedules rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRTEProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LMMDR_WIPT -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LMMDR_WIPT">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example/Part2#LDTO"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example/Part2#LTO"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example/Part2#OTA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LMMDR_WIPT_Charter -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LMMDR_WIPT_Charter">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LMMDR_WIPT_Info -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LMMDR_WIPT_Info">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDR_WIPT_Role"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDR_WIPT_Charter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LMMDR_WIPT_Role -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LMMDR_WIPT_Role">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#WIPT"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example/Part2#LDTO_Role"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example/Part2#LTO_Role"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example/Part2#OTA_Role"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDR_WIPT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LTO -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LTO">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#LTO_Role -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#LTO_Role">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#LeadTestOrganization"/>
+        <TEMP_TestProgramTeams:isDesignatedBy rdf:resource="http://uaontologies.com/DoD_Example/Part2#PdM"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example/Part2#LTO"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#MATDEV -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#MATDEV">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#MATDEV_OTRS -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#MATDEV_OTRS">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#MilestoneA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#MilestoneA">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Milestone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#NormativeDocument -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#NormativeDocument">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#OTA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#OTA">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#OTA_Role -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#OTA_Role">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#OperationalTestAgency"/>
+        <TEMP_TestProgramTeams:isDesignatedBy rdf:resource="http://uaontologies.com/DoD_Example/Part2#PdM"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example/Part2#OTA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#OTC -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#OTC">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+        <TEMP_TestProgramPolicy:undertakes rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRIOTEProgram1"/>
+        <TEMP_TestProgramPolicy:undertakes rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDROTEProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#OTEFramework -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#OTEFramework">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#OperationalEvaluationFramework"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDROTEProgram"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/DoD_Example/Part1#LMMDR_TEMP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#OTEFrameworkApproval -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#OTEFrameworkApproval">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#OTEFrameworkApproval"/>
+        <UA_Agent:hasInput rdf:resource="http://uaontologies.com/DoD_Example/Part2#OTEFramework"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/DoD_Example/Part2#OTEFramework"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#OTEObjective -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#OTEObjective">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestProgramObjective"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDROverallOTEProgram"/>
+        <UA_Requirements:hasObjectiveText>Evaluate the Mission Capability</UA_Requirements:hasObjectiveText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#OTEProgramDefinition -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#OTEProgramDefinition">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#TEProgramDefinition"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDROTEProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#OpTest1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#OpTest1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example/Part1#LMMDRSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#OpTest1_Result -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#OpTest1_Result">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestResult"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/DoD_Example/Part2#OpTest1"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example/Part2#Op_TIR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#OpTest2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#OpTest2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example/Part1#LMMDRSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#OpTest2_Result -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#OpTest2_Result">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestResult"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/DoD_Example/Part2#OpTest2"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example/Part2#Op_TIR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#Op_TIR -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#Op_TIR">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#Organization1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#Organization1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+        <TEMP_TestProgramPolicy:undertakes rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRDTEProgram1"/>
+        <TEMP_TestProgramPolicy:undertakes rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRDTEProgram2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#PdM -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#PdM">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#ProgramManager"/>
+        <TEMP_TestProgramStructure:manages rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRDTEProgram1"/>
+        <TEMP_TestProgramStructure:manages rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRDTEProgram2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#Person1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#Person1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Person"/>
+        <UA_Agent:hasRole rdf:resource="http://uaontologies.com/DoD_Example/Part2#PdM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#Person2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#Person2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Person"/>
+        <UA_Agent:hasRole rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDR_CDT"/>
+        <UA_Agent:hasRole rdf:resource="http://uaontologies.com/DoD_Example/Part2#MATDEV"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#Produce_MATDEV_OTRS -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#Produce_MATDEV_OTRS">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <UA_SystemArchitecture:canOutput rdf:resource="http://uaontologies.com/DoD_Example/Part2#MATDEV_OTRS"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example/Part2#MATDEV"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#RecommendedCorrectiveAction1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#RecommendedCorrectiveAction1">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#RecommendedCorrectiveAction"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRTEProgram"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example/Part2#CorrectiveActionDatabase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#RecommendedCorrectiveAction2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#RecommendedCorrectiveAction2">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#RecommendedCorrectiveAction"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRTEProgram"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example/Part2#CorrectiveActionDatabase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#Repository1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#Repository1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_DataManagement#Repository"/>
+        <UA_DataManagement:isAccessibleBy rdf:resource="http://uaontologies.com/DoD_Example/Part2#Person1"/>
+        <UA_DataManagement:isAccessibleBy rdf:resource="http://uaontologies.com/DoD_Example/Part2#TEWG1"/>
+        <UA_DataManagement:isDigitalLocationOf rdf:resource="http://uaontologies.com/DoD_Example/Part2#Dev_TIR"/>
+        <UA_DataManagement:isDigitalLocationOf rdf:resource="http://uaontologies.com/DoD_Example/Part2#Op_TIR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#Repository2_External -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#Repository2_External">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_DataManagement#Repository"/>
+        <UA_DataManagement:isAccessibleBy rdf:resource="http://uaontologies.com/DoD_Example/Part2#Contractor1"/>
+        <UA_DataManagement:isDigitalLocationOf rdf:resource="http://uaontologies.com/DoD_Example/Part2#ExternalDataDoc"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#Soldiers -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#Soldiers">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#ObjectAggregate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#TEMPReviewPlan -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#TEMPReviewPlan">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example/Part1#LMMDR_TEMP"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example/Part2#NormativeDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#TEOversightList1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#TEOversightList1">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightList"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/DoD_Example/Part2#LMMDRTEProgram"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example/Part2#OTEProgramDefinition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#TEWG1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#TEWG1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example/Part2#TEWG2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example/Part2#TEWG2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+
+

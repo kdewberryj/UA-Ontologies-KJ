@@ -1,0 +1,358 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture Part 2 of the example TEMP"
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/DoD_Example_Rover/Part2#> as part2 {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    //uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    //uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    //uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	//uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    
+    uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#> as temp_tps
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#> as temp_tpf
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#> as temp_resp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> as temp_tpt
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_dec
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as temp_teo
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#> as temp_ear
+    
+    // Extends other descriptions
+    
+    extends <http://uaontologies.com/DoD_Example_Rover/Part1#> as part1 
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	//// PART 2 - TEST PROGRAM MANAGEMENT AND SCHEDULE
+	
+	//////////////////////////// Description Definitions //////////////////////////////	
+
+	// Section 2.1
+	
+	ci DOTE : temp_org:DOTE [
+		temp_teo:managesTEOL Rover_TEOversightList
+	]
+	
+	ci Rover_TEOversightList : temp_resp:TEOversightList [
+		foundation:contains Rover_OTEProgramDefinition
+		info:describes Rover_TEProgram
+	]
+	
+	ci Rover_OTEProgramDefinition : temp_teo:TEProgramDefinition [
+		info:describes Rover_OTEProgram
+	]
+	
+	ci Rover_TEProgram : temp_tpp:IntegratedTestProgram [
+		foundation:isContainedIn part1:Rover_Program
+		foundation:contains Rover_DTEProgram_Phase1
+		foundation:contains Rover_DTEProgram_Phase2
+		foundation:contains Rover_OTEProgram
+		foundation:contains Rover_LTEProgram
+	]
+	
+	ref ci part1:Rover_TEMP [
+		info:prescribes Rover_TEProgram
+	]
+	
+	ci CapstoneDevelopmentTest : test:Test [
+		event:hasParticipant part1:LocalDebris
+		test:hasTestSubject part1:Rover_System
+	]
+	
+	ci Rover_DTEProgram_Phase1 : temp_tps:DevelopmentalTEProgram [
+		temp_tpp:comprisesTest CapstoneDevelopmentTest
+	]
+	ci Rover_DTEProgram_Phase2 : temp_tps:DevelopmentalTEProgram
+	
+	ci Rover_IOTEProgram_Phase1 : temp_tps:InitialOperationalTEProgram
+	
+	ci Rover_IOTEProgram_Phase2 : temp_tps:InitialOperationalTEProgram
+	
+	ci Rover_OTEProgram_Phase1 : temp_tps:OperationalTEProgram
+	
+	ci Rover_LTEProgram : temp_tps:LiveFireTEProgram
+	
+	ci Rover_OTEProgram : temp_tps:OperationalTEProgram [
+		foundation:contains Rover_IOTEProgram_Phase1
+		foundation:contains Rover_IOTEProgram_Phase2
+		foundation:contains Rover_OTEProgram_Phase1
+	]
+	
+	ci PdM : temp_tps:ProgramManager [
+		temp_tps:manages Rover_DTEProgram_Phase1
+		temp_tps:manages Rover_DTEProgram_Phase2
+	]
+	
+	ci Person1 : agent:Person [
+		foundation:hasName "Homer Simpson"
+		agent:hasRole PdM
+	]
+	
+	ci Approve_Rover_OTEFramework : temp_resp:ApproveOTEFramework [
+		foundation:specificallyDependentOn DOTE
+		event:manifestsIn Rover_IOTE_Phase1_FrameworkApproval
+		event:manifestsIn Rover_IOTE_Phase2_FrameworkApproval
+		event:manifestsIn Rover_OTE_Phase1_FrameworkApproval
+	]
+	
+	ci Rover_IOTE_Phase1_FrameworkApproval : temp_resp:OTEFrameworkApproval [
+		agent:hasInput Rover_IOTE_Phase1_Framework
+		agent:hasOutput Rover_IOTE_Phase1_Framework
+	]
+	
+	ci Rover_IOTE_Phase2_FrameworkApproval : temp_resp:OTEFrameworkApproval [
+		agent:hasInput Rover_IOTE_Phase2_Framework
+		agent:hasOutput Rover_IOTE_Phase2_Framework
+	]
+	
+	ci Rover_OTE_Phase1_FrameworkApproval : temp_resp:OTEFrameworkApproval [
+		agent:hasInput Rover_OTE_Phase1_Framework
+		agent:hasOutput Rover_OTE_Phase1_Framework
+	]
+	
+	ci Rover_IOTE_Phase1_Framework : temp_tpf:OperationalEvaluationFramework [
+		info:prescribes Rover_IOTEProgram_Phase1
+		foundation:isContainedIn part1:Rover_TEMP
+	]
+	
+	ci Rover_IOTE_Phase2_Framework : temp_tpf:OperationalEvaluationFramework [
+		info:prescribes Rover_IOTEProgram_Phase2
+		foundation:isContainedIn part1:Rover_TEMP
+	]
+	
+	ci Rover_OTE_Phase1_Framework : temp_tpf:OperationalEvaluationFramework [
+		info:prescribes Rover_OTEProgram
+		foundation:isContainedIn part1:Rover_TEMP
+	]
+	
+	ci Rover_OTE_Objective : temp_tpp:TestProgramObjective [
+		info:prescribes Rover_OTEProgram
+		req:hasObjectiveText "Evaluate the Mission Capability"
+	]
+	
+	// Section 2.1.1
+	
+	ci JPL : agent:Organization [
+		temp_tpp:undertakes Rover_DTEProgram_Phase1
+		temp_tpp:undertakes Rover_DTEProgram_Phase2
+	]
+	
+	ref ci part1:NASA [
+		temp_tpp:undertakes Rover_IOTEProgram_Phase1
+		temp_tpp:undertakes Rover_IOTEProgram_Phase2
+		temp_tpp:undertakes Rover_OTEProgram
+	]
+	
+	ci Rover_WIPT : agent:Organization
+	
+	ci Rover_LTO : temp_org:LeadTestOrganization [
+		foundation:genericallyDependentOn part1:NASA
+		temp_tpt:isDesignatedBy PdM
+	]
+	
+	ci Rover_LDTO : temp_org:LeadDevelopmentalTestOrganization [
+		foundation:genericallyDependentOn JPL
+		temp_tpt:isDesignatedBy PdM	
+	]
+	
+	ci Rover_OTA : temp_org:OperationalTestAgency [
+		foundation:genericallyDependentOn JPL
+		temp_tpt:isDesignatedBy PdM
+	]
+	
+	ci Rover_WIPT_Role : temp_org:WIPT [
+		foundation:contains Rover_LTO
+		foundation:contains Rover_LDTO
+		foundation:contains Rover_OTA
+	]
+	
+	ci Rover_WIPT_Charter : info:Document
+	
+	ci Rover_WIPT_Info : info:PrescriptiveInformationEntity [
+		foundation:genericallyDependentOn Rover_WIPT_Charter
+		info:prescribes Rover_WIPT_Role
+	]
+	
+	ci LockheedMartin : agent:Organization
+	
+	ci Airbus : agent:Organization
+	
+	ci Develop_Rover_ITS : temp_tpt:DevelopITS [
+		sa:canOutput Rover_ITS
+		foundation:specificallyDependentOn Rover_WIPT_Role
+	]
+	
+	ci Rover_ITS : temp_tpt:IntegratedTestSchedule [
+		temp_tpt:schedules Rover_TEProgram
+	]
+	
+	ci MaterialDeveloper : foundation:Role
+	
+	ci Rover_CDT : temp_tpt:ChiefDevelopmentalTester [
+		temp_tpt:chairsWIPT Rover_WIPT_Role
+		temp_tpt:isDesignatedBy PdM
+	]
+	
+	ci Person2 : agent:Person [
+		foundation:hasName "Marge Simpson"
+		agent:hasRole MaterialDeveloper
+	]
+	
+	ci Person3 : agent:Person [
+		foundation:hasName "Bart Simpson"
+		agent:hasRole Rover_CDT
+	]
+	
+	ci Produce_MATDEV_OTRS : foundation:Function [
+		sa:canOutput MATDEV_OTRS
+		foundation:specificallyDependentOn MaterialDeveloper
+	]
+	
+	ci MATDEV_OTRS : info:DescriptiveInformationEntity [
+		info:describes Rover_TEProgram
+		foundation:genericallyDependentOn Document_MATDEV_OTRS
+	]
+	
+	ci Document_MATDEV_OTRS : info:Document [
+		foundation:hasName "Operational Test Readiness Report"
+	]
+	
+	
+	// Section 2.2
+	
+	ci VibrationTest : test:Test [
+		test:hasTestSubject part1:Rover_System
+	]
+	
+	ci CommsTest : test:Test [
+		test:hasTestSubject part1:Rover_Comms
+	]
+	
+	ci TargetAcquisitionTest : test:Test [
+		test:hasTestSubject part1:Rover_System
+	]
+	
+	ci LowPowerTest : test:Test [
+		test:hasTestSubject part1:Rover_System
+	]
+	
+	ref ci Rover_DTEProgram_Phase2 [
+		temp_tpp:comprisesTest VibrationTest
+		temp_tpp:comprisesTest CommsTest
+	]
+	
+	ref ci Rover_OTEProgram_Phase1 [
+		temp_tpp:comprisesTest TargetAcquisitionTest
+		temp_tpp:comprisesTest LowPowerTest
+	]
+	
+	ci VibrationTest_Result : test:TestResult [
+		info:describes VibrationTest
+		foundation:genericallyDependentOn Dev_TIR
+	]
+	
+	ci CommsTest_Result : test:TestResult [
+		info:describes CommsTest
+		foundation:genericallyDependentOn Dev_TIR
+	]
+	
+	ci TargetAcquisitionTest_Result : test:TestResult [
+		info:describes TargetAcquisitionTest
+		foundation:genericallyDependentOn Op_TIR
+	]
+	
+	ci LowPowerTest_Result : test:TestResult [
+		info:describes LowPowerTest
+		foundation:genericallyDependentOn Op_TIR
+	]
+	
+	ci Dev_TIR : info:Document [
+		foundation:hasName "Rover Development Test Incident Report"
+	]
+	
+	ci Op_TIR : info:Document [
+		foundation:hasName "Rover Operational Test Incident Report"
+	]
+	
+	ci Repository1 : dm:Repository [
+		dm:isDigitalLocationOf Dev_TIR
+		dm:isDigitalLocationOf Op_TIR
+		dm:isAccessibleBy Person1
+		dm:isAccessibleBy LockheedMartin
+		dm:isAccessibleBy part1:NASA
+		dm:isAccessibleBy JPL
+	]
+	
+	ci ExternalDataDoc : info:Document
+	
+	ci Repository2_External : dm:Repository [
+		dm:isAccessibleBy Airbus
+		dm:isDigitalLocationOf ExternalDataDoc
+	]
+	
+	
+	// Section 2.3
+	
+	
+	ci DeficiencyReportingSystem : sw:Software [
+		dm:supportsRepository Repository1
+	]
+	
+	ci CorrectiveActionDatabase : info:Model
+	
+	ci RecommendedCorrectiveAction1 : temp_dec:RecommendedCorrectiveAction [
+		foundation:genericallyDependentOn CorrectiveActionDatabase
+		info:prescribes Rover_TEProgram
+	]
+	
+	ci RecommendedCorrectiveAction2 : temp_dec:RecommendedCorrectiveAction [
+		foundation:genericallyDependentOn CorrectiveActionDatabase
+		info:prescribes Rover_TEProgram
+	]
+	
+	
+	// Section 2.4
+	
+	ci PhaseC : temp_dec:Milestone 
+	
+	ci TEMPD1 : info:Document [
+		foundation:hasName "TEMP Review Procedure"
+	]
+	
+	ci TEMPReviewProcedure : info:PrescriptiveInformationEntity [
+		foundation:genericallyDependentOn TEMPD1
+		info:prescribes part1:Rover_TEMP
+	]
+	
+	
+	
+	
+	}

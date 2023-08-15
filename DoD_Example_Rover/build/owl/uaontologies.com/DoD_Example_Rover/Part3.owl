@@ -1,0 +1,1623 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/DoD_Example_Rover/Part3#"
+     xml:base="http://uaontologies.com/DoD_Example_Rover/Part3"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:UA_Test="http://uaontologies.com/UA_Domain/UA_Test#"
+     xmlns:UA_Agent="http://uaontologies.com/UA_Core/UA_Agent#"
+     xmlns:UA_Event="http://uaontologies.com/UA_Core/UA_Event#"
+     xmlns:TEMP_Decision="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#"
+     xmlns:UA_Foundation="http://uaontologies.com/UA_Foundation/UA_Foundation#"
+     xmlns:UA_Acquisition="http://uaontologies.com/UA_Domain/UA_Acquisition#"
+     xmlns:UA_Information="http://uaontologies.com/UA_Core/UA_Information#"
+     xmlns:UA_Measurement="http://uaontologies.com/UA_Core/UA_Measurement#"
+     xmlns:UA_Requirements="http://uaontologies.com/UA_Domain/UA_Requirements#"
+     xmlns:UA_SystemArchitecture="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#"
+     xmlns:TEMP_TestProgramPolicy="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#">
+    <owl:Ontology rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Agent"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Event"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Information"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Test"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Units"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A description to capture Part 3 of the example TEMP</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Description"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#informs -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#informs"/>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isInformedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isInformedBy"/>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#hasInput -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#hasInput"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#hasOutput -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#hasOutput"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#hasPlannedTemporalRegion -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#hasPlannedTemporalRegion"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#isRoleOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#isRoleOf"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#hasParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#hasParticipant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#manifestsIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#manifestsIn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#occursAt -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#occursAt"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#occursOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#occursOn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#describes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#prescribes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasDimension -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasUnit -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#measurementOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionItem -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionItem"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionPurchaser -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionPurchaser"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionVendor -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionVendor"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#satisfies -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#satisfies"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#verifies -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#verifies"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canInput -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canInput"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Test#hasTestCondition -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Test#hasTestCondition"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Test#triggersTest -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Test#triggersTest"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#hasObjectiveText -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#hasObjectiveText"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#hasRequirementText -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#hasRequirementText"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasBeginInstant -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasBeginInstant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasEndInstant -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasEndInstant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasName"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#CommsTest -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#CommsTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursAt rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#CommsTestSite"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_Comms"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Comms"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#PhaseC -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#PhaseC">
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#PhaseC_TemporalRegion"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_DTEProgram_Phase1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_DTEProgram_Phase1">
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_DTEProgram_TimePeriod"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_DTEProgram_Phase2 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_DTEProgram_Phase2">
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#CooperativeVulnerabilityEvaluation"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_DTEProgram_TimePeriod"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#Rover_IOTEProgram_Phase2 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_IOTEProgram_Phase2">
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#AntennaDeploymentTest"/>
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#MobilityDeploymentTest"/>
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#PayloadDeploymentTest"/>
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#TerrainTraversalExercise"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#TargetAcquisitionTest -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#TargetAcquisitionTest">
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_AtmosphericDust"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_Lighting"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part2#VibrationTest -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_Example_Rover/Part2#VibrationTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursAt rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#VibrationTestSite"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_Vibration"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#AntennaDeploymentTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#AntennaDeploymentTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#DeploymentTestTimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Prototype"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ArchitectureSelection -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ArchitectureSelection">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Milestone"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#ArchitectureSelection_TimePeriod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ArchitectureSelectionDecision -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ArchitectureSelectionDecision">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#ArchitectureSelection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ArchitectureSelectionDecisionMade -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ArchitectureSelectionDecisionMade">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ArchitectureSelection_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ArchitectureSelection_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-06-01T16:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-06-07T10:00:00</UA_Foundation:hasEndInstant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Atmosphere -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Atmosphere">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#COI1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#COI1">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#OperationalIssue"/>
+        <TEMP_Decision:informs rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#DecisionE"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_IDSK"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CommsTestPlan -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CommsTestPlan">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#CommsTest"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#DevTestMemo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CommsTestSite -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CommsTestSite">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Site"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CooperativeVulnerabilityEvaluation -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CooperativeVulnerabilityEvaluation">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CooperativeVulnerabilityEvaluation_Plan -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CooperativeVulnerabilityEvaluation_Plan">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Plan"/>
+        <UA_Agent:hasPlannedTemporalRegion rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#FutureTestTimePeriod"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#CooperativeVulnerabilityEvaluation"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#CooperativeVulnerabilityEvaluation_TestProcedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CooperativeVulnerabilityEvaluation_TestProcedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CooperativeVulnerabilityEvaluation_TestProcedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#CooperativeVulnerabilityEvaluation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Program"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_TimePeriod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_DTE -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_DTE">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#DevelopmentalTEProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_IntegratedTestProgram -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_IntegratedTestProgram">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#IntegratedTestProgram"/>
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_Test1"/>
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_Test2"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_DTE"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_LFTE"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_OTE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_LFTE -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_LFTE">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#LiveFireTEProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_OTE -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_OTE">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#OperationalTEProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_Test1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_Test1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_Test1TimePeriod"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_TestCondition1"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_Test1TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_Test1TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T12:00:00</UA_Foundation:hasEndInstant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_Test2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_Test2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_Test2TimePeriod"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_TestCondition2"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_Test2TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_Test2TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-01T12:00:00</UA_Foundation:hasEndInstant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_TestCondition1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_TestCondition1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_TestCondition2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_TestCondition2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#CuriosityRoverProgram_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-05-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-07-01T12:00:00</UA_Foundation:hasEndInstant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#DTE2Objective -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#DTE2Objective">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestProgramObjective"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_DTEProgram_Phase2"/>
+        <UA_Requirements:hasObjectiveText>The purpose of the DTE 2 Program is to...</UA_Requirements:hasObjectiveText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#DecisionE -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#DecisionE">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#MilestoneE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#DeploymentTestTimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#DeploymentTestTimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-11T12:00:00</UA_Foundation:hasEndInstant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#DetectFault -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#DetectFault">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#DevTestMemo -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#DevTestMemo">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Foundation:hasName>Development Test Procedures</UA_Foundation:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Develop_Rover_TEMP -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Develop_Rover_TEMP">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DevelopTEMP"/>
+        <UA_Event:manifestsIn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_TEMP_Development"/>
+        <UA_SystemArchitecture:canOutput rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_TEMP"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_WIPT_Role"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursAt rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Site"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Condition"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Condition -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Condition">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Objective -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Objective">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestObjective"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1"/>
+        <UA_Requirements:hasObjectiveText>The purpose of the Engineering Test 1 is to...</UA_Requirements:hasObjectiveText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Procedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Objective"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Site -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#EngineeringTest1Site">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestSite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#FDIRTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#FDIRTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_FDIR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#FullRateProductionDecision -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#FullRateProductionDecision">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#FullRateProductionDecisionPoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#FullRateProductionDecisionPoint -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#FullRateProductionDecisionPoint">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#FullRateProductionDecision_TimePeriod"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#FullRateProductionDecision_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#FullRateProductionDecision_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-08-01T12:00:00</UA_Foundation:hasBeginInstant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#FutureTestTimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#FutureTestTimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-31T12:00:00</UA_Foundation:hasEndInstant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#IOTE2_Criteria -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#IOTE2_Criteria">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#EntranceCriteria"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_OTEProgram_Phase1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#IsolateFault -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#IsolateFault">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#LMMDR_Model2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#LMMDR_Model2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#RoverModel2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#LMMDR_Replica1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#LMMDR_Replica1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#LUT -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#LUT">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#LiveFireTEProgram"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#LUT_EntranceCriteria -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#LUT_EntranceCriteria">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#EntranceCriteria"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#LUT"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#LowPowerTester -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#LowPowerTester">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Tester"/>
+        <UA_Agent:isRoleOf rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Person4"/>
+        <UA_Test:triggersTest rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#LowPowerTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#MBTSA_Doc -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#MBTSA_Doc">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Foundation:hasName>Reliability Test Results</UA_Foundation:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#MOE -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#MOE">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Performance"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#MOE_Document"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#MOE_Document -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#MOE_Document">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Requirements:satisfies rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#LUT_EntranceCriteria"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#MakeArchitectureSelectionDecision -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#MakeArchitectureSelectionDecision">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <UA_Event:manifestsIn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#ArchitectureSelectionDecisionMade"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_MDA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#MakePhaseCDecision -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#MakePhaseCDecision">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <UA_Event:manifestsIn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#PhaseCDecisionMade"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_MDA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#MilestoneE -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#MilestoneE">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Milestone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#MinimumHours -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#MinimumHours">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#MobilityDeploymentTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#MobilityDeploymentTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#DeploymentTestTimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Prototype"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Model1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Model1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Model"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ORG1_TestReport -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ORG1_TestReport">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_MobilityTorqueTest"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#TorqueTestData"/>
+        <UA_Foundation:hasName>Mobility Torque Test Data</UA_Foundation:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ORG2_TestReport -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ORG2_TestReport">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_MobilityTorqueTest"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#PayloadTestData"/>
+        <UA_Foundation:hasName>Payload Test Data</UA_Foundation:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#PayloadDeploymentTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#PayloadDeploymentTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#DeploymentTestTimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Prototype"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#PayloadTestData -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#PayloadTestData">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestResult"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_PayloadTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Person4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Person4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Person"/>
+        <UA_Foundation:hasName>Lisa Simpson</UA_Foundation:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#PhaseCDecision -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#PhaseCDecision">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision"/>
+        <TEMP_Decision:isInformedBy rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#ORG1_TestReport"/>
+        <TEMP_Decision:isInformedBy rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#ORG2_TestReport"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#PhaseC"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#PhaseCDecisionMade -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#PhaseCDecisionMade">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#PhaseCReliability -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#PhaseCReliability">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Milestone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#PhaseCReliabilityDecision -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#PhaseCReliabilityDecision">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision"/>
+        <TEMP_Decision:isInformedBy rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityDemo1_Result"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#PhaseCReliability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#PhaseC_TemporalRegion -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#PhaseC_TemporalRegion">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-04-20T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-04-25T12:00:00</UA_Foundation:hasEndInstant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ProduceRoverEvaluation -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ProduceRoverEvaluation">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ProduceSystemEvaluation"/>
+        <UA_Event:manifestsIn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#RoverEvaluationProduction"/>
+        <UA_SystemArchitecture:canInput rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#CommsTest_Result"/>
+        <UA_SystemArchitecture:canInput rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#VibrationTest_Result"/>
+        <UA_SystemArchitecture:canOutput rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#RoverEvaluationResult"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_OTA"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#RecoverFault -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#RecoverFault">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityCA1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityCA1">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#RecommendedCorrectiveAction"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_TEProgram"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_IDSK"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityDemo1_Result -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityDemo1_Result">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestResult"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo1"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityCA1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityDoc -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityDoc">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Foundation:hasGenericDependent rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityModel_Final"/>
+        <UA_Foundation:hasGenericDependent rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityModel_Initial"/>
+        <UA_Foundation:hasName>Reliability Test Procedures</UA_Foundation:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityModel_Final -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityModel_Final">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityModel_Initial -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilityModel_Initial">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilitySimulation1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ReliabilitySimulation1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Simulation"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#RoverModel2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#ReqDoc1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#ReqDoc1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Foundation:hasName>System Requirements Document</UA_Foundation:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_Comms -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_Comms">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#ReqDoc1"/>
+        <UA_Requirements:hasRequirementText>The Rover shall be capable of transmitting 100Mb/s to the Mars Orbiter...</UA_Requirements:hasRequirementText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_MBTSA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_MBTSA">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#PerformanceRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_System_Reliability"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#MBTSA_Doc"/>
+        <UA_Requirements:hasRequirementText>Mean time between failures shall be greater than 10000 hours with a confidence value of 99%</UA_Requirements:hasRequirementText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_Vibration -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_Vibration">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#ReqDoc1"/>
+        <UA_Requirements:hasRequirementText>The Rover shall withstand vibration of at least...</UA_Requirements:hasRequirementText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#RoverEvaluationProduction -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#RoverEvaluationProduction">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationProduction"/>
+        <UA_Agent:hasInput rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#CommsTest_Result"/>
+        <UA_Agent:hasInput rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#VibrationTest_Result"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#RoverEvaluationResult"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#RoverEvaluationResult -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#RoverEvaluationResult">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluation"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#CommsTest_Result"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#VibrationTest_Result"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#RoverModel2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#RoverModel2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Model"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_DTE1Objective -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_DTE1Objective">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestProgramObjective"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_DTEProgram_Phase1"/>
+        <UA_Requirements:hasObjectiveText>The purpose of the DTE 1 Program is to...</UA_Requirements:hasObjectiveText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_DTEProgram_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_DTEProgram_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-01T12:00:00</UA_Foundation:hasEndInstant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Efficiency -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Efficiency">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Efficiency"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Efficiency_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Efficiency_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Efficiency"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_FDIR -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_FDIR">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#DetectFault"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#IsolateFault"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#RecoverFault"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_IDSK -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_IDSK">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#IDSK"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_TEProgram"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#RecommendedCorrectiveAction1"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#RecommendedCorrectiveAction2"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_TEMP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_MobilityTorqueTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_MobilityTorqueTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Mobility"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Model1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Model1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Model1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_PayloadTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_PayloadTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ProgramObjective -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ProgramObjective">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestProgramObjective"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_Program"/>
+        <UA_Requirements:hasObjectiveText>Acquire a Rover from JPL that satisfies the user requirements</UA_Requirements:hasObjectiveText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Prototype -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Prototype">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_PrototypeAcquisition -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_PrototypeAcquisition">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#Acquisition"/>
+        <UA_Acquisition:hasAcquisitionItem rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Prototype"/>
+        <UA_Acquisition:hasAcquisitionPurchaser rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#NASA"/>
+        <UA_Acquisition:hasAcquisitionVendor rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#JPL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#MarsLander"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#MarsOrbiter"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#DeploymentTestTimePeriod"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_MBTSA"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Atmosphere"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#MinimumHours"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Terrain"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Prototype"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#MarsLander"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#MarsOrbiter"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2_TimePeriod"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Requirement_MBTSA"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Atmosphere"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#MinimumHours"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Terrain"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2_Plan -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2_Plan">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Plan"/>
+        <UA_Agent:hasPlannedTemporalRegion rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2_TimePeriod"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2_Procedure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2_Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2_Procedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_ReliabilityDemo2_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-01T12:00:00</UA_Foundation:hasEndInstant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_System_Reliability -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_System_Reliability">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_System"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Rover_TEMP_Development -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_TEMP_Development">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#TEMPDevelopment"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part1#Rover_TEMP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#TATD1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#TATD1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Foundation:hasName>Target Acquisition Test Procedure</UA_Foundation:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_AtmosphericDust -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_AtmosphericDust">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_AtmosphericDust_Planned -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_AtmosphericDust_Planned">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#PlannedTestCondition"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_AtmosphericDust"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_Lighting -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_Lighting">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_Lighting_Planned -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_Lighting_Planned">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#PlannedTestCondition"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_Lighting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_Procedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#TargetAcquisitionTest"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_AtmosphericDust_Planned"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTest_Lighting_Planned"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#TATD1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTester -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#TargetAcquisitionTester">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Tester"/>
+        <UA_Agent:isRoleOf rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Person4"/>
+        <UA_Test:triggersTest rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#TargetAcquisitionTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#TechRiskAssessment1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#TechRiskAssessment1">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#RiskAssessment"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#Rover_TEProgram"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_IDSK"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#Terrain -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#Terrain">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#TerrainTraversalExercise -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#TerrainTraversalExercise">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#DeploymentTestTimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_Prototype"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#TorqueTestData -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#TorqueTestData">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestResult"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#Rover_MobilityTorqueTest"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#VibrationTestPlan -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#VibrationTestPlan">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part2#VibrationTest"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/DoD_Example_Rover/Part3#DevTestMemo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/DoD_Example_Rover/Part3#VibrationTestSite -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/DoD_Example_Rover/Part3#VibrationTestSite">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Site"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+
+

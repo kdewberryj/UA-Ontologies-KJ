@@ -1,0 +1,420 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#"
+     xml:base="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_ProjectManagement"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Requirements"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A vocabulary to capture test program concepts required for TEMP</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#hasTestObjective -->
+
+
+    <owl:ObjectProperty rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#hasTestObjective">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
+        <rdfs:range rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Requirements#Objective"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <rdfs:label>has test objective</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#isManagedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#isManagedBy">
+        <owl:inverseOf rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#manages"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdfs:label>is managed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#isObjectiveOfTest -->
+
+
+    <owl:ObjectProperty rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#isObjectiveOfTest">
+        <owl:inverseOf rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#hasTestObjective"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdfs:label>is objective of test</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#manages -->
+
+
+    <owl:ObjectProperty rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#manages">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#ProgramManager"/>
+        <rdfs:range rdf:resource="http://siedepartment.com/SIE_Domain/SIE_ProjectManagement#Program"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <rdfs:label>manages</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#IntegratedTestProgram -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#IntegratedTestProgram">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#contains"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#DevelopmentalTEProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#contains"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#LiveFireTEProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#contains"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#OperationalTEProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#DevelopmentalTEProgram -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#DevelopmentalTEProgram">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
+        <dc:description>An [=DevelopmentalTEProgram=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Developmental TE Program</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#EntranceCriteria -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#EntranceCriteria">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Requirements#Requirement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information#prescribes"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information#prescribes"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An [=EntranceCriteria=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Entrance Criteria</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#ExitCriteria -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#ExitCriteria">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Domain/SIE_Requirements#Requirement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information#prescribes"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information#prescribes"/>
+                <owl:allValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An [=ExitCriteria=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Exit Criteria</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#FullRateProduction -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#FullRateProduction">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Domain/SIE_ProjectManagement#Program"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#contains"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#InitialOperationalTEProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#isContainedIn"/>
+                <owl:someValuesFrom rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#MajorDefenceAcquisitionProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>An [=FullRateProduction=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Full Rate Production</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#HasTestObjective -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#HasTestObjective">
+        <dc:description>[=HasTestObjective=] is a </dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+        <rdfs:label>Has Test Objective</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#InitialOperationalTEProgram -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#InitialOperationalTEProgram">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#OperationalTEProgram"/>
+        <dc:description>An [=InitialOperationalTEProgram=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Initial Operational TE Program</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#LiveFireTEProgram -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#LiveFireTEProgram">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
+        <dc:description>An [=LiveFireTEProgram=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Live Fire TE Program</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#Manages -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#Manages">
+        <dc:description>[=Manages=] is a </dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+        <rdfs:label>Manages</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#OperationalTEProgram -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#OperationalTEProgram">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
+        <dc:description>An [=OperationalTEProgram=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Operational TE Program</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#ProgramManager -->
+
+
+    <owl:Class rdf:about="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#ProgramManager">
+        <rdfs:subClassOf rdf:resource="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Role"/>
+        <dc:description>A [=ProgramManager=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>ProgramManager</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="urn:swrl:var#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>hasTestObjective derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#HasTestObjective"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#hasTestObjective"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>manages derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#Manages"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://siedepartment.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#manages"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+
+
