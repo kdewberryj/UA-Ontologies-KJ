@@ -1,0 +1,11 @@
+vocabulary bundle <http://siedepartment.com/SIE_Core/bundle#> as ^bundle {
+	
+	extends <http://siedepartment.com/SIE_Foundation/bundle#>
+	
+	includes <http://siedepartment.com/SIE_Core/SIE_Information#>
+	includes <http://siedepartment.com/SIE_Core/SIE_Event#>
+	includes <http://siedepartment.com/SIE_Core/SIE_Agent#>
+	includes <http://siedepartment.com/SIE_Core/SIE_Measurement#>
+	includes <http://siedepartment.com/SIE_Core/SIE_Provenance#>
+	
+}

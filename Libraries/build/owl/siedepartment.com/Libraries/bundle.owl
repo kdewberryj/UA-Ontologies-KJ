@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://siedepartment.com/Libraries/bundle#"
+     xml:base="http://siedepartment.com/Libraries/bundle"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://siedepartment.com/Libraries/bundle">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://siedepartment.com/Libraries/Dimensions"/>
+        <owl:imports rdf:resource="http://siedepartment.com/Libraries/SoftwareTools"/>
+        <owl:imports rdf:resource="http://siedepartment.com/Libraries/Units"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Core/bundle"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Domain/bundle"/>
+        <owl:imports rdf:resource="http://siedepartment.com/SIE_Foundation/bundle"/>
+        <dc:description>A description bundle that bundles together all libraries</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#DescriptionBundle"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://siedepartment.com/Libraries/Units#kilogram -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/Libraries/Units#kilogram">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://siedepartment.com/Libraries/Units#metre -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/Libraries/Units#metre">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://siedepartment.com/Libraries/Units#percentage -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/Libraries/Units#percentage">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://siedepartment.com/Libraries/Units#second -->
+
+
+    <rdf:Description rdf:about="http://siedepartment.com/Libraries/Units#second">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://siedepartment.com/SIE_Core/SIE_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+
+

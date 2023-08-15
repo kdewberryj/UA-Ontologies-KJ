@@ -1,0 +1,168 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#Container>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Container> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#Occurrent>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#ContainedElement> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Occurrent> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#specificallyDependentOn>
+        rdf:type  owl:ObjectProperty .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#ImmaterialEntity>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IndependentContinuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#SDCCarrier> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#ImmaterialEntity> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#IndependentContinuant>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#SDCCarrier> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IndependentContinuant> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#hasSpecificDependent>
+        rdf:type  owl:ObjectProperty .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#GenericallyDependentOn>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#GenericallyDependentOn> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#MaterialEntity>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IndependentContinuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#ContainedElement> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#SDCCarrier> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#MaterialEntity> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#RealizableEntity>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#SpecificallyDependentContinuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#RealizableEntity> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#ObjectAggregate>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#SDCCarrier> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#MaterialEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Container> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#ObjectAggregate> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#ContainedElement> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IndependentContinuant> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#Function>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Disposition> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#RealizableEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#ContainedElement> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Function> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Container> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#SpecificallyDependentContinuant> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#Occupies>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Occupies> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#occupies>
+        rdf:type  owl:ObjectProperty .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#hasName>
+        rdf:type  owl:DatatypeProperty .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#SpecificallyDependentContinuant>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#SpecificallyDependentContinuant> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#Energy>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IndependentContinuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#SDCCarrier> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#ImmaterialEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Energy> .
+
+owl:Nothing  rdf:type  owl:Class .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#isContainedIn>
+        rdf:type  owl:ObjectProperty .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#Quality>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#SpecificallyDependentContinuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Quality> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#GenericallyDependentContinuant>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#GenericallyDependentContinuant> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#Process>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#ContainedElement> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Container> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Occurrent> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Process> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#Site>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IndependentContinuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#SDCCarrier> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#ImmaterialEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Site> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#hasBeginInstant>
+        rdf:type  owl:DatatypeProperty .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#SDCCarrier>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#SDCCarrier> .
+
+owl:Thing  rdf:type  owl:Class .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#SpecificallyDependentOn>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#SpecificallyDependentOn> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#hasEndInstant>
+        rdf:type  owl:DatatypeProperty .
+
+owl:topObjectProperty
+        rdf:type  owl:SymmetricProperty , owl:TransitiveProperty , owl:ObjectProperty .
+
+owl:topDataProperty  rdf:type  owl:DatatypeProperty .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#hasNaturalLanguageDescription>
+        rdf:type  owl:DatatypeProperty .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#Contains>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Contains> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#contains>
+        rdf:type  owl:ObjectProperty .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#genericallyDependentOn>
+        rdf:type  owl:ObjectProperty .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#TemporalRegion>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#ContainedElement> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Container> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Occurrent> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#TemporalRegion> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#hasGenericDependent>
+        rdf:type  owl:ObjectProperty .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#Object>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#MaterialEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IndependentContinuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#ContainedElement> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#SDCCarrier> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Object> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#hasID>
+        rdf:type  owl:DatatypeProperty .
+
+<http://opencaesar.io/oml#hasSource>
+        rdf:type  owl:ObjectProperty .
+
+<http://opencaesar.io/oml#hasTarget>
+        rdf:type  owl:ObjectProperty .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#Disposition>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#RealizableEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#SpecificallyDependentContinuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Disposition> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#ContainedElement>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#ContainedElement> .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> .
+
+<http://siedepartment.com/SIE_Foundation/bundle/classes>
+        rdf:type         owl:Ontology ;
+        rdfs:comment     "Generated by Owl Reason 1.1.5" ;
+        owl:imports      <http://siedepartment.com/SIE_Foundation/bundle> ;
+        owl:versionInfo  "1689958962" .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#isOccupiedBy>
+        rdf:type  owl:ObjectProperty .
+
+<http://siedepartment.com/SIE_Foundation/SIE_Foundation#Role>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Container> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#ContainedElement> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#GenericallyDependentContinuant> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#SDCCarrier> , <http://siedepartment.com/SIE_Foundation/SIE_Foundation#Role> .

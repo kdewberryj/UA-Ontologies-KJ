@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuites name="http://siedepartment.com/SIE_Foundation/bundle">
+  <testsuite name="Consistency">
+    <testcase name="http://siedepartment.com/SIE_Foundation/bundle"/>
+  </testsuite>
+  <testsuite name="Satisfiability">
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#SpecificallyDependentOn"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#ContainedElement"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Role"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Occupies"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Energy"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Container"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#RealizableEntity"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#MaterialEntity"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#ImmaterialEntity"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Site"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#IndependentContinuant"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#IdentifiedEntity"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Disposition"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Object"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Contains"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#ObjectAggregate"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#GenericallyDependentContinuant"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Function"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#GenericallyDependentOn"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Process"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#SDCCarrier"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#TemporalRegion"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Continuant"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Occurrent"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#SpecificallyDependentContinuant"/>
+    <testcase name="http://siedepartment.com/SIE_Foundation/SIE_Foundation#Quality"/>
+  </testsuite>
+</testsuites>
