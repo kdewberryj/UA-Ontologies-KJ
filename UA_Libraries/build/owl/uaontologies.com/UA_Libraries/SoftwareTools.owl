@@ -40,6 +40,15 @@
     
 
 
+    <!-- http://uaontologies.com/UA_Libraries/SoftwareTools#GMAT -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/SoftwareTools#GMAT">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://uaontologies.com/UA_Libraries/SoftwareTools#Jama -->
 
 
@@ -58,10 +67,37 @@
     
 
 
+    <!-- http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/SoftwareTools#Sedaro -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/SoftwareTools#Sedaro">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://uaontologies.com/UA_Libraries/SoftwareTools#Valispace -->
 
 
     <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/SoftwareTools#Valispace">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/SoftwareTools#Violet -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet">
         <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
     </owl:NamedIndividual>
 </rdf:RDF>

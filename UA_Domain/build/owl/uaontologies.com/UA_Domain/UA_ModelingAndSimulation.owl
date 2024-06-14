@@ -43,24 +43,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#hasOutput"/>
-                <owl:allValuesFrom rdf:resource="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#AnalysisResult"/>
+                <owl:allValuesFrom rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:description>A [=Analysis=] is a...</dc:description>
         <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Analysis</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#AnalysisResult -->
-
-
-    <owl:Class rdf:about="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#AnalysisResult">
-        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
-        <dc:description>A [=AnalysisResult=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
-        <rdfs:label>Analysis Result</rdfs:label>
     </owl:Class>
     
 

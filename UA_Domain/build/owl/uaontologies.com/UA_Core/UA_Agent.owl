@@ -226,6 +226,7 @@
 
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Agent#Agent">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier"/>
         <dc:description>An [=Agent=]...</dc:description>
         <dc:type rdf:resource="http://opencaesar.io/oml#Aspect"/>
         <rdfs:label>Agent</rdfs:label>

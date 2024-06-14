@@ -34,12 +34,14 @@
     <testcase name="http://uaontologies.com/UA_Core/UA_Agent#Person"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MDADecisionMade"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Mission#Mission"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#ProduceTEReport"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Site"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Test#Tester"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#Reviews"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DoDMSCoordinationOffice"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#CanInput"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_Test#BooleanTestResult"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#LeadDevelopmentalTestOrganization"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Test#TestResult"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Program"/>
@@ -72,10 +74,12 @@
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentOn"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Process"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Test#PlannedTestCondition"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#SpaceMission"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Measurement#Measurement"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ReviewSystemEvaluationReport"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Activity"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluation"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Requirements#PhysicalRequirement"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Energy"/>
@@ -104,6 +108,7 @@
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#TestAgency"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Requirements#FunctionalRequirement"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Test#SitePlan"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#SpaceFlight"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#TEMPDevelopment"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Test#TestObjective"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#LiveFireTEProgram"/>
@@ -129,6 +134,7 @@
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#OTEFrameworkApproval"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#DevelopmentalEvaluationFramework"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_BayesianNetworks#HasBayesianChild"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#ApprovedElement"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#Manages"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#TETestUndertaking"/>
@@ -136,12 +142,14 @@
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MakeMDADecision"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionVendor"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_DataManagement#HasAccess"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_INC"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#TEFramework"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestProgramObjective"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Software#SoftwareAgent"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Requirements#Satisfies"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Agent#IsRoleOf"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_Acquisition#Vendor"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#TEProgramDefinition"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#CharacterizeTEProgram"/>
@@ -181,7 +189,9 @@
     <testcase name="http://uaontologies.com/UA_Core/UA_Information#Model"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#TEMP"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_Acquisition#Purchaser"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Analysis"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_AOP"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DevelopLFTF"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#CanOutput"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#MilitaryServiceNotification"/>
@@ -193,12 +203,14 @@
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_DataManagement#Repository"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#OrbitalPath"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#WIPT"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_TA"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Requirements#Verifies"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#ProduceTEProcedure"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Measurement#HasDimension"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Mission#HasEnvironment"/>
-    <testcase name="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#AnalysisResult"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#HasSpaceFlightPhase"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Test#TestSite"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Agent#Producer"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Disposition"/>
@@ -207,6 +219,7 @@
     <testcase name="http://uaontologies.com/UA_Core/UA_Information#InformationEntity"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#ApproveLFTEFramework"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_SMA"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Measurement#HasUnit"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#Conducts"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#USDRE"/>
@@ -216,6 +229,7 @@
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#RealizableEntity"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#PMDecisionMade"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Software#HasSoftwareVendor"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Project"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Provenance#ApprovedBy"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Requirements#PerformanceRequirement"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Occupies"/>
@@ -229,6 +243,7 @@
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEReportProduction"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DevelopOEF"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#LFTFDevelopment"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_LAN"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#DevelopmentalTEProgram"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Information#IsAbout"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DevelopTEMP"/>
@@ -238,7 +253,9 @@
     <testcase name="http://uaontologies.com/UA_Domain/UA_Test#TestEquipmentData"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Test#HasTestCondition"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbit"/>
     <testcase name="http://uaontologies.com/UA_Domain/UA_Test#TriggersTest"/>
+    <testcase name="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_ECC"/>
     <testcase name="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightList"/>
   </testsuite>
 </testsuites>

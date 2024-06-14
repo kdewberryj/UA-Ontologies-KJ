@@ -27,7 +27,7 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as UA_Proje
 	
 	//extends <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
 	//extends <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
-	//extends <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	extends <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
 	//extends <http://uaontologies.com/UA_Domain/UA_Test#> as test
 	//extends <http://uaontologies.com/UA_Domain/UA_Software#> as sw
 	//extends <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
@@ -50,10 +50,28 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as UA_Proje
 		restricts all relation foundation:contains to foundation:Occurrent
 	]
 	
+	@rdfs:label "Project"
+	@dc:description "A [=Project=] is a..."
+	concept Project :> agent:ManagedProcess, foundation:Container, foundation:ContainedElement, agent:Producer, agent:Consumer [
+		restricts all relation foundation:contains to Task
+	]
+	
+	@rdfs:label "Task"
+	@dc:description "A [=Task=] is a..."
+	concept Task :> agent:ManagedProcess, foundation:Container, foundation:ContainedElement, agent:Producer, agent:Consumer [
+		restricts all relation foundation:contains to Task
+	]
+	
+	@rdfs:label "Activity"
+	@dc:description "A [=Activity=] is a..."
+	concept Activity :> Task, req:VerificationMethod [
+		restricts some relation agent:isResponsibilityOf to agent:ProcessOwner
+	]
+	
 	
 		
 	///// Relations
-	
+
 	
 	
 	///// Scalar Properties

@@ -30,6 +30,14 @@ description <http://uaontologies.com/UA_Libraries/SoftwareTools#> as SWT {
 	ci Valispace : sw:Software
 	
 	ci Duro : sw:Software
+	
+	ci GMAT : sw:Software
+	
+	ci Violet : sw:Software
+	
+	ci Sedaro : sw:Software
+	
+	ci JupyterLab : sw:Software
 
 	
 	

@@ -31,10 +31,55 @@
     
 
 
+    <!-- http://uaontologies.com/UA_Libraries/Dimensions#Angle -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Dimensions#Angle">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://uaontologies.com/UA_Libraries/Dimensions#Area -->
 
 
     <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Dimensions#Area">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Dimensions#Boolean -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Dimensions#Boolean">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Dimensions#Capacity -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Dimensions#Capacity">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Dimensions#Cost -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Dimensions#Cost">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Dimensions#Dimensionless -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Dimensions#Dimensionless">
         <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
     </owl:NamedIndividual>
     
@@ -71,6 +116,33 @@
 
 
     <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Dimensions#Mass">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Dimensions#Power -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Dimensions#Power">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Dimensions#Probability -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Dimensions#Probability">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Dimensions#Temperature -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Dimensions#Temperature">
         <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
     </owl:NamedIndividual>
     

@@ -117,6 +117,29 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Test#hasBooleanResult -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Test#hasBooleanResult">
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#BooleanTestResult"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#scalarProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -146,6 +169,30 @@
         <dc:description>A [=ActualTestCondition=] is a...</dc:description>
         <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Actual Test Condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Test#BooleanTestResult -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/UA_Domain/UA_Test#BooleanTestResult">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:allValuesFrom rdf:resource="http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=BooleanTestResult=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Boolean Test Result</rdfs:label>
     </owl:Class>
     
 

@@ -262,6 +262,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
             </owl:Restriction>
         </rdfs:subClassOf>

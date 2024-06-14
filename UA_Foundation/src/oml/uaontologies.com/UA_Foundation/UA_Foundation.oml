@@ -51,7 +51,7 @@ vocabulary <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation 
 	]
 	
 	@rdfs:label "Process"
-	concept Process :> Occurrent, Container, ContainedElement [
+	concept Process :> Occurrent, Container, ContainedElement, SDCCarrier [
 		restricts all relation contains to Process
 		restricts all relation isContainedIn to Process 
 	]

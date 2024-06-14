@@ -148,6 +148,20 @@
     
 
 
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasBooleanValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasBooleanValue">
+        <rdfs:subPropertyOf rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasValue"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <dc:description>[=hasBooleanValue=] ...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#scalarProperty"/>
+        <rdfs:label>has Boolean value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasConfidence -->
 
 
@@ -165,7 +179,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasLowerValue">
-        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#ConfidenceInterval"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Range"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <dc:description>[=hasLowerValue=] ...</dc:description>
         <dc:type rdf:resource="http://opencaesar.io/oml#scalarProperty"/>
@@ -178,7 +192,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasUpperValue">
-        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#ConfidenceInterval"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Range"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <dc:description>[=hasUpperValue=] ...</dc:description>
         <dc:type rdf:resource="http://opencaesar.io/oml#scalarProperty"/>
@@ -216,7 +230,7 @@
 
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#ConfidenceInterval">
-        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Measurement"/>
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Range"/>
         <dc:description>A [=ConfidenceInterval=]...</dc:description>
         <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Confidence Interval</rdfs:label>
@@ -320,6 +334,18 @@
         <dc:description>A [=Quantity=]...</dc:description>
         <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Quantity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#Range -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#Range">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Measurement"/>
+        <dc:description>A [=Range=]...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Range</rdfs:label>
     </owl:Class>
     
 

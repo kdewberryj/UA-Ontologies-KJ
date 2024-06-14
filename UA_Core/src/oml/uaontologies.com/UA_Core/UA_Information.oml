@@ -136,6 +136,10 @@ vocabulary <http://uaontologies.com/UA_Core/UA_Information#> as UA_Information {
 	isAbout(a, b) ^ foundation:contains(c, b) -> isAbout(a, c)
 	]
 	
+	@rdfs:comment "When an IE represents a thing, everything that contains that thing are also represented by the IE."
+	rule Dependence-is-inherited [
+	InformationArtifact(a) ^ foundation:hasGenericDependent(a, b) ^ foundation:contains(b, c) -> foundation:hasGenericDependent(a, c)
+	]
 	
 	
 }

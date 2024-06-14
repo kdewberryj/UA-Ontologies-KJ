@@ -76,15 +76,6 @@
     
 
 
-    <!-- http://uaontologies.com/UA_Core/UA_Measurement#ConfidenceInterval -->
-
-
-    <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#ConfidenceInterval">
-        <owl:disjointWith rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
-    </rdf:Description>
-    
-
-
     <!-- http://uaontologies.com/UA_Core/UA_Measurement#HasApplicableDimension -->
 
 
@@ -99,6 +90,15 @@
 
     <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#Measurement">
         <owl:disjointWith rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#Range -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#Range">
+        <owl:disjointWith rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
     </rdf:Description>
     
 

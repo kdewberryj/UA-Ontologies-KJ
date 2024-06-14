@@ -12,6 +12,11 @@ vocabulary bundle <http://uaontologies.com/UA_Domain/bundle#> as ^bundle {
 	includes <http://uaontologies.com/UA_Domain/UA_DataManagement#>
 	includes <http://uaontologies.com/UA_Domain/UA_Acquisition#>
 	includes <http://uaontologies.com/UA_Domain/UA_Materials#>
+	includes <http://uaontologies.com/UA_Domain/UA_BayesianNetworks#>
+	includes <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#>
+	includes <http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#>
+	includes <http://uaontologies.com/UA_Domain/UA_Manuf_IFeatures#>
+	includes <http://uaontologies.com/UA_Domain/UA_Manuf_Processes#>
 	
 	
 }

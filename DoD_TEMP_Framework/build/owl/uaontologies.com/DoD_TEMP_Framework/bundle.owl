@@ -91,11 +91,11 @@
     
 
 
-    <!-- http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Analysis -->
+    <!-- http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#OrbitalPath -->
 
 
-    <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Analysis">
-        <owl:disjointWith rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#OrbitalPath">
+        <owl:disjointWith rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestSite"/>
     </rdf:Description>
     
 
@@ -165,6 +165,8 @@
             <rdf:Description rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#WIPT"/>
             <rdf:Description rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#ProgramManager"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#Purchaser"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#Vendor"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Test#Tester"/>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -246,11 +248,13 @@
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionItem"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionPurchaser"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionVendor"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_BayesianNetworks#HasBayesianChild"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_DataManagement#HasAccess"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_DataManagement#HasDigitalLocation"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_DataManagement#SupportsRepository"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Mission#HasEnvironment"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Mission#ParticipatesInMission"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#HasSpaceFlightPhase"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#DerivesRequirement"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#Refines"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#Satisfies"/>
@@ -367,8 +371,8 @@
             <rdf:Description rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#TEProgramDefinition"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#Measurement"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
-            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#AnalysisResult"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ArchitectureDescription"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Test#BooleanTestResult"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Test#TestResult"/>
         </owl:members>
     </rdf:Description>
@@ -474,6 +478,27 @@
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Program"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#Process"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Analysis"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#SpaceFlight"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Project"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_AOP"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_ECC"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_INC"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_LAN"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_SMA"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_TA"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>

@@ -22,6 +22,8 @@ description <http://uaontologies.com/UA_Libraries/Dimensions#> as Dimensions {
 	
 	///////////////////////////////////////////////////////////////////////////////////
 
+	ci Dimensionless : meas:Dimension
+	
 	ci Length : meas:Dimension
 	
 	ci Time : meas:Dimension
@@ -30,10 +32,24 @@ description <http://uaontologies.com/UA_Libraries/Dimensions#> as Dimensions {
 	
 	ci Force : meas:Dimension
 	
+	ci Temperature : meas:Dimension
+	
 	ci Area : meas:Dimension
 	
 	ci Volume : meas:Dimension
 	
+	ci Power : meas:Dimension
+	
+	ci Capacity : meas:Dimension
+	
 	ci Efficiency : meas:Dimension
+	
+	ci Angle : meas:Dimension
+	
+	ci Probability : meas:Dimension
+	
+	ci Boolean : meas:Dimension
+	
+	ci Cost : meas:Dimension
 
 }

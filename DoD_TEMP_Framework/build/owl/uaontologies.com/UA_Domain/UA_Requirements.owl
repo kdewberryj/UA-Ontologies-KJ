@@ -185,6 +185,19 @@
     
 
 
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#hasVerificationStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#hasVerificationStatus">
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>[=hasVerificationStatus=] ...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#scalarProperty"/>
+        <rdfs:label>has verification status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //

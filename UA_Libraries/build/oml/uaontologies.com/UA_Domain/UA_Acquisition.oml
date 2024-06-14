@@ -13,14 +13,14 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Acquisition#> as UA_Acquisition
 	
     extends <http://purl.org/dc/elements/1.1/> as dc
     extends <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-    //extends <http://www.w3.org/2001/XMLSchema#> as xsd
+    extends <http://www.w3.org/2001/XMLSchema#> as xsd
     
     // Import relevant vocabularies
     
     extends <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
 	
 	//extends <http://uaontologies.com/UA_Core/UA_Information#> as info
-	extends <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+	//extends <http://uaontologies.com/UA_Core/UA_Agent#> as agent
 	//extends <http://uaontologies.com/UA_Core/UA_Event#> as event
 	//extends <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
 	//extends <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
@@ -48,11 +48,19 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Acquisition#> as UA_Acquisition
 	@rdfs:label "Acquisition"
 	@dc:description "A [=Acquisition=] is a..."
 	concept Acquisition :> foundation:Process [
-		restricts some relation hasAcquisitionVendor to agent:Agent
-		restricts some relation hasAcquisitionPurchaser to agent:Agent
+		restricts some relation hasAcquisitionVendor to Vendor
+		restricts some relation hasAcquisitionPurchaser to Purchaser
 		restricts some relation hasAcquisitionItem to foundation:IdentifiedEntity
 	]
 	
+	@rdfs:label "Vendor"
+	@dc:description "A [=Vendor=] is a..."
+	concept Vendor :> foundation:Role
+	
+	@rdfs:label "Purchaser"
+	@dc:description "A [=Purchaser=] is a..."
+	concept Purchaser :> foundation:Role
+		
 	
 		
 	///// Relations
@@ -74,7 +82,7 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Acquisition#> as UA_Acquisition
 	@dc:description "[=HasAcquisitionVendor=] is a "
 	relation entity HasAcquisitionVendor [
 		from Acquisition
-		to agent:Agent
+		to Vendor
 		@rdfs:label "has acquisition vendor"
 		forward hasAcquisitionVendor
 		@rdfs:label "is vendor for"
@@ -87,7 +95,7 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Acquisition#> as UA_Acquisition
 	@dc:description "[=HasAcquisitionPurchaser=] is a "
 	relation entity HasAcquisitionPurchaser [
 		from Acquisition
-		to agent:Agent
+		to Purchaser
 		@rdfs:label "has acquisition purchaser"
 		forward hasAcquisitionPurchaser
 		@rdfs:label "is purchaser for"
@@ -108,7 +116,12 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Acquisition#> as UA_Acquisition
 	scalar property hasProcurementStatus [
 		domain foundation:IdentifiedEntity
 		range ProcurementStatus
-	]	
+	]
+	
+	scalar property hasAcquisitionDate [
+		domain Acquisition
+		range xsd:dateTime
+	]		
 	
 	
 	///// Rules

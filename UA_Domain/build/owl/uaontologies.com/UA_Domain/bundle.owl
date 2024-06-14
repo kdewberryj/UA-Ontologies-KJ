@@ -10,10 +10,15 @@
     <owl:Ontology rdf:about="http://uaontologies.com/UA_Domain/bundle">
         <owl:imports rdf:resource="http://uaontologies.com/UA_Core/bundle"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_BayesianNetworks"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_DataManagement"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Manuf_IFeatures"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Manuf_Processes"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Materials"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Mission"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Software"/>
@@ -33,15 +38,6 @@
      -->
 
 
-    
-
-
-    <!-- http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner -->
-
-
-    <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner">
-        <owl:disjointWith rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Tester"/>
-    </rdf:Description>
     
 
 
@@ -81,20 +77,74 @@
     
 
 
-    <!-- http://uaontologies.com/UA_Core/UA_Measurement#Quantity -->
+    <!-- http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#Bend -->
 
 
-    <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#Quantity">
-        <owl:disjointWith rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Architecture"/>
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#Bend">
+        <owl:disjointWith rdf:resource="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#Protrusion"/>
     </rdf:Description>
     
 
 
-    <!-- http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Analysis -->
+    <!-- http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#Blind -->
 
 
-    <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Analysis">
-        <owl:disjointWith rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#Blind">
+        <owl:disjointWith rdf:resource="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#Through"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#FormPFeature -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#FormPFeature">
+        <owl:disjointWith rdf:resource="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#ManufacturingPFeature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#Hole -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#Hole">
+        <owl:disjointWith rdf:resource="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#Slot"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#MaterialFormPFeature -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#MaterialFormPFeature">
+        <owl:disjointWith rdf:resource="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#VoidFormPFeature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#1DFeature -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#1DFeature">
+        <owl:disjointWith rdf:resource="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#2.5DFeature"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Manuf_Processes#Capability -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#Capability">
+        <owl:disjointWith rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#OrbitalPath -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#OrbitalPath">
+        <owl:disjointWith rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestSite"/>
     </rdf:Description>
     
 
@@ -184,11 +234,13 @@
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionItem"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionPurchaser"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionVendor"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_BayesianNetworks#HasBayesianChild"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_DataManagement#HasAccess"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_DataManagement#HasDigitalLocation"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_DataManagement#SupportsRepository"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Mission#HasEnvironment"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Mission#ParticipatesInMission"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#HasSpaceFlightPhase"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#DerivesRequirement"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#Refines"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#Satisfies"/>
@@ -213,6 +265,9 @@
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#Acquisition"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#ManufacturingOperation"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#ManufacturingProcess"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#ProductProductionProcess"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence"/>
         </owl:members>
     </rdf:Description>
@@ -241,6 +296,15 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#Purchaser"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#Vendor"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Test#Tester"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Information#InformationArtifact"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
@@ -257,16 +321,6 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#ConfidenceInterval"/>
-            <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
-            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Test#ActualTestCondition"/>
-            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Test#SiteData"/>
-            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Test#TestEquipmentData"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant"/>
@@ -278,9 +332,29 @@
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#Measurement"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
-            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#AnalysisResult"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_IFeatures#IFeature"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ArchitectureDescription"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Test#BooleanTestResult"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Test#TestResult"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#PFeature"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#ShapeQuality"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Architecture"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#Range"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Test#ActualTestCondition"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Test#SiteData"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Test#TestEquipmentData"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -294,10 +368,62 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_IFeatures#WeldSymbol_WeldFinish"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_IFeatures#WeldSymbol_WeldIntermittance"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_IFeatures#WeldSymbol_WeldSize"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#AdditivePFeature"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#DeformationPFeature"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#JointPFeature"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#MachiningPFeature"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#BlindHole"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#CompoundHole"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#ThroughHole"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#WeldFinish"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#WeldIntermittance"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#WeldSize"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#MaxWeldSize"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#MinWeldSize"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#WeldFinish"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_AOP"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_ECC"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_INC"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_LAN"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_SMA"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_TA"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Mission#Mission"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Program"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#Process"/>
             <rdf:Description rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Analysis"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#SpaceFlight"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Project"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task"/>
+            <rdf:Description rdf:about="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
