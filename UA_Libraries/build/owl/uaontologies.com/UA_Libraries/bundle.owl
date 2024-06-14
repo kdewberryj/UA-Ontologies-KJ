@@ -33,10 +33,190 @@
     
 
 
+    <!-- http://uaontologies.com/UA_Libraries/Units#W -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#W">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#Wh -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#Wh">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#day -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#day">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#degC -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#degC">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#degF -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#degF">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#degK -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#degK">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#degrees -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#degrees">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#gbp -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#gbp">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
     <!-- http://uaontologies.com/UA_Libraries/Units#kilogram -->
 
 
     <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#kilogram">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#km -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#km">
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
@@ -73,10 +253,70 @@
     
 
 
+    <!-- http://uaontologies.com/UA_Libraries/Units#n-a -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#n-a">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#na -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#na">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
     <!-- http://uaontologies.com/UA_Libraries/Units#percentage -->
 
 
     <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#percentage">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#radians -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#radians">
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
@@ -97,6 +337,26 @@
 
 
     <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#second">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#usd -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#usd">
         <rdf:type>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>

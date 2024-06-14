@@ -456,6 +456,7 @@
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement"/>
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Container"/>
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent"/>
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>

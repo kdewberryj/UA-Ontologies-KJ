@@ -1,0 +1,120 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A vocabulary to capture reporting concepts required for TEMP"
+@dc:hasVersion "0.1"
+vocabulary <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as temp_teo {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Imports ///////
+	
+	
+	// Import standard vocabularies	
+	
+    extends <http://purl.org/dc/elements/1.1/> as dc
+    extends <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    //extends <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Import relevant vocabularies
+    
+    extends <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    extends <http://uaontologies.com/UA_Core/UA_Information#> as info
+    extends <http://uaontologies.com/UA_Core/UA_Event#> as event
+    extends <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    //extends <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //extends <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    extends <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+	//extends <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+	//extends <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	//extends <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	//extends <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//extends <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	//extends <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//extends <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//extends <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    
+    extends <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	extends <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp
+	//extends <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#> as temp_tps
+	//extends <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#> as temp_tpf
+	extends <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#> as temp_resp
+	//extends <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> as temp_tpt
+	//extends <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_dec
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Definitions ///////
+	
+	
+	///// Aspects
+	
+	
+	
+	///// Concepts
+	
+	@rdfs:label "Notify Military Service"
+	@dc:description "A [=NotifyMilitaryService=] is a..."
+	concept NotifyMilitaryService :> foundation:Function [
+		restricts all relation foundation:specificallyDependentOn to temp_org:DOTE
+		restricts some relation foundation:specificallyDependentOn to temp_org:DOTE
+	]
+	
+	@rdfs:label "Military Service Notification"
+	@dc:description "A [=MilitaryServiceNotification=] is a..."
+	concept MilitaryServiceNotification :> sa:FunctionOccurrence [
+		restricts all relation event:isManifestationOf to NotifyMilitaryService
+		restricts some relation event:isManifestationOf to NotifyMilitaryService
+	]
+	
+	@rdfs:label "Characterize TE Program"
+	@dc:description "A [=CharacterizeTEProgram=] is a..."
+	concept CharacterizeTEProgram :> foundation:Function [
+		restricts all relation foundation:specificallyDependentOn to temp_org:DOTE
+		restricts some relation foundation:specificallyDependentOn to temp_org:DOTE
+		restricts all relation sa:canOutput to TEProgramDefinition
+	]
+	
+	@rdfs:label "T&E Program Characterization"
+	@dc:description "A [=TEProgramCharacterization=] is a..."
+	concept TEProgramCharacterization :> sa:FunctionOccurrence [
+		restricts all relation event:isManifestationOf to CharacterizeTEProgram
+		restricts some relation event:isManifestationOf to CharacterizeTEProgram
+		restricts some relation agent:hasOutput to TEProgramDefinition
+	]
+	
+	@rdfs:label "TE Program Definition"
+	@dc:description "A [=TEProgramDefinition=] is a..."
+	concept TEProgramDefinition :> info:DescriptiveInformationEntity [
+		restricts some relation info:describes to temp_tpp:TestAndEvaluationProgram
+		restricts some relation foundation:isContainedIn to temp_resp:TEOversightList
+	]
+	
+	
+	
+	///// Relations
+	
+	@rdfs:label "Manages TEOL"
+	@dc:description "[=ManagesTEOL=] is a "
+	relation entity ManagesTEOL [
+		from temp_org:DOTE
+		to temp_resp:TEOversightList
+		@rdfs:label "manages TEOL"
+		forward managesTEOL
+		@rdfs:label "is managed by"
+		reverse isManagedBy
+		asymmetric
+		irreflexive
+	]
+	
+	
+	
+	///// Redefinitions
+	
+	ref concept temp_resp:TEOversightList [
+		restricts some relation isManagedBy to temp_org:DOTE
+	]
+	
+	
+	}

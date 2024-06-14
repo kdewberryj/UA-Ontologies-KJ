@@ -63,9 +63,13 @@ vocabulary <http://uaontologies.com/UA_Core/UA_Measurement#> as UA_Measurement {
 	@dc:description "A [=SimpleMeasurement=]..."
 	concept SimpleMeasurement :> Measurement
 	
+	@rdfs:label "Range"
+	@dc:description "A [=Range=]..."
+	concept Range :> Measurement
+	
 	@rdfs:label "Confidence Interval"
 	@dc:description "A [=ConfidenceInterval=]..."
-	concept ConfidenceInterval :> Measurement
+	concept ConfidenceInterval :> Range
 	
 
 	
@@ -134,17 +138,24 @@ vocabulary <http://uaontologies.com/UA_Core/UA_Measurement#> as UA_Measurement {
 		range rdfs:Literal
 	]
 	
+	@rdfs:label "has Boolean value"
+	@dc:description "[=hasBooleanValue=] ..."
+	scalar property hasBooleanValue :> hasValue [
+		domain SimpleMeasurement
+		range xsd:boolean
+	]
+	
 	@rdfs:label "has upper value"
 	@dc:description "[=hasUpperValue=] ..."
 	scalar property hasUpperValue [
-		domain ConfidenceInterval
+		domain Range
 		range xsd:decimal
 	]
 	
 	@rdfs:label "has lower value"
 	@dc:description "[=hasLowerValue=] ..."
 	scalar property hasLowerValue [
-		domain ConfidenceInterval
+		domain Range
 		range xsd:decimal
 	]
 	

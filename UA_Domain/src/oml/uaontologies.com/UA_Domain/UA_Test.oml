@@ -13,7 +13,7 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Test#> as UA_Test {
 	
     extends <http://purl.org/dc/elements/1.1/> as dc
     extends <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-    //extends <http://www.w3.org/2001/XMLSchema#> as xsd
+    extends <http://www.w3.org/2001/XMLSchema#> as xsd
     
     // Import relevant vocabularies
     
@@ -25,8 +25,6 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Test#> as UA_Test {
 	extends <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
 	//extends <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
 	
-	//extends <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
-	//extends <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
 	extends <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
 	
 		
@@ -104,6 +102,13 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Test#> as UA_Test {
 		restricts some relation info:describes to Test
 	]
 	
+	@rdfs:label "Boolean Test Result"
+	@dc:description "A [=BooleanTestResult=] is a..."
+	concept BooleanTestResult :> info:DescriptiveInformationEntity [
+		restricts all relation info:describes to info:PrescriptiveInformationEntity
+		restricts some relation info:describes to info:PrescriptiveInformationEntity
+	]
+	
 	@rdfs:label "Site Data"
 	@dc:description "A [=SiteData=] is a..."
 	concept SiteData :> meas:Measurement [
@@ -172,13 +177,17 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Test#> as UA_Test {
 	
 	///// Scalar Properties
 	
-		
+	scalar property hasBooleanResult [
+		domain BooleanTestResult
+		range xsd:boolean
+	]	
 	
 	///// Redefine Concepts
 	
-	
+	// note: TestSite is a role, not a type of site
 	
 	///// Rules
 	
+	// add a rule that if a test is a verification method of a requirement, and the test output contains a BooleanTestResult, then the BooleanTestResult is about that requirement
     
     }

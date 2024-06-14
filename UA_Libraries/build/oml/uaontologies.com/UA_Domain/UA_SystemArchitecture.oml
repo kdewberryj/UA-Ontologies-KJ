@@ -40,13 +40,13 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as UA_Syst
 	@dc:description "A [=System=]..."
 	concept System :> foundation:Object, foundation:Container [
 		restricts all relation foundation:contains to foundation:Object
-		restricts some relation foundation:hasSpecificDependent to foundation:Function
 	] 
 	
 	@rdfs:label "Function Occurence"
 	@dc:description "A [=FunctionOccurence=]..."
 	concept FunctionOccurrence :> foundation:Process [
 		restricts all relation event:isManifestationOf to foundation:Function
+		restricts some relation event:isManifestationOf to foundation:Function
 		restricts all relation foundation:contains to FunctionOccurrence 
 		restricts all relation foundation:isContainedIn to FunctionOccurrence 
 	]

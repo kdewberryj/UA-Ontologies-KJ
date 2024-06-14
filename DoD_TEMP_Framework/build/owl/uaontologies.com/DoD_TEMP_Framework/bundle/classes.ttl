@@ -34,7 +34,7 @@
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MDADecisionMade>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MDADecisionMade> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MDADecisionMade> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#USDRE>
         rdf:type         owl:Class ;
@@ -45,7 +45,7 @@
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationProduction>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationProduction> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationProduction> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
 
 <http://uaontologies.com/UA_Core/UA_Agent#isOutputOf>
         rdf:type  owl:ObjectProperty .
@@ -56,7 +56,7 @@
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#OTEFrameworkApproval>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEFrameworkApproval> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#OTEFrameworkApproval> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEFrameworkApproval> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#OTEFrameworkApproval> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> .
 
 <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ArchitectureDescription>
         rdf:type         owl:Class ;
@@ -105,7 +105,7 @@
 
 <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Program>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Program> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Program> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#InitialOperationalTEProgram>
         rdf:type         owl:Class ;
@@ -113,7 +113,7 @@
 
 <http://uaontologies.com/UA_Core/UA_Agent#Agent>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Agent> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Core/UA_Agent#Agent> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#monitors>
         rdf:type  owl:ObjectProperty .
@@ -130,11 +130,15 @@
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEReportProduction>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEReportProduction> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> .
+        rdfs:subClassOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEReportProduction> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DefenceTechnicalInfoCenter>
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Agent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DefenceTechnicalInfoCenter> , <http://uaontologies.com/UA_Core/UA_Agent#Organization> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> .
+
+<http://uaontologies.com/UA_Domain/UA_Test#BooleanTestResult>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Domain/UA_Test#BooleanTestResult> , <http://uaontologies.com/UA_Core/UA_Information#InformationEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> .
 
 <http://uaontologies.com/UA_Core/UA_Measurement#hasDimension>
         rdf:type  owl:ObjectProperty .
@@ -162,31 +166,39 @@
 <http://opencaesar.io/oml#hasSource>
         rdf:type  owl:ObjectProperty .
 
+<http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_INC>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Quantity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SpecificallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Quality> , <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_INC> .
+
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEFrameworkApproval>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEFrameworkApproval> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEFrameworkApproval> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> .
 
 <http://uaontologies.com/UA_Domain/UA_Software#SoftwareAgent>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Agent#Agent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Domain/UA_Software#Software> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Domain/UA_Software#SoftwareAgent> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Agent#Agent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Domain/UA_Software#Software> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Domain/UA_Software#SoftwareAgent> .
 
 <http://uaontologies.com/UA_Domain/UA_Test#SiteData>
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Information#InformationEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Measurement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Domain/UA_Test#SiteData> .
 
-<http://uaontologies.com/UA_Foundation/UA_Foundation#Process>
-        rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> .
-
 <http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity>
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Core/UA_Information#InformationEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity> .
 
-<http://uaontologies.com/UA_Domain/UA_DataManagement#hasDigitalLocation>
-        rdf:type  owl:ObjectProperty .
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Process>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#chairsWIPT>
         rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_DataManagement#hasDigitalLocation>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#SpaceMission>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Domain/UA_Mission#Mission> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#SpaceMission> .
 
 <http://uaontologies.com/UA_Domain/UA_DataManagement#isSupportedBySoftware>
         rdf:type  owl:ObjectProperty .
@@ -206,12 +218,12 @@
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Object> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Information#Model> , <http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity> , <http://uaontologies.com/UA_Core/UA_Information#InformationArtifact> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationModel> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> .
 
+<http://uaontologies.com/UA_Foundation/UA_Foundation#isOccupiedBy>
+        rdf:type  owl:ObjectProperty .
+
 <http://uaontologies.com/UA_Domain/UA_DataManagement#HasAccess>
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Domain/UA_DataManagement#HasAccess> .
-
-<http://uaontologies.com/UA_Foundation/UA_Foundation#isOccupiedBy>
-        rdf:type  owl:ObjectProperty .
 
 <http://uaontologies.com/UA_Core/UA_Measurement#hasConfidence>
         rdf:type  owl:DatatypeProperty .
@@ -228,8 +240,15 @@
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SpecificallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#RealizableEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Disposition> .
 
+<http://uaontologies.com/UA_Domain/UA_Acquisition#Purchaser>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Domain/UA_Acquisition#Purchaser> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Role> .
+
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#manages>
         rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_BayesianNetworks#hasBayesianTrueStateValue>
+        rdf:type  owl:DatatypeProperty .
 
 <http://uaontologies.com/UA_Core/UA_Information#Prescribes>
         rdf:type         owl:Class ;
@@ -252,6 +271,9 @@
 <http://uaontologies.com/UA_Domain/UA_DataManagement#supportsRepository>
         rdf:type  owl:ObjectProperty .
 
+<http://uaontologies.com/UA_Domain/UA_BayesianNetworks#hasBayesianFalseStateValue>
+        rdf:type  owl:DatatypeProperty .
+
 <http://uaontologies.com/UA_Domain/UA_Software#isSoftwareVendorOf>
         rdf:type  owl:ObjectProperty .
 
@@ -272,7 +294,7 @@
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#TEProgramCharacterization>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#TEProgramCharacterization> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#TEProgramCharacterization> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
 
 <http://uaontologies.com/UA_Core/UA_Agent#hasBelonging>
         rdf:type  owl:ObjectProperty .
@@ -288,6 +310,9 @@
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#TestAgency> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#LeadDevelopmentalTestOrganization> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#WIPTRole> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Role> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> .
 
+<http://uaontologies.com/UA_Domain/UA_Test#hasBooleanResult>
+        rdf:type  owl:DatatypeProperty .
+
 <http://uaontologies.com/UA_Core/UA_Provenance#approvedBy>
         rdf:type  owl:ObjectProperty .
 
@@ -298,6 +323,10 @@
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MakePMDecision>
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MakePMDecision> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Function> , <http://uaontologies.com/UA_Foundation/UA_Foundation#RealizableEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SpecificallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Disposition> .
+
+<http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_LAN>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Quantity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SpecificallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Quality> , <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_LAN> .
 
 <http://uaontologies.com/UA_Core/UA_Event#hasParticipant>
         rdf:type  owl:ObjectProperty .
@@ -329,7 +358,7 @@ owl:topObjectProperty
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#LFTEFrameworkApproval>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEFrameworkApproval> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#LFTEFrameworkApproval> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEFrameworkApproval> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#LFTEFrameworkApproval> .
 
 <http://uaontologies.com/UA_Domain/UA_Test#TestCondition>
         rdf:type         owl:Class ;
@@ -352,7 +381,7 @@ owl:topObjectProperty
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DEFDevelopment>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DEFDevelopment> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> .
+        rdfs:subClassOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DEFDevelopment> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#chartersWIPT>
         rdf:type  owl:ObjectProperty .
@@ -391,14 +420,14 @@ owl:topObjectProperty
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightListGeneration>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightListGeneration> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightListGeneration> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
 
 <http://uaontologies.com/UA_Domain/UA_Requirements#isRefinedBy>
         rdf:type  owl:ObjectProperty .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#TestConfigurationDataProduction>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#TestConfigurationDataProduction> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#TestConfigurationDataProduction> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#UndertakeTETest>
         rdf:type         owl:Class ;
@@ -410,7 +439,10 @@ owl:topObjectProperty
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Milestone>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Milestone> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint> .
+        rdfs:subClassOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Milestone> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> .
+
+<http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#hasSpaceFlightPhase>
+        rdf:type  owl:ObjectProperty .
 
 <http://uaontologies.com/UA_Domain/UA_Software#OperatingSystem>
         rdf:type         owl:Class ;
@@ -422,6 +454,9 @@ owl:topObjectProperty
 
 <http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionVendor>
         rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#hasVerificationStatus>
+        rdf:type  owl:DatatypeProperty .
 
 <http://uaontologies.com/UA_Domain/UA_Requirements#satisfies>
         rdf:type  owl:ObjectProperty .
@@ -498,6 +533,10 @@ owl:topObjectProperty
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Domain/UA_Requirements#Refines> .
 
+<http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#OrbitalPath>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ImmaterialEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Site> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#OrbitalPath> .
+
 <http://uaontologies.com/UA_Foundation/UA_Foundation#hasBeginInstant>
         rdf:type  owl:DatatypeProperty .
 
@@ -539,11 +578,11 @@ owl:topObjectProperty
 
 <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
 
 <http://uaontologies.com/UA_Domain/UA_Test#Test>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> , <http://uaontologies.com/UA_Domain/UA_Requirements#VerificationMethod> , <http://uaontologies.com/UA_Domain/UA_Test#Test> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> , <http://uaontologies.com/UA_Domain/UA_Requirements#VerificationMethod> , <http://uaontologies.com/UA_Domain/UA_Test#Test> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#TestAgency>
         rdf:type         owl:Class ;
@@ -562,9 +601,13 @@ owl:Thing  rdf:type  owl:Class .
 <http://uaontologies.com/UA_Core/UA_Agent#belongsTo>
         rdf:type  owl:ObjectProperty .
 
+<http://uaontologies.com/UA_Domain/UA_ProjectManagement#Activity>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Domain/UA_Requirements#VerificationMethod> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task> , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Activity> .
+
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#TEMPDevelopment>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#TEMPDevelopment> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#TEMPDevelopment> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> .
 
 <http://uaontologies.com/UA_Domain/UA_Acquisition#isPurchaserFor>
         rdf:type  owl:ObjectProperty .
@@ -607,7 +650,7 @@ owl:Thing  rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Domain/UA_Acquisition#Acquisition>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Domain/UA_Acquisition#Acquisition> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Domain/UA_Acquisition#Acquisition> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> .
 
 <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent>
         rdf:type         owl:Class ;
@@ -670,7 +713,7 @@ owl:Thing  rdf:type  owl:Class .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#LFTFDevelopment>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#LFTFDevelopment> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#LFTFDevelopment> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#isConductedBy>
         rdf:type  owl:ObjectProperty .
@@ -692,12 +735,20 @@ owl:Thing  rdf:type  owl:Class .
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#isOverseenBy>
         rdf:type  owl:ObjectProperty .
 
+<http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#SpaceFlight>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#SpaceFlight> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> .
+
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#WIPT>
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirementIdentifier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Role> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#WIPT> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> .
 
 <http://uaontologies.com/UA_Core/UA_Measurement#hasUnit>
         rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_ECC>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Quantity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SpecificallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Quality> , <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_ECC> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#ManagesTEOL>
         rdf:type         owl:Class ;
@@ -725,11 +776,18 @@ owl:Thing  rdf:type  owl:Class .
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#ApprovedElement> , <http://uaontologies.com/UA_Core/UA_Information#InformationEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#TEFramework> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
 
+<http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_TA>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Quantity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SpecificallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Quality> , <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_TA> .
+
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#Designates>
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#Designates> .
 
 <http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#spaceFlightPhaseOf>
         rdf:type  owl:ObjectProperty .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ReviewSystemEvaluationReport>
@@ -756,7 +814,10 @@ owl:Thing  rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Simulation>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Domain/UA_Requirements#VerificationMethod> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Simulation> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Analysis> , <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Domain/UA_Requirements#VerificationMethod> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Simulation> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Analysis> , <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription>
+        rdf:type  owl:DatatypeProperty .
 
 <http://uaontologies.com/UA_Domain/UA_Requirements#DerivesRequirement>
         rdf:type         owl:Class ;
@@ -765,8 +826,9 @@ owl:Thing  rdf:type  owl:Class .
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#undertakes>
         rdf:type  owl:ObjectProperty .
 
-<http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription>
-        rdf:type  owl:DatatypeProperty .
+<http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_AOP>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Quantity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SpecificallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Quality> , <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_AOP> .
 
 <http://uaontologies.com/UA_Domain/UA_Requirements#refines>
         rdf:type  owl:ObjectProperty .
@@ -788,7 +850,7 @@ owl:Thing  rdf:type  owl:Class .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyIntegrationPoint>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyIntegrationPoint> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyIntegrationPoint> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#OperationalIssue>
         rdf:type         owl:Class ;
@@ -797,19 +859,23 @@ owl:Thing  rdf:type  owl:Class .
 <http://uaontologies.com/UA_Core/UA_Measurement#hasValue>
         rdf:type  owl:DatatypeProperty .
 
+<http://uaontologies.com/UA_Domain/UA_Acquisition#Vendor>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Role> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Domain/UA_Acquisition#Vendor> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> .
+
 <http://uaontologies.com/UA_Domain/UA_DataManagement#isAccessibleBy>
         rdf:type  owl:ObjectProperty .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEProcedureProduction>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEProcedureProduction> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEProcedureProduction> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#reviews>
         rdf:type  owl:ObjectProperty .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#TechnicalReadinessDecision>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#TechnicalReadinessDecision> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#TechnicalReadinessDecision> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> .
 
 <http://uaontologies.com/UA_Core/UA_Measurement#hasLowerValue>
         rdf:type  owl:DatatypeProperty .
@@ -823,6 +889,9 @@ owl:Thing  rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Core/UA_Agent#hasRole>
         rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_BayesianNetworks#hasBayesianWeight>
+        rdf:type  owl:DatatypeProperty .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#oversees>
         rdf:type  owl:ObjectProperty .
@@ -843,7 +912,7 @@ owl:Thing  rdf:type  owl:Class .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#ITSDevelopment>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#ITSDevelopment> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> .
+        rdfs:subClassOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#ITSDevelopment> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> .
 
 <http://uaontologies.com/UA_Core/UA_Measurement#isDimensionOf>
         rdf:type  owl:ObjectProperty .
@@ -856,10 +925,6 @@ owl:Thing  rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Core/UA_Event#occursOn>
         rdf:type  owl:ObjectProperty .
-
-<http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#AnalysisResult>
-        rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity> , <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#AnalysisResult> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Core/UA_Information#InformationEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
 
 <http://uaontologies.com/UA_Domain/UA_Requirements#Objective>
         rdf:type         owl:Class ;
@@ -907,7 +972,7 @@ owl:Thing  rdf:type  owl:Class .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
 
 <http://uaontologies.com/UA_Core/UA_Agent#isPlannedTemporalRegionOf>
         rdf:type  owl:ObjectProperty .
@@ -932,6 +997,9 @@ owl:Thing  rdf:type  owl:Class .
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Information#InformationEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement> , <http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Measurement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> .
 
+<http://uaontologies.com/UA_Domain/UA_BayesianNetworks#hasBayesianParent>
+        rdf:type  owl:ObjectProperty .
+
 <http://uaontologies.com/UA_Core/UA_Measurement#HasApplicableDimension>
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Information#IsAbout> , <http://uaontologies.com/UA_Core/UA_Information#Describes> , <http://uaontologies.com/UA_Core/UA_Measurement#HasApplicableDimension> .
@@ -946,6 +1014,10 @@ owl:Thing  rdf:type  owl:Class .
 <http://uaontologies.com/UA_Core/UA_Agent#Person>
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Agent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity> , <http://uaontologies.com/UA_Core/UA_Agent#Person> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> .
+
+<http://uaontologies.com/UA_Domain/UA_ProjectManagement#Project>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Project> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DevelopLFTF>
         rdf:type         owl:Class ;
@@ -963,6 +1035,9 @@ owl:Thing  rdf:type  owl:Class .
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> .
 
+<http://uaontologies.com/UA_Domain/UA_BayesianNetworks#hasBayesianChild>
+        rdf:type  owl:ObjectProperty .
+
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#managesTEOL>
         rdf:type  owl:ObjectProperty .
 
@@ -979,11 +1054,11 @@ owl:Thing  rdf:type  owl:Class .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#PMDecisionMade>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#PMDecisionMade> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#PMDecisionMade> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> .
 
 <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Analysis>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> , <http://uaontologies.com/UA_Domain/UA_Requirements#VerificationMethod> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Analysis> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> , <http://uaontologies.com/UA_Domain/UA_Requirements#VerificationMethod> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Analysis> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> .
 
 <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
         rdf:type  owl:DatatypeProperty .
@@ -994,11 +1069,14 @@ owl:Thing  rdf:type  owl:Class .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#OperationalTEProgram>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#OperationalTEProgram> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram> , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Program> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#OperationalTEProgram> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram> , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Program> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#TETestUndertaking>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#TETestUndertaking> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#TETestUndertaking> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> .
+
+<http://uaontologies.com/UA_Domain/UA_BayesianNetworks#hasBayesianNodeVisibility>
+        rdf:type  owl:DatatypeProperty .
 
 <http://uaontologies.com/UA_Core/UA_Information#describes>
         rdf:type  owl:ObjectProperty .
@@ -1009,7 +1087,7 @@ owl:Thing  rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> .
 
 <http://uaontologies.com/UA_Core/UA_Agent#isResponsibilityOf>
         rdf:type  owl:ObjectProperty .
@@ -1041,6 +1119,10 @@ owl:Thing  rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Core/UA_Agent#isRoleOf>
         rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbit>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbit> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#SpaceFlight> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#LeadTestOrganization>
         rdf:type         owl:Class ;
@@ -1077,12 +1159,12 @@ owl:Thing  rdf:type  owl:Class .
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Information#InformationEntity> , <http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Measurement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> .
 
+<http://uaontologies.com/UA_Core/UA_Agent#hasInput>
+        rdf:type  owl:ObjectProperty .
+
 <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface>
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Object> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> .
-
-<http://uaontologies.com/UA_Core/UA_Agent#hasInput>
-        rdf:type  owl:ObjectProperty .
 
 <http://uaontologies.com/UA_Domain/UA_DataManagement#hasURL>
         rdf:type  owl:DatatypeProperty .
@@ -1106,6 +1188,10 @@ owl:Thing  rdf:type  owl:Class .
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#charteredBy>
         rdf:type  owl:ObjectProperty .
 
+<http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#HasSpaceFlightPhase>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#HasSpaceFlightPhase> .
+
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#conducts>
         rdf:type  owl:ObjectProperty .
 
@@ -1124,7 +1210,7 @@ owl:Thing  rdf:type  owl:Class .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#OEFDevelopment>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#OEFDevelopment> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
+        rdfs:subClassOf  <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#OEFDevelopment> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DevelopTEMP>
         rdf:type         owl:Class ;
@@ -1134,9 +1220,13 @@ owl:Thing  rdf:type  owl:Class .
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion> .
 
+<http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_SMA>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Quantity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SpecificallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Quality> , <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_SMA> .
+
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#MilitaryServiceNotification>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#MilitaryServiceNotification> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#MilitaryServiceNotification> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> .
 
 <http://uaontologies.com/UA_Foundation/UA_Foundation#Object>
         rdf:type         owl:Class ;
@@ -1164,6 +1254,10 @@ owl:Thing  rdf:type  owl:Class .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#isObjectiveOfTest>
         rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_BayesianNetworks#HasBayesianChild>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Domain/UA_BayesianNetworks#HasBayesianChild> .
 
 <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput>
         rdf:type  owl:ObjectProperty .
@@ -1203,26 +1297,29 @@ owl:topDataProperty  rdf:type  owl:DatatypeProperty .
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Program> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> .
 
+<http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionDate>
+        rdf:type  owl:DatatypeProperty .
+
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationModelReview>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationModelReview> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationModelReview> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/bundle/classes>
         rdf:type         owl:Ontology ;
         rdfs:comment     "Generated by Owl Reason 1.1.5" ;
         owl:imports      <http://uaontologies.com/DoD_TEMP_Framework/bundle> ;
-        owl:versionInfo  "1692136524" .
+        owl:versionInfo  "1707855439" .
 
 <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#executes>
         rdf:type  owl:ObjectProperty .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#IDSKDevelopment>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#IDSKDevelopment> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#IDSKDevelopment> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationReportReview>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationReportReview> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluationReportReview> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> .
 
 <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant>
         rdf:type         owl:Class ;
@@ -1241,6 +1338,10 @@ owl:topDataProperty  rdf:type  owl:DatatypeProperty .
 <http://uaontologies.com/UA_Domain/UA_Requirements#Satisfies>
         rdf:type         owl:Class ;
         rdfs:subClassOf  <http://uaontologies.com/UA_Domain/UA_Requirements#Satisfies> .
+
+<http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task>
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> .
 
 <http://uaontologies.com/UA_Core/UA_Agent#isInputOf>
         rdf:type  owl:ObjectProperty .
@@ -1266,7 +1367,7 @@ owl:topDataProperty  rdf:type  owl:DatatypeProperty .
 
 <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#DTEFrameworkApproval>
         rdf:type         owl:Class ;
-        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEFrameworkApproval> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#DTEFrameworkApproval> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> .
+        rdfs:subClassOf  <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEFrameworkApproval> , <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#DTEFrameworkApproval> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> .
 
 <http://uaontologies.com/UA_Core/UA_Event#occursBefore>
         rdf:type  owl:ObjectProperty .

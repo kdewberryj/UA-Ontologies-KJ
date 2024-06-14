@@ -47,6 +47,7 @@
     <testcase name="http://uaontologies.com/UA_Core/UA_Measurement#HasApplicableDimension"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Provenance#ApprovedBy"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+    <testcase name="http://uaontologies.com/UA_Core/UA_Measurement#Range"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Occupies"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Contains"/>

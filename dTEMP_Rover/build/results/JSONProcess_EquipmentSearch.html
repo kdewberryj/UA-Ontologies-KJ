@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Equipment Search Results</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Equipment Search Results</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Equipment</th>
+                <th>Test</th>
+                <th>Test Program</th>
+                <th>Date and Time</th>
+            </tr>
+        </thead>
+        <tbody id="equipmentTable">
+        </tbody>
+    </table>
+
+    <script>
+        // Load the JSON data from the file 'EquipmentSearch.json'
+        fetch('EquipmentSearch.json')
+            .then(response => response.json())
+            .then(data => {
+                const equipmentTable = document.getElementById('equipmentTable');
+
+                // Iterate through the JSON data and create table rows
+                data.results.bindings.forEach(item => {
+                    const row = document.createElement('tr');
+                    const equipmentCell = document.createElement('td');
+                    equipmentCell.textContent = item.Equipment.value.split('#').pop() || '';
+                    const testCell = document.createElement('td');
+                    testCell.textContent = item.Test.value.split('#').pop() || '';
+                    const testProgramCell = document.createElement('td');
+                    testProgramCell.textContent = item.TestProgram ? item.TestProgram.value.split('#').pop() : '';
+                    const datetimeCell = document.createElement('td');
+                    datetimeCell.textContent = item.datetime.value.split('#').pop() || '';
+
+                    row.appendChild(equipmentCell);
+                    row.appendChild(testCell);
+                    row.appendChild(testProgramCell);
+                    row.appendChild(datetimeCell);
+                    equipmentTable.appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error loading JSON data:', error));
+    </script>
+</body>
+</html>

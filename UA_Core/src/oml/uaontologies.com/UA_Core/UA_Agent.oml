@@ -39,7 +39,7 @@ vocabulary <http://uaontologies.com/UA_Core/UA_Agent#> as UA_Agent {
 	
 	@rdfs:label "Agent"
 	@dc:description "An [=Agent=]..."
-	aspect Agent 
+	aspect Agent :> foundation:SDCCarrier
 
 
 	

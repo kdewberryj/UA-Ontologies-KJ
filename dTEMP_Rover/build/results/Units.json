@@ -1,0 +1,80 @@
+{ "head": {
+    "vars": [ "Unit" , "Dimension" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#W" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Power" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#Wh" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Capacity" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#day" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Time" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degC" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Temperature" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degF" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Temperature" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degK" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Temperature" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degrees" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Angle" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#gbp" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Cost" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#kilogram" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Mass" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#km" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Length" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#metre" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Length" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#n-a" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Dimensionless" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#na" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Boolean" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#percentage" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Efficiency" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#percentage" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Probability" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#radians" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Angle" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#second" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Time" }
+      } ,
+      { 
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#usd" } ,
+        "Dimension": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Dimensions#Cost" }
+      }
+    ]
+  }
+}

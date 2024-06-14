@@ -1,0 +1,23 @@
+{ "head": {
+    "vars": [ "MDAP" , "IntegratedTestProgram" , "TestProgram" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "MDAP": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Project#Rover_Program" } ,
+        "IntegratedTestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_TEProgram" } ,
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" }
+      } ,
+      { 
+        "MDAP": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Project#Rover_Program" } ,
+        "IntegratedTestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_TEProgram" } ,
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" }
+      } ,
+      { 
+        "MDAP": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Project#Rover_Program" } ,
+        "IntegratedTestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_TEProgram" } ,
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_OTEProgram" }
+      }
+    ]
+  }
+}

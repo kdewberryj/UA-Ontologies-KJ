@@ -46,7 +46,7 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as UA_M
 	@rdfs:label "Analysis"
 	@dc:description "A [=Analysis=] is a..."
 	concept Analysis :> agent:ManagedProcess, req:VerificationMethod [
-		restricts all relation agent:hasOutput to AnalysisResult
+		restricts all relation agent:hasOutput to info:DescriptiveInformationEntity
 	]
 	
 	@rdfs:label "Simulation"
@@ -54,10 +54,7 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as UA_M
 	concept Simulation :> Analysis [
 		restricts some relation event:hasParticipant to info:Model
 	]
-	
-	@rdfs:label "Analysis Result"
-	@dc:description "A [=AnalysisResult=] is a..."
-	concept AnalysisResult :> info:DescriptiveInformationEntity
+
 	
 	
 	

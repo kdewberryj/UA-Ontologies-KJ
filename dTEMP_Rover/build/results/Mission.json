@@ -1,0 +1,16 @@
+{ "head": {
+    "vars": [ "Mission" , "Participant" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "Mission": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Mission" } ,
+        "Participant": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System" }
+      } ,
+      { 
+        "Mission": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Mission" } ,
+        "Participant": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_System#MarsOrbiter" }
+      }
+    ]
+  }
+}

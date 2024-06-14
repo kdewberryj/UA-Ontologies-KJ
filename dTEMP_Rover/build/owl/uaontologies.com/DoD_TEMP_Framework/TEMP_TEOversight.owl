@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#"
+     xml:base="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Agent"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Event"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Information"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A vocabulary to capture reporting concepts required for TEMP</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#isManagedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#isManagedBy">
+        <owl:inverseOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#managesTEOL"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdfs:label>is managed by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#managesTEOL -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#managesTEOL">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightList"/>
+        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <rdfs:label>manages TEOL</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightList -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightList">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#isManagedBy"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#CharacterizeTEProgram -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#CharacterizeTEProgram">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput"/>
+                <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#TEProgramDefinition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=CharacterizeTEProgram=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Characterize TE Program</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#ManagesTEOL -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#ManagesTEOL">
+        <dc:description>[=ManagesTEOL=] is a </dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
+        <rdfs:label>Manages TEOL</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#MilitaryServiceNotification -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#MilitaryServiceNotification">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#NotifyMilitaryService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+                <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#NotifyMilitaryService"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=MilitaryServiceNotification=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Military Service Notification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#NotifyMilitaryService -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#NotifyMilitaryService">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DOTE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=NotifyMilitaryService=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>Notify Military Service</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#TEProgramCharacterization -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#TEProgramCharacterization">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#hasOutput"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#TEProgramDefinition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#CharacterizeTEProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+                <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#CharacterizeTEProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=TEProgramCharacterization=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>T&amp;E Program Characterization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#TEProgramDefinition -->
+
+
+    <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#TEProgramDefinition">
+        <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#TEOversightList"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description>A [=TEProgramDefinition=] is a...</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <rdfs:label>TE Program Definition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="urn:swrl:var#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>managesTEOL derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#ManagesTEOL"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#managesTEOL"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+
+
