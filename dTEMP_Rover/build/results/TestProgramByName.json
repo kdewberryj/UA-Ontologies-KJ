@@ -1,0 +1,448 @@
+{ "head": {
+    "vars": [ "TestProgram" , "pre" , "obj" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#NamedIndividual" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#DevelopmentalTEProgram" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/UA_Foundation/UA_Foundation#Container" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/UA_Domain/UA_ProjectManagement#Program" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Thing" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Agent#Consumer" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Agent#Producer" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Foundation/UA_Foundation#hasName" } ,
+        "obj": { "type": "literal" , "value": "Rover DTE Phase 1" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Foundation/UA_Foundation#hasName" } ,
+        "obj": { "type": "literal" , "value": "Rover DTE Phase 2" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_TEProgram" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTest" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#VibrationTest" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#CapstoneDevelopmentTest" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Event#occursOn" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_DTEProgram1_TimePeriod" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Event#occursOn" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_DTEProgram2_TimePeriod" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#DTE2Objective" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_TEMP" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityCA1" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_IDSK" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_DTE1Objective" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#TechRiskAssessment1" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_TEOversightList" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_ITS" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#IOTE2_Criteria" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#MATDEV_OTRS" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#RecommendedCorrectiveAction1" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#RecommendedCorrectiveAction2" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_IOTE_Phase1_Framework" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_IOTE_Phase2_Framework" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_OTEProgramDefinition" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_OTE_Objective" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_OTE_Phase1_Framework" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_ProgramObjective" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#isUndertakenBy" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Organization#JPL" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#isManagedBy" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Organization#PdM" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isPrescribedBy" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#DTE2Objective" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isPrescribedBy" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_DTE1Objective" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#sameAs" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#sameAs" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#NamedIndividual" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#DevelopmentalTEProgram" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/UA_Foundation/UA_Foundation#Container" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/UA_Domain/UA_ProjectManagement#Program" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#Thing" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Agent#Consumer" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Agent#Producer" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Foundation/UA_Foundation#hasName" } ,
+        "obj": { "type": "literal" , "value": "Rover DTE Phase 1" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Foundation/UA_Foundation#hasName" } ,
+        "obj": { "type": "literal" , "value": "Rover DTE Phase 2" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_TEProgram" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTest" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#VibrationTest" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#CapstoneDevelopmentTest" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Event#occursOn" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_DTEProgram1_TimePeriod" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Event#occursOn" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_DTEProgram2_TimePeriod" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#DTE2Objective" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_TEMP" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityCA1" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_IDSK" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_DTE1Objective" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#TechRiskAssessment1" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_TEOversightList" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_ITS" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#IOTE2_Criteria" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#MATDEV_OTRS" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#RecommendedCorrectiveAction1" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#RecommendedCorrectiveAction2" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_IOTE_Phase1_Framework" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_IOTE_Phase2_Framework" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_OTEProgramDefinition" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_OTE_Objective" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_OTE_Phase1_Framework" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isSubjectOf" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_ProgramObjective" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#isUndertakenBy" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Organization#JPL" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#isManagedBy" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Organization#PdM" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isPrescribedBy" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#DTE2Objective" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://uaontologies.com/UA_Core/UA_Information#isPrescribedBy" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_DTE1Objective" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#sameAs" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1" }
+      } ,
+      { 
+        "TestProgram": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" } ,
+        "pre": { "type": "uri" , "value": "http://www.w3.org/2002/07/owl#sameAs" } ,
+        "obj": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2" }
+      }
+    ]
+  }
+}

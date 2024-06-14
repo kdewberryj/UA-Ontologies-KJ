@@ -1,0 +1,15 @@
+{ "head": {
+    "vars": [ "TestSite" , "MeasurementValue" , "Test" , "TestSubject" , "SubjectValue" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "TestSite": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Schedule#CleanRoom" } ,
+        "MeasurementValue": { "type": "literal" , "value": "1000" } ,
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAMTest" } ,
+        "TestSubject": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAM" } ,
+        "SubjectValue": { "type": "literal" , "value": "100" }
+      }
+    ]
+  }
+}

@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/UA_Libraries/Units#"
+     xml:base="http://uaontologies.com/UA_Libraries/Units"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:UA_Measurement="http://uaontologies.com/UA_Core/UA_Measurement#">
+    <owl:Ontology rdf:about="http://uaontologies.com/UA_Libraries/Units">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A library description to define relevant Units.</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Description"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#W -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#W">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Power"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#Wh -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#Wh">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Capacity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#day -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#day">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#degC -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#degC">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Temperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#degF -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#degF">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Temperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#degK -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#degK">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Temperature"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#degrees -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#degrees">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Angle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#gbp -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#gbp">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Cost"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#kilogram -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#kilogram">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Mass"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#km -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#km">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Length"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#metre -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#metre">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Length"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#n-a -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#n-a">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Dimensionless"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#na -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#na">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Boolean"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#percentage -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#percentage">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Efficiency"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#radians -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#radians">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Angle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#second -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#second">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Time"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#usd -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/UA_Libraries/Units#usd">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <UA_Measurement:hasApplicableDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Cost"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+
+

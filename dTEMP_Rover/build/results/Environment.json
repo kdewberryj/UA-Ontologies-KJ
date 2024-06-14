@@ -1,0 +1,18 @@
+{ "head": {
+    "vars": [ "Mission" , "Environment" , "EnvironmentalEntity" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "Mission": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Mission" } ,
+        "Environment": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Environment_Nominal" } ,
+        "EnvironmentalEntity": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_System#LocalDebris" }
+      } ,
+      { 
+        "Mission": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Mission" } ,
+        "Environment": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Environment_Nominal" } ,
+        "EnvironmentalEntity": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_System#LocalRadiation" }
+      }
+    ]
+  }
+}

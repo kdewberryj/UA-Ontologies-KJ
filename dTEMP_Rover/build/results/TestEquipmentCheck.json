@@ -1,0 +1,32 @@
+{ "head": {
+    "vars": [ "Milestone" , "MilestoneDate" , "Test" , "TestEquipment" , "Acquisition" , "AcquisitionDate" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "Milestone": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Schedule#TestMilestoneA" } ,
+        "MilestoneDate": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2024-03-18T12:00:00" } ,
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Schedule#ElectricalTest_1" } ,
+        "TestEquipment": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Prototype" } ,
+        "Acquisition": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Schedule#Rover_Prototype_Acquisition" } ,
+        "AcquisitionDate": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2024-03-01T12:00:00" }
+      } ,
+      { 
+        "Milestone": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Schedule#TestMilestoneA" } ,
+        "MilestoneDate": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2024-03-18T12:00:00" } ,
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Schedule#ElectricalTest_1" } ,
+        "TestEquipment": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Schedule#ElectricalTestRig" } ,
+        "Acquisition": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Schedule#ElectricalTestRig_Acquisition" } ,
+        "AcquisitionDate": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2024-03-04T12:00:00" }
+      } ,
+      { 
+        "Milestone": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Schedule#TestMilestoneA" } ,
+        "MilestoneDate": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2024-03-18T12:00:00" } ,
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Schedule#VibrationTest_1" } ,
+        "TestEquipment": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Prototype" } ,
+        "Acquisition": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Schedule#Rover_Prototype_Acquisition" } ,
+        "AcquisitionDate": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2024-03-01T12:00:00" }
+      }
+    ]
+  }
+}

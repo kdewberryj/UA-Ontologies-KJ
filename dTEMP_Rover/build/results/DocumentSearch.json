@@ -1,0 +1,31 @@
+{ "head": {
+    "vars": [ "DocumentName" , "TestResult" , "TestData" , "TestDataSubject" , "Value" , "Unit" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "DocumentName": { "type": "literal" , "value": "Payload Test Data Report" } ,
+        "TestResult": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestResults#LowPowerTestData" } ,
+        "TestData": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestResults#LowPowerTestOutcome" } ,
+        "TestDataSubject": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPP_1" } ,
+        "Value": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#boolean" , "value": "true" }
+      } ,
+      { 
+        "DocumentName": { "type": "literal" , "value": "Payload Test Data Report" } ,
+        "TestResult": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestResults#PayloadTestData" } ,
+        "TestData": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestResults#PayloadTest_Site_TempData" } ,
+        "TestDataSubject": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadTestSite_Temperature" } ,
+        "Value": { "type": "literal" , "value": "16.45" } ,
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#degC" }
+      } ,
+      { 
+        "DocumentName": { "type": "literal" , "value": "Payload Test Data Report" } ,
+        "TestResult": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestResults#PayloadTestData" } ,
+        "TestData": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestResults#Payload_PowerDraw_Measurement" } ,
+        "TestDataSubject": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_TestResults#Payload_PowerDraw" } ,
+        "Value": { "type": "literal" , "value": "106.7" } ,
+        "Unit": { "type": "uri" , "value": "http://uaontologies.com/UA_Libraries/Units#W" }
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{ "head": {
+    "vars": [ "Test" , "datetime" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#AntennaDeploymentTest" } ,
+        "datetime": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2024-09-01T12:00:00" }
+      } ,
+      { 
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#MobilityDeploymentTest" } ,
+        "datetime": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2024-09-01T12:00:00" }
+      } ,
+      { 
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadDeploymentTest" } ,
+        "datetime": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2024-09-01T12:00:00" }
+      } ,
+      { 
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#TerrainTraversalExercise" } ,
+        "datetime": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2024-09-01T12:00:00" }
+      } ,
+      { 
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#Test1" } ,
+        "datetime": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2024-01-04T12:00:00" }
+      } ,
+      { 
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#Test2" } ,
+        "datetime": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2024-01-08T12:00:00" }
+      } ,
+      { 
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAM_PerformanceTest" } ,
+        "datetime": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2024-01-04T12:00:00" }
+      } ,
+      { 
+        "Test": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAM_SensitivityTest" } ,
+        "datetime": { "type": "literal" , "datatype": "http://www.w3.org/2001/XMLSchema#dateTime" , "value": "2024-01-08T12:00:00" }
+      }
+    ]
+  }
+}

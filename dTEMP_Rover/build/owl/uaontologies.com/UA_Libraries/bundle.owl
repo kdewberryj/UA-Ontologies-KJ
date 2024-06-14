@@ -1,0 +1,2259 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/UA_Libraries/bundle#"
+     xml:base="http://uaontologies.com/UA_Libraries/bundle"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://uaontologies.com/UA_Libraries/bundle">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/bundle"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/bundle"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/bundle"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Units"/>
+        <dc:description>A description bundle that bundles together all libraries</dc:description>
+        <dc:type rdf:resource="http://opencaesar.io/oml#DescriptionBundle"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#W -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#W">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#Wh -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#Wh">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#day -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#day">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#degC -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#degC">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#degF -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#degF">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#degK -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#degK">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#degrees -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#degrees">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#gbp -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#gbp">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#kilogram -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#kilogram">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#km -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#km">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#metre -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#metre">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#n-a -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#n-a">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#na -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#na">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#percentage -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#percentage">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#radians -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#radians">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#second -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#second">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/UA_Libraries/Units#usd -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/UA_Libraries/Units#usd">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_WIPT_Info -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_WIPT_Info">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#SEProcedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#SEProcedure">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#CS_Req1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#CS_Req1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#CS_Req2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#CS_Req2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPP_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPP_1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPP_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPP_2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#KSA_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KSA_1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#KSA_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KSA_2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#TPM1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#TPM1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#TPM2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#TPM2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#TPM3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#TPM3">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#TPM4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#TPM4">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#CleamRoomClass_Value -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#CleamRoomClass_Value">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#CleamRoomCleanliness_Value -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#CleamRoomCleanliness_Value">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#CleanRoom -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#CleanRoom">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isSiteOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#CleanRoomClass -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#CleanRoomClass">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#CleanRoomCleanliness -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#CleanRoomCleanliness">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#ElectricalTest1_Result -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#ElectricalTest1_Result">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#ElectricalTestRig_Acquisition -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#ElectricalTestRig_Acquisition">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionItem"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionPurchaser"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionVendor"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#ElectricalTest_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#ElectricalTest_1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#PercisionCAM_PerformanceTest_Site -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#PercisionCAM_PerformanceTest_Site">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isSiteOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#PercisionCAM_SensitivityTest_Site -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#PercisionCAM_SensitivityTest_Site">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isSiteOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#PerformanceTestResult -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#PerformanceTestResult">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAMTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAMTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAMTest_Result -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAMTest_Result">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAM_Performance -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAM_Performance">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAM_PerformanceTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAM_PerformanceTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAM_Performance_Confidence -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAM_Performance_Confidence">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAM_Sensitivity -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAM_Sensitivity">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAM_SensitivityTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAM_SensitivityTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAM_Sensitivity_Confidence -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#PrecisionCAM_Sensitivity_Confidence">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#Rover_Prototype_Acquisition -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#Rover_Prototype_Acquisition">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionItem"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionPurchaser"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionVendor"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#VibrationTest1_Result -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#VibrationTest1_Result">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Schedule#VibrationTest_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Schedule#VibrationTest_1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#DetectFault -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#DetectFault">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#IsolateFault -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#IsolateFault">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#PrecisionCAM_Accuracy -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#PrecisionCAM_Accuracy">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#PrecisionCAM_Sensitivity -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#PrecisionCAM_Sensitivity">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#RecoverFault -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#RecoverFault">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Environment_Nominal -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Environment_Nominal">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_FDIR -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_FDIR">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Performance -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Performance">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_ReceiveTC -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_ReceiveTC">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_TransmitTM -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_TransmitTM">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Traversal -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Traversal">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestProgram#ArchitectureSelectionDecisionMade -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#ArchitectureSelectionDecisionMade">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestProgram#DebrisThreatDescription -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#DebrisThreatDescription">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestProgram#FRPDecisionReview_Plan -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#FRPDecisionReview_Plan">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestProgram#FRPDecisionReview_Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#FRPDecisionReview_Procedure">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestProgram#MATDEV_OTRS -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#MATDEV_OTRS">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestProgram#MakeArchitectureSelectionDecision -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#MakeArchitectureSelectionDecision">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestProgram#MakePhaseCDecision -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#MakePhaseCDecision">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestProgram#PhaseCDecisionMade -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#PhaseCDecisionMade">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Produce_MATDEV_OTRS -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Produce_MATDEV_OTRS">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestProgram#RadiationThreatDescription -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#RadiationThreatDescription">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestProgram#TEMPReviewProcedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#TEMPReviewProcedure">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestResults#CommsTest_Result -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestResults#CommsTest_Result">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestResults#LowPowerTestData -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestResults#LowPowerTestData">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestResults#LowPowerTestOutcome -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestResults#LowPowerTestOutcome">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestResults#PayloadTestData -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestResults#PayloadTestData">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestResults#PayloadTest_Site_TempData -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestResults#PayloadTest_Site_TempData">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestResults#Payload_PowerDraw -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestResults#Payload_PowerDraw">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestResults#Payload_PowerDraw_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestResults#Payload_PowerDraw_Measurement">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestResults#TargetAcquisitionTest_Result -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestResults#TargetAcquisitionTest_Result">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestResults#TorqueTestData -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestResults#TorqueTestData">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestResults#VibrationTest_Result -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestResults#VibrationTest_Result">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#AntennaDeploymentTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#AntennaDeploymentTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CapstoneDevelopmentTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CapstoneDevelopmentTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTestPlan -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTestPlan">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation_Plan -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation_Plan">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation_TestProcedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation_TestProcedure">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_Test1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_Test1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_Test2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_Test2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Objective -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Objective">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Procedure">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Site -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Site">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isSiteOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#FDIRTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#FDIRTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#LowPowerTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#LowPowerTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#MOE -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#MOE">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#MobilityDeploymentTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#MobilityDeploymentTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadDeploymentTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadDeploymentTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadTestSite -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadTestSite">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Event#isSiteOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadTestSite_Temperature -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadTestSite_Temperature">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityDemo1_Result -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityDemo1_Result">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityModel_Final -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityModel_Final">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityModel_Initial -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityModel_Initial">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Representative_Rover_Reliability -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Representative_Rover_Reliability">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_Comms -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_Comms">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_Cost -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_Cost">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_DiskSpace -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_DiskSpace">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_MBTSA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_MBTSA">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_Vibration -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_Vibration">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Efficiency -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Efficiency">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Efficiency_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Efficiency_Measurement">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_MobilityTorqueTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_MobilityTorqueTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_PayloadTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_PayloadTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_PrototypeAcquisition -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_PrototypeAcquisition">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionItem"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionPurchaser"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionVendor"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2_Plan -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2_Plan">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2_Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2_Procedure">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_System_Reliability -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_System_Reliability">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#SystemAcceptanceTest_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#SystemAcceptanceTest_1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_AtmosphericDust_Planned -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_AtmosphericDust_Planned">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_Lighting_Planned -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_Lighting_Planned">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_Procedure">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TerrainTraversalExercise -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TerrainTraversalExercise">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Test1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Test1">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Test2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Test2">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TraversalTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TraversalTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#UNIXServerCost -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#UNIXServerCost">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#UNIXServerDiskSpace -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#UNIXServerDiskSpace">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#VibrationTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#VibrationTest">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#VibrationTestPlan -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#VibrationTestPlan">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+
+

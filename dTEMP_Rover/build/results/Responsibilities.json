@@ -1,0 +1,24 @@
+{ "head": {
+    "vars": [ "PersonName" , "Role" ]
+  } ,
+  "results": {
+    "bindings": [
+      { 
+        "PersonName": { "type": "literal" , "value": "Bart Simpson" } ,
+        "Role": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_CDT" }
+      } ,
+      { 
+        "PersonName": { "type": "literal" , "value": "Lisa Simpson" } ,
+        "Role": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#LowPowerTester" }
+      } ,
+      { 
+        "PersonName": { "type": "literal" , "value": "Lisa Simpson" } ,
+        "Role": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTester" }
+      } ,
+      { 
+        "PersonName": { "type": "literal" , "value": "Marge Simpson" } ,
+        "Role": { "type": "uri" , "value": "http://uaontologies.com/dTEMP_Rover/MR_Organization#MaterialDeveloper" }
+      }
+    ]
+  }
+}

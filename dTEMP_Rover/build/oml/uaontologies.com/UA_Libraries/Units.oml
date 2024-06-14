@@ -1,0 +1,99 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A library description to define relevant Units."
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/UA_Libraries/Units#> as Units {
+	
+////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Imports ///////
+	
+	
+	// Import standard vocabularies	
+	
+	uses <http://purl.org/dc/elements/1.1/> as dc
+    //uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    //uses <http://www.w3.org/2001/XMLSchema#> as xsd
+	
+	
+	// Import relevant vocabularies
+	
+	uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+	
+	extends <http://uaontologies.com/UA_Libraries/Dimensions#> as dim
+	
+	///////////////////////////////////////////////////////////////////////////////////
+
+	ci n-a : meas:Unit [
+		meas:hasApplicableDimension dim:Dimensionless
+	]
+	
+	ci metre : meas:Unit [
+		meas:hasApplicableDimension dim:Length
+	]
+	
+	ci km : meas:Unit [
+		meas:hasApplicableDimension dim:Length
+	]
+	
+	ci second : meas:Unit [
+		meas:hasApplicableDimension dim:Time
+	]
+	
+	ci day : meas:Unit [
+		meas:hasApplicableDimension dim:Time
+	]
+	
+	ci percentage : meas:Unit [
+		meas:hasApplicableDimension dim:Efficiency
+		meas:hasApplicableDimension dim:Probability
+	]
+	
+	ci kilogram : meas:Unit [
+		meas:hasApplicableDimension dim:Mass
+	]
+	
+	ci degC : meas:Unit [
+		meas:hasApplicableDimension dim:Temperature
+	]
+	
+	ci degF : meas:Unit [
+		meas:hasApplicableDimension dim:Temperature
+	]
+	
+	ci degK : meas:Unit [
+		meas:hasApplicableDimension dim:Temperature
+	]
+	
+	ci Wh : meas:Unit [
+		meas:hasApplicableDimension dim:Capacity
+	]
+	
+	ci W : meas:Unit [
+		meas:hasApplicableDimension dim:Power
+	]
+	
+	ci degrees : meas:Unit [
+		meas:hasApplicableDimension dim:Angle
+	]
+	
+	ci radians : meas:Unit [
+		meas:hasApplicableDimension dim:Angle
+	]
+	
+	ci gbp : meas:Unit [
+		meas:hasApplicableDimension dim:Cost
+	]
+	
+	ci usd : meas:Unit [
+		meas:hasApplicableDimension dim:Cost
+	]
+	
+	ci na : meas:Unit [
+		meas:hasApplicableDimension dim:Boolean
+	]
+
+
+	
+	
+}

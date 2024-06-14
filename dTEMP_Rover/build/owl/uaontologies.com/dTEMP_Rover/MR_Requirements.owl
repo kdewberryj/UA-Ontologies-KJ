@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/dTEMP_Rover/MR_Requirements#"
+     xml:base="http://uaontologies.com/dTEMP_Rover/MR_Requirements"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:UA_Foundation="http://uaontologies.com/UA_Foundation/UA_Foundation#"
+     xmlns:UA_Information="http://uaontologies.com/UA_Core/UA_Information#"
+     xmlns:UA_Requirements="http://uaontologies.com/UA_Domain/UA_Requirements#">
+    <owl:Ontology rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Information"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A description to capture Part 1 of the example TEMP</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+        <dc:type rdf:resource="http://opencaesar.io/oml#Description"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#prescribes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#requirementDerivedFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#requirementDerivedFrom"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#hasRequirementText -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#hasRequirementText"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasName"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#CSD1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#CSD1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Foundation:hasName>Cybersecurity Requirements Document</UA_Foundation:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#CS_Req1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#CS_Req1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#PerformanceRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Performance"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Requirements#CSD1"/>
+        <UA_Requirements:hasRequirementText>The Rover shall be resistant to cybersecurity risks of type A</UA_Requirements:hasRequirementText>
+        <UA_Foundation:hasName>CS Req 1</UA_Foundation:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#CS_Req2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#CS_Req2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#FunctionalRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Requirements#CSD1"/>
+        <UA_Requirements:hasRequirementText>The Rover shall be resistant to cybersecurity risks of type B</UA_Requirements:hasRequirementText>
+        <UA_Foundation:hasName>CS Req 2</UA_Foundation:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPPD1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPPD1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Foundation:hasName>Key Performance Parameters and Key System Attributes Document</UA_Foundation:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPP_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPP_1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#PerformanceRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Performance"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPPD1"/>
+        <UA_Requirements:hasRequirementText>The system shall provide function 1 to a performance level of w</UA_Requirements:hasRequirementText>
+        <UA_Foundation:hasName>KPP 1</UA_Foundation:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPP_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPP_2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#PerformanceRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Performance"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPPD1"/>
+        <UA_Requirements:hasRequirementText>The system shall provide function 2 to a performance level of x</UA_Requirements:hasRequirementText>
+        <UA_Foundation:hasName>KPP 2</UA_Foundation:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#KSA_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KSA_1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#FunctionalRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPPD1"/>
+        <UA_Requirements:hasRequirementText>The system shall provide function 3 to a performance level of y</UA_Requirements:hasRequirementText>
+        <UA_Foundation:hasName>KSA 1</UA_Foundation:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#KSA_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KSA_2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#PerformanceRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Performance"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPPD1"/>
+        <UA_Requirements:hasRequirementText>The system shall provide function 4 to a performance level of z</UA_Requirements:hasRequirementText>
+        <UA_Foundation:hasName>KSA 2</UA_Foundation:hasName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#TPM1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#TPM1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#QuantitativeRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Performance"/>
+        <UA_Requirements:requirementDerivedFrom rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPP_1"/>
+        <UA_Requirements:hasRequirementText>The system shall provide function 1 with a technical performance measurement of x</UA_Requirements:hasRequirementText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#TPM2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#TPM2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#QuantitativeRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Performance"/>
+        <UA_Requirements:requirementDerivedFrom rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPP_2"/>
+        <UA_Requirements:hasRequirementText>The system shall provide function 1 with a technical performance measurement of x</UA_Requirements:hasRequirementText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#TPM3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#TPM3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#QuantitativeRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Performance"/>
+        <UA_Requirements:requirementDerivedFrom rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KSA_1"/>
+        <UA_Requirements:hasRequirementText>The system shall provide function 1 with a technical performance measurement of x</UA_Requirements:hasRequirementText>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Requirements#TPM4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Requirements#TPM4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#QuantitativeRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Performance"/>
+        <UA_Requirements:requirementDerivedFrom rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KSA_2"/>
+        <UA_Requirements:hasRequirementText>The system shall provide function 1 with a technical performance measurement of x</UA_Requirements:hasRequirementText>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+
+
