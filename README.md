@@ -32,8 +32,6 @@ The **UA Ontology Stack** leverages five **Core Ontologies** to model fundamenta
 - 📏 **Measurement**  
 - 🔗 **Provenance**  
 
-
-
 ---
 
 ## 🔹 UA Domain Ontologies  
@@ -54,7 +52,6 @@ The **UA Ontology Stack** extends into **13 Domain Ontologies**, each supporting
 - 🛠️ **Test**
 - 📖 **Use Cases** 
 
-
 ---
 
 ## 🔹 Application Ontologies  
@@ -71,12 +68,24 @@ The **DoD TEMP Framework** is an **OML-based** representation of the **Test and 
 
 This repository contains multiple example projects. Each project contains OML descriptions that conform to a subset of the UAOS ontologies. 
 
-- **📌 DoD Example** – An anonymized test program  
-- **🚀 DoD Example Rover** – A notional **Rover test program**  
+<!---
+Convert this to a table. Add list of relevant ontologies being used.
+-->
+
+- **ALEO Student Project**
+- **CATSAT**
+- **Cubesat Orbit**
+- **dTEMP Operation Safe Lego**
+- **dTEMP LMMDR Rover**
+- **NoraSat**  
 
 ---
 
 ## 🔹 References
+<!---
+Add a table of references. Name, title, author, link to available online
+Add refs throughout this page
+-->
 
 ---
 
