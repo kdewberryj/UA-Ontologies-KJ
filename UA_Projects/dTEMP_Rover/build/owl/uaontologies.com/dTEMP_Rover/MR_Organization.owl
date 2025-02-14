@@ -1,0 +1,530 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/dTEMP_Rover/MR_Organization#"
+     xml:base="http://uaontologies.com/dTEMP_Rover/MR_Organization"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:mr_org="http://uaontologies.com/dTEMP_Rover/MR_Organization#"
+     xmlns:UA_Agent="http://uaontologies.com/UA_Core/UA_Agent#"
+     xmlns:UA_Event="http://uaontologies.com/UA_Core/UA_Event#"
+     xmlns:UA_Foundation="http://uaontologies.com/UA_Foundation/UA_Foundation#"
+     xmlns:UA_Information="http://uaontologies.com/UA_Core/UA_Information#"
+     xmlns:UA_DataManagement="http://uaontologies.com/UA_Domain/UA_DataManagement#"
+     xmlns:TEMP_TestProgramTeams="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#">
+    <owl:Ontology rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Agent"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Event"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Information"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_DataManagement"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Software"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#"/>
+        <oml:prefix>mr_org</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Description"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A description to capture Part 1 of the example TEMP</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#isDesignatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#isDesignatedBy"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#hasRole -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#hasRole"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#responsibleFor -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#responsibleFor"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#hasParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#hasParticipant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#prescribes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_DataManagement#isAccessibleBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_DataManagement#isAccessibleBy"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_DataManagement#isDigitalLocationOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_DataManagement#isDigitalLocationOf"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasName"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Airbus -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Airbus">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#ExternalDataDoc -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#ExternalDataDoc">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#JPL -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#JPL">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Jama -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Jama">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#LockheedMartin -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#LockheedMartin">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#MagicDraw -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#MagicDraw">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#MaterialDeveloper -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#MaterialDeveloper">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Role"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Matlab -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Matlab">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Object"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#NASA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#NASA">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#PdM -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#PdM">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#ProgramManager"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Person1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Person1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Person"/>
+        <UA_Foundation:hasName>Homer Simpson</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Person2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Person2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Person"/>
+        <UA_Agent:hasRole rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#MaterialDeveloper"/>
+        <UA_Foundation:hasName>Marge Simpson</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Person3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Person3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Person"/>
+        <UA_Agent:hasRole rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_CDT"/>
+        <UA_Foundation:hasName>Bart Simpson</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Person4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Person4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Person"/>
+        <UA_Foundation:hasName>Lisa Simpson</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Repository1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Repository1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_DataManagement#Repository"/>
+        <UA_DataManagement:isAccessibleBy rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#JPL"/>
+        <UA_DataManagement:isAccessibleBy rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#LockheedMartin"/>
+        <UA_DataManagement:isAccessibleBy rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#NASA"/>
+        <UA_DataManagement:isAccessibleBy rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#Person1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Repository2_External -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Repository2_External">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_DataManagement#Repository"/>
+        <UA_DataManagement:isAccessibleBy rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#Airbus"/>
+        <UA_DataManagement:isDigitalLocationOf rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#ExternalDataDoc"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#RequirementsManager -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#RequirementsManager">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner"/>
+        <UA_Agent:responsibleFor rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#RequirementsTV"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#RequirementsTV -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#RequirementsTV">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#Jama"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_CDT -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_CDT">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#ChiefDevelopmentalTester"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_LDTO -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_LDTO">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#LeadDevelopmentalTestOrganization"/>
+        <TEMP_TestProgramTeams:isDesignatedBy rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#PdM"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#JPL"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_LTO -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_LTO">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#LeadTestOrganization"/>
+        <TEMP_TestProgramTeams:isDesignatedBy rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#PdM"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#NASA"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_MDA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_MDA">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#MilestoneDecisionAuthority"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#NASA"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_OTA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_OTA">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#OperationalTestAgency"/>
+        <TEMP_TestProgramTeams:isDesignatedBy rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#PdM"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#JPL"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_Purchaser -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_Purchaser">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#Purchaser"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#NASA"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_Vendor -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_Vendor">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#Vendor"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#JPL"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_WIPT -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_WIPT">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_WIPT_Info -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_WIPT_Info">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_WIPT_Role"/>
+        <UA_Foundation:hasName>Rover WIPT Overview</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_WIPT_Role -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_WIPT_Role">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#WIPT"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_LDTO"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_LTO"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_OTA"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#SED1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#SED1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Foundation:hasName>Systems Engineering Procedures Document</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#SEProcedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#SEProcedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Procedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#SEProcess"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#SED1"/>
+        <UA_Foundation:hasName>SE Procedure</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#SEProcess -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#SEProcess">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#RequirementsTV"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#SimulationAndAnalysis"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#SystemArchitecting"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#SimulationAndAnalysis -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#SimulationAndAnalysis">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#Matlab"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#SystemArchitect -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#SystemArchitect">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner"/>
+        <UA_Agent:responsibleFor rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#RequirementsTV"/>
+        <UA_Agent:responsibleFor rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#SimulationAndAnalysis"/>
+        <UA_Agent:responsibleFor rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#SystemArchitecting"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#SystemArchitecting -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#SystemArchitecting">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#MagicDraw"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

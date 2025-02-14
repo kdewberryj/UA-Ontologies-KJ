@@ -1,0 +1,5 @@
+description bundle <http://uaontologies.com/NoraSat/bundle#> as ^bundle {
+	
+	includes <http://uaontologies.com/NoraSat/NoraSat#>
+	
+}

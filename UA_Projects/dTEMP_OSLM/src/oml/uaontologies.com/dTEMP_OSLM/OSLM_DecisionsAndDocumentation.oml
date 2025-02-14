@@ -1,0 +1,161 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture..."
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#> as OSLM_DecisionsAndDocumentation {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    //uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    //uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    //uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	//uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	//uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	//uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    
+    //uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#> as temp_tps
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#> as temp_tpf
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#> as temp_resp
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> as temp_tpt
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_dec
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as temp_teo
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#> as temp_ear
+    
+    // Extends other descriptions
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_Metadata#> as met
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#> as oslm_ms
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#> as oslm_tes
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_TestResults#> as oslm_res
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_Organization#> as oslm_org
+    
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	////////////////////// PREVIOUS DECISIONS AND DOCUMENTATION ///////////////////////
+	
+	instance SystemFunctionalReview : agent:ManagedProcess [
+		event:occursOn SFR_TimePeriod
+		agent:hasOutput DecisionB
+	]
+	
+	instance SFR_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2024-03-15T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2024-03-15T15:00:00"^^xsd:dateTime
+	]
+	
+	instance CapabilityProductionDocument : info:InformationArtifact [
+		prov:generatedAt "2024-01-15T12:00:00"^^xsd:dateTime
+		prov:approvedAt "2024-01-16T12:00:00"^^xsd:dateTime
+	]
+	
+	instance SystemRequirementsReview : agent:ManagedProcess [
+		event:occursOn SRR_TimePeriod
+		agent:hasOutput DecisionA
+	]
+	
+	instance SRR_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2024-01-15T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2024-01-15T15:00:00"^^xsd:dateTime
+	]
+	
+	/////////////////// MILESTONES ////////////////////
+	
+	instance MilestoneA : temp_dec:Milestone
+	
+	instance MilestoneB : temp_dec:Milestone
+	
+	instance DecisionA : temp_dec:KeyDecision [
+		info:prescribes MilestoneA
+	]
+	
+	instance DecisionB : temp_dec:KeyDecision [
+		info:prescribes MilestoneB
+	]
+		
+	
+	/////////////////// IDR DECISION ///////////////////
+	
+	instance D1 : info:DescriptiveInformationEntity [
+		foundation:hasName "Human involvement"
+		info:describes oslm_ms:LSNDS
+		foundation:contains oslm_tes:TE5_Output
+		foundation:contains oslm_tes:TE3_Output
+	]
+	
+	instance D3 : info:DescriptiveInformationEntity [
+		foundation:hasName "Deployment areas"
+		info:describes oslm_ms:LSNDS
+		foundation:contains oslm_res:TE7_TestData
+		foundation:contains oslm_tes:TE8_Output
+	]
+	
+	instance D2 : info:DescriptiveInformationEntity [
+		foundation:hasName "Mission operational elements"
+		info:describes oslm_ms:LSNDS
+		foundation:contains oslm_tes:TE4_Output
+		foundation:contains oslm_tes:TE8_Output
+	]
+	
+	instance D4 : info:DescriptiveInformationEntity [
+		foundation:hasName "Path confidence"
+		info:describes oslm_ms:LSNDS
+		foundation:contains oslm_tes:TE10_Output
+		foundation:contains oslm_tes:TE11_Output
+	]
+	
+	instance IDR_Decision : temp_dec:KeyDecision [
+		info:prescribes MilestoneC
+		temp_dec:isInformedBy D1
+		temp_dec:isInformedBy D2
+		temp_dec:isInformedBy D3
+		temp_dec:isInformedBy D4
+	]
+	
+	instance MilestoneC : temp_dec:Milestone
+	
+	instance InterimDesignReview : agent:ManagedProcess [
+		agent:hasInput met:OSLM_dTEMP
+		event:occursOn IDR_TimePeriod
+		agent:hasOutput IDR_Decision
+	]
+	
+	instance IDR_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2024-08-27T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2024-08-27T15:00:00"^^xsd:dateTime
+	]
+	
+	instance OSLM_MakeMDADecision : temp_dec:MakeMDADecision [
+		foundation:specificallyDependentOn oslm_org:OSLM_MDA
+		sa:canOutput IDR_Decision
+	]
+	
+	instance OSLM_MDADecisionMade : temp_dec:MDADecisionMade [
+		event:isManifestationOf OSLM_MakeMDADecision
+		agent:hasOutput IDR_Decision
+	]
+	
+}

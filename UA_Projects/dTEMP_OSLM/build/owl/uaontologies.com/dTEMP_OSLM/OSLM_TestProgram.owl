@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#"
+     xml:base="http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:UA_Foundation="http://uaontologies.com/UA_Foundation/UA_Foundation#"
+     xmlns:OSLM_TestProgram="http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#"
+     xmlns:TEMP_TestProgramStructure="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#">
+    <owl:Ontology rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Organization"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#"/>
+        <oml:prefix>OSLM_TestProgram</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Description"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A description to capture...</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://opencaesar.io/oml#namespace -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#namespace"/>
+    
+
+
+    <!-- http://opencaesar.io/oml#prefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#prefix"/>
+    
+
+
+    <!-- http://opencaesar.io/oml#type -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#type"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#isManagedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#isManagedBy"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasName"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#OSLM_DTP -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#OSLM_DTP">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#DevelopmentalTEProgram"/>
+        <TEMP_TestProgramStructure:isManagedBy rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Organization#OSLM_PM"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE7"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8"/>
+        <UA_Foundation:hasName>OSLM DTP</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#OSLM_ITP -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#OSLM_ITP">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#IntegratedTestProgram"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#OSLM_DTP"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#OSLM_LTP"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#OSLM_OTP"/>
+        <UA_Foundation:hasName>OSLM ITP</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#OSLM_LTP -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#OSLM_LTP">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#LiveFireTEProgram"/>
+        <UA_Foundation:hasName>OSLM LTP</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#OSLM_OTP -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#OSLM_OTP">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#OperationalTEProgram"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE2"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE9"/>
+        <UA_Foundation:hasName>OSLM OTP</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

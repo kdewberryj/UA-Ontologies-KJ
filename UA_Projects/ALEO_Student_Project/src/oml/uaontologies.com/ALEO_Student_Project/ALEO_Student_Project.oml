@@ -1,0 +1,207 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "This is the OML representation of the example ALEO student project, generated for CSER 2024"
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#> as aleo {
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	///////////////////////////////////////////////////////////////////////////////////
+    ///                                                                             ///
+    ///                               Ontology Usage                                ///
+    ///                                                                             ///
+    ///////////////////////////////////////////////////////////////////////////////////
+	
+	
+    //// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    //uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    //uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    
+    //// Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    //uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	//uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	//uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	//uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+	//uses <http://uaontologies.com/UA_Domain/UA_BayesianNetworks#> as bn
+    
+    
+    //// Extends other descriptions
+    
+    extends <http://uaontologies.com/UA_Libraries/Dimensions#> as dim
+    //extends <http://uaontologies.com/UA_Libraries/Units#> as units
+    //extends <http://uaontologies.com/UA_Libraries/SoftwareTools#> as swt
+    
+    
+    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    ///////////////////////////////////////////////////////////////////////////////////
+    ///                                                                             ///
+    ///           Data generated from Violet: 'ALEO_Student_Project' tag            ///
+    ///                                                                             ///
+    ///////////////////////////////////////////////////////////////////////////////////
+    
+    
+    // Requirements (from Jama)
+    
+    instance ALEO-SYSREQ-1 : req:Requirement [
+    	foundation:hasID "ALEO-SYSREQ-1"
+    	foundation:hasName "ALEO Mass Requirement"
+    	foundation:hasNaturalLanguageDescription "The spacecraft mass shall be less than 900kg"
+    	info:prescribes ALEO
+    ]
+    
+    instance ALEO-SYSREQ-2 : req:Requirement [
+    	foundation:hasID "ALEO-SYSREQ-2"
+    	foundation:hasName "ALEO Power Requirement"
+    	foundation:hasNaturalLanguageDescription "The spacecraft shall generate 400W of power in sunlight"
+    	info:prescribes ALEO
+    ]
+    
+    instance ALEO-SYSREQ-3 : req:Requirement [
+    	foundation:hasID "ALEO-SYSREQ-3"
+    	foundation:hasName "ALEO Communication Requirement"
+    	foundation:hasNaturalLanguageDescription "The spacecraft communicate with the ground segment on an S-Band frequency"
+    	info:prescribes ALEO
+    ]
+    
+    instance ALEO-SYSREQ-4 : req:Requirement [
+    	foundation:hasID "ALEO-SYSREQ-4"
+    	foundation:hasName "ALEO Pointing Requirement"
+    	foundation:hasNaturalLanguageDescription "The spacecraft shall have an attitude pointing accuracy of 0.1 degrees"
+    	info:prescribes ALEO
+    ]
+    
+    instance ALEO-SYSREQ-5 : req:Requirement [
+    	foundation:hasID "ALEO-SYSREQ-5"
+    	foundation:hasName "ALEO Payload Requirement"
+    	foundation:hasNaturalLanguageDescription "The spacecraft payload shall downlink science data to the ground segment at a minimum average data rate of 10 Megabits per second (Mbps)"
+    	info:prescribes ALEO
+    ]
+    
+    
+    
+    // Tasks (from Jira)
+    
+    instance role1 : agent:ProcessOwner
+    
+    instance role2 : agent:ProcessOwner
+    
+    instance role3 : agent:ProcessOwner
+    
+    instance Person1 : agent:Person [
+    	foundation:hasName "Joe Gregory"
+    	agent:hasRole role1
+    ]
+    
+    instance Person2 : agent:Person [
+    	foundation:hasName "Richardo Larez"
+    	agent:hasRole role2
+    ]
+    
+    instance Person3 : agent:Person [
+    	foundation:hasName "Niko Martell"
+    	agent:hasRole role3
+    ]
+    
+    instance task1 : pm:Activity [
+    	foundation:hasID "UAZ-1"
+    	foundation:hasNaturalLanguageDescription "Verify ALEO-SYSREQ-1"
+    	agent:isResponsibilityOf role3
+    	req:verifies ALEO-SYSREQ-1
+    ]
+    
+    instance task2 : pm:Activity [
+    	foundation:hasID "UAZ-2"
+    	foundation:hasNaturalLanguageDescription "Verify ALEO-SYSREQ-2"
+    	agent:isResponsibilityOf role1
+    	req:verifies ALEO-SYSREQ-2
+    ]
+    
+    instance task3 : pm:Activity [
+    	foundation:hasID "UAZ-3"
+    	foundation:hasNaturalLanguageDescription "Verify ALEO-SYSREQ-3"
+    	agent:isResponsibilityOf role2
+    	req:verifies ALEO-SYSREQ-3
+    ]
+    
+    instance task4 : pm:Activity [
+    	foundation:hasID "UAZ-4"
+    	foundation:hasNaturalLanguageDescription "Verify ALEO-SYSREQ-4"
+    	agent:isResponsibilityOf role2
+    	req:verifies ALEO-SYSREQ-4
+    ]
+    
+    instance task5 : pm:Activity [
+    	foundation:hasID "UAZ-5"
+    	foundation:hasNaturalLanguageDescription "Verify ALEO-SYSREQ-5"
+    	agent:isResponsibilityOf role1
+    	req:verifies ALEO-SYSREQ-5
+    ]
+
+
+    
+    // Architecture (from Duro)     
+    
+    instance ALEO : sa:System [
+    	foundation:hasName "Arizona LEO Sat"
+    	foundation:contains SolarPanelAssembly
+    	foundation:contains PropulsionSystem
+    	foundation:contains CDH
+    	foundation:contains Payload
+    	foundation:contains ADCS
+    ]
+    
+    instance ALEO_Mass : meas:Quantity [
+    	foundation:hasName "ALEO System Mass"
+    	foundation:specificallyDependentOn ALEO
+    	meas:hasDimension dim:Mass
+    	req:satisfies ALEO-SYSREQ-1
+    ] 
+    
+    instance SolarPanelAssembly : sa:System [
+    	foundation:hasName "Solar Panel Assembly"
+    	req:satisfies ALEO-SYSREQ-2
+    ]
+    
+    instance PropulsionSystem : sa:System [
+    	foundation:hasName "Propulsion System"
+    ]
+    
+    instance CDH : sa:System [
+    	foundation:hasName "C&DH"
+    	req:satisfies ALEO-SYSREQ-3
+    ]
+    
+    instance Payload : sa:System [
+    	foundation:hasName "Payload"
+    	req:satisfies ALEO-SYSREQ-5
+    ]
+    
+    instance ADCS : sa:System [
+    	foundation:hasName "ADCS"
+    	req:satisfies ALEO-SYSREQ-4
+    ]
+    
+
+ 
+	
+}

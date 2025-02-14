@@ -1,0 +1,92 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture..."
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#> as OSLM_TestProgram {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    //uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    //uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    //uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    //uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    //uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    //uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    //uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    //uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	//uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	//uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	//uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    
+    //uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#> as temp_tps
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#> as temp_tpf
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#> as temp_resp
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> as temp_tpt
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_dec
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as temp_teo
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#> as temp_ear
+    
+    // Extends other descriptions
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_Organization#> as oslm_org
+	extends <http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#> as oslm_test
+	
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	////////////////////////////// TEST PROGRAM STRUCTURE /////////////////////////////
+	
+	instance OSLM_ITP : temp_tpp:IntegratedTestProgram [
+		foundation:hasName "OSLM ITP"
+		foundation:contains OSLM_OTP
+		foundation:contains OSLM_DTP
+		foundation:contains OSLM_LTP
+	]
+	
+	instance OSLM_DTP : temp_tps:DevelopmentalTEProgram [
+		foundation:hasName "OSLM DTP"
+		temp_tps:isManagedBy oslm_org:OSLM_PM
+		foundation:contains oslm_test:TE5
+		foundation:contains oslm_test:TE5
+		foundation:contains oslm_test:TE3
+		foundation:contains oslm_test:TE6
+		foundation:contains oslm_test:TE7
+		foundation:contains oslm_test:TE8
+		foundation:contains oslm_test:TE4
+		foundation:contains oslm_test:TE10
+		foundation:contains oslm_test:TE11
+	]
+	
+	instance OSLM_OTP : temp_tps:OperationalTEProgram [
+		foundation:hasName "OSLM OTP"
+		foundation:contains oslm_test:TE2
+		foundation:contains oslm_test:TE9
+	]
+	
+	instance OSLM_LTP : temp_tps:LiveFireTEProgram [
+		foundation:hasName "OSLM LTP"
+	]
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,868 @@
+description <http://uaontologies.com/NoraSat/NoraSat#> as NoraSat {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+    
+    // Use relevant vocabularies
+    
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	//uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+	uses <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#> as orb
+    
+    // Extends other descriptions
+    
+    extends <http://uaontologies.com/UA_Libraries/Dimensions#> as dim
+    extends <http://uaontologies.com/UA_Libraries/Units#> as units
+    extends <http://uaontologies.com/UA_Libraries/SoftwareTools#> as swt
+    
+    ////////////////////////////////////////////////////////////////////////////////////
+    
+    // Requirements (from Jama)
+    
+     instance req1 : req:Requirement [
+		foundation:hasID "NoraSat-MR_1"
+		foundation:hasName "MR_1"
+		foundation:hasNaturalLanguageDescription "The NoraSat Mission shall downlink at least 2.1 Tb of data per day"
+		sw:hasEntitySource swt:Jama
+		info:prescribes NoraSat_Mission
+	]
+    
+    instance req2 : req:Requirement [
+		foundation:hasID "NoraSat-MR_2"
+		foundation:hasName "MR_2"
+		foundation:hasNaturalLanguageDescription "The NoraSat Mission shall downlink payload data with a Signal to Noise Ratio (SNR) of at least 26 dB"
+		sw:hasEntitySource swt:Jama
+		info:prescribes NoraSat_Mission
+	]
+	
+	instance req3 : req:Requirement [
+		foundation:hasID "NoraSat-MR_3"
+		foundation:hasName "MR_3"
+		foundation:hasNaturalLanguageDescription "The NoraSat Mission shall utilize a circular orbit at an altitude of 600-700 km"
+		sw:hasEntitySource swt:Jama
+		info:prescribes NoraSat_Mission
+	]
+	
+	instance req4 : req:Requirement [
+		foundation:hasID "NoraSat-MR_4"
+		foundation:hasName "MR_4"
+		foundation:hasNaturalLanguageDescription "The NoraSat Mission shall only utilize ground stations that are available to NASA"
+		sw:hasEntitySource swt:Jama
+		info:prescribes NoraSat_Mission
+	]
+	
+	instance req5 : req:Requirement [
+		foundation:hasID "NoraSat-MR_5"
+		foundation:hasName "MR_5"
+		foundation:hasNaturalLanguageDescription "The NoraSat Mission shall begin operations on 1st Jan 2025"
+		sw:hasEntitySource swt:Jama
+		info:prescribes NoraSat_Mission
+	]
+	
+	
+	
+	///////////////////// MISSION ///////////////////////////////////////////////////////////////////////
+	
+	// Mission Overview //
+	
+	instance NoraSat_Mission : orb:SpaceMission [
+		mission:hasMissionParticipant NoraSat
+		orb:hasSpaceFlightPhase NoraSat_Orbit
+		foundation:contains GroundSegment
+		req:satisfies req1
+		req:satisfies req2
+		req:satisfies req5
+	]
+	
+	
+	// Ground Segment //
+	
+	instance GroundSegment : sa:System [
+		foundation:contains GS1
+		foundation:contains GS2
+		foundation:contains GS3
+		req:satisfies req4
+	]
+	
+	instance GS1 : sa:System [
+		foundation:hasName "WPP"
+	]
+	
+	instance GS2 : sa:System [
+		foundation:hasName "SIN"
+	]
+	
+	instance GS3 : sa:System [
+		foundation:hasName "KOU"
+	]
+	
+	instance GS1_Latitude : meas:Quantity [
+		foundation:specificallyDependentOn GS1
+		meas:hasDimension dim:Angle
+	]
+	
+	instance GS1_Latitude_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf GS1_Latitude
+		meas:hasUnit units:degrees
+		meas:hasValue "37.9455"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance GS1_Longitude : meas:Quantity [
+		foundation:specificallyDependentOn GS1
+		meas:hasDimension dim:Angle
+	]
+	
+	instance GS1_Longitude_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf GS1_Longitude
+		meas:hasUnit units:degrees
+		meas:hasValue "-75.4611"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance GS1_Altitude : meas:Quantity [
+		foundation:specificallyDependentOn GS1
+		meas:hasDimension dim:Length
+	]
+	
+	instance GS1_Altitude_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf GS1_Altitude
+		meas:hasUnit units:km
+		meas:hasValue "-0.0185"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance GS2_Latitude : meas:Quantity [
+		foundation:specificallyDependentOn GS2
+		meas:hasDimension dim:Angle
+	]
+	
+	instance GS2_Latitude_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf GS2_Latitude
+		meas:hasUnit units:degrees
+		meas:hasValue "1.3919"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance GS2_Longitude : meas:Quantity [
+		foundation:specificallyDependentOn GS2
+		meas:hasDimension dim:Angle
+	]
+	
+	instance GS2_Longitude_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf GS2_Longitude
+		meas:hasUnit units:degrees
+		meas:hasValue "103.835"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance GS2_Altitude : meas:Quantity [
+		foundation:specificallyDependentOn GS2
+		meas:hasDimension dim:Length
+	]
+	
+	instance GS2_Altitude_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf GS2_Altitude
+		meas:hasUnit units:km
+		meas:hasValue "0.03"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance GS3_Latitude : meas:Quantity [
+		foundation:specificallyDependentOn GS3
+		meas:hasDimension dim:Angle
+	]
+	
+	instance GS3_Latitude_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf GS3_Latitude
+		meas:hasUnit units:degrees
+		meas:hasValue "4.9489"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance GS3_Longitude : meas:Quantity [
+		foundation:specificallyDependentOn GS3
+		meas:hasDimension dim:Angle
+	]
+	
+	instance GS3_Longitude_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf GS3_Longitude
+		meas:hasUnit units:degrees
+		meas:hasValue "-52.31"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance GS3_Altitude : meas:Quantity [
+		foundation:specificallyDependentOn GS3
+		meas:hasDimension dim:Length
+	]
+	
+	instance GS3_Altitude_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf GS3_Altitude
+		meas:hasUnit units:km
+		meas:hasValue "0.05196"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	
+	// Orbit	
+	
+	instance NoraSat_Orbit : orb:Orbit [
+		event:hasParticipant NoraSat
+		event:occursAt NoraSat_OrbitalPath
+		event:occursOn NoraSat_OrbitTemporalRegion
+		req:satisfies req3
+		sw:hasEntitySource swt:Violet
+	]
+	
+	instance NoraSat_OrbitTemporalRegion : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2025-01-01T12:00:00"^^xsd:dateTime
+		sw:hasEntitySource swt:Violet
+	]
+	
+	instance NoraSat_OrbitTemporalRegion_Duration : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Orbit
+		meas:hasDimension dim:Time
+	]
+	
+	instance NoraSat_OrbitTemporalRegion_Duration_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_OrbitTemporalRegion_Duration
+		meas:hasUnit units:day
+		meas:hasValue "7"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+	
+	instance NoraSat_OrbitalPath : orb:OrbitalPath [
+		foundation:hasSpecificDependent NoraSat_OrbitalPath_SMA
+		foundation:hasSpecificDependent NoraSat_OrbitalPath_ECC
+		foundation:hasSpecificDependent NoraSat_OrbitalPath_INC
+		foundation:hasSpecificDependent NoraSat_OrbitalPath_AOP
+		foundation:hasSpecificDependent NoraSat_OrbitalPath_LAN
+		foundation:hasSpecificDependent NoraSat_OrbitalPath_TA
+		sw:hasEntitySource swt:Violet
+	]
+        
+    instance NoraSat_OrbitalPath_SMA : orb:Orbital_SMA [
+    	meas:hasDimension dim:Length
+    	sw:hasEntitySource swt:Violet
+    ]
+    
+    instance NoraSat_OrbitalPath_SMA_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_OrbitalPath_SMA
+		meas:hasUnit units:km
+		meas:hasValue "7021"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+    
+    instance NoraSat_OrbitalPath_ECC : orb:Orbital_ECC [
+    	sw:hasEntitySource swt:Violet
+    	meas:hasDimension dim:Dimensionless
+    ]
+    
+    instance NoraSat_OrbitalPath_ECC_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_OrbitalPath_ECC
+		meas:hasValue "0"^^rdfs:Literal
+		meas:hasUnit units:na
+		sw:hasEntitySource swt:Violet
+	]
+    
+    instance NoraSat_OrbitalPath_INC : orb:Orbital_INC [
+    	meas:hasDimension dim:Angle
+    	sw:hasEntitySource swt:Violet
+    ]
+    
+    instance NoraSat_OrbitalPath_INC_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_OrbitalPath_INC
+		meas:hasUnit units:degrees
+		meas:hasValue "30"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+    
+    instance NoraSat_OrbitalPath_AOP : orb:Orbital_AOP [
+    	meas:hasDimension dim:Angle
+    	sw:hasEntitySource swt:Violet
+    ]
+    
+    instance NoraSat_OrbitalPath_AOP_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_OrbitalPath_AOP
+		meas:hasUnit units:degrees
+		meas:hasValue "0"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+    
+    instance NoraSat_OrbitalPath_LAN : orb:Orbital_LAN [
+    	meas:hasDimension dim:Angle
+    	sw:hasEntitySource swt:Violet
+    ]
+    
+    instance NoraSat_OrbitalPath_LAN_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_OrbitalPath_LAN
+		meas:hasUnit units:degrees
+		meas:hasValue "0"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+    
+    instance NoraSat_OrbitalPath_TA : orb:Orbital_TA [
+    	meas:hasDimension dim:Angle
+    	sw:hasEntitySource swt:Violet
+    ]
+    
+    instance NoraSat_OrbitalPath_TA_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_OrbitalPath_TA
+		meas:hasUnit units:degrees
+		meas:hasValue "0"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+	
+	
+	
+	///////////////////// SYSTEM ////////////////////////////////////////////////////////////////
+	
+	// System Architecture //	
+	
+	instance NoraSat : sa:System [
+		foundation:contains NoraSat_Power
+		foundation:contains NoraSat_Comms
+		foundation:contains NoraSat_Payload
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Power : sa:System [
+		foundation:contains NoraSat_Power_SAA
+		foundation:contains NoraSat_Power_Harness
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Power_SAA : sa:System [
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Power_Harness : sa:System [
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Comms : sa:System [
+		foundation:contains NoraSat_Comms_SBandTransmitter
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Comms_SBandTransmitter : sa:System [
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Payload : sa:System [
+		foundation:contains NoraSat_Payload_XBandTransmitter
+		foundation:contains NoraSat_Payload_Camera
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter : sa:System [
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Payload_Camera : sa:System [
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	
+	// System Mass Quantities
+	
+	instance NoraSat_Mass : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Power_Mass : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Power
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Comms_Mass : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Comms
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Payload_Mass : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Comms_SBandTransmitter_Mass : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Comms_SBandTransmitter
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Power_SAA_Mass : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Power_SAA
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Power_Harness_Mass : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Power_Harness
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Mass : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Payload_Camera_Mass : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_Camera
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	
+	// Other System Quantities
+	
+	instance NoraSat_PowerRequired : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat
+		meas:hasDimension dim:Power
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Power_PowerDistributed : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Power
+		meas:hasDimension dim:Power
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Power_Harness_Efficiency : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Power_Harness
+		meas:hasDimension dim:Efficiency
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Power_SAA_Efficiency : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Power_SAA
+		meas:hasDimension dim:Efficiency
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Power_SAA_Area : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Power_SAA
+		meas:hasDimension dim:Area
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Comms_SBandTransmitter_Frequency : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Comms_SBandTransmitter
+		meas:hasDimension dim:Frequency
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Comms_SBandTransmitter_Power : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Comms_SBandTransmitter
+		meas:hasDimension dim:Power
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Comms_SBandTransmitter_Gain : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Comms_SBandTransmitter
+		meas:hasDimension dim:Gain
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Frequency : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter
+		meas:hasDimension dim:Frequency
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Power : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter
+		meas:hasDimension dim:Power
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Gain : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter
+		meas:hasDimension dim:Gain
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	
+	// Quantity Values
+	
+	instance NoraSat_Power_SAA_Efficiency_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Power_SAA_Efficiency
+		meas:hasUnit units:percentage
+		meas:hasValue "80"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Power_SAA_Area_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Power_SAA_Area
+		meas:hasUnit units:metresquared
+		meas:hasValue "10"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Power_Harness_Efficiency_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Power_Harness_Efficiency
+		meas:hasUnit units:percentage
+		meas:hasValue "85"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Comms_SBandTransmitter_Frequency_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Comms_SBandTransmitter_Frequency
+		meas:hasUnit units:GHz
+		meas:hasValue "2.2"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Comms_SBandTransmitter_Power_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Comms_SBandTransmitter_Power
+		meas:hasUnit units:W
+		meas:hasValue "15"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance NoraSat_Comms_SBandTransmitter_Gain_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Comms_SBandTransmitter_Gain
+		meas:hasUnit units:dB
+		meas:hasValue "7"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	
+	// SatCatalog Imports (NOTE: maybe we only show one at a time in the OML export? i.e., the most recent one)
+	
+	// Transmitter 1
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance1 : sa:System [
+		foundation:hasName "μTX-200 Wideband X-Band Transmitter"
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance1_Power : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance1
+		meas:hasDimension dim:Power
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance1_Power_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance1_Power
+		meas:hasUnit units:W
+		meas:hasValue "78"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance1_Gain : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance1
+		meas:hasDimension dim:Gain
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance1_Gain_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance1_Gain
+		meas:hasUnit units:dB
+		meas:hasValue "20"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance1_TLL : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance1
+		meas:hasDimension dim:Gain
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance1_TLL_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance1_TLL
+		meas:hasUnit units:dB
+		meas:hasValue "-4.5"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance1_DataRate : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance1
+		meas:hasDimension dim:DataRate
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance1_DataRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance1_DataRate
+		meas:hasUnit units:Mbps
+		meas:hasValue "3200"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance1_SNR : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance1
+		meas:hasDimension dim:Gain
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance1_SNR_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance1_SNR
+		meas:hasUnit units:dB
+		meas:hasValue "25.058"^^rdfs:Literal
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance1_Frequency : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance1
+		meas:hasDimension dim:Frequency
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance1_Frequency_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance1_Frequency
+		meas:hasUnit units:GHz
+		meas:hasValue "8.2"^^rdfs:Literal
+	]
+		
+		
+	// Transmitter 2
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance2 : sa:System [
+		foundation:hasName "PDTX-1000 Payload Data Transmitter"
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance2_Power : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance2
+		meas:hasDimension dim:Power
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance2_Power_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance2_Power
+		meas:hasUnit units:W
+		meas:hasValue "45"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance2_Gain : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance2
+		meas:hasDimension dim:Gain
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance2_Gain_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance2_Gain
+		meas:hasUnit units:dB
+		meas:hasValue "20"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance2_TLL : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance2
+		meas:hasDimension dim:Gain
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance2_TLL_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance2_TLL
+		meas:hasUnit units:dB
+		meas:hasValue "-4.5"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance2_DataRate : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance2
+		meas:hasDimension dim:DataRate
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance2_DataRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance2_DataRate
+		meas:hasUnit units:Mbps
+		meas:hasValue "250"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance2_SNR : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance2
+		meas:hasDimension dim:Gain
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance2_SNR_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance2_SNR
+		meas:hasUnit units:dB
+		meas:hasValue "33.844"^^rdfs:Literal
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance2_Frequency : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance2
+		meas:hasDimension dim:Frequency
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance2_Frequency_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance2_Frequency
+		meas:hasUnit units:GHz
+		meas:hasValue "8.5"^^rdfs:Literal
+	]
+	
+	
+	// Transmitter 3	
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance3 : sa:System [
+		foundation:hasName "HRT-440 X-Band High Rate Transmitter"
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance3_Power : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance3
+		meas:hasDimension dim:Power
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance3_Power_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance3_Power
+		meas:hasUnit units:W
+		meas:hasValue "15"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance3_Gain : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance3
+		meas:hasDimension dim:Gain
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance3_Gain_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance3_Gain
+		meas:hasUnit units:dB
+		meas:hasValue "20"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance3_TLL : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance3
+		meas:hasDimension dim:Gain
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance3_TLL_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance3_TLL
+		meas:hasUnit units:dB
+		meas:hasValue "-4.5"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance3_DataRate : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance3
+		meas:hasDimension dim:DataRate
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance3_DataRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance3_DataRate
+		meas:hasUnit units:Mbps
+		meas:hasValue "440"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance3_SNR : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance3
+		meas:hasDimension dim:Gain
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance3_SNR_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance3_SNR
+		meas:hasUnit units:dB
+		meas:hasValue "26.827"^^rdfs:Literal
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance3_Frequency : meas:Quantity [
+		foundation:specificallyDependentOn NoraSat_Payload_XBandTransmitter_Instance3
+		meas:hasDimension dim:Frequency
+	]
+	
+	instance NoraSat_Payload_XBandTransmitter_Instance3_Frequency_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf NoraSat_Payload_XBandTransmitter_Instance3_Frequency
+		meas:hasUnit units:GHz
+		meas:hasValue "8.4"^^rdfs:Literal
+	]
+	
+
+    
+    // Analysis Results (from Sedaro and Python)
+    
+    // Not defining this in detail as we don't need it for this example
+    instance SedaroAnalysis : ms:Analysis [
+    	sw:hasEntitySource swt:Sedaro
+    	agent:hasOutput MaxTransmissionDistance_Measurement
+    	agent:hasOutput AverageTransmissionTime_Measurement
+    	req:verifies req3
+    	req:verifies req5
+    ]
+    
+    instance MaxTransmissionDistance : meas:Quantity [
+    	foundation:specificallyDependentOn NoraSat_Mission
+    	meas:hasDimension dim:Length
+    ]
+    
+    instance MaxTransmissionDistance_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf MaxTransmissionDistance
+		meas:hasUnit units:km
+		meas:hasValue "2955"^^rdfs:Literal
+	]
+	
+	instance AverageTransmissionTime : meas:Quantity [
+    	foundation:specificallyDependentOn NoraSat_Mission
+    	meas:hasDimension dim:Time
+    ]
+    
+    instance AverageTransmissionTime_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf AverageTransmissionTime
+		meas:hasUnit units:second
+		meas:hasValue "14691"^^rdfs:Literal
+	]
+    
+    // NOTE - only showing one version of this analysis - i.e., using Transmitter1
+    instance SNR_Calculation : ms:Analysis [
+    	agent:hasInput MaxTransmissionDistance_Measurement
+    	agent:hasInput AverageTransmissionTime_Measurement
+    	agent:hasInput NoraSat_Payload_XBandTransmitter_Instance1_Power_Measurement
+    	agent:hasInput NoraSat_Payload_XBandTransmitter_Instance1_Gain_Measurement
+    	agent:hasInput NoraSat_Payload_XBandTransmitter_Instance1_TLL_Measurement
+    	agent:hasInput NoraSat_Payload_XBandTransmitter_Instance1_DataRate_Measurement
+    	agent:hasInput NoraSat_Payload_XBandTransmitter_Instance1_Frequency_Measurement
+    	agent:hasOutput NoraSat_Payload_XBandTransmitter_Instance1_SNR_Measurement
+    	sw:hasEntitySource swt:Violet
+    	req:verifies req1
+    	req:verifies req2
+    ]
+    
+    
+    // this requirement has been defined earlier - the 'ref' prefix means we are just adding to this previous definition
+    // these values are set because of the related values in the dataset
+    // I need to define rules that will automatically set these values - not in place yet
+    ref instance req1 [
+    	req:hasVerificationStatus "true"^^xsd:string
+    ]
+    
+    ref instance req2 [
+    	req:hasVerificationStatus "false"^^xsd:string
+    ]	
+	
+}

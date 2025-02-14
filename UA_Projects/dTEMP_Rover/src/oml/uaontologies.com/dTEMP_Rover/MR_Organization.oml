@@ -1,0 +1,208 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture Part 1 of the example TEMP"
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/dTEMP_Rover/MR_Organization#> as mr_org {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    //uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    //uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    //uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    //uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    //uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	//uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	//uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    
+    uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#> as temp_tps
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#> as temp_tpf
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#> as temp_resp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> as temp_tpt
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_dec
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as temp_teo
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#> as temp_ear
+    
+    // Extends other descriptions
+    
+    //extends <http://uaontologies.com/UA_Libraries/Dimensions#> as dim
+    //extends <http://uaontologies.com/dTEMP_Rover/MR_Project#> as mr_pro
+    //extends <http://uaontologies.com/dTEMP_Rover/MR_Requirements#> as mr_req
+    //extends <http://uaontologies.com/dTEMP_Rover/MR_System#> as mr_sys
+    //extends <http://uaontologies.com/dTEMP_Rover/MR_TestProgram#> as mr_tpr
+    //extends <http://uaontologies.com/dTEMP_Rover/MR_Tests#> as mr_tes
+    
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	
+	/// Organizations
+	
+	instance NASA : agent:Organization
+	
+	instance JPL : agent:Organization
+	
+	instance LockheedMartin : agent:Organization
+	
+	instance Airbus : agent:Organization
+	
+	
+	/// Organizational Roles
+	
+	instance Rover_Purchaser : acq:Purchaser [
+		foundation:genericallyDependentOn mr_org:NASA
+	]
+	
+	instance Rover_Vendor : acq:Vendor [
+		foundation:genericallyDependentOn mr_org:JPL
+	]
+	
+	instance Rover_MDA : temp_org:MilestoneDecisionAuthority [
+		foundation:genericallyDependentOn NASA
+	]
+	
+	instance Rover_WIPT : agent:Organization
+	
+	instance Rover_LTO : temp_org:LeadTestOrganization [
+		foundation:genericallyDependentOn mr_org:NASA
+		temp_tpt:isDesignatedBy PdM
+	]
+	
+	instance Rover_LDTO : temp_org:LeadDevelopmentalTestOrganization [
+		foundation:genericallyDependentOn mr_org:JPL
+		temp_tpt:isDesignatedBy PdM	
+	]
+	
+	instance Rover_OTA : temp_org:OperationalTestAgency [
+		foundation:genericallyDependentOn mr_org:JPL
+		temp_tpt:isDesignatedBy PdM
+	]
+		
+	instance Rover_WIPT_Role : temp_org:WIPT [
+		foundation:contains Rover_LTO
+		foundation:contains Rover_LDTO
+		foundation:contains Rover_OTA
+	]
+		
+	instance Rover_WIPT_Info : info:PrescriptiveInformationEntity [
+		foundation:hasName "Rover WIPT Overview"
+		info:prescribes Rover_WIPT_Role
+	]
+	
+	/// Personnel 
+	
+	instance PdM : temp_tps:ProgramManager
+		
+	instance RequirementsManager : agent:ProcessOwner [
+		agent:responsibleFor RequirementsTV
+	]
+	
+	instance MaterialDeveloper : foundation:Role
+	
+	instance Rover_CDT : temp_tpt:ChiefDevelopmentalTester
+	
+	instance SystemArchitect : agent:ProcessOwner [
+		agent:responsibleFor RequirementsTV
+		agent:responsibleFor SystemArchitecting
+		agent:responsibleFor SimulationAndAnalysis
+	]
+	
+	instance Person1 : agent:Person [
+		foundation:hasName "Homer Simpson"
+	]
+	
+	instance Person2 : agent:Person [
+		foundation:hasName "Marge Simpson"
+		agent:hasRole MaterialDeveloper
+	]
+		
+	instance Person3 : agent:Person [
+		foundation:hasName "Bart Simpson"
+		agent:hasRole Rover_CDT
+	]
+	
+	instance Person4 : agent:Person [
+		foundation:hasName "Lisa Simpson"
+	]
+	
+	
+	/// Organizational Tools
+	
+	instance Jama : sw:Software
+	
+	instance MagicDraw : sw:Software
+	
+	instance Matlab : foundation:Object
+	
+	
+	/// Organizational Procedures
+	
+	instance SEProcedure : agent:Procedure [
+		foundation:hasName "SE Procedure"
+		info:prescribes SEProcess
+		foundation:genericallyDependentOn SED1
+	]
+	
+	instance SED1 : info:Document [
+		foundation:hasName "Systems Engineering Procedures Document"
+	]
+	
+	instance SEProcess : agent:ManagedProcess [
+		foundation:contains RequirementsTV
+		foundation:contains SystemArchitecting
+		foundation:contains SimulationAndAnalysis
+	]
+	
+	instance RequirementsTV : agent:ManagedProcess [
+		event:hasParticipant Jama
+	]
+	
+	instance SystemArchitecting : agent:ManagedProcess [
+		event:hasParticipant MagicDraw
+	]
+	
+	instance SimulationAndAnalysis : agent:ManagedProcess [
+		event:hasParticipant Matlab
+	]
+			
+	
+	/// Repositories
+	
+	instance Repository1 : dm:Repository [
+		dm:isAccessibleBy Person1
+		dm:isAccessibleBy LockheedMartin
+		dm:isAccessibleBy NASA
+		dm:isAccessibleBy JPL
+	]
+	
+	instance ExternalDataDoc : info:Document
+	
+	instance Repository2_External : dm:Repository [
+		dm:isAccessibleBy Airbus
+		dm:isDigitalLocationOf ExternalDataDoc
+	]
+	
+	
+}

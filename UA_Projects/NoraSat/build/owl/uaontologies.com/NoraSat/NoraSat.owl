@@ -1,0 +1,1890 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/NoraSat/NoraSat#"
+     xml:base="http://uaontologies.com/NoraSat/NoraSat"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:NoraSat="http://uaontologies.com/NoraSat/NoraSat#"
+     xmlns:UA_Agent="http://uaontologies.com/UA_Core/UA_Agent#"
+     xmlns:UA_Event="http://uaontologies.com/UA_Core/UA_Event#"
+     xmlns:UA_Mission="http://uaontologies.com/UA_Domain/UA_Mission#"
+     xmlns:UA_Software="http://uaontologies.com/UA_Domain/UA_Software#"
+     xmlns:UA_Foundation="http://uaontologies.com/UA_Foundation/UA_Foundation#"
+     xmlns:UA_Information="http://uaontologies.com/UA_Core/UA_Information#"
+     xmlns:UA_Measurement="http://uaontologies.com/UA_Core/UA_Measurement#"
+     xmlns:UA_Requirements="http://uaontologies.com/UA_Domain/UA_Requirements#"
+     xmlns:UA_OrbitsAndTrajectories="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#">
+    <owl:Ontology rdf:about="http://uaontologies.com/NoraSat/NoraSat">
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Agent"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Event"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Information"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Mission"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Software"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Units"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/NoraSat/NoraSat#"/>
+        <oml:prefix>NoraSat</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Description"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#hasInput -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#hasInput"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#hasOutput -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#hasOutput"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#hasParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#hasParticipant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#occursAt -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#occursAt"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#occursOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#occursOn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#prescribes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasDimension -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasUnit -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#measurementOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Mission#hasMissionParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Mission#hasMissionParticipant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#hasSpaceFlightPhase -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#hasSpaceFlightPhase"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#satisfies -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#satisfies"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#verifies -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#verifies"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Software#hasEntitySource -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Software#hasEntitySource"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasSpecificDependent -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasSpecificDependent"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasValue"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#hasVerificationStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#hasVerificationStatus"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasBeginInstant -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasBeginInstant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasID -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasID"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasName"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#AverageTransmissionTime -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#AverageTransmissionTime">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Time"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Mission"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#AverageTransmissionTime_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#AverageTransmissionTime_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#second"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#AverageTransmissionTime"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">14691</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>WPP</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS1_Altitude -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS1_Altitude">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Length"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS1_Altitude_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS1_Altitude_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#km"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS1_Altitude"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">-0.0185</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS1_Latitude -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS1_Latitude">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Angle"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS1_Latitude_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS1_Latitude_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#degrees"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS1_Latitude"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">37.9455</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS1_Longitude -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS1_Longitude">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Angle"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS1_Longitude_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS1_Longitude_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#degrees"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS1_Longitude"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">-75.4611</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>SIN</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS2_Altitude -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS2_Altitude">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Length"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS2_Altitude_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS2_Altitude_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#km"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS2_Altitude"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">0.03</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS2_Latitude -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS2_Latitude">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Angle"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS2_Latitude_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS2_Latitude_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#degrees"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS2_Latitude"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">1.3919</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS2_Longitude -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS2_Longitude">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Angle"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS2_Longitude_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS2_Longitude_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#degrees"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS2_Longitude"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">103.835</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>KOU</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS3_Altitude -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS3_Altitude">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Length"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS3"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS3_Altitude_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS3_Altitude_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#km"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS3_Altitude"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">0.05196</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS3_Latitude -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS3_Latitude">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Angle"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS3"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS3_Latitude_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS3_Latitude_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#degrees"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS3_Latitude"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">4.9489</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS3_Longitude -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS3_Longitude">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Angle"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS3"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GS3_Longitude_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GS3_Longitude_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#degrees"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS3_Longitude"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">-52.31</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#GroundSegment -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#GroundSegment">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Requirements:satisfies rdf:resource="http://uaontologies.com/NoraSat/NoraSat#req4"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS1"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS2"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GS3"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#MaxTransmissionDistance -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#MaxTransmissionDistance">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Length"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Mission"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#MaxTransmissionDistance_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#MaxTransmissionDistance_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#km"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#MaxTransmissionDistance"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2955</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_Mass -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_Mass">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Mass"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Frequency -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Frequency">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Frequency"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Frequency_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Frequency_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#GHz"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Frequency"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">2.2</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Gain -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Gain">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Gain"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Gain_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Gain_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#dB"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Gain"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">7</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Mass -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Mass">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Mass"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Power -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Power">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Power"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Power_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Power_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#W"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Comms_SBandTransmitter_Power"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">15</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Mass -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Mass">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Mass"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Mission -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Mission">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#SpaceMission"/>
+        <UA_Mission:hasMissionParticipant rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat"/>
+        <UA_OrbitsAndTrajectories:hasSpaceFlightPhase rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Orbit"/>
+        <UA_Requirements:satisfies rdf:resource="http://uaontologies.com/NoraSat/NoraSat#req1"/>
+        <UA_Requirements:satisfies rdf:resource="http://uaontologies.com/NoraSat/NoraSat#req2"/>
+        <UA_Requirements:satisfies rdf:resource="http://uaontologies.com/NoraSat/NoraSat#req5"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/NoraSat/NoraSat#GroundSegment"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Orbit -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Orbit">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbit"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat"/>
+        <UA_Event:occursAt rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitTemporalRegion"/>
+        <UA_Requirements:satisfies rdf:resource="http://uaontologies.com/NoraSat/NoraSat#req3"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitTemporalRegion -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitTemporalRegion">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2025-01-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitTemporalRegion_Duration -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitTemporalRegion_Duration">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Time"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Orbit"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitTemporalRegion_Duration_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitTemporalRegion_Duration_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#day"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitTemporalRegion_Duration"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">7</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#OrbitalPath"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <UA_Foundation:hasSpecificDependent rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_AOP"/>
+        <UA_Foundation:hasSpecificDependent rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_ECC"/>
+        <UA_Foundation:hasSpecificDependent rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_INC"/>
+        <UA_Foundation:hasSpecificDependent rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_LAN"/>
+        <UA_Foundation:hasSpecificDependent rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_SMA"/>
+        <UA_Foundation:hasSpecificDependent rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_TA"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_AOP -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_AOP">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_AOP"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Angle"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_AOP_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_AOP_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#degrees"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_AOP"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">0</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_ECC -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_ECC">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_ECC"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Dimensionless"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_ECC_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_ECC_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#na"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_ECC"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">0</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_INC -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_INC">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_INC"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Angle"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_INC_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_INC_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#degrees"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_INC"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">30</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_LAN -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_LAN">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_LAN"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Angle"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_LAN_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_LAN_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#degrees"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_LAN"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">0</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_SMA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_SMA">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_SMA"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Length"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_SMA_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_SMA_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#km"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_SMA"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">7021</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_TA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_TA">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbital_TA"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Angle"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_TA_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_TA_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#degrees"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_OrbitalPath_TA"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">0</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_Camera"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_Camera -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_Camera">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_Camera_Mass -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_Camera_Mass">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Mass"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_Camera"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_Mass -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_Mass">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Mass"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Frequency -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Frequency">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Frequency"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Gain -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Gain">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Gain"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Foundation:hasName>Î¼TX-200 Wideband X-Band Transmitter</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_DataRate -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_DataRate">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#DataRate"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_DataRate_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_DataRate_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#Mbps"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_DataRate"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">3200</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Frequency -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Frequency">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Frequency"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Frequency_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Frequency_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#GHz"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Frequency"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8.2</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Gain -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Gain">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Gain"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Gain_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Gain_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#dB"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Gain"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">20</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Power -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Power">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Power"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Power_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Power_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#W"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Power"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">78</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_SNR -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_SNR">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Gain"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_SNR_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_SNR_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#dB"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_SNR"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">25.058</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_TLL -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_TLL">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Gain"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_TLL_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_TLL_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#dB"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_TLL"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">-4.5</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Foundation:hasName>PDTX-1000 Payload Data Transmitter</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_DataRate -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_DataRate">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#DataRate"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_DataRate_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_DataRate_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#Mbps"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_DataRate"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">250</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_Frequency -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_Frequency">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Frequency"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_Frequency_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_Frequency_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#GHz"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_Frequency"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8.5</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_Gain -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_Gain">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Gain"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_Gain_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_Gain_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#dB"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_Gain"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">20</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_Power -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_Power">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Power"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_Power_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_Power_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#W"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_Power"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">45</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_SNR -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_SNR">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Gain"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_SNR_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_SNR_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#dB"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_SNR"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">33.844</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_TLL -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_TLL">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Gain"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_TLL_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_TLL_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#dB"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance2_TLL"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">-4.5</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Foundation:hasName>HRT-440 X-Band High Rate Transmitter</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_DataRate -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_DataRate">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#DataRate"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_DataRate_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_DataRate_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#Mbps"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_DataRate"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">440</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_Frequency -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_Frequency">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Frequency"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_Frequency_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_Frequency_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#GHz"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_Frequency"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">8.4</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_Gain -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_Gain">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Gain"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_Gain_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_Gain_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#dB"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_Gain"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">20</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_Power -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_Power">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Power"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_Power_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_Power_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#W"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_Power"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">15</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_SNR -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_SNR">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Gain"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_SNR_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_SNR_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#dB"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_SNR"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">26.827</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_TLL -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_TLL">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Gain"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_TLL_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_TLL_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#dB"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance3_TLL"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#SatCatalog"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">-4.5</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Mass -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Mass">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Mass"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Power -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Power">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Power"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_Harness"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_PowerRequired -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_PowerRequired">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Power"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_Harness -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_Harness">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_Harness_Efficiency -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_Harness_Efficiency">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Efficiency"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_Harness"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_Harness_Efficiency_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_Harness_Efficiency_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_Harness_Efficiency"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">85</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_Harness_Mass -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_Harness_Mass">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Mass"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_Harness"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_Mass -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_Mass">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Mass"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_PowerDistributed -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_PowerDistributed">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Power"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA_Area -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA_Area">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Area"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA_Area_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA_Area_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#metresquared"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA_Area"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">10</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA_Efficiency -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA_Efficiency">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Efficiency"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA_Efficiency_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA_Efficiency_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA_Efficiency"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">80</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA_Mass -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA_Mass">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Mass"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#JupyterLab_SysMLv2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Power_SAA"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#SNR_Calculation -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#SNR_Calculation">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Analysis"/>
+        <UA_Agent:hasInput rdf:resource="http://uaontologies.com/NoraSat/NoraSat#AverageTransmissionTime_Measurement"/>
+        <UA_Agent:hasInput rdf:resource="http://uaontologies.com/NoraSat/NoraSat#MaxTransmissionDistance_Measurement"/>
+        <UA_Agent:hasInput rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_DataRate_Measurement"/>
+        <UA_Agent:hasInput rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Frequency_Measurement"/>
+        <UA_Agent:hasInput rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Gain_Measurement"/>
+        <UA_Agent:hasInput rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_Power_Measurement"/>
+        <UA_Agent:hasInput rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_TLL_Measurement"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Payload_XBandTransmitter_Instance1_SNR_Measurement"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/NoraSat/NoraSat#req1"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/NoraSat/NoraSat#req2"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Violet"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#SedaroAnalysis -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#SedaroAnalysis">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Analysis"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/NoraSat/NoraSat#AverageTransmissionTime_Measurement"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/NoraSat/NoraSat#MaxTransmissionDistance_Measurement"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/NoraSat/NoraSat#req3"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/NoraSat/NoraSat#req5"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Sedaro"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#req1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#req1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Mission"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Jama"/>
+        <UA_Requirements:hasVerificationStatus>true</UA_Requirements:hasVerificationStatus>
+        <UA_Foundation:hasID>NoraSat-MR_1</UA_Foundation:hasID>
+        <UA_Foundation:hasName>MR_1</UA_Foundation:hasName>
+        <UA_Foundation:hasNaturalLanguageDescription>The NoraSat Mission shall downlink at least 2.1 Tb of data per day</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#req2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#req2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Mission"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Jama"/>
+        <UA_Requirements:hasVerificationStatus>false</UA_Requirements:hasVerificationStatus>
+        <UA_Foundation:hasID>NoraSat-MR_2</UA_Foundation:hasID>
+        <UA_Foundation:hasName>MR_2</UA_Foundation:hasName>
+        <UA_Foundation:hasNaturalLanguageDescription>The NoraSat Mission shall downlink payload data with a Signal to Noise Ratio (SNR) of at least 26 dB</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#req3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#req3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Mission"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Jama"/>
+        <UA_Foundation:hasID>NoraSat-MR_3</UA_Foundation:hasID>
+        <UA_Foundation:hasName>MR_3</UA_Foundation:hasName>
+        <UA_Foundation:hasNaturalLanguageDescription>The NoraSat Mission shall utilize a circular orbit at an altitude of 600-700 km</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#req4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#req4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Mission"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Jama"/>
+        <UA_Foundation:hasID>NoraSat-MR_4</UA_Foundation:hasID>
+        <UA_Foundation:hasName>MR_4</UA_Foundation:hasName>
+        <UA_Foundation:hasNaturalLanguageDescription>The NoraSat Mission shall only utilize ground stations that are available to NASA</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/NoraSat/NoraSat#req5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/NoraSat/NoraSat#req5">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/NoraSat/NoraSat#NoraSat_Mission"/>
+        <UA_Software:hasEntitySource rdf:resource="http://uaontologies.com/UA_Libraries/SoftwareTools#Jama"/>
+        <UA_Foundation:hasID>NoraSat-MR_5</UA_Foundation:hasID>
+        <UA_Foundation:hasName>MR_5</UA_Foundation:hasName>
+        <UA_Foundation:hasNaturalLanguageDescription>The NoraSat Mission shall begin operations on 1st Jan 2025</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,453 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#"
+     xml:base="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:UA_Agent="http://uaontologies.com/UA_Core/UA_Agent#"
+     xmlns:UA_Event="http://uaontologies.com/UA_Core/UA_Event#"
+     xmlns:TEMP_Decision="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#"
+     xmlns:UA_Foundation="http://uaontologies.com/UA_Foundation/UA_Foundation#"
+     xmlns:UA_Provenance="http://uaontologies.com/UA_Core/UA_Provenance#"
+     xmlns:UA_Information="http://uaontologies.com/UA_Core/UA_Information#"
+     xmlns:UA_SystemArchitecture="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#"
+     xmlns:OSLM_DecisionsAndDocumentation="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#">
+    <owl:Ontology rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Agent"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Event"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Information"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Provenance"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Metadata"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Organization"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_TestResults"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#"/>
+        <oml:prefix>OSLM_DecisionsAndDocumentation</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Description"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A description to capture...</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://opencaesar.io/oml#namespace -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#namespace"/>
+    
+
+
+    <!-- http://opencaesar.io/oml#prefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#prefix"/>
+    
+
+
+    <!-- http://opencaesar.io/oml#type -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#type"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isInformedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isInformedBy"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#hasInput -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#hasInput"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#hasOutput -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#hasOutput"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#isManifestationOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#occursOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#occursOn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#describes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#prescribes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Provenance#approvedAt -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Core/UA_Provenance#approvedAt"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Provenance#generatedAt -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Core/UA_Provenance#generatedAt"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasBeginInstant -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasBeginInstant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasEndInstant -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasEndInstant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasName"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#CapabilityProductionDocument -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#CapabilityProductionDocument">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#InformationArtifact"/>
+        <UA_Provenance:approvedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-16T12:00:00</UA_Provenance:approvedAt>
+        <UA_Provenance:generatedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-15T12:00:00</UA_Provenance:generatedAt>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#D1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#D1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3_Output"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5_Output"/>
+        <UA_Foundation:hasName>Human involvement</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#D2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#D2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4_Output"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Output"/>
+        <UA_Foundation:hasName>Mission operational elements</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#D3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#D3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_TestResults#TE7_TestData"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Output"/>
+        <UA_Foundation:hasName>Deployment areas</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#D4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#D4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10_Output"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11_Output"/>
+        <UA_Foundation:hasName>Path confidence</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#DecisionA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#DecisionA">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#MilestoneA"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#DecisionB -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#DecisionB">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#MilestoneB"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#IDR_Decision -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#IDR_Decision">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision"/>
+        <TEMP_Decision:isInformedBy rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#D1"/>
+        <TEMP_Decision:isInformedBy rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#D2"/>
+        <TEMP_Decision:isInformedBy rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#D3"/>
+        <TEMP_Decision:isInformedBy rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#D4"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#MilestoneC"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#IDR_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#IDR_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-08-27T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-08-27T15:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#InterimDesignReview -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#InterimDesignReview">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess"/>
+        <UA_Agent:hasInput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Metadata#OSLM_dTEMP"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#IDR_Decision"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#IDR_TimePeriod"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#MilestoneA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#MilestoneA">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Milestone"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#MilestoneB -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#MilestoneB">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Milestone"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#MilestoneC -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#MilestoneC">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Milestone"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#OSLM_MDADecisionMade -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#OSLM_MDADecisionMade">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MDADecisionMade"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#IDR_Decision"/>
+        <UA_Event:isManifestationOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#OSLM_MakeMDADecision"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#OSLM_MakeMDADecision -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#OSLM_MakeMDADecision">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MakeMDADecision"/>
+        <UA_SystemArchitecture:canOutput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#IDR_Decision"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Organization#OSLM_MDA"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#SFR_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#SFR_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-03-15T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-03-15T15:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#SRR_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#SRR_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-15T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-15T15:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#SystemFunctionalReview -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#SystemFunctionalReview">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#DecisionB"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#SFR_TimePeriod"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#SystemRequirementsReview -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#SystemRequirementsReview">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#DecisionA"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#SRR_TimePeriod"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

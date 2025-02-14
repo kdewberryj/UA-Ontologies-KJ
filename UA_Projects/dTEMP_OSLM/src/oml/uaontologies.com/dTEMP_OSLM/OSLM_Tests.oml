@@ -1,0 +1,526 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture..."
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#> as OSLM_Tests {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	//uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    
+    //uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#> as temp_tps
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#> as temp_tpf
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#> as temp_resp
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> as temp_tpt
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_dec
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as temp_teo
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#> as temp_ear
+    
+    // Extends other descriptions
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#> as oslm_ms
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#> as oslm_cap
+    extends <http://uaontologies.com/UA_Libraries/Dimensions#> as dim
+    extends <http://uaontologies.com/UA_Libraries/Units#> as units
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_TestResults#> as oslm_res
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#> as oslm_req
+    
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	///////////////////////////////// PREVIOUS TESTS //////////////////////////////////
+	
+	instance TE-1 : test:Test [
+		foundation:hasName "TE-1"
+		test:hasTestSubject oslm_ms:LSNDS
+		event:occursAt TE-1_Environment
+		event:occursOn TE-1_TimePeriod
+		test:hasTestCondition SC-1
+		agent:hasOutput TE-1_Output
+	]
+	
+	instance TE-1_Environment : test:TestSite [
+		foundation:hasNaturalLanguageDescription ""
+	]
+	
+	instance TE-1_Environment_Terrain : foundation:Quality [
+		foundation:specificallyDependentOn TE-1_Environment
+		foundation:hasNaturalLanguageDescription "Grass, loose gravel, and compact sand without obstacles"
+	]
+	
+	instance TE-1_Environment_Light : foundation:Quality [
+		foundation:specificallyDependentOn TE-1_Environment
+		foundation:hasNaturalLanguageDescription "Extreme sunlight and shadow"
+	]
+	
+	instance SC-1 : sa:Configuration [
+		foundation:specificallyDependentOn oslm_ms:LSNDS
+		foundation:hasNaturalLanguageDescription "drive train functionality only, 4-wheels"
+	]
+	
+	instance TE-1_Output : info:DescriptiveInformationEntity [
+		info:describes SC-1
+		foundation:hasNaturalLanguageDescription "Major issues identified: Lack of sufficient traction (low or no speed, with consequences to range, and maneuverability (no control)). Remote control not working under high sunlight."
+	]
+	
+	instance TE-1_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2024-01-08T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2024-01-08T13:00:00"^^xsd:dateTime
+	]
+	
+	
+	/////////////////////////////// DEVELOPMENTAL TESTS ////////////////////////////////
+	
+	// Test 5
+	
+	instance TE5 : test:Test [
+		foundation:hasName "Maneuverability Test"
+		test:hasTestSubject oslm_ms:LSNDS
+		event:occursAt TE53_Environment
+		event:occursOn TE5_TimePeriod
+		agent:hasOutput TE5_Output
+		event:hasParticipant oslm_ms:operator
+	]
+	
+	instance TE53_Environment : test:TestSite
+	
+	instance TE5_Output : info:DescriptiveInformationEntity [
+		info:describes oslm_ms:LSNDS
+		foundation:contains TE5_Measurement_Accuracy
+		foundation:contains TE5_Measurement_ReactionTime
+	]
+	
+	instance Accuracy : meas:Quantity [
+		foundation:specificallyDependentOn oslm_ms:LSNDS
+		meas:hasDimension dim:Length
+	]
+	
+	instance TE5_Measurement_Accuracy : meas:SimpleMeasurement [
+		meas:measurementOf Accuracy
+		meas:hasValue ""^^rdfs:Literal
+		meas:hasUnit units:metre
+	]
+	
+	instance ReactionTime : meas:Quantity [
+		foundation:specificallyDependentOn oslm_ms:LSNDS
+		meas:hasDimension dim:Time
+	]
+	
+	instance TE5_Measurement_ReactionTime : meas:SimpleMeasurement [
+		meas:measurementOf ReactionTime
+		meas:hasValue ""^^rdfs:Literal
+		meas:hasUnit units:second
+	]
+	
+	instance TE5_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2024-09-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2024-09-01T13:00:00"^^xsd:dateTime
+	]
+	
+	
+	// Test 3
+	
+	instance TE3 : test:Test [
+		foundation:hasName "Pathway Creation Time Test"
+		test:hasTestSubject oslm_ms:LSNDS
+		event:occursAt TE53_Environment
+		event:occursOn TE3_TimePeriod
+		agent:hasOutput TE3_Output
+		event:hasParticipant oslm_ms:operator
+	]
+	
+	instance TE3_Output : info:DescriptiveInformationEntity [
+		info:describes oslm_ms:LSNDS
+		foundation:contains TE3_Measurement_TimeTaken
+	]
+	
+	instance TE3_Measurement_TimeTaken : meas:SimpleMeasurement [
+		meas:measurementOf oslm_cap:PathwayCreationTime
+		meas:hasValue ""^^rdfs:Literal
+		meas:hasUnit units:second
+	]
+	
+	instance TE3_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2024-09-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2024-09-01T13:00:00"^^xsd:dateTime
+	]
+	
+	
+	// Test 6
+	
+	instance TE6 : test:Test [
+		foundation:hasName "Path Confidence Test"
+		test:hasTestSubject oslm_ms:LSNDS
+		event:occursAt TE6_Environment
+		event:occursOn TE6_TimePeriod
+		agent:hasOutput TE6_Output
+		req:verifies oslm_cap:KPP1
+		req:verifies oslm_cap:KPP2
+		req:verifies oslm_cap:KPP3
+		req:verifies oslm_cap:KPP4
+	]
+	
+	instance TE6_Environment : test:TestSite
+	
+	instance TE6_Output : info:DescriptiveInformationEntity [
+		info:describes oslm_ms:LSNDS
+		foundation:contains TE6_Measurement_DetectionRate
+		foundation:contains TE6_Measurement_DetectionFalseAlarms
+		foundation:contains TE6_Measurement_ClassificationRate
+		foundation:contains TE6_Measurement_ClassificationFalseAlarms
+	]
+	
+	instance TE6_Measurement_DetectionRate : meas:SimpleMeasurement [
+		meas:measurementOf oslm_ms:yellowSNDetectionRate
+		meas:hasValue ""^^rdfs:Literal
+		meas:hasUnit units:percentage
+	]
+	
+	instance TE6_Measurement_DetectionFalseAlarms : meas:SimpleMeasurement [
+		meas:measurementOf oslm_cap:FalseAlarmRate
+		meas:hasValue ""^^rdfs:Literal
+		meas:hasUnit units:percentage
+	]
+	
+	instance TE6_Measurement_ClassificationRate : meas:SimpleMeasurement [
+		meas:measurementOf oslm_cap:ClassificationRate
+		meas:hasValue ""^^rdfs:Literal
+		meas:hasUnit units:percentage
+	]
+	
+	instance TE6_Measurement_ClassificationFalseAlarms : meas:SimpleMeasurement [
+		meas:measurementOf oslm_cap:FalseClassificationRate
+		meas:hasValue ""^^rdfs:Literal
+		meas:hasUnit units:percentage
+	]
+	
+	instance TE6_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2024-09-02T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2024-09-02T13:00:00"^^xsd:dateTime
+	]
+	
+	
+	// Test 7
+	
+	instance LSNDS_PhysicsModel1 : info:Model
+	
+	instance TE7 : ms:Simulation [
+		foundation:hasName "Adaptability Simulation 1"
+		event:hasParticipant LSNDS_PhysicsModel1
+		event:occursOn TE7_TimePeriod
+		agent:hasOutput oslm_res:TE7_TestData
+		req:verifies oslm_req:M.1.2
+	]
+	
+	instance TE7_Measurement_TimeTaken : meas:SimpleMeasurement [
+		meas:measurementOf oslm_cap:PathwayCreationTime
+		meas:hasValue ""^^rdfs:Literal
+		meas:hasUnit units:second
+	]
+	
+	instance TE7_Measurement_Mass : meas:SimpleMeasurement [
+		meas:measurementOf oslm_ms:LSNDS_Mass
+		meas:hasValue ""^^rdfs:Literal
+		meas:hasUnit units:kilogram
+	]
+	
+	instance TE7_Measurement_Traction : meas:SimpleMeasurement [
+		meas:measurementOf oslm_cap:Traction
+		meas:hasValue ""^^rdfs:Literal
+		meas:hasUnit units:na
+	]
+	
+	instance TE7_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2024-09-02T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2024-09-02T13:00:00"^^xsd:dateTime
+	]
+	
+	
+	// Test 8
+	
+	instance LSNDS_PhysicsModel2 : info:Model
+	
+	instance TE8 : ms:Simulation [
+		foundation:hasName "Adaptability Simulation 2"
+		event:hasParticipant LSNDS_PhysicsModel2
+		event:occursOn TE8_TimePeriod
+		agent:hasOutput TE8_Output
+		req:verifies oslm_cap:KSA1
+		req:verifies oslm_cap:KSA2
+		req:verifies oslm_cap:KSA3
+	]
+	
+	instance TE8_Output : info:DescriptiveInformationEntity [
+		info:describes oslm_ms:LSNDS
+		foundation:contains TE8_Measurement_TimeTaken
+		foundation:contains TE8_Measurement_Mass
+		foundation:contains TE8_Measurement_Traction
+	]
+	
+	instance TE8_Measurement_TimeTaken : meas:SimpleMeasurement [
+		meas:measurementOf oslm_cap:PathwayCreationTime
+		meas:hasValue ""^^rdfs:Literal
+		meas:hasUnit units:second
+	]
+	
+	instance TE8_Measurement_Mass : meas:SimpleMeasurement [
+		meas:measurementOf oslm_ms:LSNDS_Mass
+		meas:hasValue ""^^rdfs:Literal
+		meas:hasUnit units:kilogram
+	]
+	
+	instance TE8_Measurement_Traction : meas:SimpleMeasurement [
+		meas:measurementOf oslm_cap:Traction
+		meas:hasValue ""^^rdfs:Literal
+		meas:hasUnit units:na
+	]
+	
+	instance TE8_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2024-09-04T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2024-09-04T13:00:00"^^xsd:dateTime
+	]
+	
+	
+	// Test 4
+	
+	instance LSNDS_ElectricalModel1 : info:Model
+	
+	instance TE4 : ms:Simulation [
+		foundation:hasName "Electrical Simulation"
+		event:hasParticipant LSNDS_ElectricalModel1
+		event:occursOn TE4_TimePeriod
+		agent:hasOutput TE4_Output
+	]
+	
+	instance TE4_Output : info:DescriptiveInformationEntity [
+		info:describes oslm_ms:LSNDS
+		foundation:contains TE4_Measurement_Capacity
+	]
+	
+	instance TE4_Measurement_Capacity : meas:SimpleMeasurement [
+		meas:measurementOf oslm_ms:remainingCapacity
+		meas:hasValue ""^^rdfs:Literal
+		meas:hasUnit units:second
+	]
+	
+	instance TE4_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2024-09-05T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2024-09-05T13:00:00"^^xsd:dateTime
+	]
+	
+	
+	// Test 10
+		
+	instance TE10 : test:Test [
+		foundation:hasName "Information Loss Test"
+		test:hasTestSubject oslm_ms:LSNDS
+		event:occursAt TE10_Environment
+		event:occursOn TE10_TimePeriod
+		agent:hasOutput TE10_Output
+	]
+	
+	instance TE10_Environment : test:TestSite
+	
+	instance TE10_Output : info:DescriptiveInformationEntity [
+		info:describes oslm_ms:LSNDS
+		foundation:contains TE10_Measurement_InformationLoss
+	]
+	
+	instance InformationLoss : meas:Quantity [
+		foundation:specificallyDependentOn oslm_ms:Controller
+		meas:hasDimension dim:Probability
+	]
+	
+	instance TE10_Measurement_InformationLoss : meas:SimpleMeasurement [
+		meas:measurementOf InformationLoss
+		meas:hasValue ""^^rdfs:Literal
+		meas:hasUnit units:percentage
+	]
+	
+	instance TE10_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2024-09-02T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2024-09-02T13:00:00"^^xsd:dateTime
+	]
+	
+	
+	// Test 11
+	
+	instance TE11 : test:Test [
+		foundation:hasName "Path Accuracy Test"
+		test:hasTestSubject oslm_ms:LSNDS
+		event:occursAt TE11_Environment
+		event:occursOn TE11_TimePeriod
+		agent:hasOutput TE11_Output
+	]
+	
+	instance TE11_Environment : test:TestSite
+	
+	instance TE11_Output : info:DescriptiveInformationEntity [
+		info:describes oslm_ms:LSNDS
+		foundation:contains TE11_Measurement_PositionAccuracy
+	]
+	
+	instance PositionAccuracy : meas:Quantity [
+		foundation:specificallyDependentOn oslm_ms:LSNDS
+		meas:hasDimension dim:Length
+	]
+	
+	instance TE11_Measurement_PositionAccuracy : meas:SimpleMeasurement [
+		meas:measurementOf PositionAccuracy
+		meas:hasValue ""^^rdfs:Literal
+		meas:hasUnit units:metre
+	]
+	
+	instance TE11_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2024-09-06T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2024-09-06T13:00:00"^^xsd:dateTime
+	]
+	
+	
+	/////////////////////////////////// OPERATIONAL TESTS /////////////////////////////////
+	
+	instance MissionEffectiveness : foundation:Quality [
+		foundation:specificallyDependentOn oslm_ms:LSNDS
+	]
+	
+	instance Adaptability : foundation:Quality [
+		foundation:specificallyDependentOn oslm_ms:LSNDS
+	]
+	
+	instance Scalability : foundation:Quality [
+		foundation:specificallyDependentOn oslm_ms:LSNDS
+	]
+	
+	instance Safety : foundation:Quality [
+		foundation:specificallyDependentOn oslm_ms:LSNDS
+	]
+	
+	instance Availability : foundation:Quality [
+		foundation:specificallyDependentOn oslm_ms:LSNDS
+	]
+	
+	// Test 2
+	instance TE2 : test:Test [
+		foundation:hasName "Mission Capability Test"
+		test:hasTestSubject oslm_ms:LSNDS
+		event:occursAt TE2_Environment
+		event:occursOn TE2_TimePeriod
+		agent:hasOutput TE2_Output
+	]
+	
+	instance TE2_Environment : test:TestSite
+	
+	instance TE2_Output : info:DescriptiveInformationEntity [
+		info:describes oslm_ms:LSNDS
+	]
+	
+	instance TE2_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2024-10-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2024-10-01T13:00:00"^^xsd:dateTime
+	]
+	
+	
+	// Test 9
+	instance TE9 : test:Test [
+		foundation:hasName "System Limit Test"
+		test:hasTestSubject oslm_ms:LSNDS
+		event:occursAt TE9_Environment
+		event:occursOn TE9_TimePeriod
+		agent:hasOutput TE9_Output
+	]
+	
+	instance TE9_Environment : test:TestSite
+	
+	instance TE9_Output : info:DescriptiveInformationEntity [
+		info:describes oslm_ms:LSNDS
+	]
+	
+	instance TE9_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2024-10-02T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2024-10-02T13:00:00"^^xsd:dateTime
+	]
+	
+	
+	
+	//////////////////////////////////// TEST PROCEDURES //////////////////////////////////
+	
+
+	instance TestProcedureDocument : info:InformationArtifact [
+		foundation:hasName "Test Procedures"
+		foundation:hasGenericDependent TE5_Procedure
+		foundation:hasGenericDependent TE3_Procedure
+		foundation:hasGenericDependent TE6_Procedure
+		foundation:hasGenericDependent TE7_Procedure
+		foundation:hasGenericDependent TE8_Procedure
+		foundation:hasGenericDependent TE4_Procedure
+		foundation:hasGenericDependent TE10_Procedure
+		foundation:hasGenericDependent TE11_Procedure
+	]
+	
+	instance TE5_Procedure : test:TestProcedure [
+		info:prescribes TE5
+	]
+	
+	instance TE3_Procedure : test:TestProcedure [
+		info:prescribes TE3
+	]
+	
+	instance TE6_Procedure : test:TestProcedure [
+		info:prescribes TE6
+	]
+	
+	instance TE7_Procedure : test:TestProcedure [
+		info:prescribes TE7
+	]
+	
+	instance TE8_Procedure : test:TestProcedure [
+		info:prescribes TE8
+	]
+	
+	instance TE4_Procedure : test:TestProcedure [
+		info:prescribes TE4
+		foundation:hasNaturalLanguageDescription "Starting at full charge, the LSNDS is commanded to complete the worst-case path in terms of friction (highest), length (longest), and temperature (coldest) without allowing a recharge."
+	]
+	
+	instance TE10_Procedure : test:TestProcedure [
+		info:prescribes TE10
+	]
+	
+	instance TE11_Procedure : test:TestProcedure [
+		info:prescribes TE11
+	]
+	
+	
+	
+	
+	
+	
+}

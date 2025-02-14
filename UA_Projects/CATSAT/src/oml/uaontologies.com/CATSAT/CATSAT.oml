@@ -1,0 +1,732 @@
+description <http://uaontologies.com/CATSAT/CATSAT#> as CATSAT {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+    
+    // Use relevant vocabularies
+    
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	//uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+	uses <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#> as orb
+    
+    // Extends other descriptions
+    
+    extends <http://uaontologies.com/UA_Libraries/Dimensions#> as dim
+    extends <http://uaontologies.com/UA_Libraries/Units#> as units
+    extends <http://uaontologies.com/UA_Libraries/SoftwareTools#> as swt
+    
+    ////////////////////////////////////////////////////////////////////////////////////
+    
+    // Requirements
+    
+     instance req1 : req:Requirement [
+		foundation:hasID "CATSAT-MR1"
+		foundation:hasName "MR1"
+		foundation:hasNaturalLanguageDescription "The cubesat shall deorbit within 25 years of the end of its mission."
+		sw:hasEntitySource swt:Jama
+		info:prescribes CATSAT_Mission
+	]
+    
+    instance req2 : req:Requirement [
+		foundation:hasID "CATSAT-MR2"
+		foundation:hasName "MR2"
+		foundation:hasNaturalLanguageDescription "The cubesat shall download at least 5 GB per day to the ground segment upon command."
+		sw:hasEntitySource swt:Jama
+		info:prescribes CATSAT_Mission
+	]
+	
+	instance req3 : req:Requirement [
+		foundation:hasID "CATSAT-MR3"
+		foundation:hasName "MR3"
+		foundation:hasNaturalLanguageDescription "The cubesat shall continuously operate during its orbit."
+		sw:hasEntitySource swt:Jama
+		info:prescribes CATSAT_Mission
+	]
+	
+	instance req4 : req:Requirement [
+		foundation:hasID "CATSAT-MR4"
+		foundation:hasName "MR4"
+		foundation:hasNaturalLanguageDescription "The cubesat shall capture images of the Earth at a resolution of 40m per pixel."
+		sw:hasEntitySource swt:Jama
+		info:prescribes CATSAT_Mission
+	]
+	
+	instance req5 : req:Requirement [
+		foundation:hasID "CATSAT-MR5"
+		foundation:hasName "MR5"
+		foundation:hasNaturalLanguageDescription "The cubesat shall maintain a pointing accuracy of ±2 degrees with respect to the image location during data collection."
+		sw:hasEntitySource swt:Jama
+		info:prescribes CATSAT_Mission
+	]
+	
+	
+	
+	///////////////////// MISSION ///////////////////////////////////////////////////////////////////////
+	
+	// Mission Overview //
+	
+	instance CATSAT_Mission : orb:SpaceMission [
+		mission:hasMissionParticipant CATSAT
+		orb:hasSpaceFlightPhase CATSAT_Orbit
+		req:satisfies req1
+		req:satisfies req2
+		req:satisfies req3
+		req:satisfies req4
+		req:satisfies req5
+	]
+	
+	instance CATSAT_Orbit : orb:Orbit [
+		event:hasParticipant CATSAT
+		event:occursAt CATSAT_OrbitalPath
+		event:occursOn CATSAT_OrbitTemporalRegion
+	]
+		
+	instance CATSAT_OrbitalPath : orb:OrbitalPath [
+		foundation:hasSpecificDependent CATSAT_OrbitalPath_SMA
+		foundation:hasSpecificDependent CATSAT_OrbitalPath_ECC
+		foundation:hasSpecificDependent CATSAT_OrbitalPath_INC
+		foundation:hasSpecificDependent CATSAT_OrbitalPath_AOP
+		foundation:hasSpecificDependent CATSAT_OrbitalPath_LAN
+		foundation:hasSpecificDependent CATSAT_OrbitalPath_TA
+		sw:hasEntitySource swt:Violet
+	]
+        
+    instance CATSAT_OrbitalPath_SMA : orb:Orbital_SMA [
+    	meas:hasDimension dim:Length
+    ]
+    
+    instance CATSAT_OrbitalPath_SMA_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_OrbitalPath_SMA
+		meas:hasUnit units:km
+		meas:hasValue "6836"^^rdfs:Literal
+	]
+    
+    instance CATSAT_OrbitalPath_ECC : orb:Orbital_ECC [
+    	sw:hasEntitySource swt:Violet
+    	meas:hasDimension dim:Dimensionless
+    ]
+    
+    instance CATSAT_OrbitalPath_ECC_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_OrbitalPath_ECC
+		meas:hasValue "0"^^rdfs:Literal
+		meas:hasUnit units:na
+		sw:hasEntitySource swt:Violet
+	]
+    
+    instance CATSAT_OrbitalPath_INC : orb:Orbital_INC [
+    	meas:hasDimension dim:Angle
+    	sw:hasEntitySource swt:Violet
+    ]
+    
+    instance CATSAT_OrbitalPath_INC_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_OrbitalPath_INC
+		meas:hasUnit units:degrees
+		meas:hasValue "30"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+    
+    instance CATSAT_OrbitalPath_AOP : orb:Orbital_AOP [
+    	meas:hasDimension dim:Angle
+    	sw:hasEntitySource swt:Violet
+    ]
+    
+    instance CATSAT_OrbitalPath_AOP_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_OrbitalPath_AOP
+		meas:hasUnit units:degrees
+		meas:hasValue "0"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+    
+    instance CATSAT_OrbitalPath_LAN : orb:Orbital_LAN [
+    	meas:hasDimension dim:Angle
+    	sw:hasEntitySource swt:Violet
+    ]
+    
+    instance CATSAT_OrbitalPath_LAN_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_OrbitalPath_LAN
+		meas:hasUnit units:degrees
+		meas:hasValue "0"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+    
+    instance CATSAT_OrbitalPath_TA : orb:Orbital_TA [
+    	meas:hasDimension dim:Angle
+    	sw:hasEntitySource swt:Violet
+    ]
+    
+    instance CATSAT_OrbitalPath_TA_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_OrbitalPath_TA
+		meas:hasUnit units:degrees
+		meas:hasValue "0"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+	
+	instance CATSAT_OrbitTemporalRegion : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2025-01-01T12:00:00"^^xsd:dateTime
+		sw:hasEntitySource swt:Violet
+	]
+	
+	instance CATSAT_OrbitTemporalRegion_Duration : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Orbit
+		meas:hasDimension dim:Time
+	]
+	
+	instance CATSAT_OrbitTemporalRegion_Duration_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_OrbitTemporalRegion_Duration
+		meas:hasUnit units:day
+		meas:hasValue "7"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+	
+	
+	
+	///////////////////// SYSTEM ////////////////////////////////////////////////////////////////
+	
+	// System Architecture //	
+	
+	instance CATSAT : sa:System [
+		foundation:contains CATSAT_Power
+		foundation:contains CATSAT_Comms
+		foundation:contains CATSAT_Payload
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Power : sa:System [
+		foundation:contains CATSAT_Power_SAA
+		foundation:contains CATSAT_Power_Harness
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Power_SAA : sa:System [
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Power_Harness : sa:System [
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Comms : sa:System [
+		foundation:contains CATSAT_Comms_SBandTransmitter
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Comms_SBandTransmitter : sa:System [
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Payload : sa:System [
+		foundation:contains CATSAT_Payload_XBandTransmitter
+		foundation:contains CATSAT_Payload_Camera
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter : sa:System [
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Payload_Camera : sa:System [
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	
+	// System Mass Quantities
+	
+	instance CATSAT_Mass : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Power_Mass : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Power
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Comms_Mass : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Comms
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Payload_Mass : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Comms_SBandTransmitter_Mass : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Comms_SBandTransmitter
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Power_SAA_Mass : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Power_SAA
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Power_Harness_Mass : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Power_Harness
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Mass : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Payload_Camera_Mass : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_Camera
+		meas:hasDimension dim:Mass
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	
+	// Other System Quantities
+	
+	instance CATSAT_PowerRequired : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT
+		meas:hasDimension dim:Power
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Power_PowerDistributed : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Power
+		meas:hasDimension dim:Power
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Power_Harness_Efficiency : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Power_Harness
+		meas:hasDimension dim:Efficiency
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Power_SAA_Efficiency : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Power_SAA
+		meas:hasDimension dim:Efficiency
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Power_SAA_Area : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Power_SAA
+		meas:hasDimension dim:Area
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Comms_SBandTransmitter_Frequency : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Comms_SBandTransmitter
+		meas:hasDimension dim:Frequency
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Comms_SBandTransmitter_Power : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Comms_SBandTransmitter
+		meas:hasDimension dim:Power
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Comms_SBandTransmitter_Gain : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Comms_SBandTransmitter
+		meas:hasDimension dim:Gain
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Frequency : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter
+		meas:hasDimension dim:Frequency
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Power : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter
+		meas:hasDimension dim:Power
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Gain : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter
+		meas:hasDimension dim:Gain
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	
+	// Quantity Values
+	
+	instance CATSAT_Power_SAA_Efficiency_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Power_SAA_Efficiency
+		meas:hasUnit units:percentage
+		meas:hasValue "80"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Power_SAA_Area_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Power_SAA_Area
+		meas:hasUnit units:metresquared
+		meas:hasValue "10"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Power_Harness_Efficiency_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Power_Harness_Efficiency
+		meas:hasUnit units:percentage
+		meas:hasValue "85"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Comms_SBandTransmitter_Frequency_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Comms_SBandTransmitter_Frequency
+		meas:hasUnit units:GHz
+		meas:hasValue "2.2"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Comms_SBandTransmitter_Power_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Comms_SBandTransmitter_Power
+		meas:hasUnit units:W
+		meas:hasValue "15"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	instance CATSAT_Comms_SBandTransmitter_Gain_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Comms_SBandTransmitter_Gain
+		meas:hasUnit units:dB
+		meas:hasValue "7"^^rdfs:Literal
+		sw:hasEntitySource swt:JupyterLab_SysMLv2
+	]
+	
+	
+	// SatCatalog Imports (NOTE: maybe we only show one at a time in the OML export? i.e., the most recent one)
+	
+	// Transmitter 1
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance1 : sa:System [
+		foundation:hasName "μTX-200 Wideband X-Band Transmitter"
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance1_Power : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance1
+		meas:hasDimension dim:Power
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance1_Power_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance1_Power
+		meas:hasUnit units:W
+		meas:hasValue "78"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance1_Gain : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance1
+		meas:hasDimension dim:Gain
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance1_Gain_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance1_Gain
+		meas:hasUnit units:dB
+		meas:hasValue "20"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance1_TLL : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance1
+		meas:hasDimension dim:Gain
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance1_TLL_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance1_TLL
+		meas:hasUnit units:dB
+		meas:hasValue "-4.5"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance1_DataRate : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance1
+		meas:hasDimension dim:DataRate
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance1_DataRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance1_DataRate
+		meas:hasUnit units:Mbps
+		meas:hasValue "3200"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance1_SNR : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance1
+		meas:hasDimension dim:Gain
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance1_SNR_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance1_SNR
+		meas:hasUnit units:dB
+		meas:hasValue "25.058"^^rdfs:Literal
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance1_Frequency : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance1
+		meas:hasDimension dim:Frequency
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance1_Frequency_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance1_Frequency
+		meas:hasUnit units:GHz
+		meas:hasValue "8.2"^^rdfs:Literal
+	]
+		
+		
+	// Transmitter 2
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance2 : sa:System [
+		foundation:hasName "PDTX-1000 Payload Data Transmitter"
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance2_Power : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance2
+		meas:hasDimension dim:Power
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance2_Power_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance2_Power
+		meas:hasUnit units:W
+		meas:hasValue "45"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance2_Gain : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance2
+		meas:hasDimension dim:Gain
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance2_Gain_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance2_Gain
+		meas:hasUnit units:dB
+		meas:hasValue "20"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance2_TLL : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance2
+		meas:hasDimension dim:Gain
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance2_TLL_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance2_TLL
+		meas:hasUnit units:dB
+		meas:hasValue "-4.5"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance2_DataRate : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance2
+		meas:hasDimension dim:DataRate
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance2_DataRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance2_DataRate
+		meas:hasUnit units:Mbps
+		meas:hasValue "250"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance2_SNR : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance2
+		meas:hasDimension dim:Gain
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance2_SNR_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance2_SNR
+		meas:hasUnit units:dB
+		meas:hasValue "33.844"^^rdfs:Literal
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance2_Frequency : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance2
+		meas:hasDimension dim:Frequency
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance2_Frequency_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance2_Frequency
+		meas:hasUnit units:GHz
+		meas:hasValue "8.5"^^rdfs:Literal
+	]
+	
+	
+	// Transmitter 3	
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance3 : sa:System [
+		foundation:hasName "HRT-440 X-Band High Rate Transmitter"
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance3_Power : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance3
+		meas:hasDimension dim:Power
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance3_Power_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance3_Power
+		meas:hasUnit units:W
+		meas:hasValue "15"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance3_Gain : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance3
+		meas:hasDimension dim:Gain
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance3_Gain_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance3_Gain
+		meas:hasUnit units:dB
+		meas:hasValue "20"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance3_TLL : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance3
+		meas:hasDimension dim:Gain
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance3_TLL_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance3_TLL
+		meas:hasUnit units:dB
+		meas:hasValue "-4.5"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance3_DataRate : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance3
+		meas:hasDimension dim:DataRate
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance3_DataRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance3_DataRate
+		meas:hasUnit units:Mbps
+		meas:hasValue "440"^^rdfs:Literal
+		sw:hasEntitySource swt:SatCatalog
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance3_SNR : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance3
+		meas:hasDimension dim:Gain
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance3_SNR_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance3_SNR
+		meas:hasUnit units:dB
+		meas:hasValue "26.827"^^rdfs:Literal
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance3_Frequency : meas:Quantity [
+		foundation:specificallyDependentOn CATSAT_Payload_XBandTransmitter_Instance3
+		meas:hasDimension dim:Frequency
+	]
+	
+	instance CATSAT_Payload_XBandTransmitter_Instance3_Frequency_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf CATSAT_Payload_XBandTransmitter_Instance3_Frequency
+		meas:hasUnit units:GHz
+		meas:hasValue "8.4"^^rdfs:Literal
+	]
+	
+
+    
+    // Analysis Results (from Sedaro and Python)
+    
+    // Not defining this in detail as we don't need it for this example
+    instance SedaroAnalysis : ms:Analysis [
+    	sw:hasEntitySource swt:Sedaro
+    	agent:hasOutput MaxTransmissionDistance_Measurement
+    	agent:hasOutput AverageTransmissionTime_Measurement
+    	req:verifies req3
+    	req:verifies req5
+    ]
+    
+    instance MaxTransmissionDistance : meas:Quantity [
+    	foundation:specificallyDependentOn CATSAT_Mission
+    	meas:hasDimension dim:Length
+    ]
+    
+    instance MaxTransmissionDistance_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf MaxTransmissionDistance
+		meas:hasUnit units:km
+		meas:hasValue "2955"^^rdfs:Literal
+	]
+	
+	instance AverageTransmissionTime : meas:Quantity [
+    	foundation:specificallyDependentOn CATSAT_Mission
+    	meas:hasDimension dim:Time
+    ]
+    
+    instance AverageTransmissionTime_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf AverageTransmissionTime
+		meas:hasUnit units:second
+		meas:hasValue "14691"^^rdfs:Literal
+	]
+    
+    // NOTE - only showing one version of this analysis - i.e., using Transmitter1
+    instance SNR_Calculation : ms:Analysis [
+    	agent:hasInput MaxTransmissionDistance_Measurement
+    	agent:hasInput AverageTransmissionTime_Measurement
+    	agent:hasInput CATSAT_Payload_XBandTransmitter_Instance1_Power_Measurement
+    	agent:hasInput CATSAT_Payload_XBandTransmitter_Instance1_Gain_Measurement
+    	agent:hasInput CATSAT_Payload_XBandTransmitter_Instance1_TLL_Measurement
+    	agent:hasInput CATSAT_Payload_XBandTransmitter_Instance1_DataRate_Measurement
+    	agent:hasInput CATSAT_Payload_XBandTransmitter_Instance1_Frequency_Measurement
+    	agent:hasOutput CATSAT_Payload_XBandTransmitter_Instance1_SNR_Measurement
+    	sw:hasEntitySource swt:Violet
+    	req:verifies req1
+    	req:verifies req2
+    ]
+    
+    
+    // this requirement has been defined earlier - the 'ref' prefix means we are just adding to this previous definition
+    // these values are set because of the related values in the dataset
+    // I need to define rules that will automatically set these values - not in place yet
+    ref instance req1 [
+    	req:hasVerificationStatus "true"^^xsd:string
+    ]
+    
+    ref instance req2 [
+    	req:hasVerificationStatus "false"^^xsd:string
+    ]	
+	
+}
