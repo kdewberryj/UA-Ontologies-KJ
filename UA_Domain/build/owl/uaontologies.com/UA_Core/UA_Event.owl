@@ -2,21 +2,25 @@
 <rdf:RDF xmlns="http://uaontologies.com/UA_Core/UA_Event#"
      xml:base="http://uaontologies.com/UA_Core/UA_Event"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:UA_Event="http://uaontologies.com/UA_Core/UA_Event#">
     <owl:Ontology rdf:about="http://uaontologies.com/UA_Core/UA_Event">
         <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/UA_Core/UA_Event#"/>
+        <oml:prefix>UA_Event</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
         <dc:contributor>Joe Gregory</dc:contributor>
         <dc:creator>SIE Disruption Lab</dc:creator>
         <dc:description>A vocabulary to capture the event patterns required by the SIE Disruption Lab. Note that this is essentially a simplified CCO Event Ontology.</dc:description>
         <dc:hasVersion>0.1</dc:hasVersion>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
     </owl:Ontology>
     
 
@@ -41,7 +45,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent"/>
         <rdfs:range rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/UA_Core/UA_Event#HasParticipant"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>has participant</rdfs:label>
     </owl:ObjectProperty>
     
@@ -52,7 +57,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#isManifestationOf">
         <owl:inverseOf rdf:resource="http://uaontologies.com/UA_Core/UA_Event#manifestsIn"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Disposition"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/UA_Core/UA_Event#ManifestsIn"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>is manifestation of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -63,7 +73,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#isParticipantOf">
         <owl:inverseOf rdf:resource="http://uaontologies.com/UA_Core/UA_Event#hasParticipant"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/UA_Core/UA_Event#HasParticipant"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>is participant of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -74,7 +89,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#isSiteOf">
         <owl:inverseOf rdf:resource="http://uaontologies.com/UA_Core/UA_Event#occursAt"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Site"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/UA_Core/UA_Event#OccursAt"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>is site of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -85,7 +105,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#isTemporalRegionOf">
         <owl:inverseOf rdf:resource="http://uaontologies.com/UA_Core/UA_Event#occursOn"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/UA_Core/UA_Event#OccursOn"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>is temporal region of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -99,7 +124,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Disposition"/>
         <rdfs:range rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/UA_Core/UA_Event#ManifestsIn"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>manifests in</rdfs:label>
     </owl:ObjectProperty>
     
@@ -110,7 +136,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#occursAfter">
         <owl:inverseOf rdf:resource="http://uaontologies.com/UA_Core/UA_Event#occursBefore"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/UA_Core/UA_Event#OccursBefore"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>occurs after</rdfs:label>
     </owl:ObjectProperty>
     
@@ -124,7 +155,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent"/>
         <rdfs:range rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Site"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/UA_Core/UA_Event#OccursAt"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>occurs at</rdfs:label>
     </owl:ObjectProperty>
     
@@ -138,7 +170,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
         <rdfs:range rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/UA_Core/UA_Event#OccursBefore"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>occurs before</rdfs:label>
     </owl:ObjectProperty>
     
@@ -152,7 +185,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent"/>
         <rdfs:range rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/UA_Core/UA_Event#OccursOn"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>occurs on</rdfs:label>
     </owl:ObjectProperty>
     
@@ -174,8 +208,8 @@
 
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Event#HasParticipant">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=HasParticipant=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>Has Participant</rdfs:label>
     </owl:Class>
     
@@ -185,8 +219,8 @@
 
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Event#ManifestsIn">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=ManifestsIn=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>Manifests In</rdfs:label>
     </owl:Class>
     
@@ -196,8 +230,8 @@
 
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Event#OccursAt">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=OccursAt=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>Occurs At</rdfs:label>
     </owl:Class>
     
@@ -207,8 +241,8 @@
 
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Event#OccursBefore">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=OccursBefore=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>Occurs Before</rdfs:label>
     </owl:Class>
     
@@ -218,8 +252,8 @@
 
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Event#OccursOn">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=OccursOn=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>Occurs On</rdfs:label>
     </owl:Class>
     
@@ -251,10 +285,9 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Event#HasParticipant"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -262,9 +295,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Event#HasParticipant"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -308,10 +342,9 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Event#ManifestsIn"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -319,9 +352,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Event#ManifestsIn"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -365,10 +399,9 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Event#OccursAt"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -376,9 +409,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Event#OccursAt"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -422,10 +456,9 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Event#OccursBefore"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -433,9 +466,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Event#OccursBefore"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -479,10 +513,9 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Event#OccursOn"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -490,9 +523,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Event#OccursOn"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -532,6 +566,6 @@
 
 
 
-<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
 
 

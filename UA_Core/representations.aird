@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_vC5nEDuuEe6c2YMIS3c31Q" version="15.0.0.202209061200">
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" uid="_vC5nEDuuEe6c2YMIS3c31Q" version="15.2.0.202303281325">
   <semanticResources>build/oml/purl.org/dc/elements/1.1.oml</semanticResources>
   <semanticResources>build/oml/www.w3.org/2000/01/rdf-schema.oml</semanticResources>
   <semanticResources>build/oml/www.w3.org/2001/XMLSchema.oml</semanticResources>
@@ -10,4 +10,8 @@
   <semanticResources>src/oml/uaontologies.com/UA_Core/UA_Measurement.oml</semanticResources>
   <semanticResources>build/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml</semanticResources>
   <semanticResources>src/oml/uaontologies.com/UA_Core/UA_Provenance.oml</semanticResources>
+  <semanticResources>build/oml/www.w3.org/2002/07/owl.oml</semanticResources>
+  <semanticResources>build/oml/uaontologies.com/UA_Foundation/bundle.oml</semanticResources>
+  <semanticResources>build/oml/www.w3.org/1999/02/22-rdf-syntax-ns.oml</semanticResources>
+  <semanticResources>build/oml/www.w3.org/2003/11/swrlb.oml</semanticResources>
 </viewpoint:DAnalysis>

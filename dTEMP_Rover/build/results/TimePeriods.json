@@ -1,9 +1,0 @@
-{ "head": {
-    "vars": [ "TimePeriodStart" , "TimePeriodEnd" , "Event" ]
-  } ,
-  "results": {
-    "bindings": [
-      
-    ]
-  }
-}

@@ -5,6 +5,7 @@
   </testsuite>
   <testsuite name="Satisfiability">
     <testcase name="http://uaontologies.com/UA_Core/UA_Agent#Consumer"/>
+    <testcase name="http://www.w3.org/2002/07/owl#Thing"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
@@ -55,6 +56,7 @@
     <testcase name="http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Provenance#GeneratedBy"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Agent#ResponsibleFor"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Measurement#ConfidenceInterval"/>
     <testcase name="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>

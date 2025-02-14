@@ -26,6 +26,7 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Software#> as UA_Software {
 	//extends <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
 	
 	//extends <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+	extends <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
 	//extends <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
 	//extends <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
 	//extends <http://uaontologies.com/UA_Domain/UA_Test#> as test
@@ -43,17 +44,17 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Software#> as UA_Software {
 	
 	@rdfs:label "Software"
 	@dc:description "A [=Software=] is a..."
-	concept Software :> foundation:GenericallyDependentContinuant [
-		restricts all relation foundation:genericallyDependentOn to foundation:Object
+	concept Software < foundation:GenericallyDependentContinuant [
+		restricts all foundation:genericallyDependentOn to foundation:Object
 	]
 	
 	@rdfs:label "Software Agent"
 	@dc:description "A [=SoftwareAgent=] is a..."
-	concept SoftwareAgent :> Software, agent:Agent
+	concept SoftwareAgent < Software, agent:Agent
 	
 	@rdfs:label "Operating System"
 	@dc:description "A [=OperatingSystem=] is a..."
-	concept OperatingSystem :> Software
+	concept OperatingSystem < Software
 	
 	
 	
@@ -81,6 +82,19 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Software#> as UA_Software {
 		forward hasEntitySource
 		@rdfs:label "is source of entity"
 		reverse isSourceOfEntity
+		asymmetric
+		irreflexive
+	]
+	
+	@rdfs:label "Supports"
+	@dc:description "[=Supports=] is a..."
+	relation entity Supports [
+		from Software
+		to pm:Task
+		@rdfs:label "supports"
+		forward supports
+		@rdfs:label "supportedBy"
+		reverse supportedBy
 		asymmetric
 		irreflexive
 	]

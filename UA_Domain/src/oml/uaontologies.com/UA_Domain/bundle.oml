@@ -17,6 +17,7 @@ vocabulary bundle <http://uaontologies.com/UA_Domain/bundle#> as ^bundle {
 	includes <http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#>
 	includes <http://uaontologies.com/UA_Domain/UA_Manuf_IFeatures#>
 	includes <http://uaontologies.com/UA_Domain/UA_Manuf_Processes#>
+	includes <http://uaontologies.com/UA_Domain/UA_UseCases#>
 	
 	
 }

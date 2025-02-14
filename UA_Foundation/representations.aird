@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:oml="http://opencaesar.io/oml" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis uid="_wjmvYDuvEe6c2YMIS3c31Q" selectedViews="_shf2EAAWEe-3tbSaNUkgbA" version="15.0.0.202209061200">
+  <viewpoint:DAnalysis uid="_wjmvYDuvEe6c2YMIS3c31Q" selectedViews="_shf2EAAWEe-3tbSaNUkgbA" version="15.2.0.202303281325">
     <semanticResources>src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml</semanticResources>
     <semanticResources>build/oml/purl.org/dc/elements/1.1.oml</semanticResources>
     <semanticResources>build/oml/www.w3.org/2000/01/rdf-schema.oml</semanticResources>
@@ -8,10 +8,10 @@
     <semanticResources>src/oml/uaontologies.com/UA_Foundation/bundle.oml</semanticResources>
     <semanticResources>build/oml/www.w3.org/1999/02/22-rdf-syntax-ns.oml</semanticResources>
     <semanticResources>build/oml/www.w3.org/2002/07/owl.oml</semanticResources>
-    <semanticResources>build/oml/opencaesar.io/viewpoint.oml</semanticResources>
+    <semanticResources>build/oml/www.w3.org/2003/11/swrlb.oml</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_shf2EAAWEe-3tbSaNUkgbA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_sxPiQAAWEe-3tbSaNUkgbA" name="Foundation Viewer" repPath="#_sxMe8AAWEe-3tbSaNUkgbA" changeId="92fc6f6b-c01b-45a9-b406-0f20a64eb824">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_sxPiQAAWEe-3tbSaNUkgbA" name="Foundation Viewer" repPath="#_sxMe8AAWEe-3tbSaNUkgbA" changeId="1739309486296">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']"/>
         <target xmi:type="oml:Vocabulary" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#/"/>
       </ownedRepresentationDescriptors>
@@ -1599,109 +1599,109 @@
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='SpecializationAxiom']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_sx9T8AAWEe-3tbSaNUkgbA" name="∀isContainedIn" sourceNode="_sxidNQAWEe-3tbSaNUkgbA" targetNode="_sxidNQAWEe-3tbSaNUkgbA">
-      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.16/@ownedRelationRestrictions.1"/>
-      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.16/@ownedRelationRestrictions.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_sx9T8QAWEe-3tbSaNUkgbA" lineStyle="dot" size="2" routingStyle="manhattan" strokeColor="0,0,0">
         <customFeatures>strokeColor</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_sx9T8gAWEe-3tbSaNUkgbA" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']"/>
+      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.16/@ownedRelationRestrictions.1"/>
+      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.16/@ownedRelationRestrictions.1"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_sx97AgAWEe-3tbSaNUkgbA" name="∀isContainedIn" sourceNode="_sxgA8QAWEe-3tbSaNUkgbA" targetNode="_sxgA8QAWEe-3tbSaNUkgbA">
-      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.14/@ownedRelationRestrictions.1"/>
-      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.14/@ownedRelationRestrictions.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_sx-iEAAWEe-3tbSaNUkgbA" lineStyle="dot" size="2" routingStyle="manhattan" strokeColor="209,209,209">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_sx-iEQAWEe-3tbSaNUkgbA" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']"/>
+      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.14/@ownedRelationRestrictions.1"/>
+      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.14/@ownedRelationRestrictions.1"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_sx-iFAAWEe-3tbSaNUkgbA" name="∀contains" sourceNode="_sxgoBgAWEe-3tbSaNUkgbA" targetNode="_sxgoBgAWEe-3tbSaNUkgbA">
-      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.6/@ownedRelationRestrictions.0"/>
-      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.6/@ownedRelationRestrictions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_sx-iFQAWEe-3tbSaNUkgbA" lineStyle="dot" size="2" routingStyle="manhattan" strokeColor="209,209,209">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_sx-iFgAWEe-3tbSaNUkgbA" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']"/>
+      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.6/@ownedRelationRestrictions.0"/>
+      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.6/@ownedRelationRestrictions.0"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_sx-iGQAWEe-3tbSaNUkgbA" name="∀contains" sourceNode="_sxeLwgAWEe-3tbSaNUkgbA" targetNode="_sxeLwgAWEe-3tbSaNUkgbA">
-      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.7/@ownedRelationRestrictions.0"/>
-      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.7/@ownedRelationRestrictions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_sx_JIAAWEe-3tbSaNUkgbA" lineStyle="dot" size="2" routingStyle="manhattan" strokeColor="209,209,209">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_sx_JIQAWEe-3tbSaNUkgbA" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']"/>
+      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.7/@ownedRelationRestrictions.0"/>
+      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.7/@ownedRelationRestrictions.0"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_sx_JJAAWEe-3tbSaNUkgbA" name="∀contains" sourceNode="_sxgA9AAWEe-3tbSaNUkgbA" targetNode="_sxgA9AAWEe-3tbSaNUkgbA">
-      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.21/@ownedRelationRestrictions.0"/>
-      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.21/@ownedRelationRestrictions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_sx_JJQAWEe-3tbSaNUkgbA" lineStyle="dot" size="2" routingStyle="manhattan" strokeColor="209,209,209">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_sx_JJgAWEe-3tbSaNUkgbA" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']"/>
+      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.21/@ownedRelationRestrictions.0"/>
+      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.21/@ownedRelationRestrictions.0"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_sx_JKQAWEe-3tbSaNUkgbA" name="∀isContainedIn" sourceNode="_sxgA9AAWEe-3tbSaNUkgbA" targetNode="_sxgA9AAWEe-3tbSaNUkgbA">
-      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.21/@ownedRelationRestrictions.1"/>
-      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.21/@ownedRelationRestrictions.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_sx_JKgAWEe-3tbSaNUkgbA" lineStyle="dot" size="2" routingStyle="manhattan" strokeColor="0,0,0">
         <customFeatures>strokeColor</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_sx_JKwAWEe-3tbSaNUkgbA" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']"/>
+      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.21/@ownedRelationRestrictions.1"/>
+      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.21/@ownedRelationRestrictions.1"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_sx_wMAAWEe-3tbSaNUkgbA" name="∀isContainedIn" sourceNode="_sxgoBgAWEe-3tbSaNUkgbA" targetNode="_sxgoBgAWEe-3tbSaNUkgbA">
-      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.6/@ownedRelationRestrictions.1"/>
-      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.6/@ownedRelationRestrictions.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_sx_wMQAWEe-3tbSaNUkgbA" lineStyle="dot" size="2" routingStyle="manhattan" strokeColor="0,0,0">
         <customFeatures>strokeColor</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_sx_wMgAWEe-3tbSaNUkgbA" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']"/>
+      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.6/@ownedRelationRestrictions.1"/>
+      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.6/@ownedRelationRestrictions.1"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_sx_wNQAWEe-3tbSaNUkgbA" name="∃specificallyDependentOn" visible="false" sourceNode="_sxjEQwAWEe-3tbSaNUkgbA" targetNode="_sxpK4gAWEe-3tbSaNUkgbA">
-      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.9/@ownedRelationRestrictions.0"/>
-      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.9/@ownedRelationRestrictions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_sx_wNgAWEe-3tbSaNUkgbA" lineStyle="dot" size="2" routingStyle="manhattan" strokeColor="209,209,209">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_sx_wNwAWEe-3tbSaNUkgbA" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']"/>
+      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.9/@ownedRelationRestrictions.0"/>
+      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.9/@ownedRelationRestrictions.0"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_syAXQAAWEe-3tbSaNUkgbA" name="∀contains" sourceNode="_sxgA8QAWEe-3tbSaNUkgbA" targetNode="_sxgA8QAWEe-3tbSaNUkgbA">
-      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.14/@ownedRelationRestrictions.0"/>
-      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.14/@ownedRelationRestrictions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_syAXQQAWEe-3tbSaNUkgbA" lineStyle="dot" size="2" routingStyle="manhattan" strokeColor="0,0,0">
         <customFeatures>strokeColor</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_syAXQgAWEe-3tbSaNUkgbA" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']"/>
+      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.14/@ownedRelationRestrictions.0"/>
+      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.14/@ownedRelationRestrictions.0"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_syA-UAAWEe-3tbSaNUkgbA" name="∀contains" sourceNode="_sxidNQAWEe-3tbSaNUkgbA" targetNode="_sxh2JQAWEe-3tbSaNUkgbA">
-      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.16/@ownedRelationRestrictions.0"/>
-      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.16/@ownedRelationRestrictions.0"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_syA-UQAWEe-3tbSaNUkgbA" lineStyle="dot" size="2" routingStyle="manhattan" strokeColor="0,0,0">
         <customFeatures>strokeColor</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_syA-UgAWEe-3tbSaNUkgbA" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']"/>
+      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.16/@ownedRelationRestrictions.0"/>
+      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.16/@ownedRelationRestrictions.0"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_syBlYAAWEe-3tbSaNUkgbA" name="∀isContainedIn" sourceNode="_sxeLwgAWEe-3tbSaNUkgbA" targetNode="_sxeLwgAWEe-3tbSaNUkgbA">
-      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.7/@ownedRelationRestrictions.1"/>
-      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.7/@ownedRelationRestrictions.1"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_syBlYQAWEe-3tbSaNUkgbA" lineStyle="dot" size="2" routingStyle="manhattan" strokeColor="0,0,0">
         <customFeatures>strokeColor</customFeatures>
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_syBlYgAWEe-3tbSaNUkgbA" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']/@defaultLayer/@edgeMappings[name='RelationRangeRestrictionAxiom']"/>
+      <target xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.7/@ownedRelationRestrictions.1"/>
+      <semanticElements xmi:type="oml:RelationRangeRestrictionAxiom" href="src/oml/uaontologies.com/UA_Foundation/UA_Foundation.oml#//@ownedStatements.7/@ownedRelationRestrictions.1"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/io.opencaesar.rosetta.sirius.viewpoint/description/oml.odesign#//@ownedViewpoints[name='Vocabularies']/@ownedRepresentations[name='Vocabulary%20Diagram']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_sxNGAAAWEe-3tbSaNUkgbA"/>

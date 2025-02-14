@@ -40,12 +40,12 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Mission#> as UA_Mission {
 	
 	@rdfs:label "Mission"
 	@dc:description "A [=Mission=]..."
-	concept Mission :> foundation:Occurrent
+	concept Mission < foundation:Occurrent
 	
 	@rdfs:label "Environment"
 	@dc:description "A [=Environment=]..."
-	concept Environment :> foundation:ObjectAggregate [
-		restricts some relation foundation:contains to sa:System
+	concept Environment < foundation:ObjectAggregate [
+		restricts some foundation:contains to sa:System
 	]
 	
 	
@@ -55,7 +55,7 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Mission#> as UA_Mission {
 	@rdfs:label "Participates In Mission"
 	@dc:description "[=ParticipatesInMission=] is a..."
 	relation entity ParticipatesInMission [
-		from sa:System
+		from foundation:Continuant
 		to Mission
 		@rdfs:label "participates in"
 		forward participatesIn

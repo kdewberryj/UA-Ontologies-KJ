@@ -57,92 +57,92 @@ vocabulary <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReportin
 	
 	@rdfs:label "Undertake TE Test"
 	@dc:description "A [=UndertakeTETest=] is a..."
-	concept UndertakeTETest :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:TestAgency
-		restricts some relation foundation:specificallyDependentOn to temp_org:TestAgency
-		restricts some relation sa:canInput to temp_tpf:TEFramework
-		restricts some relation sa:canOutput to test:TestResult
+	concept UndertakeTETest < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:TestAgency
+		restricts some foundation:specificallyDependentOn to temp_org:TestAgency
+		restricts some sa:canInput to temp_tpf:TEFramework
+		restricts some sa:canOutput to test:TestResult
 	]
 	
 	@rdfs:label "TE Test Undertaking"
 	@dc:description "A [=TETestUndertaking=] is a..."
-	concept TETestUndertaking :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to UndertakeTETest
-		restricts some relation event:isManifestationOf to UndertakeTETest
-		restricts some relation agent:hasInput to temp_tpf:TEFramework
-		restricts some relation agent:hasOutput to test:TestResult
+	concept TETestUndertaking < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to UndertakeTETest
+		restricts some event:isManifestationOf to UndertakeTETest
+		restricts some agent:hasInput to temp_tpf:TEFramework
+		restricts some agent:hasOutput to test:TestResult
 	]
 	
 	@rdfs:label "Produce System Evaluation"
 	@dc:description "A [=ProduceSystemEvaluation=] is a..."
-	concept ProduceSystemEvaluation :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:TestAgency
-		restricts some relation foundation:specificallyDependentOn to temp_org:TestAgency
-		restricts some relation sa:canInput to test:TestResult
-		restricts some relation sa:canOutput to SystemEvaluation
+	concept ProduceSystemEvaluation < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:TestAgency
+		restricts some foundation:specificallyDependentOn to temp_org:TestAgency
+		restricts some sa:canInput to test:TestResult
+		restricts some sa:canOutput to SystemEvaluation
 	]
 	
 	@rdfs:label "System Evaluation Production"
 	@dc:description "A [=SystemEvaluationProduction=] is a..."
-	concept SystemEvaluationProduction :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to ProduceSystemEvaluation
-		restricts some relation event:isManifestationOf to ProduceSystemEvaluation
-		restricts some relation agent:hasInput to test:TestResult
-		restricts some relation agent:hasOutput to SystemEvaluation
+	concept SystemEvaluationProduction < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to ProduceSystemEvaluation
+		restricts some event:isManifestationOf to ProduceSystemEvaluation
+		restricts some agent:hasInput to test:TestResult
+		restricts some agent:hasOutput to SystemEvaluation
 	]
 	
 	@rdfs:label "System Evaluation"
 	@dc:description "An [=SystemEvaluation=] is a..."
-	concept SystemEvaluation :> info:DescriptiveInformationEntity [
-		restricts some relation foundation:contains to test:TestResult
+	concept SystemEvaluation < info:DescriptiveInformationEntity [
+		restricts some foundation:contains to test:TestResult
 	]
 	
 	@rdfs:label "System Evaluation Report"
 	@dc:description "An [=SystemEvaluationReport=] is a..."
-	concept SystemEvaluationReport :> info:Document [
-		restricts all relation foundation:hasGenericDependent to SystemEvaluation
+	concept SystemEvaluationReport < info:Document [
+		restricts all foundation:hasGenericDependent to SystemEvaluation
 	]
 	
 	@rdfs:label "System Evaluation Model"
 	@dc:description "An [=SystemEvaluationModel=] is a..."
-	concept SystemEvaluationModel :> info:Model [
-		restricts all relation foundation:hasGenericDependent to SystemEvaluation
+	concept SystemEvaluationModel < info:Model [
+		restricts all foundation:hasGenericDependent to SystemEvaluation
 	]
 	
 	@rdfs:label "Review System Evaluation Report"
 	@dc:description "A [=ReviewSystemEvaluationReport=] is a..."
-	concept ReviewSystemEvaluationReport :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:DefenceTechnicalInfoCenter
-		restricts some relation foundation:specificallyDependentOn to temp_org:DefenceTechnicalInfoCenter
-		restricts some relation sa:canInput to SystemEvaluationReport
-		restricts some relation sa:canOutput to SystemEvaluationReport
+	concept ReviewSystemEvaluationReport < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:DefenceTechnicalInfoCenter
+		restricts some foundation:specificallyDependentOn to temp_org:DefenceTechnicalInfoCenter
+		restricts some sa:canInput to SystemEvaluationReport
+		restricts some sa:canOutput to SystemEvaluationReport
 	]	
 	
 	@rdfs:label "System Evaluation Report Review"
 	@dc:description "An [=SystemEvaluationReportReview=] is a..."
-	concept SystemEvaluationReportReview :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to ReviewSystemEvaluationReport
-		restricts some relation event:isManifestationOf to ReviewSystemEvaluationReport
-		restricts some relation agent:hasInput to SystemEvaluationReport
-		restricts some relation agent:hasOutput to SystemEvaluationReport
+	concept SystemEvaluationReportReview < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to ReviewSystemEvaluationReport
+		restricts some event:isManifestationOf to ReviewSystemEvaluationReport
+		restricts some agent:hasInput to SystemEvaluationReport
+		restricts some agent:hasOutput to SystemEvaluationReport
 	]
 	
 	@rdfs:label "Review System Evaluation Model"
 	@dc:description "A [=ReviewSystemEvaluationModel=] is a..."
-	concept ReviewSystemEvaluationModel :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:DoDMSCoordinationOffice
-		restricts some relation foundation:specificallyDependentOn to temp_org:DoDMSCoordinationOffice
-		restricts some relation sa:canInput to SystemEvaluationModel
-		restricts some relation sa:canOutput to SystemEvaluationModel
+	concept ReviewSystemEvaluationModel < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:DoDMSCoordinationOffice
+		restricts some foundation:specificallyDependentOn to temp_org:DoDMSCoordinationOffice
+		restricts some sa:canInput to SystemEvaluationModel
+		restricts some sa:canOutput to SystemEvaluationModel
 	]	
 	
 	@rdfs:label "System Evaluation Model Review"
 	@dc:description "An [=SystemEvaluationModelReview=] is a..."
-	concept SystemEvaluationModelReview :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to ReviewSystemEvaluationModel
-		restricts some relation event:isManifestationOf to ReviewSystemEvaluationModel
-		restricts some relation agent:hasInput to SystemEvaluationModel
-		restricts some relation agent:hasOutput to SystemEvaluationModel
+	concept SystemEvaluationModelReview < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to ReviewSystemEvaluationModel
+		restricts some event:isManifestationOf to ReviewSystemEvaluationModel
+		restricts some agent:hasInput to SystemEvaluationModel
+		restricts some agent:hasOutput to SystemEvaluationModel
 	]
 	
 	

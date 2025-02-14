@@ -36,6 +36,9 @@
 <http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#ManufacturingPFeature>
         rdf:type  owl:Class .
 
+<http://uaontologies.com/UA_Domain/UA_Software#Supports>
+        rdf:type  owl:Class .
+
 <http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#FormPFeature>
         rdf:type  owl:Class .
 
@@ -114,6 +117,9 @@
 <http://uaontologies.com/UA_Domain/UA_Test#SiteData>
         rdf:type  owl:Class .
 
+<http://uaontologies.com/UA_Domain/UA_DataManagement#isSupportedBySoftware>
+        rdf:type  owl:ObjectProperty .
+
 <http://uaontologies.com/UA_Foundation/UA_Foundation#Process>
         rdf:type  owl:Class .
 
@@ -126,8 +132,11 @@
 <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#SpaceMission>
         rdf:type  owl:Class .
 
-<http://uaontologies.com/UA_Domain/UA_DataManagement#isSupportedBySoftware>
+<http://uaontologies.com/UA_Domain/UA_UseCases#isActorInUseCase>
         rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#ConstraintParameter>
+        rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Domain/UA_Test#HasTestSubject>
         rdf:type  owl:Class .
@@ -158,6 +167,9 @@
 
 <http://uaontologies.com/UA_Domain/UA_BayesianNetworks#hasBayesianTrueStateValue>
         rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier>
+        rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Core/UA_Information#Prescribes>
         rdf:type  owl:Class .
@@ -193,6 +205,9 @@
         rdf:type  owl:ObjectProperty .
 
 <http://uaontologies.com/UA_Core/UA_Agent#hasBelonging>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Software#supports>
         rdf:type  owl:ObjectProperty .
 
 <http://uaontologies.com/UA_Core/UA_Event#isManifestationOf>
@@ -242,6 +257,12 @@ owl:topObjectProperty
 
 <http://uaontologies.com/UA_Domain/UA_Test#TestCondition>
         rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#HasObjectiveValue>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#isThresholdValueOf>
+        rdf:type  owl:ObjectProperty .
 
 <http://uaontologies.com/UA_Domain/UA_Manuf_Processes#WeldingCapability>
         rdf:type  owl:Class .
@@ -327,6 +348,9 @@ owl:topObjectProperty
 <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canBeInputOf>
         rdf:type  owl:ObjectProperty .
 
+<http://uaontologies.com/UA_Domain/UA_Requirements#hasObjectiveValue>
+        rdf:type  owl:ObjectProperty .
+
 <http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#WeldIntermittance>
         rdf:type  owl:Class .
 
@@ -348,11 +372,14 @@ owl:topObjectProperty
 <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#OrbitalPath>
         rdf:type  owl:Class .
 
+<http://uaontologies.com/UA_Foundation/UA_Foundation#hasBeginInstant>
+        rdf:type  owl:DatatypeProperty .
+
 <http://uaontologies.com/UA_Core/UA_Agent#IsRoleOf>
         rdf:type  owl:Class .
 
-<http://uaontologies.com/UA_Foundation/UA_Foundation#hasBeginInstant>
-        rdf:type  owl:DatatypeProperty .
+<http://uaontologies.com/UA_Domain/UA_Requirements#HasThresholdValue>
+        rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Core/UA_Information#InformationArtifact>
         rdf:type  owl:Class .
@@ -420,6 +447,9 @@ owl:Thing  rdf:type  owl:Class .
         rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Core/UA_Event#occursAfter>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#hasThresholdValue>
         rdf:type  owl:ObjectProperty .
 
 <http://uaontologies.com/UA_Core/UA_Measurement#HasDimension>
@@ -506,6 +536,9 @@ owl:Thing  rdf:type  owl:Class .
 <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#spaceFlightPhaseOf>
         rdf:type  owl:ObjectProperty .
 
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Configuration>
+        rdf:type  owl:Class .
+
 <http://uaontologies.com/UA_Domain/UA_DataManagement#hasAccess>
         rdf:type  owl:ObjectProperty .
 
@@ -553,6 +586,9 @@ owl:Thing  rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Domain/UA_BayesianNetworks#hasBayesianWeight>
         rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Domain/UA_UseCases#isIncludedInUseCase>
+        rdf:type  owl:ObjectProperty .
 
 <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#hasItemFlow>
         rdf:type  owl:ObjectProperty .
@@ -635,10 +671,16 @@ owl:Thing  rdf:type  owl:Class .
 <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Project>
         rdf:type  owl:Class .
 
+<http://uaontologies.com/UA_Domain/UA_Requirements#parameterOwnedBy>
+        rdf:type  owl:ObjectProperty .
+
 <http://uaontologies.com/UA_Domain/UA_Test#Tester>
         rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Foundation/UA_Foundation#Container>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_UseCases#HasActor>
         rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Domain/UA_BayesianNetworks#hasBayesianChild>
@@ -668,11 +710,17 @@ owl:Thing  rdf:type  owl:Class .
 <http://uaontologies.com/UA_Domain/UA_Test#TestResult>
         rdf:type  owl:Class .
 
+<http://uaontologies.com/UA_Domain/UA_Software#supportedBy>
+        rdf:type  owl:ObjectProperty .
+
 <http://uaontologies.com/UA_Domain/UA_Manuf_IFeatures#WeldSymbol_WeldIntermittance>
         rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Domain/UA_BayesianNetworks#hasBayesianNodeVisibility>
         rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Domain/UA_UseCases#IncludesUseCase>
+        rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Core/UA_Information#describes>
         rdf:type  owl:ObjectProperty .
@@ -698,6 +746,9 @@ owl:Thing  rdf:type  owl:Class .
 <http://uaontologies.com/UA_Domain/UA_Requirements#hasConstraintExpression>
         rdf:type  owl:DatatypeProperty .
 
+<http://uaontologies.com/UA_Domain/UA_Requirements#KPP>
+        rdf:type  owl:Class .
+
 <http://uaontologies.com/UA_Core/UA_Measurement#Range>
         rdf:type  owl:Class .
 
@@ -709,6 +760,9 @@ owl:Thing  rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#Orbit>
         rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#ownsParameter>
+        rdf:type  owl:ObjectProperty .
 
 <http://uaontologies.com/UA_Core/UA_Information#IsAbout>
         rdf:type  owl:Class .
@@ -767,6 +821,12 @@ owl:Thing  rdf:type  owl:Class .
 <http://uaontologies.com/UA_Foundation/UA_Foundation#Object>
         rdf:type  owl:Class .
 
+<http://uaontologies.com/UA_Domain/UA_UseCases#hasActor>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#ParameterOwnedBy>
+        rdf:type  owl:Class .
+
 <http://uaontologies.com/UA_Domain/UA_Mission#HasEnvironment>
         rdf:type  owl:Class .
 
@@ -785,6 +845,9 @@ owl:Thing  rdf:type  owl:Class .
 <http://uaontologies.com/UA_Domain/UA_Test#testIsTriggeredBy>
         rdf:type  owl:ObjectProperty .
 
+<http://uaontologies.com/UA_Domain/UA_Requirements#isObjectiveValueOf>
+        rdf:type  owl:ObjectProperty .
+
 <http://uaontologies.com/UA_Domain/UA_Test#TestEquipmentData>
         rdf:type  owl:Class .
 
@@ -801,9 +864,12 @@ owl:topDataProperty  rdf:type  owl:DatatypeProperty .
 
 <http://uaontologies.com/UA_Domain/bundle/individuals>
         rdf:type         owl:Ontology ;
-        rdfs:comment     "Generated by Owl Reason 1.1.5" ;
+        rdfs:comment     "Generated by Owl Reason 2.14.0" ;
         owl:imports      <http://uaontologies.com/UA_Domain/bundle> ;
-        owl:versionInfo  "1717698739" .
+        owl:versionInfo  "1739314660" .
+
+<http://uaontologies.com/UA_Domain/UA_UseCases#includesUseCase>
+        rdf:type  owl:ObjectProperty .
 
 <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#executes>
         rdf:type  owl:ObjectProperty .
@@ -880,10 +946,10 @@ owl:topDataProperty  rdf:type  owl:DatatypeProperty .
 <http://uaontologies.com/UA_Core/UA_Information#isDescribedBy>
         rdf:type  owl:ObjectProperty .
 
-owl:Nothing  rdf:type  owl:Class .
-
 <http://uaontologies.com/UA_Domain/UA_Acquisition#hasProcurementStatus>
         rdf:type  owl:DatatypeProperty .
+
+owl:Nothing  rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Core/UA_Agent#Producer>
         rdf:type  owl:Class .
@@ -895,6 +961,9 @@ owl:Nothing  rdf:type  owl:Class .
         rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Core/UA_Measurement#Unit>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_UseCases#UseCase>
         rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Domain/UA_Mission#isEnvironmentOf>
@@ -925,6 +994,9 @@ owl:Nothing  rdf:type  owl:Class .
         rdf:type  owl:ObjectProperty .
 
 <http://uaontologies.com/UA_Domain/UA_Test#TestObjective>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#KSA>
         rdf:type  owl:Class .
 
 <http://uaontologies.com/UA_Core/UA_Agent#BelongsTo>

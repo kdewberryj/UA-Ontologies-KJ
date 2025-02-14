@@ -2,13 +2,15 @@
 <rdf:RDF xmlns="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#"
      xml:base="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:temp_dec="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#">
     <owl:Ontology rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision">
         <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
         <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization"/>
@@ -21,11 +23,13 @@
         <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#"/>
+        <oml:prefix>temp_dec</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
         <dc:contributor>Joe Gregory</dc:contributor>
         <dc:creator>SIE Disruption Lab</dc:creator>
         <dc:description>A vocabulary to capture decision concepts required for TEMP</dc:description>
         <dc:hasVersion>0.1</dc:hasVersion>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
     </owl:Ontology>
     
 
@@ -50,7 +54,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirementIdentifier"/>
         <rdfs:range rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirement"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#IdentifiesDataRequirement"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>identifies data requirement</rdfs:label>
     </owl:ObjectProperty>
     
@@ -64,7 +69,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Information#InformationEntity"/>
         <rdfs:range rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Informs"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>informs</rdfs:label>
     </owl:ObjectProperty>
     
@@ -75,7 +81,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isIdentifiedBy">
         <owl:inverseOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#identifiesDataRequirement"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirement"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirementIdentifier"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#IdentifiesDataRequirement"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>is identified by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -86,7 +97,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isInformedBy">
         <owl:inverseOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#informs"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/UA_Core/UA_Information#InformationEntity"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Informs"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>is informed by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -110,8 +126,8 @@
     <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#ChiefEngineer">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirementIdentifier"/>
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Role"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>An [=ChiefEngineer=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Chief Engineer</rdfs:label>
     </owl:Class>
     
@@ -146,8 +162,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>An [=DataRequirement=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Data Requirement</rdfs:label>
     </owl:Class>
     
@@ -157,8 +173,8 @@
 
 
     <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#DataRequirementIdentifier">
+        <oml:type rdf:resource="http://opencaesar.io/oml#Aspect"/>
         <dc:description>A [=DataRequirementIdentifier=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Aspect"/>
         <rdfs:label>Data Requirement Identifier</rdfs:label>
     </owl:Class>
     
@@ -168,8 +184,8 @@
 
 
     <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#IdentifiesDataRequirement">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=IdentifiesDataRequirement=] is a </dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>IdentifiesDataRequirement</rdfs:label>
     </owl:Class>
     
@@ -179,8 +195,8 @@
 
 
     <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Informs">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=Informs=] is a </dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>Informs</rdfs:label>
     </owl:Class>
     
@@ -197,8 +213,8 @@
                 <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=KeyDecision=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Key Decision</rdfs:label>
     </owl:Class>
     
@@ -215,8 +231,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>An [=KeyDecisionPoint=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>KeyDecisionPoint</rdfs:label>
     </owl:Class>
     
@@ -227,8 +243,8 @@
 
     <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyIntegrationPoint">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>An [=KeyIntegrationPoint=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Key Integration Point</rdfs:label>
     </owl:Class>
     
@@ -257,8 +273,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MakeMDADecision"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=MDADecisionMade=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>MDA Decision Made</rdfs:label>
     </owl:Class>
     
@@ -287,8 +303,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#MilestoneDecisionAuthority"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=MakeMDADecision=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Make MDA Decision</rdfs:label>
     </owl:Class>
     
@@ -317,8 +333,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#ProgramManager"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=MakePMDecision=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Make PM Decision</rdfs:label>
     </owl:Class>
     
@@ -329,8 +345,8 @@
 
     <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Milestone">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>An [=Milestone=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Milestone</rdfs:label>
     </owl:Class>
     
@@ -347,8 +363,8 @@
                 <owl:someValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#IDSK"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>An [=OperationalIssue=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Operational Issue</rdfs:label>
     </owl:Class>
     
@@ -377,8 +393,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#MakePMDecision"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=PMDecisionMade=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>PM Decision Made</rdfs:label>
     </owl:Class>
     
@@ -407,8 +423,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>An [=RecommendedCorrectiveAction=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Recommended Corrective Action</rdfs:label>
     </owl:Class>
     
@@ -437,8 +453,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestAndEvaluationProgram"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>An [=RiskAssessment=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Risk Assessment</rdfs:label>
     </owl:Class>
     
@@ -449,8 +465,8 @@
 
     <owl:Class rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#TechnicalReadinessDecision">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecisionPoint"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>An [=TechnicalReadinessDecision=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Technical Readiness Decision</rdfs:label>
     </owl:Class>
     
@@ -518,10 +534,9 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#IdentifiesDataRequirement"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -529,9 +544,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#IdentifiesDataRequirement"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -575,10 +591,9 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Informs"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -586,9 +601,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Informs"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -628,6 +644,6 @@
 
 
 
-<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
 
 

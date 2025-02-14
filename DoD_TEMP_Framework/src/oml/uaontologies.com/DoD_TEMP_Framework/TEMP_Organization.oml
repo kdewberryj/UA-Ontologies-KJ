@@ -51,56 +51,56 @@ vocabulary <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#> as te
 		
 	@rdfs:label "TestAgency"
 	@dc:description "An [=TestAgency=] is a..."
-	concept TestAgency :> foundation:Role [
-		restricts all relation foundation:genericallyDependentOn to agent:Organization
+	concept TestAgency < foundation:Role [
+		restricts all foundation:genericallyDependentOn to agent:Organization
 	]
 	
 	@rdfs:label "Lead Developmental Test Organization"
 	@dc:description "An [=LeadDevelopmentalTestOrganization=] is a..."
-	concept LeadDevelopmentalTestOrganization :> TestAgency
+	concept LeadDevelopmentalTestOrganization < TestAgency
 	
 	@rdfs:label "Lead Test Organization"
 	@dc:description "An [=LeadTestOrganization=] is a..."
-	concept LeadTestOrganization :> TestAgency
+	concept LeadTestOrganization < TestAgency
 	
 	@rdfs:label "Operational Test Agency"
 	@dc:description "An [=OperationalTestAgency=] is a..."
-	concept OperationalTestAgency :> TestAgency
+	concept OperationalTestAgency < TestAgency
 	
 	@rdfs:label "DoD Component"
 	@dc:description "A [=DoDComponent=] is a..."
-	concept DoDComponent :> agent:Organization
+	concept DoDComponent < agent:Organization
 	
 	@rdfs:label "DOTE"
 	@dc:description "A [=DOTE=] is a..."
-	concept DOTE :> agent:Organization
+	concept DOTE < agent:Organization
 
 	@rdfs:label "USD (R&E)"
 	@dc:description "A [=USDRE=] is a..."
-	concept USDRE :> agent:Organization
+	concept USDRE < agent:Organization
 
 	@rdfs:label "Milestone Decision Authority"
 	@dc:description "A [=MilestoneDecisionAuthority=] is a..."
-	concept MilestoneDecisionAuthority :> foundation:Role [
-		restricts all relation foundation:genericallyDependentOn to agent:Organization
+	concept MilestoneDecisionAuthority < foundation:Role [
+		restricts all foundation:genericallyDependentOn to agent:Organization
 	]
 	
 	@rdfs:label "WIPT"
 	@dc:description "A [=WIPT=] is a..."
-	concept WIPT :> foundation:Role [
-		restricts all relation foundation:genericallyDependentOn to agent:Organization
-		restricts some relation foundation:contains to LeadTestOrganization
-		restricts some relation foundation:contains to LeadDevelopmentalTestOrganization
-		restricts some relation foundation:contains to OperationalTestAgency
+	concept WIPT < foundation:Role [
+		restricts all foundation:genericallyDependentOn to agent:Organization
+		restricts some foundation:contains to LeadTestOrganization
+		restricts some foundation:contains to LeadDevelopmentalTestOrganization
+		restricts some foundation:contains to OperationalTestAgency
 	]
 	
 	@rdfs:label "Defence Technical Info Center"
 	@dc:description "A [=DefenceTechnicalInfoCenter=] is a..."
-	concept DefenceTechnicalInfoCenter :> agent:Organization				
+	concept DefenceTechnicalInfoCenter < agent:Organization				
 	
 	@rdfs:label "DoD M&S Coordination Office"
 	@dc:description "A [=DoDMSCoordinationOffice=] is a..."
-	concept DoDMSCoordinationOffice :> agent:Organization
+	concept DoDMSCoordinationOffice < agent:Organization
 	
 	
 	

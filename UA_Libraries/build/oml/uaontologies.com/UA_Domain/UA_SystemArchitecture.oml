@@ -38,33 +38,41 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as UA_Syst
 	
 	@rdfs:label "System"
 	@dc:description "A [=System=]..."
-	concept System :> foundation:Object, foundation:Container [
-		restricts all relation foundation:contains to foundation:Object
+	concept System < foundation:Object, foundation:Container [
+		restricts all foundation:contains to foundation:Object
 	] 
 	
 	@rdfs:label "Function Occurence"
 	@dc:description "A [=FunctionOccurence=]..."
-	concept FunctionOccurrence :> foundation:Process [
-		restricts all relation event:isManifestationOf to foundation:Function
-		restricts some relation event:isManifestationOf to foundation:Function
-		restricts all relation foundation:contains to FunctionOccurrence 
-		restricts all relation foundation:isContainedIn to FunctionOccurrence 
+	concept FunctionOccurrence < foundation:Process [
+		restricts all event:isManifestationOf to foundation:Function
+		restricts some event:isManifestationOf to foundation:Function
+		restricts all foundation:contains to FunctionOccurrence 
+		restricts all foundation:isContainedIn to FunctionOccurrence 
 	]
 	
 	@rdfs:label "Interface"
 	@dc:description "An [=Interface=]..."
-	concept Interface :> foundation:Object 
+	concept Interface < foundation:Object 
 	
 	@rdfs:label "Architecture Description"
 	@dc:description "An [=ArchitectureDescription=]..."
-	concept ArchitectureDescription :> info:DescriptiveInformationEntity [
-		restricts all relation info:describes to Architecture
+	concept ArchitectureDescription < info:DescriptiveInformationEntity [
+		restricts all info:describes to Architecture
 	]
 	
 	@rdfs:label "Architecture"
 	@dc:description "An [=Architecture=]..."
-	concept Architecture :> foundation:Quality [
-		restricts all relation foundation:specificallyDependentOn to System
+	concept Architecture < foundation:Quality [
+		restricts all foundation:specificallyDependentOn to System
+		restricts some foundation:specificallyDependentOn to System
+	]
+	
+	@rdfs:label "Configuration"
+	@dc:description "An [=Configuration=]..."
+	concept Configuration < foundation:Quality [
+		restricts all foundation:specificallyDependentOn to System
+		restricts some foundation:specificallyDependentOn to System
 	]
 	 	 
 	
@@ -73,7 +81,7 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as UA_Syst
 	
 	@rdfs:label "Executed By"
 	@dc:description "[=ExecutedBy=] is a..."
-	relation entity ExecutedBy :> event:HasParticipant [
+	relation entity ExecutedBy [
 		from FunctionOccurrence
 		to foundation:Continuant
 		@rdfs:label "executed by"
@@ -83,6 +91,7 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as UA_Syst
 		asymmetric
 		irreflexive
 	]
+	< event:HasParticipant
 	
 	@rdfs:label "CanInput"
 	@dc:description "[=CanInput=] is a..."
@@ -150,7 +159,7 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as UA_Syst
 	
 	@rdfs:comment "If B is a manifestation of Function A, and C can execute Function B, then C executes Function A"
 	rule Function_manifestation [
-		event:manifestsIn(a,b) ^ foundation:specificallyDependentOn(a,c) -> executes(c,b)
+		event:manifestsIn(a,b) & foundation:specificallyDependentOn(a,c) -> executes(c,b)
 	]
 	
 	
