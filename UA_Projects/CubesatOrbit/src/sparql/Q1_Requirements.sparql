@@ -1,0 +1,40 @@
+
+
+PREFIX foundation:	<http://uaontologies.com/UA_Foundation/UA_Foundation#>
+
+PREFIX agent:	<http://uaontologies.com/UA_Core/UA_Agent#>
+PREFIX event:	<http://uaontologies.com/UA_Core/UA_Event#>
+PREFIX info:	<http://uaontologies.com/UA_Core/UA_Information#>
+PREFIX meas:	<http://uaontologies.com/UA_Core/UA_Measurement#>
+
+PREFIX mission:	<http://uaontologies.com/UA_Domain/UA_Mission#>
+PREFIX ms:		<http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#>
+PREFIX orb:		<http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#>
+PREFIX req:		<http://uaontologies.com/UA_Domain/UA_Requirements#>
+PREFIX sw:		<http://uaontologies.com/UA_Domain/UA_Software#>
+PREFIX sa:		<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#>
+
+
+
+
+SELECT DISTINCT ?ReqName ?ReqID ?Text ?Source
+				?VerifiedBy ?VSource ?Status
+
+WHERE {
+     ?Requirement a req:Requirement.
+     ?Requirement foundation:hasID ?ReqID.
+     ?Requirement foundation:hasName ?ReqName.
+     ?Requirement
+     	foundation:hasNaturalLanguageDescription
+     	?Text .
+     ?Requirement sw:hasEntitySource ?Source .
+     OPTIONAL {
+     	?Requirement req:isVerifiedBy ?VerifiedBy .
+     	?VerifiedBy a req:VerificationMethod  .
+     	?VerifiedBy sw:hasEntitySource ?VSource  .
+     	?Requirement
+     		req:hasVerificationStatus
+     		?Status .
+     }
+}
+ORDER BY ASC (?ReqID)

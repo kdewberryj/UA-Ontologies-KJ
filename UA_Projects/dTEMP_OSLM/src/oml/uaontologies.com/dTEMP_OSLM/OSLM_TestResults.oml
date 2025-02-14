@@ -1,0 +1,103 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture..."
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/dTEMP_OSLM/OSLM_TestResults#> as OSLM_TestResults {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    //uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    //uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    //uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    //uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    //uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	//uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	//uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    
+    //uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#> as temp_tps
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#> as temp_tpf
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#> as temp_resp
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> as temp_tpt
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_dec
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as temp_teo
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#> as temp_ear
+    
+    // Extends other descriptions
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#> as oslm_tes
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#> as oslm_ms
+    extends <http://uaontologies.com/UA_Libraries/Units#> as units
+    
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	instance TE7_TestData : test:TestResult [
+		foundation:hasName "TE7 Test Data"
+		info:describes oslm_tes:TE7
+		foundation:contains terrainTraversalSuccessRate_Measurement
+		foundation:contains sensorDetectionSuccessRate_Measurement
+		foundation:contains stickyNoteDetectionSuccessRate_Measurement
+		foundation:contains stickyNoteRemovalSuccessRate_Measurement
+		foundation:contains cargoTransportSuccessRate_Measurement
+		foundation:contains cargoDeliverySuccessRate_Measurement
+	]
+	
+	instance terrainTraversalSuccessRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf oslm_ms:terrainTraversalSuccessRate
+		meas:hasUnit units:percentage
+		meas:hasValue "85"^^rdfs:Literal
+	]
+	
+	instance sensorDetectionSuccessRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf oslm_ms:yellowSNDetectionRate
+		meas:hasUnit units:percentage
+		meas:hasValue "95"^^rdfs:Literal
+	]
+	
+	instance stickyNoteDetectionSuccessRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf oslm_ms:stickyNoteDetectionSuccessRate
+		meas:hasUnit units:percentage
+		meas:hasValue "80.75"^^rdfs:Literal
+	]
+	
+	instance stickyNoteRemovalSuccessRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf oslm_ms:stickyNoteRemovalSuccessRate
+		meas:hasUnit units:percentage
+		meas:hasValue "95"^^rdfs:Literal
+	]
+	
+	instance cargoTransportSuccessRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf oslm_ms:cargoTransportSuccessRate
+		meas:hasUnit units:percentage
+		meas:hasValue "95"^^rdfs:Literal
+	]
+	
+	instance cargoDeliverySuccessRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf oslm_ms:cargoDeliverySuccessRate
+		meas:hasUnit units:percentage
+		meas:hasValue "72.88"^^rdfs:Literal
+	]
+	
+}

@@ -1,0 +1,449 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#"
+     xml:base="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:aleo="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:UA_Agent="http://uaontologies.com/UA_Core/UA_Agent#"
+     xmlns:UA_Foundation="http://uaontologies.com/UA_Foundation/UA_Foundation#"
+     xmlns:UA_Information="http://uaontologies.com/UA_Core/UA_Information#"
+     xmlns:UA_Measurement="http://uaontologies.com/UA_Core/UA_Measurement#"
+     xmlns:UA_Requirements="http://uaontologies.com/UA_Domain/UA_Requirements#">
+    <owl:Ontology rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Agent"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Information"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#"/>
+        <oml:prefix>aleo</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Description"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>This is the OML representation of the example ALEO student project, generated for CSER 2024</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#hasRole -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#hasRole"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#isResponsibilityOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#isResponsibilityOf"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#prescribes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasDimension -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#satisfies -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#satisfies"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#verifies -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#verifies"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasID -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasID"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasName"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ADCS -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ADCS">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Requirements:satisfies rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-4"/>
+        <UA_Foundation:hasName>ADCS</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ADCS"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#CDH"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Payload"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#PropulsionSystem"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#SolarPanelAssembly"/>
+        <UA_Foundation:hasName>Arizona LEO Sat</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO"/>
+        <UA_Foundation:hasID>ALEO-SYSREQ-1</UA_Foundation:hasID>
+        <UA_Foundation:hasName>ALEO Mass Requirement</UA_Foundation:hasName>
+        <UA_Foundation:hasNaturalLanguageDescription>The spacecraft mass shall be less than 900kg</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO"/>
+        <UA_Foundation:hasID>ALEO-SYSREQ-2</UA_Foundation:hasID>
+        <UA_Foundation:hasName>ALEO Power Requirement</UA_Foundation:hasName>
+        <UA_Foundation:hasNaturalLanguageDescription>The spacecraft shall generate 400W of power in sunlight</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO"/>
+        <UA_Foundation:hasID>ALEO-SYSREQ-3</UA_Foundation:hasID>
+        <UA_Foundation:hasName>ALEO Communication Requirement</UA_Foundation:hasName>
+        <UA_Foundation:hasNaturalLanguageDescription>The spacecraft communicate with the ground segment on an S-Band frequency</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO"/>
+        <UA_Foundation:hasID>ALEO-SYSREQ-4</UA_Foundation:hasID>
+        <UA_Foundation:hasName>ALEO Pointing Requirement</UA_Foundation:hasName>
+        <UA_Foundation:hasNaturalLanguageDescription>The spacecraft shall have an attitude pointing accuracy of 0.1 degrees</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-5">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO"/>
+        <UA_Foundation:hasID>ALEO-SYSREQ-5</UA_Foundation:hasID>
+        <UA_Foundation:hasName>ALEO Payload Requirement</UA_Foundation:hasName>
+        <UA_Foundation:hasNaturalLanguageDescription>The spacecraft payload shall downlink science data to the ground segment at a minimum average data rate of 10 Megabits per second (Mbps)</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO_Mass -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO_Mass">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Mass"/>
+        <UA_Requirements:satisfies rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-1"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO"/>
+        <UA_Foundation:hasName>ALEO System Mass</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#CDH -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#CDH">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Requirements:satisfies rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-3"/>
+        <UA_Foundation:hasName>C&amp;DH</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Payload -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Payload">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Requirements:satisfies rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-5"/>
+        <UA_Foundation:hasName>Payload</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Person"/>
+        <UA_Agent:hasRole rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role1"/>
+        <UA_Foundation:hasName>Joe Gregory</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Person"/>
+        <UA_Agent:hasRole rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role2"/>
+        <UA_Foundation:hasName>Richardo Larez</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Person"/>
+        <UA_Agent:hasRole rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role3"/>
+        <UA_Foundation:hasName>Niko Martell</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#PropulsionSystem -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#PropulsionSystem">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>Propulsion System</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#SolarPanelAssembly -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#SolarPanelAssembly">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Requirements:satisfies rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-2"/>
+        <UA_Foundation:hasName>Solar Panel Assembly</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Activity"/>
+        <UA_Agent:isResponsibilityOf rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role3"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-1"/>
+        <UA_Foundation:hasID>UAZ-1</UA_Foundation:hasID>
+        <UA_Foundation:hasNaturalLanguageDescription>Verify ALEO-SYSREQ-1</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Activity"/>
+        <UA_Agent:isResponsibilityOf rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role1"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-2"/>
+        <UA_Foundation:hasID>UAZ-2</UA_Foundation:hasID>
+        <UA_Foundation:hasNaturalLanguageDescription>Verify ALEO-SYSREQ-2</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Activity"/>
+        <UA_Agent:isResponsibilityOf rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role2"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-3"/>
+        <UA_Foundation:hasID>UAZ-3</UA_Foundation:hasID>
+        <UA_Foundation:hasNaturalLanguageDescription>Verify ALEO-SYSREQ-3</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Activity"/>
+        <UA_Agent:isResponsibilityOf rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role2"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-4"/>
+        <UA_Foundation:hasID>UAZ-4</UA_Foundation:hasID>
+        <UA_Foundation:hasNaturalLanguageDescription>Verify ALEO-SYSREQ-4</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task5">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Activity"/>
+        <UA_Agent:isResponsibilityOf rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role1"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-5"/>
+        <UA_Foundation:hasID>UAZ-5</UA_Foundation:hasID>
+        <UA_Foundation:hasNaturalLanguageDescription>Verify ALEO-SYSREQ-5</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

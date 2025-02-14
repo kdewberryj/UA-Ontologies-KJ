@@ -1,0 +1,601 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture Part 1 of the example TEMP"
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/dTEMP_Rover/MR_Tests#> as mr_tes {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    //uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	//uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    
+    //uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#> as temp_tps
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#> as temp_tpf
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#> as temp_resp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> as temp_tpt
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_dec
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as temp_teo
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#> as temp_ear
+    
+    // Extends other descriptions
+    
+    extends <http://uaontologies.com/UA_Libraries/Dimensions#> as dim
+    extends <http://uaontologies.com/UA_Libraries/Units#> as units
+    extends <http://uaontologies.com/dTEMP_Rover/MR_Organization#> as mr_org
+    //extends <http://uaontologies.com/dTEMP_Rover/MR_Project#> as mr_pro
+    extends <http://uaontologies.com/dTEMP_Rover/MR_Requirements#> as mr_req
+    extends <http://uaontologies.com/dTEMP_Rover/MR_System#> as mr_sys
+    extends <http://uaontologies.com/dTEMP_Rover/MR_TestProgram#> as mr_tpr
+   
+	
+	///////////////////////////////////////////////////////////////////////////////////
+		
+	/// Test Equipment
+	
+	instance UNIXServer : foundation:Object
+	
+	instance UNIXServerDiskSpace : foundation:Quality [
+		foundation:specificallyDependentOn UNIXServer
+	]
+	
+	instance UNIXServerCost : foundation:Quality [
+		foundation:specificallyDependentOn UNIXServer
+	]
+	
+	instance Requirement_DiskSpace : req:PerformanceRequirement [
+		info:prescribes UNIXServerDiskSpace
+		req:hasRequirementText "The server shall have a minimum of 400 Gb disk space"
+	]
+	
+	instance Requirement_Cost : req:QuantitativeRequirement [
+		info:prescribes UNIXServerCost
+		req:hasRequirementText "The server shall cost no more than 1000 USD"
+	]
+	
+	instance CPU : foundation:Object
+	
+	instance Switch_A1 : foundation:Object
+	
+	instance ROS : sw:Software [
+		foundation:genericallyDependentOn Switch_A1
+		sw:hasSoftwareVersion "4.01"
+	]
+	
+	instance TerrainIdentificationSoftware : sw:Software
+	
+	instance TMGenerationSourceCode : sw:Software
+	
+	instance Oracle : agent:Organization
+	
+	instance OracleDatabase : sw:Software [
+		sw:hasSoftwareVendor Oracle
+		sw:hasSoftwareVersion "5.5"
+	]
+	
+	instance OracleCRM : sw:Software[
+		sw:hasSoftwareVendor Oracle
+		sw:hasSoftwareVersion "9.1.03j"
+	]
+	
+	instance JDeveloper : sw:Software [
+		sw:hasSoftwareVendor Oracle
+	]
+	
+	instance RoverTestScript_1 : sw:Software
+	
+	
+	/// Rover Prototype
+	
+	instance Rover_PrototypeAcquisition : acq:Acquisition [
+		acq:hasAcquisitionItem Rover_Prototype
+		acq:hasAcquisitionVendor mr_org:Rover_Vendor
+		acq:hasAcquisitionPurchaser mr_org:Rover_Purchaser
+	]
+	
+	instance Rover_Prototype : sa:System
+	
+	
+	/// List of Tests
+	
+	instance Test1_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2024-01-04T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2022-01-04T13:00:00"^^xsd:dateTime
+	]
+	
+	instance Test2_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2024-01-08T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2022-01-08T13:00:00"^^xsd:dateTime
+	]
+	
+	instance Test1 : test:Test [
+		test:hasTestSubject mr_sys:PrecisionCAM_Accuracy
+		test:hasTestSubject mr_sys:PrecisionCAM_Sensitivity
+		event:occursOn Test1_TimePeriod
+	]
+	
+	instance Test2 : test:Test [
+		test:hasTestSubject mr_sys:PrecisionCAM_Sensitivity
+		event:occursOn Test2_TimePeriod
+	]
+	
+	instance SystemAcceptanceTest_1 : test:Test [
+		event:hasParticipant RoverTestScript_1
+		test:hasTestSubject mr_sys:Rover_System
+	]
+	
+	instance CommsTest : test:Test [
+		event:occursOn CommsTest_TimePeriod
+		test:hasTestSubject mr_sys:Rover_Comms
+	]
+	
+	instance CommsTest_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2022-11-10T10:30:00"^^xsd:dateTime
+		foundation:hasEndInstant "2022-11-12T15:00:00"^^xsd:dateTime
+	]
+		
+	instance TraversalTest : test:Test [
+		event:occursOn TraversalTest_TimePeriod
+		test:hasTestSubject mr_sys:Rover_Mobility
+	]
+	
+	instance TraversalTest_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-09-25T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-10-03T12:00:00"^^xsd:dateTime
+	]
+		
+	instance CapstoneDevelopmentTest : test:Test [
+		event:hasParticipant mr_sys:LocalDebris
+		test:hasTestSubject mr_sys:Rover_System
+	]
+	
+	instance VibrationTest : test:Test [
+		test:hasTestSubject mr_sys:Rover_System
+	]
+		
+	instance TargetAcquisitionTest : test:Test [
+		test:hasTestSubject mr_sys:Rover_System
+		test:hasTestCondition TargetAcquisitionTest_Lighting
+		test:hasTestCondition TargetAcquisitionTest_AtmosphericDust
+	]
+	
+	instance LowPowerTest : test:Test [
+		test:hasTestSubject mr_sys:Rover_System
+		req:verifies mr_req:KPP_1
+	]
+	
+	ref instance mr_tpr:Rover_DTEProgram_Phase2 [
+		temp_tpp:comprisesTest VibrationTest
+		temp_tpp:comprisesTest CommsTest
+	]
+	
+	ref instance mr_tpr:Rover_OTEProgram_Phase1 [
+		temp_tpp:comprisesTest TargetAcquisitionTest
+		temp_tpp:comprisesTest LowPowerTest
+	]
+	
+	instance Dev_TIR : info:Document [
+		foundation:hasName "Rover Development Test Incident Report"
+	]
+	
+	instance Op_TIR : info:Document [
+		foundation:hasName "Rover Operational Test Incident Report"
+	]
+	
+	instance Rover_MobilityTorqueTest : test:Test [
+		test:hasTestSubject mr_sys:Rover_Mobility
+	]
+	
+	instance Rover_PayloadTest : test:Test [
+		test:hasTestSubject mr_sys:Rover_System
+		event:occursAt PayloadTestSite
+	]
+	
+	instance PayloadTestSite : test:TestSite [
+		foundation:hasSpecificDependent PayloadTestSite_Temperature
+	]
+	
+	instance PayloadTestSite_Temperature : meas:Quantity [
+		meas:hasDimension dim:Temperature
+	]
+	
+	instance TargetAcquisitionTest_Lighting : test:TestCondition [
+	]
+	
+	instance TargetAcquisitionTest_Lighting_Planned : test:PlannedTestCondition [
+		foundation:hasName "TAT Lighting"
+		info:prescribes TargetAcquisitionTest_Lighting
+	]
+		
+	instance TargetAcquisitionTest_AtmosphericDust : test:TestCondition
+	
+	instance TargetAcquisitionTest_AtmosphericDust_Planned : test:PlannedTestCondition [
+		foundation:hasName "TAT Atmospheric Dust"
+		info:prescribes TargetAcquisitionTest_AtmosphericDust
+	]
+	
+	instance TargetAcquisitionTester : test:Tester [
+		test:triggersTest TargetAcquisitionTest
+		agent:isRoleOf mr_org:Person4
+	]
+	
+	instance LowPowerTester : test:Tester [
+		test:triggersTest LowPowerTest
+		agent:isRoleOf mr_org:Person4
+	]
+		
+	instance TATD1 : info:Document [
+		foundation:hasName "Target Acquisition Test Procedure"
+	]
+	
+	instance TargetAcquisitionTest_Procedure : test:TestProcedure [
+		foundation:hasName"TAT Procedure"
+		foundation:contains TargetAcquisitionTest_Lighting_Planned
+		foundation:contains TargetAcquisitionTest_AtmosphericDust_Planned
+		foundation:genericallyDependentOn TATD1
+		info:prescribes TargetAcquisitionTest
+	]
+	
+	instance CooperativeVulnerabilityEvaluation_TestProcedure : test:TestProcedure [
+		foundation:hasName"Coop Vulnerability Evaluation"
+		info:prescribes CooperativeVulnerabilityEvaluation
+	]
+	
+	instance FutureTestTimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-10-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-10-31T12:00:00"^^xsd:dateTime
+	]
+	
+	instance CooperativeVulnerabilityEvaluation_Plan : agent:Plan [
+		foundation:hasName"Coop Vulnerability Plan"
+		foundation:contains CooperativeVulnerabilityEvaluation_TestProcedure
+		agent:hasPlannedTemporalRegion FutureTestTimePeriod
+		info:prescribes CooperativeVulnerabilityEvaluation
+	]
+	
+	instance CooperativeVulnerabilityEvaluation : test:Test [
+		test:hasTestSubject mr_sys:Rover_System
+	]
+	
+	ref instance mr_tpr:Rover_DTEProgram_Phase2 [
+		temp_tpp:comprisesTest CooperativeVulnerabilityEvaluation
+	]
+	
+	
+	// Curiosity Tests
+		
+	instance CuriosityRoverProgram_Test1 : test:Test [
+		event:occursOn CuriosityRoverProgram_Test1TimePeriod
+		test:hasTestCondition CuriosityRoverProgram_TestCondition1
+		test:hasTestSubject mr_sys:Rover_System
+	]
+	
+	instance CuriosityRoverProgram_Test1TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2022-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2022-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	instance CuriosityRoverProgram_TestCondition1 : test:TestCondition
+	
+	instance CuriosityRoverProgram_Test2 : test:Test [
+		event:occursOn CuriosityRoverProgram_Test2TimePeriod
+		test:hasTestCondition CuriosityRoverProgram_TestCondition2
+		test:hasTestSubject mr_sys:Rover_System
+	]
+	
+	instance CuriosityRoverProgram_Test2TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	instance CuriosityRoverProgram_TestCondition2 : test:TestCondition
+	
+	
+	// More Rover Tests
+	
+	instance DeploymentTestTimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant
+		"2024-09-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant
+		"2024-09-11T12:00:00"^^xsd:dateTime
+	]
+	
+	instance MobilityDeploymentTest : test:Test [
+		test:hasTestSubject Rover_Prototype
+		event:occursOn DeploymentTestTimePeriod
+	]
+	
+	instance AntennaDeploymentTest : test:Test [
+		test:hasTestSubject Rover_Prototype
+		event:occursOn DeploymentTestTimePeriod
+	]
+	
+	instance PayloadDeploymentTest : test:Test [
+		test:hasTestSubject Rover_Prototype
+		event:occursOn DeploymentTestTimePeriod
+	]
+	
+	instance TerrainTraversalExercise : test:Test [
+		test:hasTestSubject Rover_Prototype
+		event:occursOn DeploymentTestTimePeriod
+	]
+	
+	ref instance mr_tpr:Rover_IOTEProgram_Phase2 [
+		temp_tpp:comprisesTest MobilityDeploymentTest
+		temp_tpp:comprisesTest AntennaDeploymentTest
+		temp_tpp:comprisesTest PayloadDeploymentTest
+		temp_tpp:comprisesTest TerrainTraversalExercise
+	]
+	
+	instance FDIRTest : test:Test [
+		test:hasTestSubject mr_sys:Rover_FDIR
+	]
+	
+	instance TechRiskAssessment1 : temp_dec:RiskAssessment [
+		foundation:hasName"Tech Risk Assessment 1"
+		info:describes mr_tpr:Rover_TEProgram
+		foundation:isContainedIn mr_tpr:Rover_IDSK
+	]
+	
+	instance Terrain : test:TestCondition
+	instance Atmosphere : test:TestCondition
+	instance MinimumHours : test:TestCondition
+		
+	instance Rover_ReliabilityDemo1 : test:Test [
+		event:occursOn DeploymentTestTimePeriod
+		test:hasTestSubject Rover_Prototype
+		event:hasParticipant mr_sys:MarsOrbiter
+		event:hasParticipant mr_sys:MarsLander
+		test:hasTestCondition Terrain
+		test:hasTestCondition Atmosphere
+		test:hasTestCondition MinimumHours
+		req:verifies Requirement_MBTSA
+	]
+	
+	instance Rover_ReliabilityDemo2_Procedure : test:TestProcedure [
+		info:prescribes Rover_ReliabilityDemo2
+	]
+	
+	instance Rover_ReliabilityDemo2_Plan : agent:Plan [
+		foundation:contains Rover_ReliabilityDemo2_Procedure
+		agent:hasPlannedTemporalRegion Rover_ReliabilityDemo2_TimePeriod
+		info:prescribes Rover_ReliabilityDemo2
+	]
+	
+	instance Rover_ReliabilityDemo2_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	instance Rover_ReliabilityDemo2 : test:Test [
+		test:hasTestSubject mr_sys:Rover_System
+		event:hasParticipant mr_sys:MarsOrbiter
+		event:hasParticipant mr_sys:MarsLander
+		test:hasTestCondition Terrain
+		test:hasTestCondition Atmosphere
+		test:hasTestCondition MinimumHours
+		req:verifies Requirement_MBTSA
+		event:occursOn Rover_ReliabilityDemo2_TimePeriod
+	]
+	
+	instance MBTSA_Doc : info:Document [
+		foundation:hasName "Reliability Test Results"
+	]
+	
+	instance Rover_System_Reliability : foundation:Quality [
+		foundation:specificallyDependentOn mr_sys:Rover_System
+	]
+	
+	instance Requirement_MBTSA : req:PerformanceRequirement [
+		req:hasRequirementText "Mean time between failures shall be greater than 10000 hours with a confidence value of 99%"
+		info:prescribes Rover_System_Reliability
+		foundation:genericallyDependentOn MBTSA_Doc
+	]
+	
+	instance ReliabilityCA1 : temp_dec:RecommendedCorrectiveAction [
+		foundation:isContainedIn mr_tpr:Rover_IDSK
+		info:prescribes mr_tpr:Rover_TEProgram
+	]
+	
+	instance ReliabilityDemo1_Result : test:TestResult [
+		info:describes Rover_ReliabilityDemo1
+		foundation:contains ReliabilityCA1
+	]
+	
+	instance PhaseCReliabilityDecision : temp_dec:KeyDecision [
+		info:prescribes PhaseCReliability
+		temp_dec:isInformedBy ReliabilityDemo1_Result
+	]
+	
+	instance ReliabilityDoc : info:Document [
+		foundation:hasName "Reliability Test Procedures"
+		foundation:hasGenericDependent ReliabilityModel_Initial
+		foundation:hasGenericDependent ReliabilityModel_Final
+	]
+	
+	instance PhaseCReliability : temp_dec:Milestone
+	
+	instance ReliabilityModel_Initial : test:TestProcedure [
+		info:prescribes Rover_ReliabilityDemo1
+	]
+	
+	instance ReliabilityModel_Final : test:TestProcedure [
+		info:prescribes Rover_ReliabilityDemo2
+	]
+	
+	instance Rover_DTEProgram1_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-01-01T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-01-01T12:00:00"^^xsd:dateTime
+	]
+	
+	instance Rover_DTEProgram2_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-01-02T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-01-02T12:00:00"^^xsd:dateTime
+	]
+	
+	ref instance mr_tpr:Rover_DTEProgram_Phase1 [
+		event:occursOn Rover_DTEProgram1_TimePeriod
+	]
+	
+	instance Rover_DTE1Objective : temp_tpp:TestProgramObjective [
+		info:prescribes mr_tpr:Rover_DTEProgram_Phase1
+		req:hasObjectiveText "The purpose of the DTE 1 Program is to..."
+	]
+	
+	ref instance mr_tpr:Rover_DTEProgram_Phase2 [
+		event:occursOn Rover_DTEProgram2_TimePeriod
+	]
+	
+	instance DTE2Objective : temp_tpp:TestProgramObjective [
+		info:prescribes mr_tpr:Rover_DTEProgram_Phase2
+		req:hasObjectiveText "The purpose of the DTE 2 Program is to..."
+	]
+	
+	instance VibrationTestSite : foundation:Site
+	instance CommsTestSite : foundation:Site
+	
+	ref instance VibrationTest [
+		event:occursAt VibrationTestSite
+	]
+	
+	ref instance CommsTest [
+		event:occursAt CommsTestSite
+	]
+
+	ref instance VibrationTest : test:Test [
+		req:verifies Requirement_Vibration
+		test:hasTestSubject mr_sys:Rover_System
+	]
+	
+	ref instance CommsTest : test:Test [
+		req:verifies Requirement_Comms
+		test:hasTestSubject mr_sys:Rover_Comms
+	]
+	
+	instance VibrationTestPlan : test:TestProcedure [
+		foundation:genericallyDependentOn DevTestMemo
+		info:prescribes VibrationTest
+	]
+	
+	instance CommsTestPlan : test:TestProcedure [
+		foundation:genericallyDependentOn DevTestMemo
+		info:prescribes CommsTest
+	]
+	
+	instance DevTestMemo : info:Document [
+		foundation:hasName "Development Test Procedures"
+	]
+	
+	instance ReqDoc1 : info:Document [
+		foundation:hasName "System Requirements Document"
+	]
+	
+	instance Requirement_Vibration : req:Requirement [
+		req:hasRequirementText "The Rover shall withstand vibration of at least..."
+		foundation:genericallyDependentOn ReqDoc1
+		info:prescribes mr_sys:Rover_System
+	]
+	
+	instance Requirement_Comms : req:Requirement [
+		req:hasRequirementText "The Rover shall be capable of transmitting 100Mb/s to the Mars Orbiter..."
+		foundation:genericallyDependentOn ReqDoc1
+		info:prescribes mr_sys:Rover_System
+	]
+		
+	instance Develop_Rover_TEMP : temp_tpt:DevelopTEMP [
+		sa:canOutput mr_tpr:Rover_TEMP
+		foundation:specificallyDependentOn mr_org:Rover_WIPT_Role
+		event:manifestsIn Rover_TEMP_Development
+	]
+	
+	instance Rover_TEMP_Development : temp_tpt:TEMPDevelopment [
+		agent:hasOutput mr_tpr:Rover_TEMP
+	]
+	
+	instance LUT : temp_tps:LiveFireTEProgram
+	
+	instance LUT_EntranceCriteria : temp_tps:EntranceCriteria [
+		info:prescribes LUT		
+	]
+	
+	instance Rover_Efficiency : meas:Quantity [
+		foundation:specificallyDependentOn mr_sys:Rover_System
+		meas:hasDimension dim:Efficiency
+	]
+	
+	instance Rover_Efficiency_Measurement : meas:SimpleMeasurement [
+		meas:hasUnit units:percentage
+		meas:measurementOf Rover_Efficiency
+	]
+	
+	instance MOE : meas:SimpleMeasurement [
+		foundation:genericallyDependentOn MOE_Document
+		meas:measurementOf mr_sys:Rover_Performance
+		meas:hasUnit units:percentage
+	]
+	
+	instance MOE_Document : info:Document [
+		req:satisfies LUT_EntranceCriteria
+	]
+	
+	instance EngineeringTest1Objective : test:TestObjective [
+		info:prescribes EngineeringTest1
+		req:hasObjectiveText "The purpose of the Engineering Test 1 is to..."
+	]
+	
+	instance EngineeringTest1Procedure : test:TestProcedure [
+		info:prescribes EngineeringTest1
+		foundation:contains EngineeringTest1Objective
+	]
+	
+	instance EngineeringTest1 : test:Test [
+		event:occursAt EngineeringTest1Site
+		test:hasTestCondition EngineeringTest1Condition
+		test:hasTestSubject mr_sys:Rover_System
+	]
+	
+	instance EngineeringTest1Site : test:TestSite
+	
+	instance EngineeringTest1Condition : test:TestCondition
+		
+	instance Representative_Rover_Reliability : foundation:Quality [
+		foundation:specificallyDependentOn Rover_Prototype
+	]
+	
+	//instance Representative_Rover_Traversal : foundation:Function [
+	//	foundation:specificallyDependentOn Rover_Prototype
+	//]
+	
+	ref instance mr_org:Repository1 [
+		dm:isDigitalLocationOf Dev_TIR
+		dm:isDigitalLocationOf Op_TIR
+	]
+	
+}

@@ -1,0 +1,5 @@
+description bundle <http://uaontologies.com/ALEO_Student_Project/bundle#> as ^bundle {
+	
+	includes <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#>
+	
+}

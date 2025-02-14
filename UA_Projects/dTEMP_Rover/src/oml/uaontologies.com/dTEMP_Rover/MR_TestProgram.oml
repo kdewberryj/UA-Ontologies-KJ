@@ -1,0 +1,398 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture Part 1 of the example TEMP"
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/dTEMP_Rover/MR_TestProgram#> as mr_tpr {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    //uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    //uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	//uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	//uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    
+    uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#> as temp_tps
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#> as temp_tpf
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#> as temp_resp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> as temp_tpt
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_dec
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as temp_teo
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#> as temp_ear
+    
+    // Extends other descriptions
+    
+    //extends <http://uaontologies.com/UA_Libraries/Dimensions#> as dim
+    extends <http://uaontologies.com/dTEMP_Rover/MR_Organization#> as mr_org
+    extends <http://uaontologies.com/dTEMP_Rover/MR_Project#> as mr_pro
+    //extends <http://uaontologies.com/dTEMP_Rover/MR_Requirements#> as mr_req
+    extends <http://uaontologies.com/dTEMP_Rover/MR_System#> as mr_sys
+    extends <http://uaontologies.com/dTEMP_Rover/MR_Tests#> as mr_tes
+    extends <http://uaontologies.com/dTEMP_Rover/MR_TestResults#> as mr_ter
+    
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	
+	/// Test Program Structure
+		
+	instance Rover_TEOversightList : temp_resp:TEOversightList [
+		foundation:contains Rover_OTEProgramDefinition
+		info:describes Rover_TEProgram
+	]
+	
+	instance Rover_OTEProgramDefinition : temp_teo:TEProgramDefinition [
+		info:describes Rover_OTEProgram
+	]
+	
+	instance Rover_LFTEProgramDefinition : temp_teo:TEProgramDefinition [
+		info:describes Rover_LFTEProgram
+	]
+	
+	instance Rover_TEProgram : temp_tpp:IntegratedTestProgram [
+		foundation:isContainedIn mr_pro:Rover_Program
+		foundation:contains Rover_DTEProgram_Phase1
+		foundation:contains Rover_DTEProgram_Phase2
+		foundation:contains Rover_OTEProgram
+		foundation:contains Rover_LFTEProgram
+	]
+	
+	instance Rover_DTEProgram_Phase1 : temp_tps:DevelopmentalTEProgram [
+		foundation:hasName "Rover DTE Phase 1"
+		temp_tpp:comprisesTest mr_tes:CapstoneDevelopmentTest
+	]
+	
+	instance Rover_DTEProgram_Phase2 : temp_tps:DevelopmentalTEProgram [
+		foundation:hasName "Rover DTE Phase 2"
+	]
+	
+	instance Rover_LFTEProgram : temp_tps:LiveFireTEProgram [
+		foundation:hasName "Rover LFTE Phase"
+	]
+	
+	instance Rover_OTEProgram : temp_tps:OperationalTEProgram [
+		foundation:contains Rover_IOTEProgram_Phase1
+		foundation:contains Rover_IOTEProgram_Phase2
+		foundation:contains Rover_OTEProgram_Phase1
+	]
+	
+	instance Rover_IOTEProgram_Phase1 : temp_tps:InitialOperationalTEProgram
+	
+	instance Rover_IOTEProgram_Phase2 : temp_tps:InitialOperationalTEProgram
+	
+	instance Rover_OTEProgram_Phase1 : temp_tps:OperationalTEProgram
+	
+	
+	/// Key Documentation
+	
+	instance Rover_TEMP_Document : info:Document [
+		foundation:hasName "Rover Document TEMP"
+		foundation:hasGenericDependent Rover_TEMP
+	]
+	
+	instance Rover_TEMP : temp_tpt:TEMP [
+		foundation:hasName"Rover TEMP"
+		temp_dec:informs FRPDecision
+		info:prescribes Rover_TEProgram
+	]
+	
+	instance Rover_IDSK : temp_tpt:IDSK [
+		foundation:hasName"Rover IDSK"
+		foundation:isContainedIn Rover_TEMP
+		foundation:contains RecommendedCorrectiveAction1
+		foundation:contains RecommendedCorrectiveAction2
+		info:prescribes Rover_TEProgram
+	]
+	
+	instance TEMPD1 : info:Document [
+		foundation:hasName "TEMP Review Procedure"
+	]
+	
+	instance Rover_WIPT_Charter : info:Document [
+		foundation:hasName"Rover WIPT Charter"
+		foundation:hasGenericDependent mr_org:Rover_WIPT_Info
+	]
+
+	instance CPD1 : info:Document [
+		foundation:hasName "Capability Production Document"
+		prov:generatedAt "2023-06-01T12:00:00"^^xsd:dateTime
+		prov:approvedAt "2023-06-03T15:30:00"^^xsd:dateTime
+	]
+	
+	instance Rover_ITS : temp_tpt:IntegratedTestSchedule [
+		foundation:hasName"Rover Integrated Test Schedule"
+		temp_tpt:schedules Rover_TEProgram
+	]
+	
+	instance Document_MATDEV_OTRS : info:Document [
+		foundation:hasName "Operational Test Readiness Report"
+	]
+	
+	instance TD1 : info:Document [
+		foundation:hasName "Threat Description Document"
+		foundation:hasGenericDependent RadiationThreatDescription
+		foundation:hasGenericDependent DebrisThreatDescription
+	]
+	
+	instance RadiationThreatDescription : info:DescriptiveInformationEntity [
+		foundation:hasName "Radiation Threat Description"
+		info:describes mr_sys:LocalRadiation
+	]
+	
+	instance DebrisThreatDescription : info:DescriptiveInformationEntity [
+		foundation:hasName "Debris Threat Description"
+		info:describes mr_sys:LocalDebris
+	]
+		
+	
+	
+		
+	
+	/// Key Decision Points
+	
+	instance FRPDecisionReview : temp_dec:KeyDecisionPoint
+	
+	instance FRPDecision : temp_dec:KeyDecision [
+		foundation:hasName "FRP Decision"
+		info:prescribes FRPDecisionReview
+	]
+	
+	instance FRPDecisionReview_Procedure : agent:Procedure [
+		foundation:hasName "FRP Decision Review Procedure"
+		info:prescribes FRPDecisionReview
+	]
+	
+	instance FRPDecisionReview_Plan : agent:Plan [
+		foundation:hasName "FRP Decision Review Plan"
+		info:prescribes FRPDecisionReview
+		foundation:contains FRPDecisionReview_Procedure
+		agent:hasPlannedTemporalRegion FRPDecisionReview_TimePeriod
+	]
+	
+	instance FRPDecisionReview_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-07-01T10:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-07-01T17:00:00"^^xsd:dateTime
+	]
+	
+	instance Rover_IOTE1 : temp_tps:InitialOperationalTEProgram [
+		event:occursOn Rover_IOTE1_TimePeriod
+	]
+	
+	instance Rover_IOTE1_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2022-01-01T09:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2022-03-01T17:00:00"^^xsd:dateTime
+	]
+	
+	instance PhaseC : temp_dec:Milestone
+	
+	instance MakePhaseCDecision : foundation:Function [
+		foundation:specificallyDependentOn mr_org:Rover_MDA
+		event:manifestsIn PhaseCDecisionMade
+	]
+	
+	instance PhaseCDecisionMade : sa:FunctionOccurrence
+		
+	instance IOTE2_Criteria : temp_tps:EntranceCriteria [
+		info:prescribes mr_tpr:Rover_OTEProgram_Phase1
+	]
+	
+	instance PhaseCDecision : temp_dec:KeyDecision [
+		info:prescribes mr_tpr:PhaseC
+		temp_dec:isInformedBy mr_ter:TorqueTestData
+		temp_dec:isInformedBy mr_ter:PayloadTestData
+	]
+	
+	ref instance mr_tpr:PhaseC [
+		event:occursOn PhaseC_TemporalRegion
+	]
+	
+	instance PhaseC_TemporalRegion : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-04-20T12:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-04-25T12:00:00"^^xsd:dateTime
+	]
+	
+	instance ArchitectureSelection : temp_dec:Milestone [
+		event:occursOn ArchitectureSelection_TimePeriod
+	]
+	
+	instance ArchitectureSelection_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-06-01T16:00:00"^^xsd:dateTime
+		foundation:hasEndInstant "2023-06-07T10:00:00"^^xsd:dateTime
+	]
+	
+	instance MakeArchitectureSelectionDecision : foundation:Function [
+		foundation:specificallyDependentOn mr_org:Rover_MDA
+		event:manifestsIn ArchitectureSelectionDecisionMade
+	]
+	
+	instance ArchitectureSelectionDecisionMade : sa:FunctionOccurrence
+	
+	instance ArchitectureSelectionDecision : temp_dec:KeyDecision [
+		info:prescribes ArchitectureSelection
+	]
+	
+	instance FullRateProductionDecision : temp_dec:KeyDecision [
+		info:prescribes FullRateProductionDecisionPoint
+	]
+	
+	instance FullRateProductionDecisionPoint : temp_dec:KeyDecisionPoint [
+		event:occursOn FullRateProductionDecision_TimePeriod
+	]
+	
+	instance FullRateProductionDecision_TimePeriod : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-08-01T12:00:00"^^xsd:dateTime
+	]
+	
+	instance Rover_ProgramObjective : temp_tpp:TestProgramObjective [
+		info:prescribes mr_pro:Rover_Program
+		req:hasObjectiveText "Acquire a Rover from JPL that satisfies the user requirements"
+	]
+		
+		
+	/// Framework Approval
+	
+	instance Approve_Rover_OTEFramework : temp_resp:ApproveOTEFramework [
+		foundation:specificallyDependentOn DOTE
+		event:manifestsIn Rover_IOTE_Phase1_FrameworkApproval
+		event:manifestsIn Rover_IOTE_Phase2_FrameworkApproval
+		event:manifestsIn Rover_OTE_Phase1_FrameworkApproval
+	]
+	
+	instance Rover_IOTE_Phase1_FrameworkApproval : temp_resp:OTEFrameworkApproval [
+		agent:hasInput Rover_IOTE_Phase1_Framework
+		agent:hasOutput Rover_IOTE_Phase1_Framework
+	]
+	
+	instance Rover_IOTE_Phase2_FrameworkApproval : temp_resp:OTEFrameworkApproval [
+		agent:hasInput Rover_IOTE_Phase2_Framework
+		agent:hasOutput Rover_IOTE_Phase2_Framework
+	]
+	
+	instance Rover_OTE_Phase1_FrameworkApproval : temp_resp:OTEFrameworkApproval [
+		agent:hasInput Rover_OTE_Phase1_Framework
+		agent:hasOutput Rover_OTE_Phase1_Framework
+	]
+	
+	instance Rover_IOTE_Phase1_Framework : temp_tpf:OperationalEvaluationFramework [
+		info:prescribes Rover_IOTEProgram_Phase1
+		foundation:isContainedIn Rover_TEMP
+	]
+	
+	instance Rover_IOTE_Phase2_Framework : temp_tpf:OperationalEvaluationFramework [
+		info:prescribes Rover_IOTEProgram_Phase2
+		foundation:isContainedIn Rover_TEMP
+	]
+	
+	instance Rover_OTE_Phase1_Framework : temp_tpf:OperationalEvaluationFramework [
+		info:prescribes Rover_OTEProgram
+		foundation:isContainedIn Rover_TEMP
+	]
+	
+	instance Rover_OTE_Objective : temp_tpp:TestProgramObjective [
+		info:prescribes Rover_OTEProgram
+		req:hasObjectiveText "Evaluate the Mission Capability"
+	]
+	
+	
+	// Organization Responsibilities
+	
+	ref instance mr_org:JPL [
+		temp_tpp:undertakes Rover_DTEProgram_Phase1
+		temp_tpp:undertakes Rover_DTEProgram_Phase2
+	]
+	
+	ref instance mr_org:NASA [
+		temp_tpp:undertakes Rover_IOTEProgram_Phase1
+		temp_tpp:undertakes Rover_IOTEProgram_Phase2
+		temp_tpp:undertakes Rover_OTEProgram
+	]
+	
+	instance Develop_Rover_ITS : temp_tpt:DevelopITS [
+		sa:canOutput Rover_ITS
+		foundation:specificallyDependentOn mr_org:Rover_WIPT_Role
+	]
+	
+	
+	/// Reporting Systems
+	
+	instance DeficiencyReportingSystem : sw:Software [
+		dm:supportsRepository mr_org:Repository1
+	]
+	
+	instance CorrectiveActionDatabase : info:Model
+	
+	instance RecommendedCorrectiveAction1 : temp_dec:RecommendedCorrectiveAction [
+		foundation:hasName "RCA 1"
+		foundation:genericallyDependentOn CorrectiveActionDatabase
+		info:prescribes Rover_TEProgram
+	]
+	
+	instance RecommendedCorrectiveAction2 : temp_dec:RecommendedCorrectiveAction [
+		foundation:hasName "RCA 2"
+		foundation:genericallyDependentOn CorrectiveActionDatabase
+		info:prescribes Rover_TEProgram
+	]
+		
+	instance TEMPReviewProcedure : info:PrescriptiveInformationEntity [
+		foundation:hasName "TEMP Review Procedure"
+		foundation:genericallyDependentOn TEMPD1
+		info:prescribes Rover_TEMP
+	]
+	
+	
+	/// Assigning Roles to Personnel
+	
+	instance DOTE : temp_org:DOTE [
+		temp_teo:managesTEOL Rover_TEOversightList
+	]
+	
+	ref instance mr_org:Rover_CDT : temp_tpt:ChiefDevelopmentalTester [
+		temp_tpt:chairsWIPT mr_org:Rover_WIPT_Role
+		temp_tpt:isDesignatedBy mr_org:PdM
+	]
+	
+	ref instance mr_org:PdM : temp_tps:ProgramManager [
+		temp_tps:manages Rover_DTEProgram_Phase1
+		temp_tps:manages Rover_DTEProgram_Phase2
+	]
+	
+	instance Produce_MATDEV_OTRS : foundation:Function [
+		sa:canOutput MATDEV_OTRS
+		foundation:specificallyDependentOn mr_org:MaterialDeveloper
+	]
+	
+	instance MATDEV_OTRS : info:DescriptiveInformationEntity [
+		foundation:hasName "Material Developer Spec"
+		info:describes Rover_TEProgram
+		foundation:genericallyDependentOn Document_MATDEV_OTRS
+	]
+	
+	
+
+	
+	}

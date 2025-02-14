@@ -1,0 +1,349 @@
+description <http://uaprojects.com/CubesatOrbit/AriSAT#> as tag1 {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+    
+    // Use relevant vocabularies
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	//uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+	uses <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#> as orb
+    
+    // Extends other descriptions
+    
+    extends <http://uaontologies.com/UA_Libraries/Dimensions#> as dim
+    extends <http://uaontologies.com/UA_Libraries/Units#> as units
+    extends <http://uaontologies.com/UA_Libraries/SoftwareTools#> as swt
+    
+    ////////////////////////////////////////////////////////////////////////////////////
+    
+    // Requirements (from Jama)
+    
+     instance req1 : req:Requirement [
+		foundation:hasID "AriSAT-SYSRQ-1"
+		foundation:hasName "System Mass Requirement"
+		foundation:hasNaturalLanguageDescription "The system shall have a mass lower than 20 kg"
+		sw:hasEntitySource swt:Jama
+		info:prescribes AriSAT
+	]
+    
+    instance req2 : req:Requirement [
+		foundation:hasID "AriSAT-SYSRQ-2"
+		foundation:hasName "Payload Requirement"
+		foundation:hasNaturalLanguageDescription "The system shall measure Earth's gravitational field strength continuously"
+		sw:hasEntitySource swt:Jama
+		info:prescribes AriSAT
+	]
+	
+	instance req3 : req:Requirement [
+		foundation:hasID "AriSAT-SYSRQ-3"
+		foundation:hasName "Communications Requirement"
+		foundation:hasNaturalLanguageDescription "The system shall provide Earth's gravitational field strength's measurements to the Ground Station"
+		sw:hasEntitySource swt:Jama
+		info:prescribes AriSAT
+	]
+	
+	instance req4 : req:Requirement [
+		foundation:hasID "AriSAT-SYSRQ-4"
+		foundation:hasName "Accuracy Requirement"
+		foundation:hasNaturalLanguageDescription "The system shall measure Earth's gravitational field strength with XYZ accuracy"
+		sw:hasEntitySource swt:Jama
+		info:prescribes AriSAT
+	]
+	
+	
+	
+	// System and Subsystems (Duro)
+	
+	instance AriSAT : sa:System [
+		foundation:hasID "999-00055"
+		foundation:hasName "AriSAT"
+		foundation:hasNaturalLanguageDescription "University of Arizona Cubesat"
+		foundation:contains AriSAT_Power
+		foundation:contains AriSAT_Comms
+		foundation:contains AriSAT_Payload
+		sw:hasEntitySource swt:Duro
+	]
+	
+	instance AriSAT_Status : foundation:Quality [
+		foundation:hasNaturalLanguageDescription "DESIGN"
+		foundation:specificallyDependentOn AriSAT
+		sw:hasEntitySource swt:Duro
+	]
+	
+	instance AriSAT_Power : sa:System [
+		foundation:hasID "991-00010"
+		foundation:hasName "AriSAT Power"
+		foundation:hasNaturalLanguageDescription "Power subsystem for University of Arizona Cubesat"
+		foundation:contains AriSAT_Power_SAA
+		foundation:contains AriSAT_Power_Battery
+		sw:hasEntitySource swt:Duro
+	]
+	
+	instance AriSAT_Power_SAA : sa:System [
+		foundation:hasID "991-00012"
+		foundation:hasName "AriSAT Solar Array Assembly"
+		sw:hasEntitySource swt:Duro
+	]
+	
+	instance AriSAT_Power_Battery : sa:System [
+		foundation:hasID "211-00003"
+		foundation:hasName "AriSAT Battery"
+		req:satisfies req2
+		sw:hasEntitySource swt:Duro
+	]
+	
+	instance AriSAT_Power_Battery_Capacity : meas:Quantity [
+		foundation:specificallyDependentOn AriSAT_Power_Battery
+		meas:hasDimension dim:Capacity
+		sw:hasEntitySource swt:Duro
+	]
+	
+	instance AriSAT_Power_Battery_Capacity_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf AriSAT_Power_Battery_Capacity
+		meas:hasUnit units:Wh
+		meas:hasValue "10"^^rdfs:Literal
+		sw:hasEntitySource swt:Duro
+	]
+		
+	instance AriSAT_Power_Status : foundation:Quality [
+		foundation:hasNaturalLanguageDescription "DESIGN"
+		foundation:specificallyDependentOn AriSAT_Power
+		sw:hasEntitySource swt:Duro
+	]
+	     
+    instance AriSAT_Comms : sa:System [
+		foundation:hasID "921-00009"
+		foundation:hasName "AriSAT Communications"
+		foundation:hasNaturalLanguageDescription "Communications subsystem for the University of Arizona Cubesat"
+		sw:hasEntitySource swt:Duro
+		req:satisfies req3
+	]
+	
+	instance AriSAT_Comms_Status : foundation:Quality [
+		foundation:hasNaturalLanguageDescription "DESIGN"
+		foundation:specificallyDependentOn AriSAT_Comms
+		sw:hasEntitySource swt:Duro
+	]
+    
+    instance AriSAT_Payload : sa:System [
+		foundation:hasID "910-00011"
+		foundation:hasName "AriSAT Payload"
+		foundation:hasNaturalLanguageDescription "Payload of the University of Arizona Cubesat"
+		sw:hasEntitySource swt:Duro
+		req:satisfies req4
+	]
+	
+	instance AriSAT_Payload_Status : foundation:Quality [
+		foundation:hasNaturalLanguageDescription "DESIGN"
+		foundation:specificallyDependentOn AriSAT_Payload
+		sw:hasEntitySource swt:Duro
+	]
+	
+	
+	
+	// Power draw manually added as a parameter in Violet for now (in future, this will come from another analysis).
+	
+	instance AriSAT_PowerDraw : meas:Quantity [
+		foundation:specificallyDependentOn AriSAT
+		meas:hasDimension dim:Power
+		sw:hasEntitySource swt:Violet
+	]
+	
+	instance AriSAT_PowerDraw_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf AriSAT_PowerDraw
+		meas:hasUnit units:W
+		meas:hasValue "12"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+        
+    
+    
+    // Mission and Orbit (defined in Violet)
+    	
+	instance AriSAT_Mission : orb:SpaceMission [
+		mission:hasMissionParticipant AriSAT
+		orb:hasSpaceFlightPhase AriSAT_Orbit
+		sw:hasEntitySource swt:Violet
+	]
+	
+	instance AriSAT_Orbit : orb:Orbit [
+		event:hasParticipant AriSAT
+		event:occursAt AriSAT_OrbitalPath
+		event:occursOn AriSAT_OrbitTemporalRegion
+		sw:hasEntitySource swt:Violet
+	]
+	
+	instance AriSAT_OrbitTemporalRegion : foundation:TemporalRegion [
+		foundation:hasBeginInstant "2023-01-01T12:00:00"^^xsd:dateTime
+		sw:hasEntitySource swt:Violet
+	]
+	
+	instance AriSAT_OrbitTemporalRegion_Duration : meas:Quantity [
+		foundation:specificallyDependentOn AriSAT_Orbit
+		meas:hasDimension dim:Time
+	]
+	
+	instance AriSAT_OrbitTemporalRegion_Duration_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf AriSAT_OrbitTemporalRegion_Duration
+		meas:hasUnit units:day
+		meas:hasValue "30"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+	
+	instance AriSAT_OrbitalPath : orb:OrbitalPath [
+		foundation:hasSpecificDependent AriSAT_OrbitalPath_SMA
+		foundation:hasSpecificDependent AriSAT_OrbitalPath_ECC
+		foundation:hasSpecificDependent AriSAT_OrbitalPath_INC
+		foundation:hasSpecificDependent AriSAT_OrbitalPath_AOP
+		foundation:hasSpecificDependent AriSAT_OrbitalPath_LAN
+		foundation:hasSpecificDependent AriSAT_OrbitalPath_TA
+		sw:hasEntitySource swt:Violet
+	]
+        
+    instance AriSAT_OrbitalPath_SMA : orb:Orbital_SMA [
+    	meas:hasDimension dim:Length
+    	sw:hasEntitySource swt:Violet
+    ]
+    
+    instance AriSAT_OrbitalPath_SMA_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf AriSAT_OrbitalPath_SMA
+		meas:hasUnit units:km
+		meas:hasValue "7000"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+    
+    instance AriSAT_OrbitalPath_ECC : orb:Orbital_ECC [
+    	sw:hasEntitySource swt:Violet
+    	meas:hasDimension dim:Dimensionless
+    ]
+    
+    instance AriSAT_OrbitalPath_ECC_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf AriSAT_OrbitalPath_ECC
+		meas:hasValue "0"^^rdfs:Literal
+		meas:hasUnit units:na
+		sw:hasEntitySource swt:Violet
+	]
+    
+    instance AriSAT_OrbitalPath_INC : orb:Orbital_INC [
+    	meas:hasDimension dim:Angle
+    	sw:hasEntitySource swt:Violet
+    ]
+    
+    instance AriSAT_OrbitalPath_INC_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf AriSAT_OrbitalPath_INC
+		meas:hasUnit units:degrees
+		meas:hasValue "60"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+    
+    instance AriSAT_OrbitalPath_AOP : orb:Orbital_AOP [
+    	meas:hasDimension dim:Angle
+    	sw:hasEntitySource swt:Violet
+    ]
+    
+    instance AriSAT_OrbitalPath_AOP_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf AriSAT_OrbitalPath_AOP
+		meas:hasUnit units:degrees
+		meas:hasValue "0"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+    
+    instance AriSAT_OrbitalPath_LAN : orb:Orbital_LAN [
+    	meas:hasDimension dim:Angle
+    	sw:hasEntitySource swt:Violet
+    ]
+    
+    instance AriSAT_OrbitalPath_LAN_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf AriSAT_OrbitalPath_LAN
+		meas:hasUnit units:degrees
+		meas:hasValue "10"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+    
+    instance AriSAT_OrbitalPath_TA : orb:Orbital_TA [
+    	meas:hasDimension dim:Angle
+    	sw:hasEntitySource swt:Violet
+    ]
+    
+    instance AriSAT_OrbitalPath_TA_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf AriSAT_OrbitalPath_TA
+		meas:hasUnit units:degrees
+		meas:hasValue "190"^^rdfs:Literal
+		sw:hasEntitySource swt:Violet
+	]
+	
+	
+    
+    // Analysis Results (from Sedaro and Jupyter)
+    
+    instance EclipseAnalysis : ms:Analysis [
+    	sw:hasEntitySource swt:JupyterLab
+    	agent:hasInput AriSAT_Power_Battery_Capacity_Measurement
+    	agent:hasInput AriSAT_PowerDraw_Measurement
+    	agent:hasInput AriSAT_OrbitalPath_SMA_Measurement
+    	agent:hasInput AriSAT_OrbitalPath_ECC_Measurement
+    	agent:hasInput AriSAT_OrbitalPath_INC_Measurement
+    	agent:hasInput AriSAT_OrbitalPath_LAN_Measurement
+    	agent:hasInput AriSAT_OrbitalPath_AOP_Measurement
+    	agent:hasInput AriSAT_OrbitalPath_TA_Measurement
+    	agent:hasOutput AriSAT_Power_Battery_Life_Measurement 	
+    	agent:hasOutput AriSAT_OrbitalPath_MaxEclipse_Measurement
+    ]
+    
+    instance AriSAT_OrbitalPath_MaxEclipse : meas:Quantity [
+    	foundation:specificallyDependentOn AriSAT_OrbitalPath
+    	meas:hasDimension dim:Time
+    	sw:hasEntitySource swt:JupyterLab
+    ]
+    
+    // note that this is the maximum duration identified from the list of eclipses from Sedaro
+    instance AriSAT_OrbitalPath_MaxEclipse_Measurement : meas:SimpleMeasurement [
+    	meas:measurementOf AriSAT_OrbitalPath_MaxEclipse
+    	meas:hasUnit units:second
+    	meas:hasValue "2130"^^rdfs:Literal
+    	sw:hasEntitySource swt:JupyterLab
+    ]
+    
+    instance AriSAT_Power_Battery_Life : meas:Quantity [
+    	foundation:specificallyDependentOn AriSAT_Power_Battery
+    	meas:hasDimension dim:Time
+    	sw:hasEntitySource swt:JupyterLab
+    ]
+    
+    // note that this value is calculated from 10Wh capacity for a 12W power draw
+    instance AriSAT_Power_Battery_Life_Measurement : meas:SimpleMeasurement [
+    	meas:measurementOf AriSAT_Power_Battery_Life
+    	meas:hasUnit units:second
+    	meas:hasValue "3000"^^rdfs:Literal
+    	sw:hasEntitySource swt:JupyterLab
+    ]
+    
+    // this requirement has been defined earlier - the 'ref' prefix means we are just adding to this previous definition
+    // this value is set to true because I assume the true/false criteria is defined in the Jupyter Lab analysis
+    // i.e., if 3000 > 2130, then set power requirement verification status to true   
+    ref instance req2 [
+    	req:hasVerificationStatus "true"^^xsd:string
+    	req:isVerifiedBy EclipseAnalysis
+    ]	
+	
+}

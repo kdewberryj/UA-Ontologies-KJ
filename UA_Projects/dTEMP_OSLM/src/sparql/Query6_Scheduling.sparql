@@ -1,0 +1,32 @@
+PREFIX rdfs:		<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dc:			<http://purl.org/dc/elements/1.1/>
+PREFIX xsd:			<http://www.w3.org/2001/XMLSchema#>
+
+PREFIX foundation:	<http://uaontologies.com/UA_Foundation/UA_Foundation#>
+PREFIX event:		<http://uaontologies.com/UA_Core/UA_Event#>
+PREFIX req:			<http://uaontologies.com/UA_Domain/UA_Requirements#>
+PREFIX test:		<http://uaontologies.com/UA_Domain/UA_Test#>
+PREFIX temp_tpp:	<http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#>
+
+
+SELECT DISTINCT ?ITPName ?DTPName ?VM ?VMName
+(GROUP_CONCAT(DISTINCT ?TestSubject; separator=", ") AS ?TestSubjects) ?Site ?Start ?End
+
+WHERE {
+    ?ITP a temp_tpp:IntegratedTestProgram .
+    ?ITP foundation:hasName ?ITPName .
+    ?ITP foundation:contains ?DTP .
+    ?DTP foundation:hasName ?DTPName .
+    ?DTP foundation:contains ?VM .
+    ?VM a req:VerificationMethod .
+    ?VM foundation:hasName ?VMName .
+    OPTIONAL {
+    	?VM event:occursAt ?Site .
+    }
+    ?VM event:occursOn ?TimePeriod .
+    ?VM test:hasTestSubject ?TestSubject .
+    ?TimePeriod foundation:hasBeginInstant ?Start .
+    ?TimePeriod foundation:hasEndInstant ?End .
+}
+GROUP BY ?ITPName ?DTPName ?VM ?VMName ?Site ?Start ?End
+ORDER BY ASC (?Start)

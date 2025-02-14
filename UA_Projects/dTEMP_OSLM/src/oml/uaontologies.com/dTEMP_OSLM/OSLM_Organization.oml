@@ -1,0 +1,185 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture..."
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/dTEMP_OSLM/OSLM_Organization#> as OSLM_Organization {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    //uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    //uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    //uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    //uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    //uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	//uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	//uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	//uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    
+    uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#> as temp_tps
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#> as temp_tpf
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#> as temp_resp
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> as temp_tpt
+	uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_dec
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as temp_teo
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#> as temp_ear
+    
+    // Extends other descriptions
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_Metadata#> as oslm_met
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#> as oslm_tps
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#> as oslm_dad
+    
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	///////////////////////////////////// PROGRAMS ////////////////////////////////////
+	
+		
+	instance OSS : temp_tpp:MajorDefenceAcquisitionProgram [
+		foundation:hasName "OSS Acquisition Program"
+		foundation:contains oslm_tps:OSLM_ITP
+	]
+	
+	/////////////////////////// ORGANIZATIONS AND PERSONNEL ///////////////////////////
+	
+	instance DisruptionLab : agent:Organization [
+		foundation:hasName "Disruption Lab"
+	]
+	
+	instance VTNSI_LK_Division : agent:Organization [
+		foundation:hasName "VTNSI LK Division"
+	]
+	
+	instance OSLM_MDA : temp_org:MilestoneDecisionAuthority [
+		foundation:genericallyDependentOn VTNSI_LK_Division
+	]
+	
+	//instance OSLM_DOTE : temp_org:DOTE [
+	//	temp_resp:oversees OSS
+	//]
+	
+	instance OSLM_PM : temp_tps:ProgramManager
+	
+	instance OSLM_WIPT : temp_org:WIPT [
+		foundation:contains OSLM_LeadTestOrganization
+		foundation:contains OSLM_LeadDevelopmentalTestOrganization
+		foundation:contains OSLM_OperationalTestAgency
+		foundation:contains OSLM_MATDEV
+		foundation:contains OSLM_CDT
+		foundation:contains OSLM_CBTDEV
+		foundation:contains O1STChair
+	]
+	
+	instance OSLM_LeadTestOrganization : temp_org:LeadTestOrganization [
+		temp_tpt:isDesignatedBy OSLM_PM
+	]
+	
+	instance OSLM_LeadDevelopmentalTestOrganization : temp_org:LeadDevelopmentalTestOrganization [
+		temp_tpt:isDesignatedBy OSLM_PM
+	]
+	
+	instance OSLM_OperationalTestAgency : temp_org:OperationalTestAgency [
+		foundation:genericallyDependentOn VTNSI_LK_Division
+		temp_tpt:isDesignatedBy OSLM_PM
+	]
+	
+	instance OSLM_MATDEV : foundation:Role
+	
+	instance OSLM_CDT : temp_tpt:ChiefDevelopmentalTester [
+		temp_tpt:chairsWIPT OSLM_WIPT
+		temp_tpt:isDesignatedBy OSLM_PM
+	]
+	
+	instance Person1 : agent:Person [
+		foundation:hasName "Firstname Lastname"
+		foundation:hasGenericDependent OSLM_PM
+		foundation:hasGenericDependent OSLM_MATDEV
+		foundation:hasGenericDependent OSLM_CDT
+	]
+	
+	instance O1STChair : foundation:Role [
+		foundation:isContainedIn OSLM_MDA
+	]
+	
+	instance OSLM_CBTDEV : foundation:Role [
+		foundation:genericallyDependentOn VTNSI_LK_Division
+	]
+	
+	instance CustomerEvaluator : foundation:Role [
+		foundation:genericallyDependentOn VTNSI_LK_Division
+	]
+		
+	instance OSLM_PdM : foundation:Role
+	
+	
+	////////////////////////////////// RESPONSIBILITIES //////////////////////////////////
+	
+	instance DevelopOSLMTEMP : temp_tpt:DevelopTEMP [
+		foundation:specificallyDependentOn OSLM_WIPT
+		sa:canOutput oslm_met:OSLM_dTEMP
+	]
+	
+	instance PrepareSEP : foundation:Function [
+		foundation:specificallyDependentOn O1STChair
+		sa:canOutput SEP
+	]
+	
+	instance SEP : info:InformationArtifact
+	
+	instance PrepareOMAR : foundation:Function [
+		foundation:specificallyDependentOn VTNSI_LK_Division
+		sa:canOutput OMAR
+	]
+	
+	instance OMAR : info:InformationArtifact [
+		foundation:hasGenericDependent OMAR_Content
+	]
+	
+	instance OMAR_Content : info:DescriptiveInformationEntity [
+		info:describes oslm_tps:OSLM_OTP
+		temp_dec:informs oslm_dad:DecisionA
+	]
+	
+	instance PrepareOER : foundation:Function [
+		foundation:specificallyDependentOn VTNSI_LK_Division
+		sa:canOutput OER
+	]
+	
+	instance OER : info:InformationArtifact [
+		foundation:hasGenericDependent OER_Content
+	]
+	
+	instance OER_Content : info:DescriptiveInformationEntity [
+		info:describes oslm_tps:OSLM_OTP
+		temp_dec:informs oslm_dad:DecisionB
+	]
+	
+	instance dTEMP_Content : info:InformationEntity [
+		foundation:genericallyDependentOn oslm_met:OSLM_dTEMP
+		temp_dec:informs oslm_dad:DecisionA
+	]
+	
+	
+	
+}

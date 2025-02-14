@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/dTEMP_Rover/MR_System#"
+     xml:base="http://uaontologies.com/dTEMP_Rover/MR_System"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:mr_sys="http://uaontologies.com/dTEMP_Rover/MR_System#"
+     xmlns:UA_Mission="http://uaontologies.com/UA_Domain/UA_Mission#"
+     xmlns:UA_Foundation="http://uaontologies.com/UA_Foundation/UA_Foundation#"
+     xmlns:UA_Measurement="http://uaontologies.com/UA_Core/UA_Measurement#"
+     xmlns:UA_SystemArchitecture="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#">
+    <owl:Ontology rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Mission"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#"/>
+        <oml:prefix>mr_sys</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Description"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A description to capture Part 1 of the example TEMP</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://opencaesar.io/oml#hasSource -->
+
+
+    <owl:ObjectProperty rdf:about="http://opencaesar.io/oml#hasSource"/>
+    
+
+
+    <!-- http://opencaesar.io/oml#hasTarget -->
+
+
+    <owl:ObjectProperty rdf:about="http://opencaesar.io/oml#hasTarget"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasDimension -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Mission#hasMissionParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Mission#hasMissionParticipant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Mission#isEnvironmentOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Mission#isEnvironmentOf"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_SystemArchitecture#hasItemFlow -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#hasItemFlow"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasSpecificDependent -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasSpecificDependent"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#DetectFault -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#DetectFault">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Interface_Orbiter_Comms -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Interface_Orbiter_Comms">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Interface_Rover_Comms -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Interface_Rover_Comms">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#IsolateFault -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#IsolateFault">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#LocalDebris -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#LocalDebris">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#ObjectAggregate"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#LocalRadiation -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#LocalRadiation">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Object"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#MarsLander -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#MarsLander">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#MarsOrbiter -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#MarsOrbiter">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Interface_Orbiter_Comms"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#PrecisionCAM -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#PrecisionCAM">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasSpecificDependent rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#PrecisionCAM_Accuracy"/>
+        <UA_Foundation:hasSpecificDependent rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#PrecisionCAM_Sensitivity"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#PrecisionCAM_Accuracy -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#PrecisionCAM_Accuracy">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Length"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#PrecisionCAM_Sensitivity -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#PrecisionCAM_Sensitivity">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Length"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#RecoverFault -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#RecoverFault">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Comms -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Comms">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Comms_Connection -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Comms_Connection">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Interface_Rover_Comms"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Interface_Orbiter_Comms"/>
+        <UA_SystemArchitecture:hasItemFlow rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#TC"/>
+        <UA_SystemArchitecture:hasItemFlow rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#TM"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Environment_Nominal -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Environment_Nominal">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Mission#Environment"/>
+        <UA_Mission:isEnvironmentOf rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Mission"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#LocalDebris"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#LocalRadiation"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_FDIR -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_FDIR">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#DetectFault"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#IsolateFault"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#RecoverFault"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Mission -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Mission">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Mission#Mission"/>
+        <UA_Mission:hasMissionParticipant rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#MarsOrbiter"/>
+        <UA_Mission:hasMissionParticipant rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Mobility -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Mobility">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Performance -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Performance">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Efficiency"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_ReceiveTC -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_ReceiveTC">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Comms"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#PrecisionCAM"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Comms"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Mobility"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_TransmitTM -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_TransmitTM">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Comms"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Traversal -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Traversal">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Function"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Mobility"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#TC -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#TC">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Object"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_System#TM -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_System#TM">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Object"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

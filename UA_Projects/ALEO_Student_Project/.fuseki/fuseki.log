@@ -1,0 +1,133 @@
+[2024-03-22 19:35:26] Server     INFO  Apache Jena Fuseki 4.6.1
+[2024-03-22 19:35:26] Server     INFO  Configuration file: ../.fuseki.ttl
+[2024-03-22 19:35:26] Server     INFO  Path = /ALEO_Student_Project
+[2024-03-22 19:35:26] Server     INFO  System
+[2024-03-22 19:35:26] Server     INFO    Memory: 8.0 GiB
+[2024-03-22 19:35:26] Server     INFO    Java:   17.0.5
+[2024-03-22 19:35:26] Server     INFO    OS:     Windows 11 10.0 amd64
+[2024-03-22 19:35:26] Server     INFO    PID:    24832
+[2024-03-22 19:35:26] Server     INFO  Start Fuseki (http=3030)
+[2024-03-22 19:35:31] Fuseki     INFO  [1] GET http://localhost:3030/ALEO_Student_Project
+[2024-03-22 19:35:31] Fuseki     INFO  [1] 200 OK (27 ms)
+[2024-03-22 19:35:31] Fuseki     INFO  [2] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/ALEO_Student_Project/bundle/individuals
+[2024-03-22 19:35:31] Fuseki     INFO  [2] Body: Content-Length=63562, Content-Type=text/turtle, Charset=null => Turtle : Count=683 Triples=683 Quads=0
+[2024-03-22 19:35:31] Fuseki     INFO  [2] 201 Created (212 ms)
+[2024-03-22 19:35:31] Fuseki     INFO  [3] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Libraries/Dimensions
+[2024-03-22 19:35:31] Fuseki     INFO  [3] Body: Content-Length=5481, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=36 Triples=36 Quads=0
+[2024-03-22 19:35:31] Fuseki     INFO  [3] 201 Created (84 ms)
+[2024-03-22 19:35:31] Fuseki     INFO  [4] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/ALEO_Student_Project/bundle/classes
+[2024-03-22 19:35:31] Fuseki     INFO  [4] Body: Content-Length=50802, Content-Type=text/turtle, Charset=null => Turtle : Count=614 Triples=614 Quads=0
+[2024-03-22 19:35:31] Fuseki     INFO  [4] 201 Created (36 ms)
+[2024-03-22 19:35:31] Fuseki     INFO  [5] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Core/UA_Agent
+[2024-03-22 19:35:31] Fuseki     INFO  [5] Body: Content-Length=43007, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=413 Triples=413 Quads=0
+[2024-03-22 19:35:31] Fuseki     INFO  [5] 201 Created (49 ms)
+[2024-03-22 19:35:31] Fuseki     INFO  [6] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Domain/UA_Requirements
+[2024-03-22 19:35:31] Fuseki     INFO  [6] Body: Content-Length=28706, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=263 Triples=263 Quads=0
+[2024-03-22 19:35:31] Fuseki     INFO  [6] 201 Created (34 ms)
+[2024-03-22 19:35:31] Fuseki     INFO  [7] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Domain/UA_SystemArchitecture
+[2024-03-22 19:35:31] Fuseki     INFO  [7] Body: Content-Length=35636, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=328 Triples=328 Quads=0
+[2024-03-22 19:35:31] Fuseki     INFO  [7] 201 Created (28 ms)
+[2024-03-22 19:35:31] Fuseki     INFO  [8] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Domain/UA_ProjectManagement
+[2024-03-22 19:35:31] Fuseki     INFO  [8] Body: Content-Length=6090, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=59 Triples=59 Quads=0
+[2024-03-22 19:35:31] Fuseki     INFO  [8] 201 Created (11 ms)
+[2024-03-22 19:35:31] Fuseki     INFO  [9] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/ALEO_Student_Project/bundle
+[2024-03-22 19:35:31] Fuseki     INFO  [9] Body: Content-Length=20613, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=186 Triples=186 Quads=0
+[2024-03-22 19:35:31] Fuseki     INFO  [9] 201 Created (28 ms)
+[2024-03-22 19:35:31] Fuseki     INFO  [10] POST http://localhost:3030/ALEO_Student_Project?graph=http://purl.org/dc/elements/1.1
+[2024-03-22 19:35:31] Fuseki     INFO  [10] Body: Content-Length=3568, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=22 Triples=22 Quads=0
+[2024-03-22 19:35:31] Fuseki     INFO  [10] 201 Created (9 ms)
+[2024-03-22 19:35:31] Fuseki     INFO  [11] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/ALEO_Student_Project/bundle/properties
+[2024-03-22 19:35:31] Fuseki     INFO  [11] Body: Content-Length=33073, Content-Type=text/turtle, Charset=null => Turtle : Count=343 Triples=343 Quads=0
+[2024-03-22 19:35:31] Fuseki     INFO  [11] 201 Created (21 ms)
+[2024-03-22 19:35:31] Fuseki     INFO  [12] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project
+[2024-03-22 19:35:31] Fuseki     INFO  [12] Body: Content-Length=19602, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=137 Triples=137 Quads=0
+[2024-03-22 19:35:31] Fuseki     INFO  [12] 201 Created (19 ms)
+[2024-03-22 19:35:31] Fuseki     INFO  [13] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Core/UA_Information
+[2024-03-22 19:35:31] Fuseki     INFO  [13] Body: Content-Length=36122, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=332 Triples=332 Quads=0
+[2024-03-22 19:35:31] Fuseki     INFO  [13] 201 Created (31 ms)
+[2024-03-22 19:35:31] Fuseki     INFO  [14] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Core/UA_Event
+[2024-03-22 19:35:31] Fuseki     INFO  [14] Body: Content-Length=26194, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=241 Triples=241 Quads=0
+[2024-03-22 19:35:31] Fuseki     INFO  [14] 201 Created (22 ms)
+[2024-03-22 19:35:31] Fuseki     INFO  [15] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Core/UA_Measurement
+[2024-03-22 19:35:31] Fuseki     INFO  [15] Body: Content-Length=30028, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=282 Triples=282 Quads=0
+[2024-03-22 19:35:31] Fuseki     INFO  [15] 201 Created (22 ms)
+[2024-03-22 19:35:31] Fuseki     INFO  [16] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Foundation/UA_Foundation
+[2024-03-22 19:35:31] Fuseki     INFO  [16] Body: Content-Length=39923, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=368 Triples=368 Quads=0
+[2024-03-22 19:35:31] Fuseki     INFO  [16] 201 Created (28 ms)
+[2024-03-24 09:20:45] Fuseki     INFO  [17] GET http://localhost:3030/ALEO_Student_Project
+[2024-03-24 09:20:45] Fuseki     INFO  [17] 200 OK (246 ms)
+[2024-03-24 09:20:45] Fuseki     INFO  [18] DELETE http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Domain/UA_Requirements
+[2024-03-24 09:20:45] Fuseki     INFO  [18] 204 No Content (24 ms)
+[2024-03-24 09:20:45] Fuseki     INFO  [19] DELETE http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/ALEO_Student_Project/bundle/individuals
+[2024-03-24 09:20:45] Fuseki     INFO  [19] 204 No Content (25 ms)
+[2024-03-24 09:20:45] Fuseki     INFO  [20] DELETE http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Core/UA_Agent
+[2024-03-24 09:20:45] Fuseki     INFO  [20] 204 No Content (12 ms)
+[2024-03-24 09:20:45] Fuseki     INFO  [21] DELETE http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Libraries/Dimensions
+[2024-03-24 09:20:45] Fuseki     INFO  [21] 204 No Content (3 ms)
+[2024-03-24 09:20:45] Fuseki     INFO  [22] DELETE http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project
+[2024-03-24 09:20:45] Fuseki     INFO  [22] 204 No Content (5 ms)
+[2024-03-24 09:20:45] Fuseki     INFO  [23] DELETE http://localhost:3030/ALEO_Student_Project?graph=http://purl.org/dc/elements/1.1
+[2024-03-24 09:20:45] Fuseki     INFO  [23] 204 No Content (2 ms)
+[2024-03-24 09:20:45] Fuseki     INFO  [24] DELETE http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Core/UA_Event
+[2024-03-24 09:20:45] Fuseki     INFO  [24] 204 No Content (8 ms)
+[2024-03-24 09:20:45] Fuseki     INFO  [25] DELETE http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Core/UA_Information
+[2024-03-24 09:20:45] Fuseki     INFO  [25] 204 No Content (10 ms)
+[2024-03-24 09:20:45] Fuseki     INFO  [26] DELETE http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Domain/UA_ProjectManagement
+[2024-03-24 09:20:45] Fuseki     INFO  [26] 204 No Content (4 ms)
+[2024-03-24 09:20:45] Fuseki     INFO  [27] DELETE http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/ALEO_Student_Project/bundle/classes
+[2024-03-24 09:20:45] Fuseki     INFO  [27] 204 No Content (12 ms)
+[2024-03-24 09:20:45] Fuseki     INFO  [28] DELETE http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Core/UA_Measurement
+[2024-03-24 09:20:45] Fuseki     INFO  [28] 204 No Content (7 ms)
+[2024-03-24 09:20:45] Fuseki     INFO  [29] DELETE http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/ALEO_Student_Project/bundle
+[2024-03-24 09:20:45] Fuseki     INFO  [29] 204 No Content (4 ms)
+[2024-03-24 09:20:45] Fuseki     INFO  [30] DELETE http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/ALEO_Student_Project/bundle/properties
+[2024-03-24 09:20:45] Fuseki     INFO  [30] 204 No Content (5 ms)
+[2024-03-24 09:20:45] Fuseki     INFO  [31] DELETE http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Domain/UA_SystemArchitecture
+[2024-03-24 09:20:45] Fuseki     INFO  [31] 204 No Content (5 ms)
+[2024-03-24 09:20:45] Fuseki     INFO  [32] DELETE http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Foundation/UA_Foundation
+[2024-03-24 09:20:45] Fuseki     INFO  [32] 204 No Content (5 ms)
+[2024-03-24 09:20:46] Fuseki     INFO  [33] POST http://localhost:3030/ALEO_Student_Project?graph=http://purl.org/dc/elements/1.1
+[2024-03-24 09:20:46] Fuseki     INFO  [33] Body: Content-Length=3568, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=22 Triples=22 Quads=0
+[2024-03-24 09:20:46] Fuseki     INFO  [33] 201 Created (10 ms)
+[2024-03-24 09:20:46] Fuseki     INFO  [34] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/ALEO_Student_Project/bundle
+[2024-03-24 09:20:46] Fuseki     INFO  [34] Body: Content-Length=20613, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=186 Triples=186 Quads=0
+[2024-03-24 09:20:46] Fuseki     INFO  [34] 201 Created (24 ms)
+[2024-03-24 09:20:46] Fuseki     INFO  [35] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Domain/UA_ProjectManagement
+[2024-03-24 09:20:46] Fuseki     INFO  [35] Body: Content-Length=6090, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=59 Triples=59 Quads=0
+[2024-03-24 09:20:46] Fuseki     INFO  [35] 201 Created (17 ms)
+[2024-03-24 09:20:46] Fuseki     INFO  [36] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Domain/UA_SystemArchitecture
+[2024-03-24 09:20:46] Fuseki     INFO  [36] Body: Content-Length=35636, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=328 Triples=328 Quads=0
+[2024-03-24 09:20:46] Fuseki     INFO  [36] 201 Created (32 ms)
+[2024-03-24 09:20:46] Fuseki     INFO  [37] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Domain/UA_Requirements
+[2024-03-24 09:20:46] Fuseki     INFO  [37] Body: Content-Length=28706, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=263 Triples=263 Quads=0
+[2024-03-24 09:20:46] Fuseki     INFO  [37] 201 Created (24 ms)
+[2024-03-24 09:20:46] Fuseki     INFO  [38] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Core/UA_Agent
+[2024-03-24 09:20:47] Fuseki     INFO  [38] Body: Content-Length=43007, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=413 Triples=413 Quads=0
+[2024-03-24 09:20:47] Fuseki     INFO  [38] 201 Created (96 ms)
+[2024-03-24 09:20:47] Fuseki     INFO  [39] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/ALEO_Student_Project/bundle/classes
+[2024-03-24 09:20:47] Fuseki     INFO  [39] Body: Content-Length=50802, Content-Type=text/turtle, Charset=null => Turtle : Count=614 Triples=614 Quads=0
+[2024-03-24 09:20:47] Fuseki     INFO  [39] 201 Created (30 ms)
+[2024-03-24 09:20:47] Fuseki     INFO  [40] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Libraries/Dimensions
+[2024-03-24 09:20:47] Fuseki     INFO  [40] Body: Content-Length=5481, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=36 Triples=36 Quads=0
+[2024-03-24 09:20:47] Fuseki     INFO  [40] 201 Created (8 ms)
+[2024-03-24 09:20:47] Fuseki     INFO  [41] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/ALEO_Student_Project/bundle/individuals
+[2024-03-24 09:20:47] Fuseki     INFO  [41] Body: Content-Length=63562, Content-Type=text/turtle, Charset=null => Turtle : Count=683 Triples=683 Quads=0
+[2024-03-24 09:20:47] Fuseki     INFO  [41] 201 Created (30 ms)
+[2024-03-24 09:20:47] Fuseki     INFO  [42] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Foundation/UA_Foundation
+[2024-03-24 09:20:47] Fuseki     INFO  [42] Body: Content-Length=39923, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=368 Triples=368 Quads=0
+[2024-03-24 09:20:47] Fuseki     INFO  [42] 201 Created (19 ms)
+[2024-03-24 09:20:47] Fuseki     INFO  [43] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Core/UA_Measurement
+[2024-03-24 09:20:47] Fuseki     INFO  [43] Body: Content-Length=30028, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=282 Triples=282 Quads=0
+[2024-03-24 09:20:47] Fuseki     INFO  [43] 201 Created (17 ms)
+[2024-03-24 09:20:47] Fuseki     INFO  [44] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Core/UA_Event
+[2024-03-24 09:20:47] Fuseki     INFO  [44] Body: Content-Length=26194, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=241 Triples=241 Quads=0
+[2024-03-24 09:20:47] Fuseki     INFO  [44] 201 Created (16 ms)
+[2024-03-24 09:20:47] Fuseki     INFO  [45] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/UA_Core/UA_Information
+[2024-03-24 09:20:47] Fuseki     INFO  [45] Body: Content-Length=36122, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=332 Triples=332 Quads=0
+[2024-03-24 09:20:47] Fuseki     INFO  [45] 201 Created (20 ms)
+[2024-03-24 09:20:47] Fuseki     INFO  [46] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project
+[2024-03-24 09:20:47] Fuseki     INFO  [46] Body: Content-Length=19602, Content-Type=application/rdf+xml, Charset=null => RDF/XML : Count=137 Triples=137 Quads=0
+[2024-03-24 09:20:47] Fuseki     INFO  [46] 201 Created (13 ms)
+[2024-03-24 09:20:47] Fuseki     INFO  [47] POST http://localhost:3030/ALEO_Student_Project?graph=http://uaontologies.com/ALEO_Student_Project/bundle/properties
+[2024-03-24 09:20:47] Fuseki     INFO  [47] Body: Content-Length=33073, Content-Type=text/turtle, Charset=null => Turtle : Count=343 Triples=343 Quads=0
+[2024-03-24 09:20:47] Fuseki     INFO  [47] 201 Created (15 ms)

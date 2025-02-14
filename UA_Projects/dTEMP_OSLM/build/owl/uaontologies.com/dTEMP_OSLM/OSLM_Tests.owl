@@ -1,0 +1,1244 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#"
+     xml:base="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:UA_Test="http://uaontologies.com/UA_Domain/UA_Test#"
+     xmlns:UA_Agent="http://uaontologies.com/UA_Core/UA_Agent#"
+     xmlns:UA_Event="http://uaontologies.com/UA_Core/UA_Event#"
+     xmlns:OSLM_Tests="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#"
+     xmlns:UA_Foundation="http://uaontologies.com/UA_Foundation/UA_Foundation#"
+     xmlns:UA_Information="http://uaontologies.com/UA_Core/UA_Information#"
+     xmlns:UA_Measurement="http://uaontologies.com/UA_Core/UA_Measurement#"
+     xmlns:UA_Requirements="http://uaontologies.com/UA_Domain/UA_Requirements#">
+    <owl:Ontology rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Agent"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Event"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Information"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Test"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Units"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_TestResults"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#"/>
+        <oml:prefix>OSLM_Tests</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Description"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A description to capture...</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://opencaesar.io/oml#namespace -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#namespace"/>
+    
+
+
+    <!-- http://opencaesar.io/oml#prefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#prefix"/>
+    
+
+
+    <!-- http://opencaesar.io/oml#type -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#type"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#hasOutput -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#hasOutput"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#hasParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#hasParticipant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#occursAt -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#occursAt"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#occursOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#occursOn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#describes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#prescribes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasDimension -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasUnit -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#measurementOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#verifies -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#verifies"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Test#hasTestCondition -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Test#hasTestCondition"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasValue"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasBeginInstant -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasBeginInstant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasEndInstant -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasEndInstant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasName"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#Accuracy -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#Accuracy">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Length"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#Adaptability -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#Adaptability">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#Availability -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#Availability">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#InformationLoss -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#InformationLoss">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Controller"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#LSNDS_ElectricalModel1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#LSNDS_ElectricalModel1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Model"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#LSNDS_PhysicsModel1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#LSNDS_PhysicsModel1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Model"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#LSNDS_PhysicsModel2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#LSNDS_PhysicsModel2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Model"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#MissionEffectiveness -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#MissionEffectiveness">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#PositionAccuracy -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#PositionAccuracy">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Length"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#ReactionTime -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#ReactionTime">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Time"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#SC-1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#SC-1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Configuration"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:hasNaturalLanguageDescription>drive train functionality only, 4-wheels</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#Safety -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#Safety">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#Scalability -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#Scalability">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1_Output"/>
+        <UA_Event:occursAt rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1_Environment"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1_TimePeriod"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#SC-1"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:hasName>TE-1</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1_Environment -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1_Environment">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestSite"/>
+        <UA_Foundation:hasNaturalLanguageDescription></UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1_Environment_Light -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1_Environment_Light">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1_Environment"/>
+        <UA_Foundation:hasNaturalLanguageDescription>Extreme sunlight and shadow</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1_Environment_Terrain -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1_Environment_Terrain">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1_Environment"/>
+        <UA_Foundation:hasNaturalLanguageDescription>Grass, loose gravel, and compact sand without obstacles</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1_Output -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1_Output">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#SC-1"/>
+        <UA_Foundation:hasNaturalLanguageDescription>Major issues identified: Lack of sufficient traction (low or no speed, with consequences to range, and maneuverability (no control)). Remote control not working under high sunlight.</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE-1_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-08T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-08T13:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10_Output"/>
+        <UA_Event:occursAt rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10_Environment"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10_TimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:hasName>Information Loss Test</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10_Environment -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10_Environment">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestSite"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10_Measurement_InformationLoss -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10_Measurement_InformationLoss">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#InformationLoss"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10_Output -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10_Output">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10_Measurement_InformationLoss"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10_Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10_Procedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-02T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-02T13:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11_Output"/>
+        <UA_Event:occursAt rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11_Environment"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11_TimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:hasName>Path Accuracy Test</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11_Environment -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11_Environment">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestSite"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11_Measurement_PositionAccuracy -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11_Measurement_PositionAccuracy">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#metre"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#PositionAccuracy"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11_Output -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11_Output">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11_Measurement_PositionAccuracy"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11_Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11_Procedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-06T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-06T13:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE2_Output"/>
+        <UA_Event:occursAt rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE2_Environment"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE2_TimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:hasName>Mission Capability Test</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE2_Environment -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE2_Environment">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestSite"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE2_Output -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE2_Output">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE2_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE2_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-01T13:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3_Output"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#operator"/>
+        <UA_Event:occursAt rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE53_Environment"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3_TimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:hasName>Pathway Creation Time Test</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3_Measurement_TimeTaken -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3_Measurement_TimeTaken">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#second"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#PathwayCreationTime"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3_Output -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3_Output">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3_Measurement_TimeTaken"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3_Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3_Procedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-01T13:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Simulation"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4_Output"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#LSNDS_ElectricalModel1"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4_TimePeriod"/>
+        <UA_Foundation:hasName>Electrical Simulation</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4_Measurement_Capacity -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4_Measurement_Capacity">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#second"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#remainingCapacity"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4_Output -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4_Output">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4_Measurement_Capacity"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4_Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4_Procedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4"/>
+        <UA_Foundation:hasNaturalLanguageDescription>Starting at full charge, the LSNDS is commanded to complete the worst-case path in terms of friction (highest), length (longest), and temperature (coldest) without allowing a recharge.</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-05T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-05T13:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5_Output"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#operator"/>
+        <UA_Event:occursAt rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE53_Environment"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5_TimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:hasName>Maneuverability Test</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE53_Environment -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE53_Environment">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestSite"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5_Measurement_Accuracy -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5_Measurement_Accuracy">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#metre"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#Accuracy"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5_Measurement_ReactionTime -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5_Measurement_ReactionTime">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#second"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#ReactionTime"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5_Output -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5_Output">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5_Measurement_Accuracy"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5_Measurement_ReactionTime"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5_Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5_Procedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-01T13:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Output"/>
+        <UA_Event:occursAt rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Environment"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_TimePeriod"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#KPP1"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#KPP2"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#KPP3"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#KPP4"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:hasName>Path Confidence Test</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Environment -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Environment">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestSite"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Measurement_ClassificationFalseAlarms -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Measurement_ClassificationFalseAlarms">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#FalseClassificationRate"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Measurement_ClassificationRate -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Measurement_ClassificationRate">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#ClassificationRate"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Measurement_DetectionFalseAlarms -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Measurement_DetectionFalseAlarms">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#FalseAlarmRate"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Measurement_DetectionRate -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Measurement_DetectionRate">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#yellowSNDetectionRate"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Output -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Output">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Measurement_ClassificationFalseAlarms"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Measurement_ClassificationRate"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Measurement_DetectionFalseAlarms"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Measurement_DetectionRate"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Procedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-02T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-02T13:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE7 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE7">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Simulation"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_TestResults#TE7_TestData"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#LSNDS_PhysicsModel1"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE7_TimePeriod"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.1.2"/>
+        <UA_Foundation:hasName>Adaptability Simulation 1</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE7_Measurement_Mass -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE7_Measurement_Mass">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#kilogram"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS_Mass"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE7_Measurement_TimeTaken -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE7_Measurement_TimeTaken">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#second"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#PathwayCreationTime"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE7_Measurement_Traction -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE7_Measurement_Traction">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#na"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#Traction"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE7_Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE7_Procedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE7"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE7_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE7_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-02T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-02T13:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#Simulation"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Output"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#LSNDS_PhysicsModel2"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_TimePeriod"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#KSA1"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#KSA2"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#KSA3"/>
+        <UA_Foundation:hasName>Adaptability Simulation 2</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Measurement_Mass -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Measurement_Mass">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#kilogram"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS_Mass"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Measurement_TimeTaken -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Measurement_TimeTaken">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#second"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#PathwayCreationTime"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Measurement_Traction -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Measurement_Traction">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#na"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#Traction"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal"></UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Output -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Output">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Measurement_Mass"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Measurement_TimeTaken"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Measurement_Traction"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Procedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-04T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-04T13:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE9 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE9">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE9_Output"/>
+        <UA_Event:occursAt rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE9_Environment"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE9_TimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:hasName>System Limit Test</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE9_Environment -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE9_Environment">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestSite"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE9_Output -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE9_Output">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE9_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE9_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-02T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-02T13:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TestProcedureDocument -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TestProcedureDocument">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#InformationArtifact"/>
+        <UA_Foundation:hasGenericDependent rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE10_Procedure"/>
+        <UA_Foundation:hasGenericDependent rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE11_Procedure"/>
+        <UA_Foundation:hasGenericDependent rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE3_Procedure"/>
+        <UA_Foundation:hasGenericDependent rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE4_Procedure"/>
+        <UA_Foundation:hasGenericDependent rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE5_Procedure"/>
+        <UA_Foundation:hasGenericDependent rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE6_Procedure"/>
+        <UA_Foundation:hasGenericDependent rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE7_Procedure"/>
+        <UA_Foundation:hasGenericDependent rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#TE8_Procedure"/>
+        <UA_Foundation:hasName>Test Procedures</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

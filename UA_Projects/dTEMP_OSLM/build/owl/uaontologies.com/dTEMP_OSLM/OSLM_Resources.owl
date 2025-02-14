@@ -1,0 +1,580 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#"
+     xml:base="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:UA_Agent="http://uaontologies.com/UA_Core/UA_Agent#"
+     xmlns:UA_Software="http://uaontologies.com/UA_Domain/UA_Software#"
+     xmlns:UA_Foundation="http://uaontologies.com/UA_Foundation/UA_Foundation#"
+     xmlns:OSLM_Resources="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#"
+     xmlns:UA_Information="http://uaontologies.com/UA_Core/UA_Information#"
+     xmlns:UA_Requirements="http://uaontologies.com/UA_Domain/UA_Requirements#">
+    <owl:Ontology rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Agent"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Information"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Software"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#"/>
+        <oml:prefix>OSLM_Resources</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Description"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A description to capture...</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#isResponsibilityOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#isResponsibilityOf"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#prescribes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Software#hasSoftwareVendor -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Software#hasSoftwareVendor"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Software#supportedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Software#supportedBy"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#hasRequirementText -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#hasRequirementText"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Software#hasSoftwareVersion -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Software#hasSoftwareVersion"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#BayesServer -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#BayesServer">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#CADModeling -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#CADModeling">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task"/>
+        <UA_Agent:isResponsibilityOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MechanicalEngineer"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#CameoSystemsModeler -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#CameoSystemsModeler">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#CoGAnalysis -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#CoGAnalysis">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task"/>
+        <UA_Agent:isResponsibilityOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MechanicalEngineer"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer_Req1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer_Req1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer"/>
+        <UA_Requirements:hasRequirementText>The computer shall use Windows 10 or 11 (64 bit)</UA_Requirements:hasRequirementText>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer_Req2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer_Req2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer"/>
+        <UA_Requirements:hasRequirementText>The computer shall have at least 500 MB free space on the hard drive</UA_Requirements:hasRequirementText>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer_Req3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer_Req3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer"/>
+        <UA_Requirements:hasRequirementText>The computer shall have 1.6 GHz processor or faster</UA_Requirements:hasRequirementText>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer_Req4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer_Req4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer"/>
+        <UA_Requirements:hasRequirementText>The computer shall have 1 GB RAM</UA_Requirements:hasRequirementText>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#ConfidenceAssessment -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#ConfidenceAssessment">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task"/>
+        <UA_Agent:isResponsibilityOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#VerificationEngineer"/>
+        <UA_Software:supportedBy rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#BayesServer"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#DataRecording -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#DataRecording">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task"/>
+        <UA_Agent:isResponsibilityOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#TestEngineer"/>
+        <UA_Software:supportedBy rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Violet"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#EV3Firmware -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#EV3Firmware">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer"/>
+        <UA_Software:hasSoftwareVersion>1.10E</UA_Software:hasSoftwareVersion>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#EV3_Brick -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#EV3_Brick">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Object"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#EV3_DeviceManager -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#EV3_DeviceManager">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <UA_Software:hasSoftwareVendor rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Lego"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer"/>
+        <UA_Software:hasSoftwareVersion>n/a</UA_Software:hasSoftwareVersion>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#EV3_MicroPython_Extension -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#EV3_MicroPython_Extension">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <UA_Software:hasSoftwareVendor rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Lego"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer"/>
+        <UA_Software:hasSoftwareVersion>n/a</UA_Software:hasSoftwareVersion>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Jama -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Jama">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#LSNDS_USB_A -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#LSNDS_USB_A">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Lego -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Lego">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MSW1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MSW1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MassAnalysis -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MassAnalysis">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task"/>
+        <UA_Agent:isResponsibilityOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MechanicalEngineer"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MechanicalEngineer -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MechanicalEngineer">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MicroSDHC -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MicroSDHC">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MicroSDHC_Req1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MicroSDHC_Req1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MicroSDHC"/>
+        <UA_Requirements:hasRequirementText>The SDHC shall have min 4GB and max 32 GB storage</UA_Requirements:hasRequirementText>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MicroSDHC_Req2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MicroSDHC_Req2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MicroSDHC"/>
+        <UA_Requirements:hasRequirementText>The SDHC shall be Application Performance Class A1</UA_Requirements:hasRequirementText>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Microsoft -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Microsoft">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MissionEngineer -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MissionEngineer">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MissionThreadModeling -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MissionThreadModeling">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task"/>
+        <UA_Agent:isResponsibilityOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MissionEngineer"/>
+        <UA_Software:supportedBy rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#CameoSystemsModeler"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#RequirementsEngineer -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#RequirementsEngineer">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#RequirementsTraceabilityAndVerification -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#RequirementsTraceabilityAndVerification">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task"/>
+        <UA_Agent:isResponsibilityOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#RequirementsEngineer"/>
+        <UA_Agent:isResponsibilityOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#VerificationEngineer"/>
+        <UA_Software:supportedBy rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Jama"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#SEProcedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#SEProcedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Procedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#CADModeling"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#CoGAnalysis"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#ConfidenceAssessment"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#DataRecording"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MassAnalysis"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MissionThreadModeling"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#RequirementsTraceabilityAndVerification"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#SystemModeling"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#TractionAnalysis"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#SystemArchitect -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#SystemArchitect">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#SystemModeling -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#SystemModeling">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task"/>
+        <UA_Agent:isResponsibilityOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#SystemArchitect"/>
+        <UA_Software:supportedBy rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#CameoSystemsModeler"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#TET-PL-003_3.2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#TET-PL-003_3.2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#InformationArtifact"/>
+        <UA_Foundation:hasGenericDependent rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#SEProcedure"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#TestEngineer -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#TestEngineer">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#TractionAnalysis -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#TractionAnalysis">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task"/>
+        <UA_Agent:isResponsibilityOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#MechanicalEngineer"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#USB_A_Cable -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#USB_A_Cable">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Object"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#VerificationEngineer -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#VerificationEngineer">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Violet -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Violet">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#VisualStudioCode -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#VisualStudioCode">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <UA_Software:hasSoftwareVendor rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Microsoft"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#Computer"/>
+        <UA_Software:hasSoftwareVersion>1.31</UA_Software:hasSoftwareVersion>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,1718 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#"
+     xml:base="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:UA_Mission="http://uaontologies.com/UA_Domain/UA_Mission#"
+     xmlns:UA_UseCases="http://uaontologies.com/UA_Domain/UA_UseCases#"
+     xmlns:UA_Foundation="http://uaontologies.com/UA_Foundation/UA_Foundation#"
+     xmlns:UA_Provenance="http://uaontologies.com/UA_Core/UA_Provenance#"
+     xmlns:UA_Information="http://uaontologies.com/UA_Core/UA_Information#"
+     xmlns:UA_Measurement="http://uaontologies.com/UA_Core/UA_Measurement#"
+     xmlns:OSLM_MissionAndSystem="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#"
+     xmlns:UA_SystemArchitecture="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#">
+    <owl:Ontology rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Information"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Provenance"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Mission"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_UseCases"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Units"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#"/>
+        <oml:prefix>OSLM_MissionAndSystem</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Description"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A description to capture...</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://opencaesar.io/oml#hasSource -->
+
+
+    <owl:ObjectProperty rdf:about="http://opencaesar.io/oml#hasSource"/>
+    
+
+
+    <!-- http://opencaesar.io/oml#hasTarget -->
+
+
+    <owl:ObjectProperty rdf:about="http://opencaesar.io/oml#hasTarget"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#describes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#prescribes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasDimension -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasUnit -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#measurementOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Mission#hasEnvironment -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Mission#hasEnvironment"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Mission#hasMissionParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Mission#hasMissionParticipant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_SystemArchitecture#hasItemFlow -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#hasItemFlow"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_UseCases#hasActor -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_UseCases#hasActor"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_UseCases#includesUseCase -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_UseCases#includesUseCase"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasValue"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Provenance#generatedAt -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Core/UA_Provenance#generatedAt"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasName"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ADV -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ADV">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>Adversary</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Battery -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Battery">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>Battery</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Camera -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Camera">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>Camera</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#CameraJammer -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#CameraJammer">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#CameraJammer_IF"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#CameraJammerConnection -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#CameraJammerConnection">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#CameraJammer_IF"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ImageIn"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#CameraJammer_IF -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#CameraJammer_IF">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Chassis -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Chassis">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity"/>
+        <UA_Foundation:hasName>Chassis</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Controller -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Controller">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRR2"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Speaker"/>
+        <UA_Foundation:hasName>Controller</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#DriveTrain -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#DriveTrain">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Motor"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel1"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel2"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel3"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel4"/>
+        <UA_Foundation:hasName>Drive Train</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#FieldCell -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#FieldCell">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#StickyNote"/>
+        <UA_Foundation:hasName>Field Cell</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRConnection -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRConnection">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRInOut1"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRInOut2"/>
+        <UA_SystemArchitecture:hasItemFlow rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRTransmission"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRInOut1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRInOut1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRR1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRInOut2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRInOut2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRR2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRR1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRR1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>IRR</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRR2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRR2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>IRR</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRTransmission -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRTransmission">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#InformationArtifact"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ImageConnection -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ImageConnection">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ImageOut"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ImageIn"/>
+        <UA_SystemArchitecture:hasItemFlow rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#StickyNoteImage"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ImageIn -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ImageIn">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Camera"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ImageOut -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ImageOut">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#FieldCell"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LCTS -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LCTS">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>Lego Cargo Transport System</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LPDS -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LPDS">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>LPDS</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Battery"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Camera"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Chassis"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Controller"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#DriveTrain"/>
+        <UA_Foundation:hasName>Lego Sticky Note Detection System</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS_Mass -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS_Mass">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Mass"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNRS -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNRS">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>Lego Sticky Note Removal System</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LTAS -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LTAS">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>Lego Terrain Assessment System</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#M_UC_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#M_UC_1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_UseCases#UseCase"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLMission"/>
+        <UA_UseCases:hasActor rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#operator"/>
+        <UA_UseCases:includesUseCase rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#S_UC_1"/>
+        <UA_UseCases:includesUseCase rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#S_UC_2"/>
+        <UA_UseCases:includesUseCase rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#S_UC_3"/>
+        <UA_UseCases:includesUseCase rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#S_UC_4"/>
+        <UA_Foundation:hasName>Perform Operation Safe Lego</UA_Foundation:hasName>
+        <UA_Foundation:hasNaturalLanguageDescription>The safe lego mission provides a safe passage for cargo by detecting and removing sticky notes from an environment, planning a best path through the environment, and finally the transport of cargo through the defined path.</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Motor -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Motor">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>Motor</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLM_MissionEffectiveness -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLM_MissionEffectiveness">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLMission"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLM_Objective -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLM_Objective">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Objective"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLMission"/>
+        <UA_Foundation:hasNaturalLanguageDescription>to create a pass safe from sticky notes to transport cargo through different terrains, safely (i.e., not hitting sticky notes), and effectively (i.e., the cargo arrives to the desired location in the required condition and the participating systems in the mission maintain their integrity).</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLM_Suitability -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLM_Suitability">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLMission"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLM_Survivability -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLM_Survivability">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLMission"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLMission -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLMission">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Mission#Mission"/>
+        <UA_Mission:hasEnvironment rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#environment"/>
+        <UA_Mission:hasMissionParticipant rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ADV"/>
+        <UA_Mission:hasMissionParticipant rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LCTS"/>
+        <UA_Mission:hasMissionParticipant rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Mission:hasMissionParticipant rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNRS"/>
+        <UA_Mission:hasMissionParticipant rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LTAS"/>
+        <UA_Mission:hasMissionParticipant rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#operator"/>
+        <UA_Foundation:hasName>Operation Safe Lego Mission</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerConnection1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerConnection1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerOut1"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerIn1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerConnection2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerConnection2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerOut2"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerIn2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerConnection3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerConnection3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerOut3"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerIn3"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerIn1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerIn1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Controller"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerIn2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerIn2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Motor"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerIn3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerIn3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Camera"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerOut1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerOut1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Battery"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerOut2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerOut2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Battery"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerOut3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#PowerOut3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Battery"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ReceiverJammer -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ReceiverJammer">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ReceiverJammer_IF"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ReceiverJammerConnection -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ReceiverJammerConnection">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ReceiverJammer_IF"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRR2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ReceiverJammer_IF -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ReceiverJammer_IF">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#RemoteControl -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#RemoteControl">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#IRR1"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LPDS"/>
+        <UA_Foundation:hasName>Remote Control</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#S_UC_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#S_UC_1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_UseCases#UseCase"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_UseCases:hasActor rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#environment"/>
+        <UA_Foundation:hasName>Detect Sticky Notes</UA_Foundation:hasName>
+        <UA_Foundation:hasNaturalLanguageDescription>The operator systematically directs the Lego Sticky Note Detection System (LSNDS) to traverse all field cells within the environment in order to detect all sticky notes within the environment. Upon detection of a sticky note, the system will classify the color of the stick note using a corresponding audio pattern.</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#S_UC_2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#S_UC_2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_UseCases#UseCase"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_UseCases:hasActor rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#environment"/>
+        <UA_Foundation:hasName>Remove Sticky Notes</UA_Foundation:hasName>
+        <UA_Foundation:hasNaturalLanguageDescription>The Lego Sticky Note Removal System (LSNRS) traverses the field to detected stick notes and removes them from the environment.</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#S_UC_3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#S_UC_3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_UseCases#UseCase"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_UseCases:hasActor rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#environment"/>
+        <UA_Foundation:hasName>Determine Safe Path</UA_Foundation:hasName>
+        <UA_Foundation:hasNaturalLanguageDescription>The Lego Passage Determination System (LPDS) determines a best path of field cell traversal (from entry cell to exit cell) for delivery of cargo.</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#S_UC_4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#S_UC_4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_UseCases#UseCase"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_UseCases:hasActor rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#environment"/>
+        <UA_Foundation:hasName>Transport Cargo</UA_Foundation:hasName>
+        <UA_Foundation:hasNaturalLanguageDescription>The operator loads cargo to the Lego Cargo Transport System (LCTS) at the entry field cell and then directs it over the determined path of field cells in order to safely deliver the cargo to the exit field cell.</UA_Foundation:hasNaturalLanguageDescription>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Speaker -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Speaker">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>Speaker</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#StickyNote -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#StickyNote">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity"/>
+        <UA_Foundation:hasName>Sticky Note</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#StickyNoteImage -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#StickyNoteImage">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#InformationArtifact"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#StickyNoteModifer -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#StickyNoteModifer">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#StickyNoteModifier_IF"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#StickyNoteModifer_Connection -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#StickyNoteModifer_Connection">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#StickyNoteModifier_IF"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ImageOut"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#StickyNoteModifier_IF -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#StickyNoteModifier_IF">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TET-TR-001_1.2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TET-TR-001_1.2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#InformationArtifact"/>
+        <UA_Foundation:hasGenericDependent rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ThreatDescription"/>
+        <UA_Provenance:generatedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-12-12T12:00:00</UA_Provenance:generatedAt>
+        <UA_Foundation:hasName>TET-TR-001 Issue 1.2</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ThreatDescription -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ThreatDescription">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#CameraJammer"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ReceiverJammer"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#StickyNoteModifer"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueIn1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueIn1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueIn2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueIn2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueIn3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueIn3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel3"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueIn4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueIn4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel4"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueOut1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueOut1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Motor"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueOut2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueOut2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Motor"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueOut3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueOut3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Motor"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueOut4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueOut4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Motor"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TransferTorque1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TransferTorque1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueOut1"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueIn1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TransferTorque2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TransferTorque2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueOut2"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueIn2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TransferTorque3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TransferTorque3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueOut3"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueIn3"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TransferTorque4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TransferTorque4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueOut4"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#TorqueIn4"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>Wheel</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>Wheel</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>Wheel</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:hasName>Wheel</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadIn1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadIn1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#FieldCell"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadIn2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadIn2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#FieldCell"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadIn3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadIn3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#FieldCell"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadIn4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadIn4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#FieldCell"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadOut1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadOut1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadOut2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadOut2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadOut3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadOut3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel3"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadOut4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadOut4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel4"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelToRoad1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelToRoad1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadOut1"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadIn1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelToRoad2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelToRoad2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadOut2"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadIn2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelToRoad3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelToRoad3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadOut3"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadIn3"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelToRoad4 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelToRoad4">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo"/>
+        <oml:hasSource rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadOut4"/>
+        <oml:hasTarget rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#WheelRoadIn4"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#cargoDeliverySuccessRate -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#cargoDeliverySuccessRate">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLM_MissionEffectiveness"/>
+        <UA_Foundation:hasName>Cargo Delivery Success Rate</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#cargoTransportSuccessRate -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#cargoTransportSuccessRate">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LCTS"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#cargoTransportSuccessRate_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#cargoTransportSuccessRate_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#cargoTransportSuccessRate"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">95</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#cof -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#cof">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Dimensionless"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel1"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel3"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel4"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#color -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#color">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#StickyNote"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#environment -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#environment">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Mission#Environment"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#FieldCell"/>
+        <UA_Foundation:hasName>Mission Environment</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#height -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#height">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Length"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#FieldCell"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#isEntry -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#isEntry">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Boolean"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#FieldCell"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#isEntry_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#isEntry_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#na"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#isEntry"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">false</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#isExit -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#isExit">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Boolean"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#FieldCell"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#isExit_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#isExit_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#na"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#isExit"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">false</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#lightLevel -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#lightLevel">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Dimensionless"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#environment"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#missionAvailability -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#missionAvailability">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLM_Suitability"/>
+        <UA_Foundation:hasName>Mission Availability</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#missionCompletionTime -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#missionCompletionTime">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Time"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLM_MissionEffectiveness"/>
+        <UA_Foundation:hasName>Mission Completion Time</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#missionSafety -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#missionSafety">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLM_Survivability"/>
+        <UA_Foundation:hasName>Safety</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#missionScalability -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#missionScalability">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLM_Suitability"/>
+        <UA_Foundation:hasName>Mission Scalability</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#operator -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#operator">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#RemoteControl"/>
+        <UA_Foundation:hasName>Operator 1</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#pinkSNDetectionRate -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#pinkSNDetectionRate">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Camera"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#pinkSNDetectionRate_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#pinkSNDetectionRate_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#pinkSNDetectionRate"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">70</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#pinkSNSupply -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#pinkSNSupply">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ADV"/>
+        <UA_Foundation:hasName>Pink Sticky Note Supply</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#pinkSNSupply_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#pinkSNSupply_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#pinkSNSupply"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">10</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#radius -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#radius">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Length"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel1"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel2"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel3"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Wheel4"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#remainingCapacity -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#remainingCapacity">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Time"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Battery"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#remoteOperation -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#remoteOperation">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#OSLM_MissionEffectiveness"/>
+        <UA_Foundation:hasName>Remote Operation Measure</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#stickyNoteDetectionSuccessRate -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#stickyNoteDetectionSuccessRate">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#stickyNoteRemovalSuccessRate -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#stickyNoteRemovalSuccessRate">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNRS"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#stickyNoteRemovalSuccessRate_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#stickyNoteRemovalSuccessRate_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#stickyNoteRemovalSuccessRate"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">95</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#temperature -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#temperature">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Temperature"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#environment"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#terrain -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#terrain">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#FieldCell"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#terrainAssessmentSuccessRate -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#terrainAssessmentSuccessRate">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LTAS"/>
+        <UA_Foundation:hasName>Terrain Assessment Success Rate</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#terrainAssessmentSuccessRate_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#terrainAssessmentSuccessRate_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#terrainAssessmentSuccessRate"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">99</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#terrainTraversalSuccessRate -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#terrainTraversalSuccessRate">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#DriveTrain"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#terrainTraversalSuccessRate_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#terrainTraversalSuccessRate_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#terrainTraversalSuccessRate"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">95</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#trackWidth -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#trackWidth">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Length"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#DriveTrain"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#wheelBase -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#wheelBase">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Length"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#DriveTrain"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#xyCoordinate -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#xyCoordinate">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#FieldCell"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#yellowSNDetectionRate -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#yellowSNDetectionRate">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#Camera"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#yellowSNDetectionRate_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#yellowSNDetectionRate_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#yellowSNDetectionRate"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">95</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#yellowSNSupply -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#yellowSNSupply">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#ADV"/>
+        <UA_Foundation:hasName>Yellow Sticky Note Supply</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#yellowSNSupply_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#yellowSNSupply_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#yellowSNSupply"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">90</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,14 @@
+description bundle <http://uaontologies.com/dTEMP_OSLM/bundle#> as ^bundle {
+	
+	includes <http://uaontologies.com/dTEMP_OSLM/OSLM_DecisionsAndDocumentation#>
+	includes <http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#>
+	includes <http://uaontologies.com/dTEMP_OSLM/OSLM_Metadata#>
+	includes <http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#>
+	includes <http://uaontologies.com/dTEMP_OSLM/OSLM_Organization#>
+	includes <http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#>
+	includes <http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#>
+	includes <http://uaontologies.com/dTEMP_OSLM/OSLM_TestProgram#>
+	includes <http://uaontologies.com/dTEMP_OSLM/OSLM_Tests#>
+	includes <http://uaontologies.com/dTEMP_OSLM/OSLM_TestResults#>
+
+}

@@ -1,0 +1,294 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#"
+     xml:base="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:UA_Foundation="http://uaontologies.com/UA_Foundation/UA_Foundation#"
+     xmlns:UA_Information="http://uaontologies.com/UA_Core/UA_Information#"
+     xmlns:UA_Measurement="http://uaontologies.com/UA_Core/UA_Measurement#"
+     xmlns:UA_Requirements="http://uaontologies.com/UA_Domain/UA_Requirements#"
+     xmlns:OSLM_Requirements="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#">
+    <owl:Ontology rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Information"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Units"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#"/>
+        <oml:prefix>OSLM_Requirements</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Description"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A description to capture...</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#prescribes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasDimension -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasUnit -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#measurementOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#isSatisfiedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#isSatisfiedBy"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#ownsParameter -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#ownsParameter"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#refines -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#refines"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasValue"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#hasConstraintExpression -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#hasConstraintExpression"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasName"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#C.1.2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#C.1.2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Constraint"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Requirements:ownsParameter rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#p1"/>
+        <UA_Requirements:ownsParameter rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#p2"/>
+        <UA_Requirements:refines rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.1.2"/>
+        <UA_Requirements:hasConstraintExpression>cargoDeliverySuccessRate &gt; cargoDeliveryRate</UA_Requirements:hasConstraintExpression>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#QuantitativeRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:hasName>Safe Delivery of Cargo</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.1.1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.1.1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#QuantitativeRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:hasName>Cargo Delivery Time</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.1.2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.1.2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#QuantitativeRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Requirements:isSatisfiedBy rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#cargoDeliverySuccessRate"/>
+        <UA_Foundation:hasName>Cargo Delivery Rate</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.1.2.1.2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.1.2.1.2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#QuantitativeRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:hasName>Sensor Detection Rate</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.1.2.2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.1.2.2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#QuantitativeRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:hasName>Sticky Note Removal Rate</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.1.2.3 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.1.2.3">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#QuantitativeRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:hasName>Cargo Transport Rate</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.2.1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.2.1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#QuantitativeRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:hasName>Sticky Note Detection Rate</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.2.1.1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#M.2.1.1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#QuantitativeRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#LSNDS"/>
+        <UA_Foundation:hasName>Terrain Traversal Rate</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#p1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#p1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#ConstraintParameter"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:hasName>actual</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#p2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#p2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#ConstraintParameter"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Probability"/>
+        <UA_Foundation:hasName>min</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#p2_value -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#p2_value">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#p2"/>
+        <UA_Measurement:hasValue rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">75</UA_Measurement:hasValue>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

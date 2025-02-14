@@ -1,0 +1,692 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture..."
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#> as OSLM_MissionAndSystem {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    //uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    //uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	//uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	//uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	//uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+	uses <http://uaontologies.com/UA_Domain/UA_UseCases#> as uc
+    
+        
+    // Extends other descriptions
+    extends <http://uaontologies.com/UA_Libraries/Dimensions#> as dim
+    extends <http://uaontologies.com/UA_Libraries/Units#> as units
+    
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	//////////////////////////////////// USE CASES ////////////////////////////////////
+	
+	instance operator : sa:System [
+		foundation:hasName "Operator 1"
+	]
+	
+	instance environment : mission:Environment [
+		foundation:hasName "Mission Environment"
+	]
+	
+	instance M_UC_1 : uc:UseCase [
+		foundation:hasName "Perform Operation Safe Lego"
+		info:prescribes OSLMission
+		foundation:hasNaturalLanguageDescription "The safe lego mission provides a safe passage for cargo by detecting and removing sticky notes from an environment, planning a best path through the environment, and finally the transport of cargo through the defined path."
+		uc:includesUseCase S_UC_1
+		uc:includesUseCase S_UC_2
+		uc:includesUseCase S_UC_3
+		uc:includesUseCase S_UC_4
+		uc:hasActor operator
+	]
+	
+	instance S_UC_1 : uc:UseCase [
+		foundation:hasName "Detect Sticky Notes"
+		info:prescribes LSNDS
+		foundation:hasNaturalLanguageDescription "The operator systematically directs the Lego Sticky Note Detection System (LSNDS) to traverse all field cells within the environment in order to detect all sticky notes within the environment. Upon detection of a sticky note, the system will classify the color of the stick note using a corresponding audio pattern."
+		uc:hasActor environment
+	]
+	
+	instance S_UC_2 : uc:UseCase [
+		foundation:hasName "Remove Sticky Notes"
+		info:prescribes LSNDS
+		foundation:hasNaturalLanguageDescription "The Lego Sticky Note Removal System (LSNRS) traverses the field to detected stick notes and removes them from the environment."
+		uc:hasActor environment
+	]
+	
+	instance S_UC_3 : uc:UseCase [
+		foundation:hasName "Determine Safe Path"
+		info:prescribes LSNDS
+		foundation:hasNaturalLanguageDescription "The Lego Passage Determination System (LPDS) determines a best path of field cell traversal (from entry cell to exit cell) for delivery of cargo."
+		uc:hasActor environment
+	]
+	
+	instance S_UC_4 : uc:UseCase [
+		foundation:hasName "Transport Cargo"
+		info:prescribes LSNDS
+		foundation:hasNaturalLanguageDescription "The operator loads cargo to the Lego Cargo Transport System (LCTS) at the entry field cell and then directs it over the determined path of field cells in order to safely deliver the cargo to the exit field cell."
+		uc:hasActor environment
+	]
+	
+	
+	///////////////////// MISSION ///////////////////////
+	
+	instance OSLMission : mission:Mission [
+		foundation:hasName "Operation Safe Lego Mission"
+		mission:hasEnvironment environment
+		mission:hasMissionParticipant operator
+		mission:hasMissionParticipant LSNDS
+		mission:hasMissionParticipant LSNRS
+		mission:hasMissionParticipant LCTS
+		mission:hasMissionParticipant LTAS
+		mission:hasMissionParticipant ADV
+	]
+	
+	instance OSLM_MissionEffectiveness : foundation:Quality [
+		foundation:specificallyDependentOn OSLMission
+	]
+	
+	instance OSLM_Survivability : foundation:Quality [
+		foundation:specificallyDependentOn OSLMission
+	]
+	
+	instance OSLM_Suitability : foundation:Quality [
+		foundation:specificallyDependentOn OSLMission
+	]
+	
+	instance missionCompletionTime : meas:Quantity [
+		foundation:hasName "Mission Completion Time"
+		foundation:specificallyDependentOn OSLM_MissionEffectiveness
+		meas:hasDimension dim:Time
+	]
+	
+	instance cargoDeliverySuccessRate : meas:Quantity [
+		foundation:hasName "Cargo Delivery Success Rate"
+		foundation:specificallyDependentOn OSLM_MissionEffectiveness
+		meas:hasDimension dim:Probability
+	]
+	
+	instance remoteOperation : meas:Quantity [
+		foundation:hasName "Remote Operation Measure"
+		foundation:specificallyDependentOn OSLM_MissionEffectiveness
+		meas:hasDimension dim:Probability
+	]
+	
+	instance missionScalability : meas:Quantity [
+		foundation:hasName "Mission Scalability"
+		foundation:specificallyDependentOn OSLM_Suitability
+		meas:hasDimension dim:Probability
+	]
+	
+	instance missionSafety : meas:Quantity [
+		foundation:hasName "Safety"
+		foundation:specificallyDependentOn OSLM_Survivability
+		meas:hasDimension dim:Probability
+	]
+	
+	instance missionAvailability : meas:Quantity [
+		foundation:hasName "Mission Availability"
+		foundation:specificallyDependentOn OSLM_Suitability
+		meas:hasDimension dim:Probability
+	]
+	
+	instance OSLM_Objective : req:Objective [
+		info:prescribes OSLMission
+		foundation:hasNaturalLanguageDescription "to create a pass safe from sticky notes to transport cargo through different terrains, safely (i.e., not hitting sticky notes), and effectively (i.e., the cargo arrives to the desired location in the required condition and the participating systems in the mission maintain their integrity)."
+	]
+	
+	instance LTAS : sa:System [
+		foundation:hasName "Lego Terrain Assessment System"
+	]
+	
+	instance terrainAssessmentSuccessRate : meas:Quantity [
+		foundation:hasName "Terrain Assessment Success Rate"
+		foundation:specificallyDependentOn LTAS
+		meas:hasDimension dim:Probability
+	]
+	
+	instance ADV : sa:System [
+		foundation:hasName "Adversary"
+	]
+	
+	instance yellowSNSupply : meas:Quantity [
+		foundation:hasName "Yellow Sticky Note Supply"
+		foundation:specificallyDependentOn ADV
+		meas:hasDimension dim:Probability
+	]
+	
+	instance pinkSNSupply : meas:Quantity [
+		foundation:hasName "Pink Sticky Note Supply"
+		foundation:specificallyDependentOn ADV
+		meas:hasDimension dim:Probability
+	]
+	
+	instance LSNDS : sa:System [
+		foundation:hasName "Lego Sticky Note Detection System"
+	]
+	
+	instance LSNRS : sa:System [
+		foundation:hasName "Lego Sticky Note Removal System"
+	]
+	
+	instance stickyNoteRemovalSuccessRate : meas:Quantity [
+		meas:hasDimension dim:Probability
+		foundation:specificallyDependentOn LSNRS
+	]
+	
+	instance LCTS : sa:System [
+		foundation:hasName "Lego Cargo Transport System"
+	]
+	
+	instance cargoTransportSuccessRate : meas:Quantity [
+		meas:hasDimension dim:Probability
+		foundation:specificallyDependentOn LCTS
+	]
+	
+	ref instance operator [
+		foundation:contains RemoteControl
+	]
+	
+	instance RemoteControl : sa:System [
+		foundation:hasName "Remote Control"
+		foundation:contains IRR1
+		foundation:contains LPDS
+	]
+	
+	instance IRR1 : sa:System [
+		foundation:hasName "IRR"
+	]
+	
+	instance LPDS : sa:System [
+		foundation:hasName "LPDS"
+	]
+	
+	ref instance environment [
+		foundation:contains FieldCell
+	]
+	
+	instance lightLevel : meas:Quantity [
+		meas:hasDimension dim:Dimensionless
+		foundation:specificallyDependentOn environment
+	]
+	
+	instance temperature : meas:Quantity [
+		meas:hasDimension dim:Temperature
+		foundation:specificallyDependentOn environment
+	]
+	
+	instance FieldCell : sa:System [
+		foundation:hasName "Field Cell"
+		foundation:contains StickyNote
+	]
+	
+	instance xyCoordinate : foundation:Quality [
+		foundation:specificallyDependentOn FieldCell
+	]
+	
+	instance height : meas:Quantity [
+		meas:hasDimension dim:Length
+		foundation:specificallyDependentOn FieldCell
+	]
+	
+	instance terrain : foundation:Quality [
+		foundation:specificallyDependentOn FieldCell
+	]
+	
+	instance isEntry : meas:Quantity [
+		meas:hasDimension dim:Boolean
+		foundation:specificallyDependentOn FieldCell
+	]
+	
+	instance isExit : meas:Quantity [
+		meas:hasDimension dim:Boolean
+		foundation:specificallyDependentOn FieldCell
+	]
+	
+	instance StickyNote : foundation:MaterialEntity [
+		foundation:hasName "Sticky Note"
+	]
+	
+	instance color : foundation:Quality [
+		foundation:specificallyDependentOn StickyNote
+	]
+	
+	
+	///////////////// SYSTEM ////////////////////////
+	
+	ref instance LSNDS [
+		foundation:contains Controller
+		foundation:contains Chassis
+		foundation:contains Battery
+		foundation:contains DriveTrain
+		foundation:contains Camera
+	]
+	
+	instance LSNDS_Mass : meas:Quantity [
+		meas:hasDimension dim:Mass
+		foundation:specificallyDependentOn LSNDS
+	]
+	
+	instance stickyNoteDetectionSuccessRate : meas:Quantity [
+		meas:hasDimension dim:Probability
+		foundation:specificallyDependentOn LSNDS
+	]
+	
+	instance terrainTraversalSuccessRate : meas:Quantity [
+		meas:hasDimension dim:Probability
+		foundation:specificallyDependentOn DriveTrain
+	]
+	
+	instance yellowSNDetectionRate : meas:Quantity [
+		meas:hasDimension dim:Probability
+		foundation:specificallyDependentOn Camera
+	]
+	
+	instance pinkSNDetectionRate : meas:Quantity [
+		meas:hasDimension dim:Probability
+		foundation:specificallyDependentOn Camera
+	]
+	
+	instance Controller : sa:System [
+		foundation:hasName "Controller"
+		foundation:contains IRR2
+		foundation:contains Speaker
+	]
+	
+	instance IRR2 : sa:System [
+		foundation:hasName "IRR"
+	]
+	
+	instance Speaker : sa:System [
+		foundation:hasName "Speaker"
+	]
+	
+	instance Chassis : foundation:MaterialEntity [
+		foundation:hasName "Chassis"
+	]
+	
+	instance Battery : sa:System [
+		foundation:hasName "Battery"
+	]
+	
+	instance remainingCapacity : meas:Quantity [
+		meas:hasDimension dim:Time
+		foundation:specificallyDependentOn Battery
+	]
+	
+	instance DriveTrain : sa:System [
+		foundation:hasName "Drive Train"
+		foundation:contains Motor
+		foundation:contains Wheel1
+		foundation:contains Wheel2
+		foundation:contains Wheel3
+		foundation:contains Wheel4
+	]
+	
+	instance wheelBase : meas:Quantity [
+		meas:hasDimension dim:Length
+		foundation:specificallyDependentOn DriveTrain
+	]
+	
+	instance trackWidth : meas:Quantity [
+		meas:hasDimension dim:Length
+		foundation:specificallyDependentOn DriveTrain
+	]
+	
+	instance Motor : sa:System [
+		foundation:hasName "Motor"
+	]
+	
+	instance Wheel1 : sa:System [
+		foundation:hasName "Wheel"
+	]
+	instance Wheel2 : sa:System [
+		foundation:hasName "Wheel"
+	]
+	instance Wheel3 : sa:System [
+		foundation:hasName "Wheel"
+	]
+	instance Wheel4 : sa:System [
+		foundation:hasName "Wheel"
+	]
+	
+	instance radius : meas:Quantity [
+		meas:hasDimension dim:Length
+		foundation:specificallyDependentOn Wheel1
+		foundation:specificallyDependentOn Wheel2
+		foundation:specificallyDependentOn Wheel3
+		foundation:specificallyDependentOn Wheel4
+	]
+	
+	instance cof : meas:Quantity [
+		meas:hasDimension dim:Dimensionless
+		foundation:specificallyDependentOn Wheel1
+		foundation:specificallyDependentOn Wheel2
+		foundation:specificallyDependentOn Wheel3
+		foundation:specificallyDependentOn Wheel4
+	]
+	
+	instance Camera : sa:System [
+		foundation:hasName "Camera"
+	]
+	
+	
+	//////////////////////////////// INTERNAL STRUCTURE ////////////////////////////////
+	
+	instance IRTransmission : info:InformationArtifact
+	
+	instance StickyNoteImage : info:InformationArtifact
+	
+	instance IRInOut1 : sa:Interface [
+		foundation:isContainedIn IRR1
+	]
+	
+	instance IRInOut2 : sa:Interface [
+		foundation:isContainedIn IRR2
+	]
+	
+	relation instance IRConnection : sa:ConnectsTo [
+		from IRInOut1
+		to IRInOut2
+		sa:hasItemFlow IRTransmission
+	]
+	
+	instance PowerOut1 : sa:Interface [
+		foundation:isContainedIn Battery
+	]
+	
+	instance PowerOut2 : sa:Interface [
+		foundation:isContainedIn Battery
+	] 
+	
+	instance PowerOut3 : sa:Interface [
+		foundation:isContainedIn Battery
+	]
+	
+	instance PowerIn1 : sa:Interface [
+		foundation:isContainedIn Controller
+	]
+	
+	instance PowerIn2 : sa:Interface [
+		foundation:isContainedIn Motor
+	]  
+	
+	instance PowerIn3 : sa:Interface [
+		foundation:isContainedIn Camera
+	]
+	
+	relation instance PowerConnection1 : sa:ConnectsTo [
+		from PowerOut1
+		to PowerIn1
+	]
+	
+	relation instance PowerConnection2 : sa:ConnectsTo [
+		from PowerOut2
+		to PowerIn2
+	] 
+	
+	relation instance PowerConnection3 : sa:ConnectsTo [
+		from PowerOut3
+		to PowerIn3
+	]
+	
+	instance ImageOut : sa:Interface [
+		foundation:isContainedIn FieldCell
+	]
+	
+	instance ImageIn : sa:Interface [
+		foundation:isContainedIn Camera
+	]
+	
+	relation instance ImageConnection : sa:ConnectsTo [
+		from ImageOut
+		to ImageIn
+		sa:hasItemFlow StickyNoteImage
+	]
+	
+	instance TorqueOut1 : sa:Interface [
+		foundation:isContainedIn Motor
+	]
+	
+	instance TorqueOut2 : sa:Interface [
+		foundation:isContainedIn Motor
+	] 
+	
+	instance TorqueOut3 : sa:Interface [
+		foundation:isContainedIn Motor
+	] 
+	
+	instance TorqueOut4 : sa:Interface [
+		foundation:isContainedIn Motor
+	]
+	
+	instance TorqueIn1 : sa:Interface [
+		foundation:isContainedIn Wheel1
+	]
+	
+	instance TorqueIn2 : sa:Interface [
+		foundation:isContainedIn Wheel2
+	]
+	
+	instance TorqueIn3 : sa:Interface [
+		foundation:isContainedIn Wheel3
+	]
+	
+	instance TorqueIn4 : sa:Interface [
+		foundation:isContainedIn Wheel4
+	]
+	
+	relation instance TransferTorque1 : sa:ConnectsTo [
+		from TorqueOut1 
+		to TorqueIn1
+	]
+	
+	relation instance TransferTorque2 : sa:ConnectsTo [
+		from TorqueOut2 
+		to TorqueIn2
+	]
+	
+	relation instance TransferTorque3 : sa:ConnectsTo [
+		from TorqueOut3 
+		to TorqueIn3
+	]
+	
+	relation instance TransferTorque4 : sa:ConnectsTo [
+		from TorqueOut4 
+		to TorqueIn4
+	]
+	
+	instance WheelRoadOut1 : sa:Interface [
+		foundation:isContainedIn Wheel1
+	]
+	
+	instance WheelRoadOut2 : sa:Interface [
+		foundation:isContainedIn Wheel2
+	]
+	
+	instance WheelRoadOut3 : sa:Interface [
+		foundation:isContainedIn Wheel3
+	]
+	
+	instance WheelRoadOut4 : sa:Interface [
+		foundation:isContainedIn Wheel4
+	]      
+	
+	instance WheelRoadIn1 : sa:Interface [
+		foundation:isContainedIn FieldCell
+	]
+	
+	instance WheelRoadIn2 : sa:Interface [
+		foundation:isContainedIn FieldCell
+	]
+	
+	instance WheelRoadIn3 : sa:Interface [
+		foundation:isContainedIn FieldCell
+	]
+	
+	instance WheelRoadIn4 : sa:Interface [
+		foundation:isContainedIn FieldCell
+	]
+	
+	relation instance WheelToRoad1 : sa:ConnectsTo [
+		from WheelRoadOut1
+		to WheelRoadIn1
+	]
+	
+	relation instance WheelToRoad2 : sa:ConnectsTo [
+		from WheelRoadOut2
+		to WheelRoadIn2
+	]
+	
+	relation instance WheelToRoad3 : sa:ConnectsTo [
+		from WheelRoadOut3
+		to WheelRoadIn3
+	]
+	
+	relation instance WheelToRoad4 : sa:ConnectsTo [
+		from WheelRoadOut4
+		to WheelRoadIn4
+	]
+	
+	
+	////////////////////////////////// MISSION VALUES //////////////////////////////////
+	
+	instance stickyNoteRemovalSuccessRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf stickyNoteRemovalSuccessRate
+		meas:hasUnit units:percentage
+		meas:hasValue "95"^^rdfs:Literal
+	]
+	
+	instance cargoTransportSuccessRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf cargoTransportSuccessRate
+		meas:hasUnit units:percentage
+		meas:hasValue "95"^^rdfs:Literal
+	]
+	
+	instance terrainAssessmentSuccessRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf terrainAssessmentSuccessRate
+		meas:hasUnit units:percentage
+		meas:hasValue "99"^^rdfs:Literal
+	]
+	
+	instance yellowSNSupply_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf yellowSNSupply
+		meas:hasUnit units:percentage
+		meas:hasValue "90"^^rdfs:Literal
+	]
+	
+	instance pinkSNSupply_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf pinkSNSupply
+		meas:hasUnit units:percentage
+		meas:hasValue "10"^^rdfs:Literal
+	]
+	
+	instance isEntry_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf isEntry
+		meas:hasUnit units:na
+		meas:hasValue "false"^^rdfs:Literal
+	]
+	
+	instance isExit_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf isExit
+		meas:hasUnit units:na
+		meas:hasValue "false"^^rdfs:Literal
+	]
+	
+	
+	////////////////////////////////// SYSTEM VALUES //////////////////////////////////	
+	
+	instance terrainTraversalSuccessRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf terrainTraversalSuccessRate
+		meas:hasUnit units:percentage
+		meas:hasValue "95"^^rdfs:Literal
+	]
+	
+	instance yellowSNDetectionRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf yellowSNDetectionRate
+		meas:hasUnit units:percentage
+		meas:hasValue "95"^^rdfs:Literal
+	]
+	
+	instance pinkSNDetectionRate_Measurement : meas:SimpleMeasurement [
+		meas:measurementOf pinkSNDetectionRate
+		meas:hasUnit units:percentage
+		meas:hasValue "70"^^rdfs:Literal
+	]
+	
+	
+	///////////////////////////////////// THREATS /////////////////////////////////////	
+	
+	instance TET-TR-001_1.2 : info:InformationArtifact [
+		foundation:hasName "TET-TR-001 Issue 1.2"
+		prov:generatedAt "2023-12-12T12:00:00"^^xsd:dateTime
+		foundation:hasGenericDependent ThreatDescription
+	]
+	
+	instance ThreatDescription : info:DescriptiveInformationEntity [
+		info:describes ReceiverJammer
+		info:describes CameraJammer
+		info:describes StickyNoteModifer
+	]
+	
+	instance ReceiverJammer : sa:System [
+		foundation:contains ReceiverJammer_IF
+	]
+	
+	instance ReceiverJammer_IF : sa:Interface
+	
+	relation instance ReceiverJammerConnection : sa:ConnectsTo [
+		from ReceiverJammer_IF
+		to IRR2
+	]
+	
+	instance CameraJammer : sa:System [
+		foundation:contains CameraJammer_IF
+	]
+	
+	instance CameraJammer_IF : sa:Interface
+	
+	relation instance CameraJammerConnection : sa:ConnectsTo [
+		from CameraJammer_IF
+		to ImageIn
+	]
+	
+	instance StickyNoteModifer : sa:System [
+		foundation:contains StickyNoteModifier_IF
+	]
+	instance StickyNoteModifier_IF : sa:Interface
+	
+	relation instance StickyNoteModifer_Connection : sa:ConnectsTo [
+		from StickyNoteModifier_IF
+		to ImageOut
+	]
+	
+		
+}
+	
+	

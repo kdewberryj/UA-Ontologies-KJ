@@ -1,0 +1,960 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Boolean>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Boolean> .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Volume>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Volume> .
+
+<http://uaontologies.com/UA_Core/UA_Information#isPrescribedBy>
+        rdf:type  owl:ObjectProperty .
+
+<http://opencaesar.io/oml#hasSource>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Capacity>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Capacity> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#contains>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Information#Document>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#PhysicalRequirement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-3>
+        rdf:type    owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Domain/UA_Requirements#Requirement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Information#InformationEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity> ;
+        <http://uaontologies.com/UA_Core/UA_Information#isAbout>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#PropulsionSystem> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Payload> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#SolarPanelAssembly> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ADCS> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#CDH> ;
+        <http://uaontologies.com/UA_Core/UA_Information#prescribes>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#isSatisfiedBy>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#CDH> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#isVerifiedBy>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task3> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasID>
+                "ALEO-SYSREQ-3" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+                "ALEO Communication Requirement" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription>
+                "The spacecraft communicate with the ground segment on an S-Band frequency" ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-3> .
+
+<http://uaontologies.com/UA_Core/UA_Event#isParticipantOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Agent#HasOrganizationalContext>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#HasInput>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#satisfies>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Information#InformationEntity>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Gain>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Gain> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#isObjectiveValueOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#isSatisfiedBy>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#HasThresholdValue>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task4>
+        rdf:type    <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Domain/UA_Requirements#VerificationMethod> , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Activity> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task> , <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier> ;
+        <http://uaontologies.com/UA_Core/UA_Agent#isResponsibilityOf>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role2> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#verifies>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-4> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasID>
+                "UAZ-4" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription>
+                "Verify ALEO-SYSREQ-4" ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task4> .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role2>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Role> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> ;
+        <http://uaontologies.com/UA_Core/UA_Agent#isRoleOf>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person2> ;
+        <http://uaontologies.com/UA_Core/UA_Agent#responsibleFor>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task4> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task3> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person2> ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role2> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription>
+        rdf:type  owl:DatatypeProperty .
+
+owl:topDataProperty  rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#requirementDerivedFrom>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Cost>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Cost> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#isOutputOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Event#manifestsIn>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#MeasurementOf>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentOn>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#CanOutput>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#hasBelonging>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#hasObjectiveValue>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person2>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Core/UA_Agent#Agent> , <http://uaontologies.com/UA_Core/UA_Agent#Person> ;
+        <http://uaontologies.com/UA_Core/UA_Agent#hasRole>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role2> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role2> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+                "Richardo Larez" ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person2> .
+
+<http://uaontologies.com/UA_Core/UA_Event#ManifestsIn>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Force>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Force> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#HasOutput>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Event#OccursAt>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#SolarPanelAssembly>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Object> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> ;
+        <http://uaontologies.com/UA_Core/UA_Information#isSubjectOf>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-2> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-3> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-4> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-5> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-1> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#satisfies>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-2> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+                "Solar Panel Assembly" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#SolarPanelAssembly> .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#HasApplicableDimension>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Event#OccursOn>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+        rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Function>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#SpecificallyDependentOn>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#Prescribes>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Event#isManifestationOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#parameterOwnedBy>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Object>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#Constraint>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Temperature>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Temperature> .
+
+<http://uaontologies.com/UA_Domain/UA_ProjectManagement#Activity>
+        rdf:type  owl:Class .
+
+owl:topObjectProperty
+        rdf:type  owl:SymmetricProperty , owl:TransitiveProperty , owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#FunctionOccurrence>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Event#HasParticipant>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#hasBooleanValue>
+        rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#hasItemFlow>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Agent#HasPlannedTemporalRegion>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Efficiency>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Efficiency> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#ownsParameter>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#Verifies>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Angle>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Angle> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#belongsTo>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#HasItemFlow>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#hasOrganziationalContext>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#hasSpecificDependent>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Agent#hasInput>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-1>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , owl:Thing , <http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity> , <http://uaontologies.com/UA_Domain/UA_Requirements#Requirement> , <http://uaontologies.com/UA_Core/UA_Information#InformationEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> ;
+        <http://uaontologies.com/UA_Core/UA_Information#isAbout>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Payload> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#CDH> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ADCS> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#PropulsionSystem> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#SolarPanelAssembly> ;
+        <http://uaontologies.com/UA_Core/UA_Information#prescribes>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#isSatisfiedBy>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO_Mass> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#isVerifiedBy>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task1> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasID>
+                "ALEO-SYSREQ-1" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+                "ALEO Mass Requirement" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription>
+                "The spacecraft mass shall be less than 900kg" ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-1> .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#Range>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Disposition>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#Satisfies>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#isOrganizationalContextOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ExecutedBy>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#InformationArtifact>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Area>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Area> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task2>
+        rdf:type    <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Domain/UA_Requirements#VerificationMethod> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task> , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Activity> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> ;
+        <http://uaontologies.com/UA_Core/UA_Agent#isResponsibilityOf>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role1> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#verifies>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-2> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasID>
+                "UAZ-2" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription>
+                "Verify ALEO-SYSREQ-2" ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task2> .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Configuration>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Contains>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#KSA>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#Unit>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#MassFlow>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#MassFlow> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#hasObjectiveText>
+        rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canBeInputOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#isApplicableDimensionOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Event#occursBefore>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Agent#Agent>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#ObjectAggregate>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Event#occursAt>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Probability>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Probability> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Event#occursOn>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#HasObjectiveValue>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Mass>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        <http://uaontologies.com/UA_Core/UA_Measurement#isDimensionOf>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO_Mass> ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Mass> .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#connectsToA>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#isSubjectOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Information#isAbout>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Quality>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#Consumer>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-4>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Domain/UA_Requirements#Requirement> , <http://uaontologies.com/UA_Core/UA_Information#InformationEntity> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity> ;
+        <http://uaontologies.com/UA_Core/UA_Information#isAbout>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Payload> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#SolarPanelAssembly> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#CDH> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#PropulsionSystem> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ADCS> ;
+        <http://uaontologies.com/UA_Core/UA_Information#prescribes>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#isSatisfiedBy>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ADCS> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#isVerifiedBy>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task4> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasID>
+                "ALEO-SYSREQ-4" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+                "ALEO Pointing Requirement" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription>
+                "The spacecraft shall have an attitude pointing accuracy of 0.1 degrees" ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-4> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#isThresholdValueOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Architecture>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#hasDimension>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Event#isTemporalRegionOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Agent#hasPlannedTemporalRegion>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#Requirement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#executedBy>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#isUnitOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role3>
+        rdf:type    <http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Role> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> ;
+        <http://uaontologies.com/UA_Core/UA_Agent#isRoleOf>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person3> ;
+        <http://uaontologies.com/UA_Core/UA_Agent#responsibleFor>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task1> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person3> ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role3> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#responsibleFor>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task5>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier> , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task> , <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Activity> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Domain/UA_Requirements#VerificationMethod> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> ;
+        <http://uaontologies.com/UA_Core/UA_Agent#isResponsibilityOf>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role1> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#verifies>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-5> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasID>
+                "UAZ-5" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription>
+                "Verify ALEO-SYSREQ-5" ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task5> .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#PropulsionSystem>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#Object> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity> ;
+        <http://uaontologies.com/UA_Core/UA_Information#isSubjectOf>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-4> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-5> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-2> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-3> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-1> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+                "Propulsion System" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#PropulsionSystem> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#verifies>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Agent#Person>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_ProjectManagement#Project>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#itemFlowOfConnection>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Event#OccursBefore>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#BelongsTo>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#Dimension>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#refines>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Agent#isInputOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#measuredBy>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Agent#Plan>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person3>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Agent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity> , <http://uaontologies.com/UA_Core/UA_Agent#Person> ;
+        <http://uaontologies.com/UA_Core/UA_Agent#hasRole>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role3> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role3> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+                "Niko Martell" ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person3> .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#DataRate>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#DataRate> .
+
+<http://uaontologies.com/UA_Domain/UA_ProjectManagement#Program>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#Measurement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#CDH>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Object> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , owl:Thing ;
+        <http://uaontologies.com/UA_Core/UA_Information#isSubjectOf>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-5> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-1> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-2> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-4> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-3> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#satisfies>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-3> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+                "C&DH" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#CDH> .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#ConfidenceInterval>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Event#occursAfter>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#Objective>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#hasRequirementText>
+        rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#FunctionalRequirement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#Model>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#HasDimension>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#VerificationMethod>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Length>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Length> .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Frequency>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Frequency> .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ADCS>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Object> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> ;
+        <http://uaontologies.com/UA_Core/UA_Information#isSubjectOf>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-4> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-1> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-5> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-2> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-3> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#satisfies>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-4> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+                "ADCS" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ADCS> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#isRefinedBy>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Agent#Organization>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#hasBeginInstant>
+        rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#executes>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#isVerifiedBy>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canInput>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#KPP>
+        rdf:type  owl:Class .
+
+owl:Thing  rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Dimensionless>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Dimensionless> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#isRoleOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#Procedure>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#describes>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#ParameterOwnedBy>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#isOccupiedBy>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-2>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Core/UA_Information#InformationEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Domain/UA_Requirements#Requirement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> ;
+        <http://uaontologies.com/UA_Core/UA_Information#isAbout>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#SolarPanelAssembly> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Payload> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#PropulsionSystem> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#CDH> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ADCS> ;
+        <http://uaontologies.com/UA_Core/UA_Information#prescribes>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#isSatisfiedBy>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#SolarPanelAssembly> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#isVerifiedBy>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task2> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasID>
+                "ALEO-SYSREQ-2" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+                "ALEO Power Requirement" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription>
+                "The spacecraft shall generate 400W of power in sunlight" ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-2> .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Acceleration>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Acceleration> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#hasRole>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ArchitectureDescription>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Site>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Container>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#hasValue>
+        rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Role>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Occupies>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role1>
+        rdf:type    <http://uaontologies.com/UA_Core/UA_Agent#ProcessOwner> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Role> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> ;
+        <http://uaontologies.com/UA_Core/UA_Agent#isRoleOf>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person1> ;
+        <http://uaontologies.com/UA_Core/UA_Agent#responsibleFor>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task2> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task5> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person1> ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role1> .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task3>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Domain/UA_Requirements#VerificationMethod> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Activity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> , owl:Thing , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> ;
+        <http://uaontologies.com/UA_Core/UA_Agent#isResponsibilityOf>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role2> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#verifies>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-3> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasID>
+                "UAZ-3" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription>
+                "Verify ALEO-SYSREQ-3" ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task3> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Event#isSiteOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#SpecificallyDependentContinuant>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Energy>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#ImmaterialEntity>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#QuantitativeRequirement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#ConnectsTo>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person1>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Core/UA_Agent#Person> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Core/UA_Agent#Agent> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant> ;
+        <http://uaontologies.com/UA_Core/UA_Agent#hasRole>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role1> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role1> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+                "Joe Gregory" ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Person1> .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Payload>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#Object> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> ;
+        <http://uaontologies.com/UA_Core/UA_Information#isSubjectOf>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-4> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-5> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-2> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-1> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-3> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#satisfies>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-5> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+                "Payload" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Payload> .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#Quantity>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canBeOutputOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#connectsToB>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#hasUnit>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#derivesRequirement>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#HasUnit>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#hasThresholdValue>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Information#prescribes>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Agent#isPlannedTemporalRegionOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Agent#ResponsibleFor>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-5>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Domain/UA_Requirements#Requirement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Core/UA_Information#InformationEntity> , <http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant> ;
+        <http://uaontologies.com/UA_Core/UA_Information#isAbout>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#CDH> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#PropulsionSystem> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Payload> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#SolarPanelAssembly> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ADCS> ;
+        <http://uaontologies.com/UA_Core/UA_Information#prescribes>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#isSatisfiedBy>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Payload> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#isVerifiedBy>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task5> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasID>
+                "ALEO-SYSREQ-5" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+                "ALEO Payload Requirement" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription>
+                "The spacecraft payload shall downlink science data to the ground segment at a minimum average data rate of 10 Megabits per second (Mbps)" ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-5> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#hasID>
+        rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#PerformanceRequirement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#DerivesRequirement>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO>
+        rdf:type    owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Object> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity> , <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System> ;
+        <http://uaontologies.com/UA_Core/UA_Information#isPrescribedBy>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-4> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-5> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-1> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-2> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-3> ;
+        <http://uaontologies.com/UA_Core/UA_Information#isSubjectOf>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-1> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-5> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-4> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-3> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-2> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#contains>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#SolarPanelAssembly> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#CDH> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ADCS> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#Payload> , <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#PropulsionSystem> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+                "Arizona LEO Sat" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasSpecificDependent>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO_Mass> ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#ConstraintParameter>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#hasConstraintExpression>
+        rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#isDimensionOf>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#IsAbout>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Speed>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Speed> .
+
+<http://uaontologies.com/UA_Core/UA_Information#isDescribedBy>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentContinuant>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#Process>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO_Mass>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Continuant> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Quality> , owl:Thing , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SpecificallyDependentContinuant> , <http://uaontologies.com/UA_Core/UA_Measurement#Quantity> ;
+        <http://uaontologies.com/UA_Core/UA_Measurement#hasDimension>
+                <http://uaontologies.com/UA_Libraries/Dimensions#Mass> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#satisfies>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-1> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasName>
+                "ALEO System Mass" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO> ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO_Mass> .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#Interface>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Information#Describes>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Event#hasParticipant>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#hasEndInstant>
+        rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#hasLowerValue>
+        rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#hasUpperValue>
+        rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#RealizableEntity>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Agent#hasOutput>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Core/UA_Agent#Producer>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Foundation/UA_Foundation#occupies>
+        rdf:type  owl:ObjectProperty .
+
+<http://opencaesar.io/oml#hasTarget>
+        rdf:type  owl:ObjectProperty .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Power>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Power> .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#hasConfidence>
+        rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#CanInput>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task1>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement> , <http://uaontologies.com/UA_Foundation/UA_Foundation#SDCCarrier> , <http://uaontologies.com/UA_Domain/UA_Requirements#VerificationMethod> , owl:Thing , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Task> , <http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier> , <http://uaontologies.com/UA_Core/UA_Agent#Producer> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Container> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Occurrent> , <http://uaontologies.com/UA_Core/UA_Agent#ManagedProcess> , <http://uaontologies.com/UA_Foundation/UA_Foundation#Process> , <http://uaontologies.com/UA_Domain/UA_ProjectManagement#Activity> , <http://uaontologies.com/UA_Core/UA_Agent#Consumer> ;
+        <http://uaontologies.com/UA_Core/UA_Agent#isResponsibilityOf>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#role3> ;
+        <http://uaontologies.com/UA_Domain/UA_Requirements#verifies>
+                <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#ALEO-SYSREQ-1> ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasID>
+                "UAZ-1" ;
+        <http://uaontologies.com/UA_Foundation/UA_Foundation#hasNaturalLanguageDescription>
+                "Verify ALEO-SYSREQ-1" ;
+        owl:sameAs  <http://uaontologies.com/ALEO_Student_Project/ALEO_Student_Project#task1> .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#Refines>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Core/UA_Measurement#measurementOf>
+        rdf:type  owl:ObjectProperty .
+
+owl:Nothing  rdf:type  owl:Class .
+
+<http://uaontologies.com/UA_Domain/UA_Requirements#hasVerificationStatus>
+        rdf:type  owl:DatatypeProperty .
+
+<http://uaontologies.com/UA_Libraries/Dimensions#Time>
+        rdf:type    <http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity> , <http://uaontologies.com/UA_Core/UA_Measurement#Dimension> , owl:Thing ;
+        owl:sameAs  <http://uaontologies.com/UA_Libraries/Dimensions#Time> .
+
+<http://uaontologies.com/UA_Core/UA_Agent#IsRoleOf>
+        rdf:type  owl:Class .
+
+<http://uaontologies.com/ALEO_Student_Project/bundle/individuals>
+        rdf:type         owl:Ontology ;
+        rdfs:comment     "Generated by Owl Reason 2.14.0" ;
+        owl:imports      <http://uaontologies.com/ALEO_Student_Project/bundle> ;
+        owl:versionInfo  "1739550564" .
+
+<http://uaontologies.com/UA_Core/UA_Agent#isResponsibilityOf>
+        rdf:type  owl:ObjectProperty .

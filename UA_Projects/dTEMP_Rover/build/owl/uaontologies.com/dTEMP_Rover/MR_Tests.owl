@@ -1,0 +1,1678 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://uaontologies.com/dTEMP_Rover/MR_Tests#"
+     xml:base="http://uaontologies.com/dTEMP_Rover/MR_Tests"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:mr_tes="http://uaontologies.com/dTEMP_Rover/MR_Tests#"
+     xmlns:UA_Test="http://uaontologies.com/UA_Domain/UA_Test#"
+     xmlns:UA_Agent="http://uaontologies.com/UA_Core/UA_Agent#"
+     xmlns:UA_Event="http://uaontologies.com/UA_Core/UA_Event#"
+     xmlns:UA_Software="http://uaontologies.com/UA_Domain/UA_Software#"
+     xmlns:TEMP_Decision="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#"
+     xmlns:UA_Foundation="http://uaontologies.com/UA_Foundation/UA_Foundation#"
+     xmlns:UA_Acquisition="http://uaontologies.com/UA_Domain/UA_Acquisition#"
+     xmlns:UA_Information="http://uaontologies.com/UA_Core/UA_Information#"
+     xmlns:UA_Measurement="http://uaontologies.com/UA_Core/UA_Measurement#"
+     xmlns:UA_Requirements="http://uaontologies.com/UA_Domain/UA_Requirements#"
+     xmlns:UA_DataManagement="http://uaontologies.com/UA_Domain/UA_DataManagement#"
+     xmlns:UA_SystemArchitecture="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#"
+     xmlns:TEMP_TestProgramPolicy="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#">
+    <owl:Ontology rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests">
+        <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure"/>
+        <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Agent"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Event"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Information"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_DataManagement"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Software"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Test"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions"/>
+        <owl:imports rdf:resource="http://uaontologies.com/UA_Libraries/Units"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Requirements"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System"/>
+        <owl:imports rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_TestProgram"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#"/>
+        <oml:prefix>mr_tes</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Description"/>
+        <dc:contributor>Joe Gregory</dc:contributor>
+        <dc:creator>SIE Disruption Lab</dc:creator>
+        <dc:description>A description to capture Part 1 of the example TEMP</dc:description>
+        <dc:hasVersion>0.1</dc:hasVersion>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://opencaesar.io/oml#namespace -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#namespace"/>
+    
+
+
+    <!-- http://opencaesar.io/oml#prefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#prefix"/>
+    
+
+
+    <!-- http://opencaesar.io/oml#type -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#type"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isInformedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#isInformedBy"/>
+    
+
+
+    <!-- http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#comprisesTest"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#hasOutput -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#hasOutput"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#hasPlannedTemporalRegion -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#hasPlannedTemporalRegion"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Agent#isRoleOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Agent#isRoleOf"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#hasParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#hasParticipant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#manifestsIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#manifestsIn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#occursAt -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#occursAt"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Event#occursOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Event#occursOn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#describes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Information#prescribes -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasDimension -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#hasUnit -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Core/UA_Measurement#measurementOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionItem -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionItem"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionPurchaser -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionPurchaser"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionVendor -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionVendor"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_DataManagement#isDigitalLocationOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_DataManagement#isDigitalLocationOf"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#satisfies -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#satisfies"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#verifies -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#verifies"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Software#hasSoftwareVendor -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Software#hasSoftwareVendor"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#canOutput"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Test#hasTestCondition -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Test#hasTestCondition"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Test#hasTestSubject"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Test#triggersTest -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Test#triggersTest"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#contains -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#contains"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#genericallyDependentOn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasGenericDependent"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasSpecificDependent -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasSpecificDependent"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#isContainedIn"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn -->
+
+
+    <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#specificallyDependentOn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#hasObjectiveText -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#hasObjectiveText"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Requirements#hasRequirementText -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Requirements#hasRequirementText"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Domain/UA_Software#hasSoftwareVersion -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Software#hasSoftwareVersion"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasBeginInstant -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasBeginInstant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasEndInstant -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasEndInstant"/>
+    
+
+
+    <!-- http://uaontologies.com/UA_Foundation/UA_Foundation#hasName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Foundation/UA_Foundation#hasName"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Organization#Repository1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Organization#Repository1">
+        <UA_DataManagement:isDigitalLocationOf rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Dev_TIR"/>
+        <UA_DataManagement:isDigitalLocationOf rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Op_TIR"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1">
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_DTEProgram1_TimePeriod"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2">
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTest"/>
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation"/>
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#VibrationTest"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_DTEProgram2_TimePeriod"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_IOTEProgram_Phase2 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_IOTEProgram_Phase2">
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#AntennaDeploymentTest"/>
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#MobilityDeploymentTest"/>
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadDeploymentTest"/>
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#TerrainTraversalExercise"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_OTEProgram_Phase1 -->
+
+
+    <rdf:Description rdf:about="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_OTEProgram_Phase1">
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#LowPowerTest"/>
+        <TEMP_TestProgramPolicy:comprisesTest rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#AntennaDeploymentTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#AntennaDeploymentTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#DeploymentTestTimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Prototype"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Atmosphere -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Atmosphere">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CPU -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CPU">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Object"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CapstoneDevelopmentTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CapstoneDevelopmentTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#LocalDebris"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursAt rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTestSite"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTest_TimePeriod"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_Comms"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Comms"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTestPlan -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTestPlan">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTest"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#DevTestMemo"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTestSite -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTestSite">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Site"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTest_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CommsTest_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-10T10:30:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-11-12T15:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation_Plan -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation_Plan">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Plan"/>
+        <UA_Agent:hasPlannedTemporalRegion rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#FutureTestTimePeriod"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation_TestProcedure"/>
+        <UA_Foundation:hasName>Coop Vulnerability Plan</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation_TestProcedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation_TestProcedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#CooperativeVulnerabilityEvaluation"/>
+        <UA_Foundation:hasName>Coop Vulnerability Evaluation</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_Test1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_Test1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_Test1TimePeriod"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_TestCondition1"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_Test1TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_Test1TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-01T12:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_Test2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_Test2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_Test2TimePeriod"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_TestCondition2"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_Test2TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_Test2TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-01T12:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_TestCondition1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_TestCondition1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_TestCondition2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#CuriosityRoverProgram_TestCondition2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#DTE2Objective -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#DTE2Objective">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestProgramObjective"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase2"/>
+        <UA_Requirements:hasObjectiveText>The purpose of the DTE 2 Program is to...</UA_Requirements:hasObjectiveText>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#DeploymentTestTimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#DeploymentTestTimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-09-11T12:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#DevTestMemo -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#DevTestMemo">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Foundation:hasName>Development Test Procedures</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Dev_TIR -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Dev_TIR">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Foundation:hasName>Rover Development Test Incident Report</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Develop_Rover_TEMP -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Develop_Rover_TEMP">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#DevelopTEMP"/>
+        <UA_Event:manifestsIn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_TEMP_Development"/>
+        <UA_SystemArchitecture:canOutput rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_TEMP"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_WIPT_Role"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursAt rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Site"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Condition"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Condition -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Condition">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Objective -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Objective">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestObjective"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1"/>
+        <UA_Requirements:hasObjectiveText>The purpose of the Engineering Test 1 is to...</UA_Requirements:hasObjectiveText>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Procedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Objective"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Site -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#EngineeringTest1Site">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestSite"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#FDIRTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#FDIRTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_FDIR"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#FutureTestTimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#FutureTestTimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-31T12:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#JDeveloper -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#JDeveloper">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <UA_Software:hasSoftwareVendor rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Oracle"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#LUT -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#LUT">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#LiveFireTEProgram"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#LUT_EntranceCriteria -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#LUT_EntranceCriteria">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#EntranceCriteria"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#LUT"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#LowPowerTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#LowPowerTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Requirements#KPP_1"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#LowPowerTester -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#LowPowerTester">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Tester"/>
+        <UA_Agent:isRoleOf rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#Person4"/>
+        <UA_Test:triggersTest rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#LowPowerTest"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#MBTSA_Doc -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#MBTSA_Doc">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Foundation:hasName>Reliability Test Results</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#MOE -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#MOE">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Performance"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#MOE_Document"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#MOE_Document -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#MOE_Document">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Requirements:satisfies rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#LUT_EntranceCriteria"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#MinimumHours -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#MinimumHours">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#MobilityDeploymentTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#MobilityDeploymentTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#DeploymentTestTimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Prototype"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Op_TIR -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Op_TIR">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Foundation:hasName>Rover Operational Test Incident Report</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Oracle -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Oracle">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Organization"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#OracleCRM -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#OracleCRM">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <UA_Software:hasSoftwareVendor rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Oracle"/>
+        <UA_Software:hasSoftwareVersion>9.1.03j</UA_Software:hasSoftwareVersion>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#OracleDatabase -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#OracleDatabase">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <UA_Software:hasSoftwareVendor rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Oracle"/>
+        <UA_Software:hasSoftwareVersion>5.5</UA_Software:hasSoftwareVersion>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadDeploymentTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadDeploymentTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#DeploymentTestTimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Prototype"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadTestSite -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadTestSite">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestSite"/>
+        <UA_Foundation:hasSpecificDependent rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadTestSite_Temperature"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadTestSite_Temperature -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadTestSite_Temperature">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Temperature"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#PhaseCReliability -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#PhaseCReliability">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#Milestone"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#PhaseCReliabilityDecision -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#PhaseCReliabilityDecision">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#KeyDecision"/>
+        <TEMP_Decision:isInformedBy rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityDemo1_Result"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#PhaseCReliability"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#ROS -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#ROS">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Switch_A1"/>
+        <UA_Software:hasSoftwareVersion>4.01</UA_Software:hasSoftwareVersion>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityCA1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityCA1">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#RecommendedCorrectiveAction"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_TEProgram"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_IDSK"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityDemo1_Result -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityDemo1_Result">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestResult"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo1"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityCA1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityDoc -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityDoc">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Foundation:hasGenericDependent rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityModel_Final"/>
+        <UA_Foundation:hasGenericDependent rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityModel_Initial"/>
+        <UA_Foundation:hasName>Reliability Test Procedures</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityModel_Final -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityModel_Final">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityModel_Initial -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#ReliabilityModel_Initial">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo1"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Representative_Rover_Reliability -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Representative_Rover_Reliability">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Prototype"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#ReqDoc1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#ReqDoc1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Foundation:hasName>System Requirements Document</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_Comms -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_Comms">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#ReqDoc1"/>
+        <UA_Requirements:hasRequirementText>The Rover shall be capable of transmitting 100Mb/s to the Mars Orbiter...</UA_Requirements:hasRequirementText>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_Cost -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_Cost">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#QuantitativeRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#UNIXServerCost"/>
+        <UA_Requirements:hasRequirementText>The server shall cost no more than 1000 USD</UA_Requirements:hasRequirementText>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_DiskSpace -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_DiskSpace">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#PerformanceRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#UNIXServerDiskSpace"/>
+        <UA_Requirements:hasRequirementText>The server shall have a minimum of 400 Gb disk space</UA_Requirements:hasRequirementText>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_MBTSA -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_MBTSA">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#PerformanceRequirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_System_Reliability"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#MBTSA_Doc"/>
+        <UA_Requirements:hasRequirementText>Mean time between failures shall be greater than 10000 hours with a confidence value of 99%</UA_Requirements:hasRequirementText>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_Vibration -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_Vibration">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Requirements#Requirement"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#ReqDoc1"/>
+        <UA_Requirements:hasRequirementText>The Rover shall withstand vibration of at least...</UA_Requirements:hasRequirementText>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#RoverTestScript_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#RoverTestScript_1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_DTE1Objective -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_DTE1Objective">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#TestProgramObjective"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_DTEProgram_Phase1"/>
+        <UA_Requirements:hasObjectiveText>The purpose of the DTE 1 Program is to...</UA_Requirements:hasObjectiveText>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_DTEProgram1_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_DTEProgram1_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-01T12:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_DTEProgram2_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_DTEProgram2_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-02T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-02T12:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Efficiency -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Efficiency">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <UA_Measurement:hasDimension rdf:resource="http://uaontologies.com/UA_Libraries/Dimensions#Efficiency"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Efficiency_Measurement -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Efficiency_Measurement">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
+        <UA_Measurement:hasUnit rdf:resource="http://uaontologies.com/UA_Libraries/Units#percentage"/>
+        <UA_Measurement:measurementOf rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Efficiency"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_MobilityTorqueTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_MobilityTorqueTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Mobility"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_PayloadTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_PayloadTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursAt rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#PayloadTestSite"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Prototype -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Prototype">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture#System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_PrototypeAcquisition -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_PrototypeAcquisition">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#Acquisition"/>
+        <UA_Acquisition:hasAcquisitionItem rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Prototype"/>
+        <UA_Acquisition:hasAcquisitionPurchaser rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_Purchaser"/>
+        <UA_Acquisition:hasAcquisitionVendor rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#Rover_Vendor"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#MarsLander"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#MarsOrbiter"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#DeploymentTestTimePeriod"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_MBTSA"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Atmosphere"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#MinimumHours"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Terrain"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Prototype"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#MarsLander"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#MarsOrbiter"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2_TimePeriod"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_MBTSA"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Atmosphere"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#MinimumHours"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Terrain"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2_Plan -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2_Plan">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Plan"/>
+        <UA_Agent:hasPlannedTemporalRegion rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2_TimePeriod"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2_Procedure"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2_Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2_Procedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_ReliabilityDemo2_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-01T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-01-01T12:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_System_Reliability -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_System_Reliability">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_TEMP_Development -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_TEMP_Development">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#TEMPDevelopment"/>
+        <UA_Agent:hasOutput rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_TEMP"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Switch_A1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Switch_A1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Object"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#SystemAcceptanceTest_1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#SystemAcceptanceTest_1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:hasParticipant rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#RoverTestScript_1"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TATD1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TATD1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Document"/>
+        <UA_Foundation:hasName>Target Acquisition Test Procedure</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TMGenerationSourceCode -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TMGenerationSourceCode">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_AtmosphericDust"/>
+        <UA_Test:hasTestCondition rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_Lighting"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_AtmosphericDust -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_AtmosphericDust">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_AtmosphericDust_Planned -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_AtmosphericDust_Planned">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#PlannedTestCondition"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_AtmosphericDust"/>
+        <UA_Foundation:hasName>TAT Atmospheric Dust</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_Lighting -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_Lighting">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_Lighting_Planned -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_Lighting_Planned">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#PlannedTestCondition"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_Lighting"/>
+        <UA_Foundation:hasName>TAT Lighting</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_Procedure -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_Procedure">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_AtmosphericDust_Planned"/>
+        <UA_Foundation:contains rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest_Lighting_Planned"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#TATD1"/>
+        <UA_Foundation:hasName>TAT Procedure</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTester -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTester">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Tester"/>
+        <UA_Agent:isRoleOf rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Organization#Person4"/>
+        <UA_Test:triggersTest rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#TargetAcquisitionTest"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TechRiskAssessment1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TechRiskAssessment1">
+        <rdf:type rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#RiskAssessment"/>
+        <UA_Information:describes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_TEProgram"/>
+        <UA_Foundation:isContainedIn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_TestProgram#Rover_IDSK"/>
+        <UA_Foundation:hasName>Tech Risk Assessment 1</UA_Foundation:hasName>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Terrain -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Terrain">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestCondition"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TerrainIdentificationSoftware -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TerrainIdentificationSoftware">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Software#Software"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TerrainTraversalExercise -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TerrainTraversalExercise">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#DeploymentTestTimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Rover_Prototype"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Test1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Test1">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Test1_TimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#PrecisionCAM_Accuracy"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#PrecisionCAM_Sensitivity"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Test1_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Test1_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-04T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-04T13:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Test2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Test2">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Test2_TimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#PrecisionCAM_Sensitivity"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#Test2_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#Test2_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-08T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-01-08T13:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TraversalTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TraversalTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#TraversalTest_TimePeriod"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_Mobility"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#TraversalTest_TimePeriod -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#TraversalTest_TimePeriod">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
+        <UA_Foundation:hasBeginInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-09-25T12:00:00</UA_Foundation:hasBeginInstant>
+        <UA_Foundation:hasEndInstant rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-03T12:00:00</UA_Foundation:hasEndInstant>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#UNIXServer -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#UNIXServer">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Object"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#UNIXServerCost -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#UNIXServerCost">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#UNIXServer"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#UNIXServerDiskSpace -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#UNIXServerDiskSpace">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Quality"/>
+        <UA_Foundation:specificallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#UNIXServer"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#VibrationTest -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#VibrationTest">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#Test"/>
+        <UA_Event:occursAt rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#VibrationTestSite"/>
+        <UA_Requirements:verifies rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#Requirement_Vibration"/>
+        <UA_Test:hasTestSubject rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_System#Rover_System"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#VibrationTestPlan -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#VibrationTestPlan">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestProcedure"/>
+        <UA_Information:prescribes rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#VibrationTest"/>
+        <UA_Foundation:genericallyDependentOn rdf:resource="http://uaontologies.com/dTEMP_Rover/MR_Tests#DevTestMemo"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://uaontologies.com/dTEMP_Rover/MR_Tests#VibrationTestSite -->
+
+
+    <owl:NamedIndividual rdf:about="http://uaontologies.com/dTEMP_Rover/MR_Tests#VibrationTestSite">
+        <rdf:type rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Site"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ConceptInstance"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
+
+

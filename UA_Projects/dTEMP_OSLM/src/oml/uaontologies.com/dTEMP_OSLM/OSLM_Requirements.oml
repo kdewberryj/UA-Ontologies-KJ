@@ -1,0 +1,117 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture..."
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/dTEMP_OSLM/OSLM_Requirements#> as OSLM_Requirements {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    //uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    //uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    //uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    //uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	//uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	//uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	//uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    
+    
+    // Extends other descriptions
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#> as oslm_ms
+    extends <http://uaontologies.com/UA_Libraries/Dimensions#> as dim
+	extends <http://uaontologies.com/UA_Libraries/Units#> as units
+	
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	////////////////////////////// MISSION REQUIREMENTS ////////////////////////////////
+	
+	instance M.1 : req:QuantitativeRequirement [
+		info:prescribes oslm_ms:LSNDS
+		foundation:hasName "Safe Delivery of Cargo"
+	]
+	
+	instance M.1.1 : req:QuantitativeRequirement [
+		info:prescribes oslm_ms:LSNDS
+		foundation:hasName "Cargo Delivery Time"
+	]
+	
+	instance M.1.2 : req:QuantitativeRequirement [
+		info:prescribes oslm_ms:LSNDS
+		req:isSatisfiedBy oslm_ms:cargoDeliverySuccessRate
+		foundation:hasName "Cargo Delivery Rate"
+	]
+	
+	instance M.2.1 : req:QuantitativeRequirement [
+		info:prescribes oslm_ms:LSNDS
+		foundation:hasName "Sticky Note Detection Rate"
+	]
+	
+	instance M.2.1.1 : req:QuantitativeRequirement [
+		info:prescribes oslm_ms:LSNDS
+		foundation:hasName "Terrain Traversal Rate"
+	]
+	
+	instance M.1.2.1.2 : req:QuantitativeRequirement [
+		info:prescribes oslm_ms:LSNDS
+		foundation:hasName "Sensor Detection Rate"
+	]
+	
+	instance M.1.2.2 : req:QuantitativeRequirement [
+		info:prescribes oslm_ms:LSNDS
+		foundation:hasName "Sticky Note Removal Rate"
+	]
+	
+	instance M.1.2.3 : req:QuantitativeRequirement [
+		info:prescribes oslm_ms:LSNDS
+		foundation:hasName "Cargo Transport Rate"
+	]
+	
+	
+	///////////////////////////////// CONSTRAINTS ///////////////////////////////////
+	
+	instance C.1.2 : req:Constraint [
+		info:prescribes oslm_ms:LSNDS
+		req:refines M.1.2
+		req:hasConstraintExpression "cargoDeliverySuccessRate > cargoDeliveryRate"
+		req:ownsParameter p1
+		req:ownsParameter p2
+	]
+	
+	instance p1 : req:ConstraintParameter [
+		meas:hasDimension dim:Probability
+		foundation:hasName "actual"
+	]
+	
+	instance p2 : req:ConstraintParameter [
+		meas:hasDimension dim:Probability
+		foundation:hasName "min"
+	]
+	
+	instance p2_value : meas:SimpleMeasurement [
+		meas:measurementOf p2
+		meas:hasValue "75"^^rdfs:Literal
+		meas:hasUnit units:percentage
+	]
+	
+	}

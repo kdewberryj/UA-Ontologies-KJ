@@ -1,0 +1,5 @@
+description bundle <http://uaprojects.com/CubesatOrbit/bundle#> as ^bundle {
+	
+	includes <http://uaprojects.com/CubesatOrbit/AriSAT#>
+	
+}

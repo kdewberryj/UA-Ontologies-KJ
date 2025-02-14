@@ -1,0 +1,43 @@
+PREFIX rdfs:		<http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dc:			<http://purl.org/dc/elements/1.1/>
+PREFIX xsd:			<http://www.w3.org/2001/XMLSchema#>
+
+PREFIX foundation:	<http://uaontologies.com/UA_Foundation/UA_Foundation#>
+
+PREFIX agent:	<http://uaontologies.com/UA_Core/UA_Agent#>
+PREFIX event:	<http://uaontologies.com/UA_Core/UA_Event#>
+PREFIX info:	<http://uaontologies.com/UA_Core/UA_Information#>
+PREFIX meas:	<http://uaontologies.com/UA_Core/UA_Measurement#>
+PREFIX prov:	<http://uaontologies.com/UA_Core/UA_Provenance#>
+
+PREFIX acq:		<http://uaontologies.com/UA_Domain/UA_Acquisition#>
+PREFIX data:	<http://uaontologies.com/UA_Domain/UA_DataManagement#>
+PREFIX mission:	<http://uaontologies.com/UA_Domain/UA_Mission#>
+PREFIX ms:		<http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#>
+PREFIX pm:		<http://uaontologies.com/UA_Domain/UA_ProjectManagement#>
+PREFIX req:		<http://uaontologies.com/UA_Domain/UA_Requirements#>
+PREFIX sw:		<http://uaontologies.com/UA_Domain/UA_Software#>
+PREFIX sa:		<http://uaontologies.com/UA_Domain/UA_SystemArchitecture#>
+PREFIX test:	<http://uaontologies.com/UA_Domain/UA_Test#>
+PREFIX mat:		<http://uaontologies.com/UA_Domain/UA_Materials#>
+
+
+SELECT DISTINCT ?ReqID ?ReqName ?ReqDescription ?SystemName ?SatisfiedByName
+?VerifiedByName ?PersonName
+
+WHERE {
+	?Requirement a req:Requirement .
+	?Requirement foundation:hasID ?ReqID .
+	?Requirement foundation:hasName ?ReqName .
+	?Requirement foundation:hasNaturalLanguageDescription ?ReqDescription .
+	?Requirement info:prescribes ?System .
+	?System foundation:hasName ?SystemName .
+	?Requirement req:isSatisfiedBy ?SatisfiedBy .
+	?SatisfiedBy foundation:hasName ?SatisfiedByName .
+	?Requirement req:isVerifiedBy ?VerifiedBy .
+	?VerifiedBy foundation:hasNaturalLanguageDescription ?VerifiedByName .
+	?VerifiedBy agent:isResponsibilityOf ?Role .
+	?Role agent:isRoleOf ?Person .
+	?Person foundation:hasName ?PersonName .
+}
+ORDER BY ASC (?ReqID)

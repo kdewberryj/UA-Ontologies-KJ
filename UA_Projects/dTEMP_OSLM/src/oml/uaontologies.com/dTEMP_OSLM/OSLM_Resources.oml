@@ -1,0 +1,217 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture..."
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/dTEMP_OSLM/OSLM_Resources#> as OSLM_Resources {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    //uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    //uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    //uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    //uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    //uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	//uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	//uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+	//uses <http://uaontologies.com/UA_Domain/UA_UseCases#> as uc
+    
+        
+    // Extends other descriptions
+    //extends <http://uaontologies.com/UA_Libraries/Dimensions#> as dim
+    //extends <http://uaontologies.com/UA_Libraries/Units#> as units
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#> as oslm_ms
+    
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	//////////////////////////////// EXTERNAL INTERFACES //////////////////////////////
+	
+	instance LSNDS_USB_A : sa:Interface [
+		foundation:isContainedIn oslm_ms:LSNDS
+	]
+	
+	instance Computer : sa:System
+	
+	instance Computer_Req1 : req:Requirement [
+		info:prescribes Computer
+		req:hasRequirementText "The computer shall use Windows 10 or 11 (64 bit)"
+	]
+	
+	instance Computer_Req2 : req:Requirement [
+		info:prescribes Computer
+		req:hasRequirementText "The computer shall have at least 500 MB free space on the hard drive"
+	]
+	
+	instance Computer_Req3 : req:Requirement [
+		info:prescribes Computer
+		req:hasRequirementText "The computer shall have 1.6 GHz processor or faster"
+	]
+	
+	instance Computer_Req4 : req:Requirement [
+		info:prescribes Computer
+		req:hasRequirementText "The computer shall have 1 GB RAM"
+	]
+	
+	instance MicroSDHC : sa:System
+	
+	instance MicroSDHC_Req1 : req:Requirement [
+		info:prescribes MicroSDHC
+		req:hasRequirementText "The SDHC shall have min 4GB and max 32 GB storage"
+	]
+	
+	instance MicroSDHC_Req2 : req:Requirement [
+		info:prescribes MicroSDHC
+		req:hasRequirementText "The SDHC shall be Application Performance Class A1"
+	]
+	
+	instance USB_A_Cable : foundation:Object
+	
+	instance EV3_Brick : foundation:Object
+	
+	instance EV3Firmware : sw:Software [
+		sw:hasSoftwareVersion "1.10E"
+		foundation:genericallyDependentOn Computer
+	]
+	
+	instance MSW1 : sw:Software [
+		foundation:genericallyDependentOn Computer
+	]
+	
+	instance VisualStudioCode : sw:Software [
+		sw:hasSoftwareVersion "1.31"
+		sw:hasSoftwareVendor Microsoft
+		foundation:genericallyDependentOn Computer
+	]
+	
+	instance Microsoft : agent:Organization
+	
+	instance EV3_MicroPython_Extension : sw:Software [
+		sw:hasSoftwareVersion "n/a"
+		sw:hasSoftwareVendor Lego
+		foundation:genericallyDependentOn Computer
+	]
+	
+	instance EV3_DeviceManager : sw:Software [
+		sw:hasSoftwareVersion "n/a"
+		sw:hasSoftwareVendor Lego
+		foundation:genericallyDependentOn Computer
+	]
+	
+	instance Lego : agent:Organization
+	
+	
+	//////////////////////////// SYSTEMS ENGINEERING TOOLS //////////////////////////
+	
+	instance TET-PL-003_3.2 : info:InformationArtifact [
+		foundation:hasGenericDependent SEProcedure
+	]
+	
+	instance SEProcedure : agent:Procedure [
+		info:prescribes RequirementsTraceabilityAndVerification
+		info:prescribes MissionThreadModeling
+		info:prescribes SystemModeling
+		info:prescribes DataRecording
+		info:prescribes ConfidenceAssessment
+		info:prescribes CADModeling
+		info:prescribes MassAnalysis
+		info:prescribes CoGAnalysis
+		info:prescribes TractionAnalysis
+	]
+	
+	instance RequirementsTraceabilityAndVerification : pm:Task [
+		sw:supportedBy Jama
+		agent:isResponsibilityOf RequirementsEngineer
+		agent:isResponsibilityOf VerificationEngineer
+	]
+	
+	instance RequirementsEngineer : agent:ProcessOwner
+	
+	instance VerificationEngineer : agent:ProcessOwner
+	
+	instance Jama : sw:Software 
+	
+	instance MissionThreadModeling : pm:Task [
+		sw:supportedBy CameoSystemsModeler
+		agent:isResponsibilityOf MissionEngineer
+	]
+	
+	instance CameoSystemsModeler : sw:Software
+	
+	instance MissionEngineer : agent:ProcessOwner
+	
+	instance SystemModeling : pm:Task [
+		sw:supportedBy CameoSystemsModeler
+		agent:isResponsibilityOf SystemArchitect
+	]
+	
+	instance SystemArchitect : agent:ProcessOwner
+	
+	instance DataRecording : pm:Task [
+		sw:supportedBy Violet
+		agent:isResponsibilityOf TestEngineer
+	]
+	
+	instance Violet : sw:Software
+	
+	instance TestEngineer : agent:ProcessOwner
+	
+	instance ConfidenceAssessment : pm:Task [
+		sw:supportedBy BayesServer
+		agent:isResponsibilityOf VerificationEngineer
+	]
+	
+	instance BayesServer : sw:Software
+	
+	instance CADModeling : pm:Task [
+		agent:isResponsibilityOf MechanicalEngineer
+	]
+	
+	instance MassAnalysis : pm:Task [
+		agent:isResponsibilityOf MechanicalEngineer
+	]
+	
+	instance CoGAnalysis : pm:Task [
+		agent:isResponsibilityOf MechanicalEngineer
+	]
+	
+	instance TractionAnalysis : pm:Task [
+		agent:isResponsibilityOf MechanicalEngineer
+	]
+	
+	instance MechanicalEngineer : agent:ProcessOwner
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

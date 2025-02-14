@@ -1,0 +1,292 @@
+@dc:creator "SIE Disruption Lab"
+@dc:contributor "Joe Gregory"
+@dc:description "A description to capture..."
+@dc:hasVersion "0.1"
+description <http://uaontologies.com/dTEMP_OSLM/OSLM_KeyCapabilities#> as OSLM_KeyCapabilities {
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	
+	/////// Vocabulary Usage ///////
+	
+	
+	// Use standard vocabularies	
+	
+    uses <http://purl.org/dc/elements/1.1/> as dc
+    uses <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+    uses <http://www.w3.org/2001/XMLSchema#> as xsd
+    
+    // Use relevant vocabularies
+    
+    uses <http://uaontologies.com/UA_Foundation/UA_Foundation#> as foundation
+    
+    uses <http://uaontologies.com/UA_Core/UA_Information#> as info
+    //uses <http://uaontologies.com/UA_Core/UA_Event#> as event
+    //uses <http://uaontologies.com/UA_Core/UA_Agent#> as agent
+    uses <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+    uses <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
+    
+    //uses <http://uaontologies.com/UA_Domain/UA_SystemArchitecture#> as sa
+    //uses <http://uaontologies.com/UA_Domain/UA_Mission#> as mission
+    uses <http://uaontologies.com/UA_Domain/UA_Requirements#> as req
+	//uses <http://uaontologies.com/UA_Domain/UA_Test#> as test
+	//uses <http://uaontologies.com/UA_Domain/UA_Software#> as sw
+	//uses <http://uaontologies.com/UA_Domain/UA_DataManagement#> as dm
+	//uses <http://uaontologies.com/UA_Domain/UA_ModelingAndSimulation#> as ms
+	//uses <http://uaontologies.com/UA_Domain/UA_ProjectManagement#> as pm
+	//uses <http://uaontologies.com/UA_Domain/UA_Acquisition#> as acq
+    
+    //uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#> as temp_org
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramPolicy#> as temp_tpp
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure#> as temp_tps
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFrameworks#> as temp_tpf
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#> as temp_resp
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> as temp_tpt
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_dec
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as temp_teo
+	//uses <http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#> as temp_ear
+    
+    // Extends other descriptions
+    extends <http://uaontologies.com/UA_Libraries/Dimensions#> as dim
+    extends <http://uaontologies.com/UA_Libraries/Units#> as units
+    extends <http://uaontologies.com/dTEMP_OSLM/OSLM_MissionAndSystem#> as oslm_ms
+    
+	
+	///////////////////////////////////////////////////////////////////////////////////
+	
+	//////////////////////////////// SYSTEM QUALITIES /////////////////////////////////
+	
+	instance FalseAlarmRate : meas:Quantity [
+		foundation:specificallyDependentOn oslm_ms:LSNDS
+		meas:hasDimension dim:Probability
+	]
+	
+	instance ClassificationRate : meas:Quantity [
+		foundation:specificallyDependentOn oslm_ms:LSNDS
+		meas:hasDimension dim:Probability
+	]
+	
+	instance FalseClassificationRate : meas:Quantity [
+		foundation:specificallyDependentOn oslm_ms:LSNDS
+		meas:hasDimension dim:Probability
+	]
+	
+	instance PathwayCreationTime : meas:Quantity [
+		foundation:specificallyDependentOn oslm_ms:LSNDS
+		meas:hasDimension dim:Time
+	]
+	
+	instance Traction : meas:Quantity [
+		foundation:specificallyDependentOn oslm_ms:LSNDS
+		meas:hasDimension dim:Dimensionless
+	]
+	
+	instance CoG : meas:Quantity [
+		foundation:specificallyDependentOn oslm_ms:LSNDS
+		meas:hasDimension dim:Angle
+	]
+	
+	
+	//////////////////////////////// KEY CAPABILITIES /////////////////////////////////
+	
+	instance TET-TR-002_1.4 : info:InformationArtifact [
+		foundation:hasName "TET-TR-002 Issue 1.4"
+		prov:generatedAt "2023-10-10T12:00:00"^^xsd:dateTime
+	]
+	
+	instance KPP1 : req:KPP [
+		foundation:hasName "KPP 1"
+		info:prescribes oslm_ms:stickyNoteDetectionSuccessRate
+		req:hasThresholdValue KPP1_Threshold
+		req:hasObjectiveValue KPP1_Objective
+		foundation:genericallyDependentOn TET-TR-002_1.4
+	]
+	
+	instance KPP1_Threshold : meas:SimpleMeasurement [
+		meas:measurementOf oslm_ms:stickyNoteDetectionSuccessRate
+		meas:hasValue "80"^^rdfs:Literal
+		meas:hasUnit units:percentage
+	]
+	
+	instance KPP1_Objective : meas:SimpleMeasurement[
+		meas:measurementOf oslm_ms:stickyNoteDetectionSuccessRate
+		meas:hasValue "90"^^rdfs:Literal
+		meas:hasUnit units:percentage
+	]
+	
+	instance KPP2 : req:KPP [
+		foundation:hasName "KPP 2"
+		info:prescribes FalseAlarmRate
+		req:hasThresholdValue KPP2_Threshold
+		req:hasObjectiveValue KPP2_Objective
+		foundation:genericallyDependentOn TET-TR-002_1.4
+	]
+	
+	instance KPP2_Threshold : meas:SimpleMeasurement [
+		meas:measurementOf FalseAlarmRate
+		meas:hasValue "30"^^rdfs:Literal
+		meas:hasUnit units:percentage
+	]
+	
+	instance KPP2_Objective : meas:SimpleMeasurement[
+		meas:measurementOf FalseAlarmRate
+		meas:hasValue "10"^^rdfs:Literal
+		meas:hasUnit units:percentage
+	]
+	
+	instance KPP3 : req:KPP [
+		foundation:hasName "KPP 3"
+		info:prescribes ClassificationRate
+		req:hasThresholdValue KPP3_Threshold
+		req:hasObjectiveValue KPP3_Objective
+		foundation:genericallyDependentOn TET-TR-002_1.4
+	]
+	
+	instance KPP3_Threshold : meas:SimpleMeasurement [
+		meas:measurementOf ClassificationRate
+		meas:hasValue "70"^^rdfs:Literal
+		meas:hasUnit units:percentage
+	]
+	
+	instance KPP3_Objective : meas:SimpleMeasurement[
+		meas:measurementOf ClassificationRate
+		meas:hasValue "85"^^rdfs:Literal
+		meas:hasUnit units:percentage
+	]
+	
+	instance KPP4 : req:KPP [
+		foundation:hasName "KPP 4"
+		info:prescribes FalseClassificationRate
+		req:hasThresholdValue KPP4_Threshold
+		req:hasObjectiveValue KPP4_Objective
+		foundation:genericallyDependentOn TET-TR-002_1.4
+	]
+	
+	instance KPP4_Threshold : meas:SimpleMeasurement [
+		meas:measurementOf FalseClassificationRate
+		meas:hasValue "30"^^rdfs:Literal
+		meas:hasUnit units:percentage
+	]
+	
+	instance KPP4_Objective : meas:SimpleMeasurement[
+		meas:measurementOf FalseClassificationRate
+		meas:hasValue "10"^^rdfs:Literal
+		meas:hasUnit units:percentage
+	]
+	
+	instance KPP5 : req:KPP [
+		foundation:hasName "KPP 5"
+		info:prescribes PathwayCreationTime
+		req:hasThresholdValue KPP5_Threshold
+		req:hasObjectiveValue KPP5_Objective
+		foundation:genericallyDependentOn TET-TR-002_1.4
+	]
+	
+	instance KPP5_Threshold : meas:SimpleMeasurement [
+		meas:measurementOf PathwayCreationTime
+		meas:hasValue "600"^^rdfs:Literal
+		meas:hasUnit units:second
+	]
+	
+	instance KPP5_Objective : meas:SimpleMeasurement[
+		meas:measurementOf PathwayCreationTime
+		meas:hasValue "300"^^rdfs:Literal
+		meas:hasUnit units:second
+	]
+	
+	instance KSA1 : req:KPP [
+		foundation:hasName "KSA 1"
+		info:prescribes oslm_ms:LSNDS_Mass
+		req:hasThresholdValue KSA1_Threshold
+		req:hasObjectiveValue KSA1_Objective
+		foundation:genericallyDependentOn TET-TR-002_1.4
+	]
+	
+	instance KSA1_Threshold : meas:SimpleMeasurement [
+		meas:measurementOf oslm_ms:LSNDS_Mass
+		meas:hasValue "5"^^rdfs:Literal
+		meas:hasUnit units:kilogram
+	]
+	
+	instance KSA1_Objective : meas:SimpleMeasurement[
+		meas:measurementOf oslm_ms:LSNDS_Mass
+		meas:hasValue "3"^^rdfs:Literal
+		meas:hasUnit units:kilogram
+	]
+	
+	instance KSA2 : req:KPP [
+		foundation:hasName "KSA 2"
+		info:prescribes oslm_ms:remainingCapacity
+		req:hasThresholdValue KSA2_Threshold
+		req:hasObjectiveValue KSA2_Objective
+		foundation:genericallyDependentOn TET-TR-002_1.4
+	]
+	
+	instance KSA2_Threshold : meas:SimpleMeasurement [
+		meas:measurementOf oslm_ms:remainingCapacity
+		meas:hasValue "1200"^^rdfs:Literal
+		meas:hasUnit units:second
+	]
+	
+	instance KSA2_Objective : meas:SimpleMeasurement[
+		meas:measurementOf oslm_ms:remainingCapacity
+		meas:hasValue "1800"^^rdfs:Literal
+		meas:hasUnit units:second
+	]
+	
+	instance KSA3 : req:KPP [
+		foundation:hasName "KSA 3"
+		info:prescribes Traction
+		req:hasThresholdValue KSA3_Threshold
+		req:hasObjectiveValue KSA3_Objective
+		foundation:genericallyDependentOn TET-TR-002_1.4
+	]
+	
+	instance KSA3_Threshold : meas:SimpleMeasurement [
+		meas:measurementOf Traction
+		meas:hasValue "5"^^rdfs:Literal
+		meas:hasUnit units:na
+	]
+	
+	instance KSA3_Objective : meas:SimpleMeasurement[
+		meas:measurementOf Traction
+		meas:hasValue "3"^^rdfs:Literal
+		meas:hasUnit units:na
+	]
+	
+	instance KSA4 : req:KPP [
+		foundation:hasName "KSA 4"
+		info:prescribes CoG
+		req:hasThresholdValue KSA4_Threshold
+		req:hasObjectiveValue KSA4_Objective
+		foundation:genericallyDependentOn TET-TR-002_1.4
+	]
+	
+	instance KSA4_Threshold : meas:SimpleMeasurement [
+		meas:measurementOf CoG
+		meas:hasValue "30"^^rdfs:Literal
+		meas:hasUnit units:degrees
+	]
+	
+	instance KSA4_Objective : meas:SimpleMeasurement[
+		meas:measurementOf CoG
+		meas:hasValue "70"^^rdfs:Literal
+		meas:hasUnit units:degrees
+	]
+	
+	
+	
+	
+	
+	
+	
+	// MAP KEY CAPABILITIES TO EXISTING QUANTITIES (e.g., is time to find path = mission time?)
+	
+	// ADD CONSTRAINTS THAT LINK THESE TOGETHER, BASED ON SYSML MODEL
+	
+	// ADD VERIFICATION REQS and SYSTEM REQS
+	
+	// SHOW SATISFACTION TRACEABILITY, VERIFICATION TRACEABILITY FROM TESTS
+
+	// SHOW PRE-TEST RESULTS, THEN SHOW SHOW FAILURE FROM TIM's SLIDES, THEN SHOW NEW TEST PLAN (BUT NOT NEW ARCHITECTURE)
+	
+	}
