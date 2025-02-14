@@ -44,36 +44,36 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Manuf_Processes#> as UA_Manuf_P
 	
 	///// Concepts
 	
-	concept Capability :> foundation:Disposition, foundation:SDCCarrier [
-		restricts some relation foundation:specificallyDependentOn to agent:Agent
-		restricts all relation foundation:specificallyDependentOn to agent:Agent
-		restricts all relation event:manifestsIn to foundation:Process
+	concept Capability < foundation:Disposition, foundation:SDCCarrier [
+		restricts some foundation:specificallyDependentOn to agent:Agent
+		restricts all foundation:specificallyDependentOn to agent:Agent
+		restricts all event:manifestsIn to foundation:Process
 	]
 	
-	concept ProductProductionProcess :> foundation:Process
+	concept ProductProductionProcess < foundation:Process
 	
-	concept ManufacturingOperation :> foundation:Process [
-		restricts all relation foundation:contains to ProductProductionProcess
+	concept ManufacturingOperation < foundation:Process [
+		restricts all foundation:contains to ProductProductionProcess
 	]
 	
-	concept ManufacturingProcess :> foundation:Process [
-		restricts all relation foundation:contains to ManufacturingOperation
+	concept ManufacturingProcess < foundation:Process [
+		restricts all foundation:contains to ManufacturingOperation
 	]
 	
-	concept WeldingProcess :> ManufacturingProcess [
-		restricts some relation agent:hasOutput to man_p:Weld
+	concept WeldingProcess < ManufacturingProcess [
+		restricts some agent:hasOutput to man_p:Weld
 	]
 	
-	concept WeldingCapability :> Capability [
-		restricts some relation foundation:hasSpecificDependent to MinWeldSize
-		restricts some relation foundation:hasSpecificDependent to MaxWeldSize
-		restricts some relation foundation:hasSpecificDependent to WeldFinish
+	concept WeldingCapability < Capability [
+		restricts some foundation:hasSpecificDependent to MinWeldSize
+		restricts some foundation:hasSpecificDependent to MaxWeldSize
+		restricts some foundation:hasSpecificDependent to WeldFinish
 	]
 	
-	concept MinWeldSize :> meas:Quantity
+	concept MinWeldSize < meas:Quantity
 	
-	concept MaxWeldSize :> meas:Quantity
+	concept MaxWeldSize < meas:Quantity
 	
-	concept WeldFinish :> meas:Quantity
+	concept WeldFinish < meas:Quantity
 	
 }

@@ -40,61 +40,61 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_OrbitsAndTrajectories#> as UA_O
 	
 	@rdfs:label "SpaceMission"
 	@dc:description "A [=SpaceMission=] is a..."
-	concept SpaceMission :> mission:Mission [
-		restricts some relation hasSpaceFlightPhase to SpaceFlight
-		restricts all relation hasSpaceFlightPhase to SpaceFlight
+	concept SpaceMission < mission:Mission [
+		restricts some hasSpaceFlightPhase to SpaceFlight
+		restricts all hasSpaceFlightPhase to SpaceFlight
 	]
 	
 	@rdfs:label "SpaceFlight"
 	@dc:description "A [=SpaceFlight=] is a..."
-	concept SpaceFlight :> agent:ManagedProcess[
-		restricts some relation event:hasParticipant to foundation:Continuant
+	concept SpaceFlight < agent:ManagedProcess[
+		restricts some event:hasParticipant to foundation:Continuant
 	]	
 	
 	@rdfs:label "Orbit"
 	@dc:description "A [=Orbit=] is a..."
-	concept Orbit :> SpaceFlight [
-		restricts some relation event:occursAt to OrbitalPath
+	concept Orbit < SpaceFlight [
+		restricts some event:occursAt to OrbitalPath
 	]
 	
 	@rdfs:label "OrbitalPath"
 	@dc:description "A [=OrbitalPath=] is a..."
-	concept OrbitalPath :> foundation:Site
+	concept OrbitalPath < foundation:Site
 	
 	@rdfs:label "Orbital SMA"
 	@dc:description "A [=OrbitalSMA=] is a..."
-	concept Orbital_SMA :> meas:Quantity [
-		restricts some relation foundation:specificallyDependentOn to OrbitalPath
+	concept Orbital_SMA < meas:Quantity [
+		restricts some foundation:specificallyDependentOn to OrbitalPath
 	]
 	
 	@rdfs:label "Orbital ECC"
 	@dc:description "A [=OrbitalECC=] is a..."
-	concept Orbital_ECC :> meas:Quantity [
-		restricts some relation foundation:specificallyDependentOn to OrbitalPath
+	concept Orbital_ECC < meas:Quantity [
+		restricts some foundation:specificallyDependentOn to OrbitalPath
 	]
 	
 	@rdfs:label "Orbital INC"
 	@dc:description "A [=OrbitalINC=] is a..."
-	concept Orbital_INC :> meas:Quantity [
-		restricts some relation foundation:specificallyDependentOn to OrbitalPath
+	concept Orbital_INC < meas:Quantity [
+		restricts some foundation:specificallyDependentOn to OrbitalPath
 	]
 	
 	@rdfs:label "Orbital AOP"
 	@dc:description "A [=OrbitalAOP=] is a..."
-	concept Orbital_AOP :> meas:Quantity [
-		restricts some relation foundation:specificallyDependentOn to OrbitalPath
+	concept Orbital_AOP < meas:Quantity [
+		restricts some foundation:specificallyDependentOn to OrbitalPath
 	]
 	
 	@rdfs:label "Orbital LAN"
 	@dc:description "A [=OrbitalLAN=] is a..."
-	concept Orbital_LAN :> meas:Quantity [
-		restricts some relation foundation:specificallyDependentOn to OrbitalPath
+	concept Orbital_LAN < meas:Quantity [
+		restricts some foundation:specificallyDependentOn to OrbitalPath
 	]
 	
 	@rdfs:label "Orbital TA"
 	@dc:description "A [=OrbitalTA=] is a..."
-	concept Orbital_TA :> meas:Quantity [
-		restricts some relation foundation:specificallyDependentOn to OrbitalPath
+	concept Orbital_TA < meas:Quantity [
+		restricts some foundation:specificallyDependentOn to OrbitalPath
 	]
 	
 

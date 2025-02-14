@@ -2,22 +2,45 @@
 <rdf:RDF xmlns="http://uaontologies.com/UA_Core/UA_Information#"
      xml:base="http://uaontologies.com/UA_Core/UA_Information"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:UA_Information="http://uaontologies.com/UA_Core/UA_Information#">
     <owl:Ontology rdf:about="http://uaontologies.com/UA_Core/UA_Information">
         <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/UA_Core/UA_Information#"/>
+        <oml:prefix>UA_Information</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
         <dc:contributor>Joe Gregory</dc:contributor>
         <dc:creator>SIE Disruption Lab</dc:creator>
         <dc:description>A vocabulary to capture the information patterns required by the SIE Disruption Lab. Note that this is essentially a simplified IEO.</dc:description>
         <dc:hasVersion>0.1</dc:hasVersion>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://opencaesar.io/oml#name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://opencaesar.io/oml#name"/>
     
 
 
@@ -42,7 +65,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
         <rdfs:range rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Describes"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>describes</rdfs:label>
     </owl:ObjectProperty>
     
@@ -56,7 +80,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Information#InformationEntity"/>
         <rdfs:range rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/UA_Core/UA_Information#IsAbout"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>is about</rdfs:label>
     </owl:ObjectProperty>
     
@@ -67,7 +92,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#isDescribedBy">
         <owl:inverseOf rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/UA_Core/UA_Information#DescriptiveInformationEntity"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Describes"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>is described by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -78,7 +108,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#isPrescribedBy">
         <owl:inverseOf rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Prescribes"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>is Prescribed by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -89,7 +124,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Information#isSubjectOf">
         <owl:inverseOf rdf:resource="http://uaontologies.com/UA_Core/UA_Information#isAbout"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/UA_Core/UA_Information#InformationEntity"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/UA_Core/UA_Information#IsAbout"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>is subject of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -104,7 +144,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Information#PrescriptiveInformationEntity"/>
         <rdfs:range rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Prescribes"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>prescribes</rdfs:label>
     </owl:ObjectProperty>
     
@@ -127,8 +168,8 @@
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Information#Describes">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Information#IsAbout"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=Describes=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>Describes</rdfs:label>
     </owl:Class>
     
@@ -145,8 +186,8 @@
                 <owl:someValuesFrom rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=DescriptiveInformationEntity=]...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Descriptive Information Entity</rdfs:label>
     </owl:Class>
     
@@ -157,8 +198,8 @@
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Information#Document">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Information#InformationArtifact"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=Document=]...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Document</rdfs:label>
     </owl:Class>
     
@@ -169,8 +210,8 @@
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Information#InformationArtifact">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Object"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=InformationArtifact=]...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Information Artifact</rdfs:label>
     </owl:Class>
     
@@ -207,8 +248,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/UA_Core/UA_Information#InformationEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=InformationEntity=]...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Information Entity</rdfs:label>
     </owl:Class>
     
@@ -218,8 +259,8 @@
 
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Information#IsAbout">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=IsAbout=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>Is About</rdfs:label>
     </owl:Class>
     
@@ -244,8 +285,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Model"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=Model=]...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Model</rdfs:label>
     </owl:Class>
     
@@ -256,8 +297,8 @@
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Information#Prescribes">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Information#IsAbout"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=Prescribes=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>Prescribes</rdfs:label>
     </owl:Class>
     
@@ -274,34 +315,10 @@
                 <owl:someValuesFrom rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=PrescriptiveInformationEntity=]...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Prescriptive Information Entity</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Information#Dependence-is-inherited">
-        <rdfs:comment>When an IE represents a thing, everything that contains that thing are also represented by the IE.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Information#IE-Inherits-Representation">
-        <rdfs:comment>When an IE represents something, all things contained by the IE also represent it.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Information#Representation-is-inherited">
-        <rdfs:comment>When an IE represents a thing, everything contained within that thing are also represented by the IE.</rdfs:comment>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://uaontologies.com/UA_Core/UA_Information#Representation-is-owned">
-        <rdfs:comment>When an IE represents a thing, everything that contains that thing are also represented by the IE.</rdfs:comment>
-    </rdf:Description>
     
 
 
@@ -333,7 +350,180 @@
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>IE-Inherits-Representation</rdfs:label>
+        <rdfs:label>describes derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Describes"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>isAbout derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Information#IsAbout"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Information#isAbout"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdfs:label>prescribes derivation</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Prescribes"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <oml:name>http://uaontologies.com/UA_Core/UA_Information#IE-Inherits-Representation</oml:name>
+        <oml:type>http://opencaesar.io/oml#Rule</oml:type>
+        <rdfs:comment>When an IE represents something, all things contained by the IE also represent it.</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -378,7 +568,9 @@
         </swrl:head>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Representation-is-inherited</rdfs:label>
+        <oml:name>http://uaontologies.com/UA_Core/UA_Information#Representation-is-inherited</oml:name>
+        <oml:type>http://opencaesar.io/oml#Rule</oml:type>
+        <rdfs:comment>When an IE represents a thing, everything contained within that thing are also represented by the IE.</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -423,7 +615,9 @@
         </swrl:head>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>Representation-is-owned</rdfs:label>
+        <oml:name>http://uaontologies.com/UA_Core/UA_Information#Representation-is-owned</oml:name>
+        <oml:type>http://opencaesar.io/oml#Rule</oml:type>
+        <rdfs:comment>When an IE represents a thing, everything that contains that thing are also represented by the IE.</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -468,178 +662,9 @@
         </swrl:head>
     </rdf:Description>
     <rdf:Description>
-        <rdfs:label>describes derivation</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Describes"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Information#describes"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>isAbout derivation</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Information#IsAbout"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Information#isAbout"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>prescribes derivation</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Prescribes"/>
-                                <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasTarget"/>
-                                        <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Information#prescribes"/>
-                        <swrl:argument1 rdf:resource="urn:swrl:var#s"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#t"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <rdfs:label>Dependence-is-inherited</rdfs:label>
+        <oml:name>http://uaontologies.com/UA_Core/UA_Information#Dependence-is-inherited</oml:name>
+        <oml:type>http://opencaesar.io/oml#Rule</oml:type>
+        <rdfs:comment>When an IE represents a thing, everything that contains that thing are also represented by the IE.</rdfs:comment>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -699,6 +724,6 @@
 
 
 
-<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
 
 

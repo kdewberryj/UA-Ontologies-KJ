@@ -59,94 +59,94 @@ vocabulary <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_d
 	
 	@rdfs:label "Make MDA Decision"
 	@dc:description "A [=MakeMDADecision=] is a..."
-	concept MakeMDADecision :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:MilestoneDecisionAuthority
-		restricts some relation foundation:specificallyDependentOn to temp_org:MilestoneDecisionAuthority
-		restricts some relation sa:canOutput to KeyDecision
+	concept MakeMDADecision < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:MilestoneDecisionAuthority
+		restricts some foundation:specificallyDependentOn to temp_org:MilestoneDecisionAuthority
+		restricts some sa:canOutput to KeyDecision
 	]
 	
 	@rdfs:label "MDA Decision Made"
 	@dc:description "A [=MDADecisionMade=] is a..."
-	concept MDADecisionMade :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to MakeMDADecision
-		restricts some relation event:isManifestationOf to MakeMDADecision
-		restricts some relation agent:hasOutput to KeyDecision 
+	concept MDADecisionMade < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to MakeMDADecision
+		restricts some event:isManifestationOf to MakeMDADecision
+		restricts some agent:hasOutput to KeyDecision 
 	]
 	
 	@rdfs:label "Make PM Decision"
 	@dc:description "A [=MakePMDecision=] is a..."
-	concept MakePMDecision :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_tps:ProgramManager
-		restricts some relation foundation:specificallyDependentOn to temp_tps:ProgramManager
-		restricts some relation sa:canOutput to KeyDecision
+	concept MakePMDecision < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_tps:ProgramManager
+		restricts some foundation:specificallyDependentOn to temp_tps:ProgramManager
+		restricts some sa:canOutput to KeyDecision
 	]
 	
 	@rdfs:label "PM Decision Made"
 	@dc:description "A [=PMDecisionMade=] is a..."
-	concept PMDecisionMade :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to MakePMDecision
-		restricts some relation event:isManifestationOf to MakePMDecision
-		restricts some relation agent:hasOutput to KeyDecision 
+	concept PMDecisionMade < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to MakePMDecision
+		restricts some event:isManifestationOf to MakePMDecision
+		restricts some agent:hasOutput to KeyDecision 
 	]
 	
 	@rdfs:label "Key Decision"
 	@dc:description "A [=KeyDecision=] is a..."
-	concept KeyDecision :> info:PrescriptiveInformationEntity [
-		restricts some relation info:prescribes to KeyDecisionPoint
+	concept KeyDecision < info:PrescriptiveInformationEntity [
+		restricts some info:prescribes to KeyDecisionPoint
 	]
 	
 	@rdfs:label "KeyDecisionPoint"
 	@dc:description "An [=KeyDecisionPoint=] is a..."
-	concept KeyDecisionPoint :> foundation:Process [
-		restricts all relation foundation:contains to KeyDecisionPoint
+	concept KeyDecisionPoint < foundation:Process [
+		restricts all foundation:contains to KeyDecisionPoint
 	]
 	
 	@rdfs:label "Milestone"
 	@dc:description "An [=Milestone=] is a..."
-	concept Milestone :> KeyDecisionPoint
+	concept Milestone < KeyDecisionPoint
 	
 	@rdfs:label "Technical Readiness Decision"
 	@dc:description "An [=TechnicalReadinessDecision=] is a..."
-	concept TechnicalReadinessDecision :> KeyDecisionPoint 
+	concept TechnicalReadinessDecision < KeyDecisionPoint 
 	
 	@rdfs:label "Key Integration Point"
 	@dc:description "An [=KeyIntegrationPoint=] is a..."
-	concept KeyIntegrationPoint :> KeyDecisionPoint 
+	concept KeyIntegrationPoint < KeyDecisionPoint 
 	
 	@rdfs:label "Recommended Corrective Action"
 	@dc:description "An [=RecommendedCorrectiveAction=] is a..."
-	concept RecommendedCorrectiveAction :> info:PrescriptiveInformationEntity [
-		restricts some relation info:prescribes to temp_tpp:TestAndEvaluationProgram
-		restricts all relation info:prescribes to temp_tpp:TestAndEvaluationProgram
-		restricts some relation foundation:isContainedIn to temp_tpt:IDSK
+	concept RecommendedCorrectiveAction < info:PrescriptiveInformationEntity [
+		restricts some info:prescribes to temp_tpp:TestAndEvaluationProgram
+		restricts all info:prescribes to temp_tpp:TestAndEvaluationProgram
+		restricts some foundation:isContainedIn to temp_tpt:IDSK
 	]
 	
 	@rdfs:label "Risk Assessment"
 	@dc:description "An [=RiskAssessment=] is a..."
-	concept RiskAssessment :> info:DescriptiveInformationEntity [
-		restricts some relation info:describes to temp_tpp:TestAndEvaluationProgram
-		restricts all relation info:describes to temp_tpp:TestAndEvaluationProgram
-		restricts some relation foundation:isContainedIn to temp_tpt:IDSK
+	concept RiskAssessment < info:DescriptiveInformationEntity [
+		restricts some info:describes to temp_tpp:TestAndEvaluationProgram
+		restricts all info:describes to temp_tpp:TestAndEvaluationProgram
+		restricts some foundation:isContainedIn to temp_tpt:IDSK
 	]
 	
 	@rdfs:label "Operational Issue"
 	@dc:description "An [=OperationalIssue=] is a..."
-	concept OperationalIssue :> info:DescriptiveInformationEntity [
-		restricts some relation foundation:isContainedIn to temp_tpt:IDSK
+	concept OperationalIssue < info:DescriptiveInformationEntity [
+		restricts some foundation:isContainedIn to temp_tpt:IDSK
 	]
 	
 	@rdfs:label "Data Requirement"
 	@dc:description "An [=DataRequirement=] is a..."
-	concept DataRequirement :> req:Requirement [
-		restricts some relation info:prescribes to temp_tpp:TestAndEvaluationProgram
-		restricts all relation info:prescribes to temp_tpp:TestAndEvaluationProgram
-		restricts some relation foundation:isContainedIn to temp_tpt:IDSK
-		restricts some relation isIdentifiedBy to DataRequirementIdentifier
+	concept DataRequirement < req:Requirement [
+		restricts some info:prescribes to temp_tpp:TestAndEvaluationProgram
+		restricts all info:prescribes to temp_tpp:TestAndEvaluationProgram
+		restricts some foundation:isContainedIn to temp_tpt:IDSK
+		restricts some isIdentifiedBy to DataRequirementIdentifier
 	]
 	
 	@rdfs:label "Chief Engineer"
 	@dc:description "An [=ChiefEngineer=] is a..."
-	concept ChiefEngineer :> foundation:Role, DataRequirementIdentifier
+	concept ChiefEngineer < foundation:Role, DataRequirementIdentifier
 	
 	
 	
@@ -187,10 +187,10 @@ vocabulary <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Decision#> as temp_d
 	
 	///// Redefined Concepts
 	
-	ref concept temp_tps:ProgramManager :> DataRequirementIdentifier
-	ref concept temp_tpt:ChiefDevelopmentalTester :> DataRequirementIdentifier
-	ref concept temp_org:WIPT :> DataRequirementIdentifier
-	ref concept temp_org:OperationalTestAgency :> DataRequirementIdentifier
+	ref concept temp_tps:ProgramManager < DataRequirementIdentifier
+	ref concept temp_tpt:ChiefDevelopmentalTester < DataRequirementIdentifier
+	ref concept temp_org:WIPT < DataRequirementIdentifier
+	ref concept temp_org:OperationalTestAgency < DataRequirementIdentifier
 
 	
 	}

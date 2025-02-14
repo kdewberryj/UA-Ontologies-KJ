@@ -93,7 +93,7 @@ vocabulary <http://uaontologies.com/UA_Core/UA_Provenance#> as Prov {
 	
 	@rdfs:comment "If a role is responsible for a process that produces an artifact, then the agent who plays that role generated the artifact."
 	rule Agent_with_role_generates_artifact [
-	agent:responsibleFor(a, b) ^ agent:hasOutput(b,c) ^ agent:hasRole(d,a) -> generatedBy(c, d)
+	agent:responsibleFor(a, b) & agent:hasOutput(b,c) & agent:hasRole(d,a) -> generatedBy(c, d)
 	]
 	
 	

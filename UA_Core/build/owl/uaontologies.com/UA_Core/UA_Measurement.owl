@@ -2,22 +2,26 @@
 <rdf:RDF xmlns="http://uaontologies.com/UA_Core/UA_Measurement#"
      xml:base="http://uaontologies.com/UA_Core/UA_Measurement"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:UA_Measurement="http://uaontologies.com/UA_Core/UA_Measurement#">
     <owl:Ontology rdf:about="http://uaontologies.com/UA_Core/UA_Measurement">
         <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Information"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#"/>
+        <oml:prefix>UA_Measurement</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
         <dc:contributor>Joe Gregory</dc:contributor>
         <dc:creator>SIE Disruption Lab</dc:creator>
         <dc:description>A vocabulary to capture the measurement patterns required by the SIE Disruption Lab. Note that this is essentially a simplified Measurement CCO.</dc:description>
         <dc:hasVersion>0.1</dc:hasVersion>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
     </owl:Ontology>
     
 
@@ -43,7 +47,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
         <rdfs:range rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#HasApplicableDimension"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>has applicable dimension</rdfs:label>
     </owl:ObjectProperty>
     
@@ -57,7 +62,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
         <rdfs:range rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#HasDimension"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>has dimension</rdfs:label>
     </owl:ObjectProperty>
     
@@ -71,7 +77,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Measurement"/>
         <rdfs:range rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#HasUnit"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>has unit</rdfs:label>
     </owl:ObjectProperty>
     
@@ -82,7 +89,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#isApplicableDimensionOf">
         <owl:inverseOf rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasApplicableDimension"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#HasApplicableDimension"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>is applicable dimension of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -93,7 +105,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#isDimensionOf">
         <owl:inverseOf rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasDimension"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#HasDimension"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>is dimension of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -104,7 +121,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#isUnitOf">
         <owl:inverseOf rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#hasUnit"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Unit"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Measurement"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#HasUnit"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>is unit of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -115,7 +137,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#measuredBy">
         <owl:inverseOf rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#measurementOf"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Measurement"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#MeasurementOf"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>measured by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -130,7 +157,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Measurement"/>
         <rdfs:range rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#MeasurementOf"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>measurement of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -156,7 +184,6 @@
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <dc:description>[=hasBooleanValue=] ...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#scalarProperty"/>
         <rdfs:label>has Boolean value</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -169,7 +196,6 @@
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#ConfidenceInterval"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <dc:description>[=hasConfidence=] ...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#scalarProperty"/>
         <rdfs:label>has confidence</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -182,7 +208,6 @@
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Range"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <dc:description>[=hasLowerValue=] ...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#scalarProperty"/>
         <rdfs:label>has lower value</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -195,7 +220,6 @@
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Range"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <dc:description>[=hasUpperValue=] ...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#scalarProperty"/>
         <rdfs:label>has upper value</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -208,7 +232,6 @@
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <dc:description>[=hasValue=] ...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#scalarProperty"/>
         <rdfs:label>has value</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -231,8 +254,8 @@
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#ConfidenceInterval">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Range"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=ConfidenceInterval=]...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Confidence Interval</rdfs:label>
     </owl:Class>
     
@@ -243,8 +266,8 @@
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#Dimension">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=Dimension=]...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Dimension</rdfs:label>
     </owl:Class>
     
@@ -255,8 +278,8 @@
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#HasApplicableDimension">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Describes"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=HasApplicableDimension=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>Has Applicable Dimension</rdfs:label>
     </owl:Class>
     
@@ -266,8 +289,8 @@
 
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#HasDimension">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=HasDimension=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>Has Dimension</rdfs:label>
     </owl:Class>
     
@@ -277,8 +300,8 @@
 
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#HasUnit">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=HasUnit=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>Has Unit</rdfs:label>
     </owl:Class>
     
@@ -301,8 +324,8 @@
                 <owl:someValuesFrom rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=Measurement=]...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Measurement</rdfs:label>
     </owl:Class>
     
@@ -313,8 +336,8 @@
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#MeasurementOf">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Information#Describes"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=MeasurementOf=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>Measurement Of</rdfs:label>
     </owl:Class>
     
@@ -331,8 +354,8 @@
                 <owl:someValuesFrom rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=Quantity=]...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Quantity</rdfs:label>
     </owl:Class>
     
@@ -343,8 +366,8 @@
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#Range">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Measurement"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=Range=]...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Range</rdfs:label>
     </owl:Class>
     
@@ -355,8 +378,8 @@
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Core/UA_Measurement#SimpleMeasurement">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Measurement"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=SimpleMeasurement=]...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Simple Measurement</rdfs:label>
     </owl:Class>
     
@@ -373,8 +396,8 @@
                 <owl:someValuesFrom rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Dimension"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=Unit=]...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Unit</rdfs:label>
     </owl:Class>
     
@@ -406,10 +429,9 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#HasDimension"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -417,9 +439,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#HasDimension"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -463,10 +486,9 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#HasUnit"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -474,9 +496,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#HasUnit"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -520,10 +543,9 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#MeasurementOf"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -531,9 +553,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#MeasurementOf"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -577,10 +600,9 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#HasApplicableDimension"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -588,9 +610,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#HasApplicableDimension"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -630,6 +653,6 @@
 
 
 
-<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
 
 

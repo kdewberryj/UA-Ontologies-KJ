@@ -44,11 +44,11 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_DataManagement#> as UA_DataMana
 	
 	@rdfs:label "Digital Location"
 	@dc:description "A [=DigitalLocation=] is a..."
-	concept DigitalLocation :> foundation:ImmaterialEntity
+	concept DigitalLocation < foundation:ImmaterialEntity
 	
 	@rdfs:label "Repository"
 	@dc:description "A [=Repository=] is a..."
-	concept Repository :> DigitalLocation
+	concept Repository < DigitalLocation
 	
 	
 		

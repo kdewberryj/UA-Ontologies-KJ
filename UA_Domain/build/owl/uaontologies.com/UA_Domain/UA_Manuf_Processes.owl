@@ -2,11 +2,13 @@
 <rdf:RDF xmlns="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#"
      xml:base="http://uaontologies.com/UA_Domain/UA_Manuf_Processes"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:UA_Manuf_Processes="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#">
     <owl:Ontology rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_Processes">
         <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Agent"/>
@@ -14,11 +16,13 @@
         <owl:imports rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#"/>
+        <oml:prefix>UA_Manuf_Processes</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
         <dc:contributor>Joe Gregory</dc:contributor>
         <dc:creator>SIE Disruption Lab</dc:creator>
         <dc:description>A vocabulary to capture manufacturing information</dc:description>
         <dc:hasVersion>0.1</dc:hasVersion>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
     </owl:Ontology>
     
 
@@ -59,7 +63,7 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/UA_Core/UA_Agent#Agent"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
     </owl:Class>
     
 
@@ -75,7 +79,7 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#ProductProductionProcess"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
     </owl:Class>
     
 
@@ -91,7 +95,7 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#ManufacturingOperation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
     </owl:Class>
     
 
@@ -101,7 +105,7 @@
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#MaxWeldSize">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
     </owl:Class>
     
 
@@ -111,7 +115,7 @@
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#MinWeldSize">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
     </owl:Class>
     
 
@@ -121,7 +125,7 @@
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#ProductProductionProcess">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Process"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
     </owl:Class>
     
 
@@ -131,7 +135,7 @@
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#WeldFinish">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Core/UA_Measurement#Quantity"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
     </owl:Class>
     
 
@@ -159,7 +163,7 @@
                 <owl:someValuesFrom rdf:resource="http://uaontologies.com/UA_Domain/UA_Manuf_Processes#WeldFinish"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
     </owl:Class>
     
 
@@ -175,12 +179,12 @@
                 <owl:someValuesFrom rdf:resource="http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#Weld"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
     </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
 
 

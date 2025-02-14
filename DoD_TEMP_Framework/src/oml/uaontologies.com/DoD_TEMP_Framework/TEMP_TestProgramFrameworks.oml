@@ -57,27 +57,27 @@ vocabulary <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFramework
 	
 	@rdfs:label "Test and Evaluation Framework"
 	@dc:description "An [=TEFramework=] is a..."
-	concept TEFramework :> info:PrescriptiveInformationEntity, ApprovedElement
+	concept TEFramework < info:PrescriptiveInformationEntity, ApprovedElement
 	
 	@rdfs:label "Operational Evaluation Framework"
 	@dc:description "An [=OperationalEvaluationFramework=] is a..."
-	concept OperationalEvaluationFramework :> TEFramework [
-		restricts all relation info:prescribes to temp_tps:OperationalTEProgram
-		restricts some relation info:prescribes to temp_tps:OperationalTEProgram
+	concept OperationalEvaluationFramework < TEFramework [
+		restricts all info:prescribes to temp_tps:OperationalTEProgram
+		restricts some info:prescribes to temp_tps:OperationalTEProgram
 	]
 	
 	@rdfs:label "Developmental Evaluation Framework"
 	@dc:description "A [=DevelopmentalEvaluationFramework=] is a..."
-	concept DevelopmentalEvaluationFramework :> TEFramework [
-		restricts all relation info:prescribes to temp_tps:DevelopmentalTEProgram
-		restricts some relation info:prescribes to temp_tps:DevelopmentalTEProgram
+	concept DevelopmentalEvaluationFramework < TEFramework [
+		restricts all info:prescribes to temp_tps:DevelopmentalTEProgram
+		restricts some info:prescribes to temp_tps:DevelopmentalTEProgram
 	]
 	
 	@rdfs:label "Live Fire Test Program Framework"
 	@dc:description "A [=LiveFireTestProgramFramework=] is a..."
-	concept LiveFireTestProgramFramework :> TEFramework [
-		restricts all relation info:prescribes to temp_tps:LiveFireTEProgram
-		restricts some relation info:prescribes to temp_tps:LiveFireTEProgram
+	concept LiveFireTestProgramFramework < TEFramework [
+		restricts all info:prescribes to temp_tps:LiveFireTEProgram
+		restricts some info:prescribes to temp_tps:LiveFireTEProgram
 	]
 	
 	
@@ -90,9 +90,8 @@ vocabulary <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramFramework
 	///// Scalar Properties
 	
 	
-	enumerated scalar ApprovalStatus [
-		"Approved",
-		"Unapproved"
+	scalar ApprovalStatus [
+		oneOf "Approved", "Unapproved"
 	]
 	
 	scalar property hasApprovalStatus [

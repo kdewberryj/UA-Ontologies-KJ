@@ -54,143 +54,143 @@ vocabulary <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> a
 	
 	@rdfs:label "WIPT Role"
 	@dc:description "A [=WIPTRole=] is a..."
-	concept WIPTRole :> foundation:Role [
-		restricts some relation isDesignatedBy to temp_tps:ProgramManager
+	concept WIPTRole < foundation:Role [
+		restricts some isDesignatedBy to temp_tps:ProgramManager
 	]
 	
 	@rdfs:label "Develop OEF"
 	@dc:description "A [=DevelopOEF=] is a..."
-	concept DevelopOEF :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:OperationalTestAgency
-		restricts some relation foundation:specificallyDependentOn to temp_org:OperationalTestAgency
-		restricts all relation sa:canOutput to temp_tpf:OperationalEvaluationFramework
+	concept DevelopOEF < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:OperationalTestAgency
+		restricts some foundation:specificallyDependentOn to temp_org:OperationalTestAgency
+		restricts all sa:canOutput to temp_tpf:OperationalEvaluationFramework
 	]
 	
 	@rdfs:label "OEF Development"
 	@dc:description "A [=OEFDevelopment=] is a..."
-	concept OEFDevelopment :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to DevelopOEF
-		restricts some relation event:isManifestationOf to DevelopOEF
-		restricts some relation agent:hasOutput to temp_tpf:OperationalEvaluationFramework 
+	concept OEFDevelopment < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to DevelopOEF
+		restricts some event:isManifestationOf to DevelopOEF
+		restricts some agent:hasOutput to temp_tpf:OperationalEvaluationFramework 
 	]
 	
 	@rdfs:label "Develop DEF"
 	@dc:description "A [=DevelopDEF=] is a..."
-	concept DevelopDEF :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:LeadDevelopmentalTestOrganization
-		restricts some relation foundation:specificallyDependentOn to temp_org:LeadDevelopmentalTestOrganization
-		restricts all relation sa:canOutput to temp_tpf:DevelopmentalEvaluationFramework
+	concept DevelopDEF < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:LeadDevelopmentalTestOrganization
+		restricts some foundation:specificallyDependentOn to temp_org:LeadDevelopmentalTestOrganization
+		restricts all sa:canOutput to temp_tpf:DevelopmentalEvaluationFramework
 	]
 	
 	@rdfs:label "DEF Development"
 	@dc:description "A [=DEFDevelopment=] is a..."
-	concept DEFDevelopment :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to DevelopDEF
-		restricts some relation event:isManifestationOf to DevelopDEF
-		restricts some relation agent:hasOutput to temp_tpf:DevelopmentalEvaluationFramework 
+	concept DEFDevelopment < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to DevelopDEF
+		restricts some event:isManifestationOf to DevelopDEF
+		restricts some agent:hasOutput to temp_tpf:DevelopmentalEvaluationFramework 
 	]
 	
 	@rdfs:label "Develop LFTF"
 	@dc:description "A [=DevelopLFTF=] is a..."
-	concept DevelopLFTF :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:LeadTestOrganization
-		restricts some relation foundation:specificallyDependentOn to temp_org:LeadTestOrganization
-		restricts all relation sa:canOutput to temp_tpf:LiveFireTestProgramFramework
+	concept DevelopLFTF < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:LeadTestOrganization
+		restricts some foundation:specificallyDependentOn to temp_org:LeadTestOrganization
+		restricts all sa:canOutput to temp_tpf:LiveFireTestProgramFramework
 	]
 	
 	@rdfs:label "LFTF Development"
 	@dc:description "A [=LFTFDevelopment=] is a..."
-	concept LFTFDevelopment :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to DevelopLFTF
-		restricts some relation event:isManifestationOf to DevelopLFTF
-		restricts some relation agent:hasOutput to temp_tpf:LiveFireTestProgramFramework 
+	concept LFTFDevelopment < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to DevelopLFTF
+		restricts some event:isManifestationOf to DevelopLFTF
+		restricts some agent:hasOutput to temp_tpf:LiveFireTestProgramFramework 
 	]
 	
 	@rdfs:label "Chief Developmental Tester"
 	@dc:description "An [=ChiefDevelopmentalTester=] is a..."
-	concept ChiefDevelopmentalTester :> WIPTRole
+	concept ChiefDevelopmentalTester < WIPTRole
 	
 	@rdfs:label "Produce Test Configuration Data"
 	@dc:description "A [=ProduceTestConfigurationData=] is a..."
-	concept ProduceTestConfigurationData :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:WIPT
-		restricts some relation foundation:specificallyDependentOn to temp_org:WIPT
-		restricts some relation sa:canOutput to test:TestProcedure
+	concept ProduceTestConfigurationData < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:WIPT
+		restricts some foundation:specificallyDependentOn to temp_org:WIPT
+		restricts some sa:canOutput to test:TestProcedure
 	]
 	
 	@rdfs:label "Test Configuration Data Production"
 	@dc:description "A [=TestConfigurationDataProduction=] is a..."
-	concept TestConfigurationDataProduction :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to ProduceTestConfigurationData
-		restricts some relation event:isManifestationOf to ProduceTestConfigurationData
-		restricts some relation agent:hasOutput to test:TestProcedure 
+	concept TestConfigurationDataProduction < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to ProduceTestConfigurationData
+		restricts some event:isManifestationOf to ProduceTestConfigurationData
+		restricts some agent:hasOutput to test:TestProcedure 
 	]
 	
 	@rdfs:label "Develop ITS"
 	@dc:description "A [=DevelopITS=] is a..."
-	concept DevelopITS :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:WIPT
-		restricts some relation foundation:specificallyDependentOn to temp_org:WIPT
-		restricts some relation sa:canOutput to IntegratedTestSchedule
+	concept DevelopITS < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:WIPT
+		restricts some foundation:specificallyDependentOn to temp_org:WIPT
+		restricts some sa:canOutput to IntegratedTestSchedule
 	]
 	
 	@rdfs:label "ITS Development"
 	@dc:description "A [=ITSDevelopment=] is a..."
-	concept ITSDevelopment :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to DevelopITS
-		restricts some relation event:isManifestationOf to DevelopITS
-		restricts some relation agent:hasOutput to IntegratedTestSchedule 
+	concept ITSDevelopment < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to DevelopITS
+		restricts some event:isManifestationOf to DevelopITS
+		restricts some agent:hasOutput to IntegratedTestSchedule 
 	]
 	
 	@rdfs:label "IntegratedTestSchedule"
 	@dc:description "An [=IntegratedTestSchedule=] is a..."
-	concept IntegratedTestSchedule :> info:PrescriptiveInformationEntity [
-		restricts some relation schedules to temp_tpp:IntegratedTestProgram 
+	concept IntegratedTestSchedule < info:PrescriptiveInformationEntity [
+		restricts some schedules to temp_tpp:IntegratedTestProgram 
 	]
 	
 	@rdfs:label "Develop TEMP"
 	@dc:description "A [=DevelopTEMP=] is a..."
-	concept DevelopTEMP :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:WIPT
-		restricts some relation foundation:specificallyDependentOn to temp_org:WIPT
-		restricts some relation sa:canOutput to TEMP
+	concept DevelopTEMP < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:WIPT
+		restricts some foundation:specificallyDependentOn to temp_org:WIPT
+		restricts some sa:canOutput to TEMP
 	]
 	
 	@rdfs:label "TEMP Development"
 	@dc:description "A [=TEMPDevelopment=] is a..."
-	concept TEMPDevelopment :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to DevelopTEMP
-		restricts some relation event:isManifestationOf to DevelopTEMP
-		restricts some relation agent:hasOutput to TEMP 
+	concept TEMPDevelopment < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to DevelopTEMP
+		restricts some event:isManifestationOf to DevelopTEMP
+		restricts some agent:hasOutput to TEMP 
 	]
 	
 	@rdfs:label "TEMP"
 	@dc:description "An [=TEMP=] is a..."
-	concept TEMP :> info:PrescriptiveInformationEntity [
-		restricts all relation info:prescribes to temp_tpp:IntegratedTestProgram
-		restricts some relation foundation:contains to IDSK
-		restricts some relation foundation:contains to temp_tpf:TEFramework
+	concept TEMP < info:PrescriptiveInformationEntity [
+		restricts all info:prescribes to temp_tpp:IntegratedTestProgram
+		restricts some foundation:contains to IDSK
+		restricts some foundation:contains to temp_tpf:TEFramework
 	]
 	
 	@rdfs:label "Develop IDSK"
 	@dc:description "A [=DevelopIDSK=] is a..."
-	concept DevelopIDSK :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_tps:ProgramManager
-		restricts some relation foundation:specificallyDependentOn to temp_tps:ProgramManager
-		restricts some relation sa:canOutput to IDSK
+	concept DevelopIDSK < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_tps:ProgramManager
+		restricts some foundation:specificallyDependentOn to temp_tps:ProgramManager
+		restricts some sa:canOutput to IDSK
 	]
 	
 	@rdfs:label "IDSK Development"
 	@dc:description "A [=IDSKDevelopment=] is a..."
-	concept IDSKDevelopment :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to DevelopIDSK
-		restricts some relation event:isManifestationOf to DevelopIDSK
-		restricts some relation agent:hasOutput to IDSK 
+	concept IDSKDevelopment < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to DevelopIDSK
+		restricts some event:isManifestationOf to DevelopIDSK
+		restricts some agent:hasOutput to IDSK 
 	]
 	
 	@rdfs:label "IDSK"
 	@dc:description "An [=IDSK=] is a..."
-	concept IDSK :> info:PrescriptiveInformationEntity 
+	concept IDSK < info:PrescriptiveInformationEntity 
 	
 	
 	
@@ -213,7 +213,7 @@ vocabulary <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> a
 	
 	@rdfs:label "Schedules"
 	@dc:description "[=Schedules=] is a "
-	relation entity Schedules :> info:Prescribes [
+	relation entity Schedules  [
 		from IntegratedTestSchedule
 		to temp_tpp:IntegratedTestProgram
 		@rdfs:label "schedules"
@@ -223,6 +223,7 @@ vocabulary <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> a
 		asymmetric
 		irreflexive
 	]
+	< info:Prescribes
 	
 	@rdfs:label "Chairs WIPT"
 	@dc:description "[=ChairsWIPT=] is a "
@@ -260,11 +261,11 @@ vocabulary <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramTeams#> a
 		
 	///// Redefine Concepts
 	
-	ref concept temp_org:LeadDevelopmentalTestOrganization :> WIPTRole
+	ref concept temp_org:LeadDevelopmentalTestOrganization < WIPTRole
 	
-	ref concept temp_org:LeadTestOrganization :> WIPTRole
+	ref concept temp_org:LeadTestOrganization < WIPTRole
 	
-	ref concept temp_org:OperationalTestAgency :> WIPTRole
+	ref concept temp_org:OperationalTestAgency < WIPTRole
 	
 	
 }

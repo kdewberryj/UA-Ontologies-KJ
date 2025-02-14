@@ -37,35 +37,39 @@ vocabulary <http://uaontologies.com/UA_Core/UA_Measurement#> as UA_Measurement {
 	
 	@rdfs:label "Dimension"
 	@dc:description "A [=Dimension=]..."
-	concept Dimension :> foundation:IdentifiedEntity
+	concept Dimension < foundation:IdentifiedEntity
 	// NOTE - this is not yet properly categorized under BFO
 	
 	@rdfs:label "Quantity"
 	@dc:description "A [=Quantity=]..."
-	concept Quantity :> foundation:Quality [
-		restricts some relation hasDimension to Dimension
+	concept Quantity < foundation:Quality [
+		restricts some hasDimension to Dimension
 	]
 	
 	@rdfs:label "Measurement"
 	@dc:description "A [=Measurement=]..."
-	concept Measurement :> info:DescriptiveInformationEntity [
-		restricts some relation hasUnit to Unit
-		restricts some relation measurementOf to Quantity
+	concept Measurement < info:DescriptiveInformationEntity [
+		restricts some hasUnit to Unit
+		restricts some measurementOf to Quantity
 	]
 	
 	@rdfs:label "Unit"
 	@dc:description "A [=Unit=]..."
-	concept Unit :> info:DescriptiveInformationEntity [
-		restricts some relation hasApplicableDimension to Dimension
+	concept Unit < info:DescriptiveInformationEntity [
+		restricts some hasApplicableDimension to Dimension
 	]
 	
 	@rdfs:label "Simple Measurement"
 	@dc:description "A [=SimpleMeasurement=]..."
-	concept SimpleMeasurement :> Measurement
+	concept SimpleMeasurement < Measurement
+	
+	@rdfs:label "Range"
+	@dc:description "A [=Range=]..."
+	concept Range < Measurement
 	
 	@rdfs:label "Confidence Interval"
 	@dc:description "A [=ConfidenceInterval=]..."
-	concept ConfidenceInterval :> Measurement
+	concept ConfidenceInterval < Range
 	
 
 	
@@ -86,7 +90,7 @@ vocabulary <http://uaontologies.com/UA_Core/UA_Measurement#> as UA_Measurement {
 	
 	@rdfs:label "Has Applicable Dimension"
 	@dc:description "[=HasApplicableDimension=] is a..."
-	relation entity HasApplicableDimension :> info:Describes [
+	relation entity HasApplicableDimension [
 		from Unit
 		to Dimension
 		@rdfs:label "has applicable dimension"
@@ -96,6 +100,7 @@ vocabulary <http://uaontologies.com/UA_Core/UA_Measurement#> as UA_Measurement {
 		asymmetric
 		irreflexive
 	]
+	< info:Describes 
 	
 	@rdfs:label "Has Unit"
 	@dc:description "[=HasUnit=] is a..."
@@ -112,7 +117,7 @@ vocabulary <http://uaontologies.com/UA_Core/UA_Measurement#> as UA_Measurement {
 	
 	@rdfs:label "Measurement Of"
 	@dc:description "[=MeasurementOf=] is a..."
-	relation entity MeasurementOf :> info:Describes [
+	relation entity MeasurementOf [
 		from Measurement
 		to Quantity
 		@rdfs:label "measurement of"
@@ -122,6 +127,7 @@ vocabulary <http://uaontologies.com/UA_Core/UA_Measurement#> as UA_Measurement {
 		asymmetric
 		irreflexive
 	]
+	< info:Describes 
 	
 	
 	
@@ -134,17 +140,25 @@ vocabulary <http://uaontologies.com/UA_Core/UA_Measurement#> as UA_Measurement {
 		range rdfs:Literal
 	]
 	
+	@rdfs:label "has Boolean value"
+	@dc:description "[=hasBooleanValue=] ..."
+	scalar property hasBooleanValue [
+		domain SimpleMeasurement
+		range xsd:boolean
+	]
+	< hasValue
+	
 	@rdfs:label "has upper value"
 	@dc:description "[=hasUpperValue=] ..."
 	scalar property hasUpperValue [
-		domain ConfidenceInterval
+		domain Range
 		range xsd:decimal
 	]
 	
 	@rdfs:label "has lower value"
 	@dc:description "[=hasLowerValue=] ..."
 	scalar property hasLowerValue [
-		domain ConfidenceInterval
+		domain Range
 		range xsd:decimal
 	]
 	

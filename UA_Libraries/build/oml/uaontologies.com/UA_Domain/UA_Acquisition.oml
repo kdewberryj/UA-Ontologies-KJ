@@ -47,19 +47,19 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Acquisition#> as UA_Acquisition
 	
 	@rdfs:label "Acquisition"
 	@dc:description "A [=Acquisition=] is a..."
-	concept Acquisition :> foundation:Process [
-		restricts some relation hasAcquisitionVendor to Vendor
-		restricts some relation hasAcquisitionPurchaser to Purchaser
-		restricts some relation hasAcquisitionItem to foundation:IdentifiedEntity
+	concept Acquisition < foundation:Process [
+		restricts some hasAcquisitionVendor to Vendor
+		restricts some hasAcquisitionPurchaser to Purchaser
+		restricts some hasAcquisitionItem to foundation:IdentifiedEntity
 	]
 	
 	@rdfs:label "Vendor"
 	@dc:description "A [=Vendor=] is a..."
-	concept Vendor :> foundation:Role
+	concept Vendor < foundation:Role
 	
 	@rdfs:label "Purchaser"
 	@dc:description "A [=Purchaser=] is a..."
-	concept Purchaser :> foundation:Role
+	concept Purchaser < foundation:Role
 		
 	
 		
@@ -108,9 +108,8 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Acquisition#> as UA_Acquisition
 	
 	///// Scalar Properties
 	
-	enumerated scalar ProcurementStatus [
-		"Buy",
-		"Make"
+	scalar ProcurementStatus [
+		oneOf "Buy", "Make"
 	]
 	
 	scalar property hasProcurementStatus [

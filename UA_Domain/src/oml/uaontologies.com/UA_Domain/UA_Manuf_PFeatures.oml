@@ -42,72 +42,72 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Manuf_PFeatures#> as UA_Manuf_P
 	
 	///// Concepts
 	
-	concept PFeature :> foundation:Quality, foundation:SDCCarrier [
-		restricts some relation foundation:specificallyDependentOn to foundation:MaterialEntity
-		restricts all relation foundation:specificallyDependentOn to foundation:MaterialEntity
+	concept PFeature < foundation:Quality, foundation:SDCCarrier [
+		restricts some foundation:specificallyDependentOn to foundation:MaterialEntity
+		restricts all foundation:specificallyDependentOn to foundation:MaterialEntity
 	]
 	
-	concept FormPFeature :> PFeature
+	concept FormPFeature < PFeature
 	
-	concept VoidFormPFeature :> FormPFeature
+	concept VoidFormPFeature < FormPFeature
 	
-	concept Hole :> VoidFormPFeature
+	concept Hole < VoidFormPFeature
 	
-	concept BlindHole :> Hole
+	concept BlindHole < Hole
 	
-	concept ThroughHole :> Hole
+	concept ThroughHole < Hole
 	
-	concept CompoundHole :> Hole
+	concept CompoundHole < Hole
 	
-	concept Slot :> VoidFormPFeature
+	concept Slot < VoidFormPFeature
 	
-	concept MaterialFormPFeature :> FormPFeature
+	concept MaterialFormPFeature < FormPFeature
 	
-	concept Protrusion :> MaterialFormPFeature
+	concept Protrusion < MaterialFormPFeature
 	
-	concept Bend :> MaterialFormPFeature
+	concept Bend < MaterialFormPFeature
 	
-	concept ManufacturingPFeature :> PFeature
+	concept ManufacturingPFeature < PFeature
 	
-	concept MachiningPFeature :> ManufacturingPFeature
+	concept MachiningPFeature < ManufacturingPFeature
 	
-	concept 2.5DFeature :> MachiningPFeature
+	concept 2.5DFeature < MachiningPFeature
 	
-	concept 1DFeature :> MachiningPFeature
+	concept 1DFeature < MachiningPFeature
 	
-	concept DeformationPFeature :> ManufacturingPFeature
+	concept DeformationPFeature < ManufacturingPFeature
 	
-	concept AdditivePFeature :> ManufacturingPFeature
+	concept AdditivePFeature < ManufacturingPFeature
 	
-	concept JointPFeature :> ManufacturingPFeature
+	concept JointPFeature < ManufacturingPFeature
 	
-	concept Weld :> JointPFeature
+	concept Weld < JointPFeature
 	
-	concept WeldSize :> meas:Quantity [
-		restricts some relation foundation:specificallyDependentOn to Weld
+	concept WeldSize < meas:Quantity [
+		restricts some foundation:specificallyDependentOn to Weld
 	]
 	
-	concept WeldIntermittance :> meas:Quantity [
-		restricts some relation foundation:specificallyDependentOn to Weld
+	concept WeldIntermittance < meas:Quantity [
+		restricts some foundation:specificallyDependentOn to Weld
 	]
 	
-	concept WeldFinish :> meas:Quantity [
-		restricts some relation foundation:specificallyDependentOn to Weld
+	concept WeldFinish < meas:Quantity [
+		restricts some foundation:specificallyDependentOn to Weld
 	]
 	
-	concept ShapeQuality :> foundation:Quality [
-		restricts some relation foundation:specificallyDependentOn to FormPFeature
-		restricts all relation foundation:specificallyDependentOn to FormPFeature
+	concept ShapeQuality < foundation:Quality [
+		restricts some foundation:specificallyDependentOn to FormPFeature
+		restricts all foundation:specificallyDependentOn to FormPFeature
 	]
 	
-	concept Blind :> ShapeQuality [
-		restricts some relation foundation:specificallyDependentOn to BlindHole
-		restricts all relation foundation:specificallyDependentOn to BlindHole
+	concept Blind < ShapeQuality [
+		restricts some foundation:specificallyDependentOn to BlindHole
+		restricts all foundation:specificallyDependentOn to BlindHole
 	]
 	
-	concept Through :> ShapeQuality [
-		restricts some relation foundation:specificallyDependentOn to ThroughHole
-		restricts all relation foundation:specificallyDependentOn to ThroughHole
+	concept Through < ShapeQuality [
+		restricts some foundation:specificallyDependentOn to ThroughHole
+		restricts all foundation:specificallyDependentOn to ThroughHole
 	]
 	
 	

@@ -2,11 +2,13 @@
 <rdf:RDF xmlns="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#"
      xml:base="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:temp_ear="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#">
     <owl:Ontology rdf:about="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting">
         <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
         <owl:imports rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization"/>
@@ -17,11 +19,13 @@
         <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_SystemArchitecture"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Domain/UA_Test"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#"/>
+        <oml:prefix>temp_ear</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
         <dc:contributor>Joe Gregory</dc:contributor>
         <dc:creator>SIE Disruption Lab</dc:creator>
         <dc:description>A vocabulary to capture reporting concepts required for TEMP</dc:description>
         <dc:hasVersion>0.1</dc:hasVersion>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
     </owl:Ontology>
     
 
@@ -67,8 +71,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#TestAgency"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=ProduceSystemEvaluation=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Produce System Evaluation</rdfs:label>
     </owl:Class>
     
@@ -103,8 +107,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DoDMSCoordinationOffice"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=ReviewSystemEvaluationModel=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Review System Evaluation Model</rdfs:label>
     </owl:Class>
     
@@ -139,8 +143,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#DefenceTechnicalInfoCenter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=ReviewSystemEvaluationReport=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Review System Evaluation Report</rdfs:label>
     </owl:Class>
     
@@ -157,8 +161,8 @@
                 <owl:someValuesFrom rdf:resource="http://uaontologies.com/UA_Domain/UA_Test#TestResult"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>An [=SystemEvaluation=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>System Evaluation</rdfs:label>
     </owl:Class>
     
@@ -175,8 +179,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>An [=SystemEvaluationModel=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>System Evaluation Model</rdfs:label>
     </owl:Class>
     
@@ -211,8 +215,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ReviewSystemEvaluationModel"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>An [=SystemEvaluationModelReview=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>System Evaluation Model Review</rdfs:label>
     </owl:Class>
     
@@ -247,8 +251,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ProduceSystemEvaluation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=SystemEvaluationProduction=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>System Evaluation Production</rdfs:label>
     </owl:Class>
     
@@ -265,8 +269,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#SystemEvaluation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>An [=SystemEvaluationReport=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>System Evaluation Report</rdfs:label>
     </owl:Class>
     
@@ -301,8 +305,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#ReviewSystemEvaluationReport"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>An [=SystemEvaluationReportReview=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>System Evaluation Report Review</rdfs:label>
     </owl:Class>
     
@@ -337,8 +341,8 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_ExecutionAndReporting#UndertakeTETest"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=TETestUndertaking=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>TE Test Undertaking</rdfs:label>
     </owl:Class>
     
@@ -373,14 +377,14 @@
                 <owl:allValuesFrom rdf:resource="http://uaontologies.com/DoD_TEMP_Framework/TEMP_Organization#TestAgency"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=UndertakeTETest=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Undertake TE Test</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
 
 

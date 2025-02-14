@@ -2,21 +2,25 @@
 <rdf:RDF xmlns="http://uaontologies.com/UA_Domain/UA_Acquisition#"
      xml:base="http://uaontologies.com/UA_Domain/UA_Acquisition"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:oml="http://opencaesar.io/oml#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
-     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:UA_Acquisition="http://uaontologies.com/UA_Domain/UA_Acquisition#">
     <owl:Ontology rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition">
         <owl:imports rdf:resource="http://purl.org/dc/elements/1.1"/>
         <owl:imports rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation"/>
+        <oml:namespace rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#"/>
+        <oml:prefix>UA_Acquisition</oml:prefix>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
         <dc:contributor>Joe Gregory</dc:contributor>
         <dc:creator>SIE Disruption Lab</dc:creator>
         <dc:description>A vocabulary to capture data management patterns</dc:description>
         <dc:hasVersion>0.1</dc:hasVersion>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Vocabulary"/>
     </owl:Ontology>
     
 
@@ -78,7 +82,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#Acquisition"/>
         <rdfs:range rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionItem"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>has acquisition item</rdfs:label>
     </owl:ObjectProperty>
     
@@ -92,7 +97,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#Acquisition"/>
         <rdfs:range rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#Purchaser"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionPurchaser"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>has acquisition purchaser</rdfs:label>
     </owl:ObjectProperty>
     
@@ -106,7 +112,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#Acquisition"/>
         <rdfs:range rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#Vendor"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#forwardRelation"/>
+        <oml:relationEntity rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionVendor"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ForwardRelation"/>
         <rdfs:label>has acquisition vendor</rdfs:label>
     </owl:ObjectProperty>
     
@@ -117,7 +124,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#isAcquiredBy">
         <owl:inverseOf rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionItem"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#Acquisition"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionItem"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>is acquired by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -128,7 +140,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#isPurchaserFor">
         <owl:inverseOf rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionPurchaser"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#Purchaser"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#Acquisition"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionPurchaser"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>is purchaser for</rdfs:label>
     </owl:ObjectProperty>
     
@@ -139,7 +156,12 @@
 
     <owl:ObjectProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#isVendorFor">
         <owl:inverseOf rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionVendor"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#reverseRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#Vendor"/>
+        <rdfs:range rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#Acquisition"/>
+        <oml:relationBase rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionVendor"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#ReverseRelation"/>
         <rdfs:label>is vendor for</rdfs:label>
     </owl:ObjectProperty>
     
@@ -163,7 +185,6 @@
     <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#hasAcquisitionDate">
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#Acquisition"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#scalarProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -174,7 +195,6 @@
     <owl:DatatypeProperty rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#hasProcurementStatus">
         <rdfs:domain rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity"/>
         <rdfs:range rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#ProcurementStatus"/>
-        <dc:type rdf:resource="http://opencaesar.io/oml#scalarProperty"/>
     </owl:DatatypeProperty>
     
 
@@ -214,8 +234,8 @@
                 <owl:someValuesFrom rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#Vendor"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=Acquisition=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Acquisition</rdfs:label>
     </owl:Class>
     
@@ -225,8 +245,8 @@
 
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionItem">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=HasAcquisitionItem=] is a </dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>Has Acquisition Item</rdfs:label>
     </owl:Class>
     
@@ -236,8 +256,8 @@
 
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionPurchaser">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=HasAcquisitionPurchaser=] is a </dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>Has Acquisition Purchaser</rdfs:label>
     </owl:Class>
     
@@ -247,8 +267,8 @@
 
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionVendor">
+        <oml:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <dc:description>[=HasAcquisitionVendor=] is a </dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#RelationEntity"/>
         <rdfs:label>Has Acquisition Vendor</rdfs:label>
     </owl:Class>
     
@@ -259,8 +279,8 @@
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#Purchaser">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Role"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=Purchaser=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Purchaser</rdfs:label>
     </owl:Class>
     
@@ -271,8 +291,8 @@
 
     <owl:Class rdf:about="http://uaontologies.com/UA_Domain/UA_Acquisition#Vendor">
         <rdfs:subClassOf rdf:resource="http://uaontologies.com/UA_Foundation/UA_Foundation#Role"/>
+        <oml:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <dc:description>A [=Vendor=] is a...</dc:description>
-        <dc:type rdf:resource="http://opencaesar.io/oml#Concept"/>
         <rdfs:label>Vendor</rdfs:label>
     </owl:Class>
     
@@ -304,10 +324,9 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionPurchaser"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -315,9 +334,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionPurchaser"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -361,10 +381,9 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionVendor"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -372,9 +391,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionVendor"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -418,10 +438,9 @@
                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                 <rdf:first>
                     <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionItem"/>
                         <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
-                        <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -429,9 +448,10 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                                <swrl:classPredicate rdf:resource="http://uaontologies.com/UA_Domain/UA_Acquisition#HasAcquisitionItem"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://opencaesar.io/oml#hasSource"/>
                                 <swrl:argument1 rdf:resource="urn:swrl:var#r"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#s"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -471,6 +491,6 @@
 
 
 
-<!-- Generated by the OWL API (version 5.1.17.2020-11-07T15:03:35Z) https://github.com/owlcs/owlapi/ -->
+<!-- Generated by the OWL API (version 5.5.0.2023-01-14T12:41:38Z) https://github.com/owlcs/owlapi/ -->
 
 

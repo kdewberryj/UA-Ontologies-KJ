@@ -19,7 +19,7 @@
     <dependency>
       <groupId>io.opencaesar.ontologies</groupId>
       <artifactId>core-vocabularies</artifactId>
-      <version>3.1.0</version>
+      <version>5.1.0</version>
     </dependency>
   </dependencies>
   <name>UA Domain</name>

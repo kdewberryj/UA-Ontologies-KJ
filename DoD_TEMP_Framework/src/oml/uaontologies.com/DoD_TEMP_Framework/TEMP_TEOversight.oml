@@ -56,39 +56,39 @@ vocabulary <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as tem
 	
 	@rdfs:label "Notify Military Service"
 	@dc:description "A [=NotifyMilitaryService=] is a..."
-	concept NotifyMilitaryService :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:DOTE
-		restricts some relation foundation:specificallyDependentOn to temp_org:DOTE
+	concept NotifyMilitaryService < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:DOTE
+		restricts some foundation:specificallyDependentOn to temp_org:DOTE
 	]
 	
 	@rdfs:label "Military Service Notification"
 	@dc:description "A [=MilitaryServiceNotification=] is a..."
-	concept MilitaryServiceNotification :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to NotifyMilitaryService
-		restricts some relation event:isManifestationOf to NotifyMilitaryService
+	concept MilitaryServiceNotification < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to NotifyMilitaryService
+		restricts some event:isManifestationOf to NotifyMilitaryService
 	]
 	
 	@rdfs:label "Characterize TE Program"
 	@dc:description "A [=CharacterizeTEProgram=] is a..."
-	concept CharacterizeTEProgram :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:DOTE
-		restricts some relation foundation:specificallyDependentOn to temp_org:DOTE
-		restricts all relation sa:canOutput to TEProgramDefinition
+	concept CharacterizeTEProgram < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:DOTE
+		restricts some foundation:specificallyDependentOn to temp_org:DOTE
+		restricts all sa:canOutput to TEProgramDefinition
 	]
 	
 	@rdfs:label "T&E Program Characterization"
 	@dc:description "A [=TEProgramCharacterization=] is a..."
-	concept TEProgramCharacterization :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to CharacterizeTEProgram
-		restricts some relation event:isManifestationOf to CharacterizeTEProgram
-		restricts some relation agent:hasOutput to TEProgramDefinition
+	concept TEProgramCharacterization < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to CharacterizeTEProgram
+		restricts some event:isManifestationOf to CharacterizeTEProgram
+		restricts some agent:hasOutput to TEProgramDefinition
 	]
 	
 	@rdfs:label "TE Program Definition"
 	@dc:description "A [=TEProgramDefinition=] is a..."
-	concept TEProgramDefinition :> info:DescriptiveInformationEntity [
-		restricts some relation info:describes to temp_tpp:TestAndEvaluationProgram
-		restricts some relation foundation:isContainedIn to temp_resp:TEOversightList
+	concept TEProgramDefinition < info:DescriptiveInformationEntity [
+		restricts some info:describes to temp_tpp:TestAndEvaluationProgram
+		restricts some foundation:isContainedIn to temp_resp:TEOversightList
 	]
 	
 	
@@ -112,8 +112,8 @@ vocabulary <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TEOversight#> as tem
 	
 	///// Redefinitions
 	
-	ref concept temp_resp:TEOversightList [
-		restricts some relation isManagedBy to temp_org:DOTE
+	ref concept temp_resp:TEOversightList < info:DescriptiveInformationEntity [
+		restricts some isManagedBy to temp_org:DOTE
 	]
 	
 	

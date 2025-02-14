@@ -39,7 +39,7 @@ vocabulary <http://uaontologies.com/UA_Core/UA_Agent#> as UA_Agent {
 	
 	@rdfs:label "Agent"
 	@dc:description "An [=Agent=]..."
-	aspect Agent :> foundation:SDCCarrier
+	aspect Agent < foundation:SDCCarrier
 
 
 	
@@ -47,36 +47,36 @@ vocabulary <http://uaontologies.com/UA_Core/UA_Agent#> as UA_Agent {
 	
 	@rdfs:label "Organization"
 	@dc:description "A [=Organization=]..."
-	concept Organization :> Agent, foundation:MaterialEntity, foundation:Container, foundation:ContainedElement [
-		restricts all relation foundation:contains to Organization
-		restricts all relation foundation:isContainedIn to Organization
+	concept Organization < Agent, foundation:MaterialEntity, foundation:Container, foundation:ContainedElement [
+		restricts all foundation:contains to Organization
+		restricts all foundation:isContainedIn to Organization
 	]
 	
 	@rdfs:label "Person"
 	@dc:description "A [=Person=]..."
-	concept Person :> Agent, foundation:MaterialEntity
+	concept Person < Agent, foundation:MaterialEntity
 	
 	@rdfs:label "ProcessOwner"
 	@dc:description "A [=ProcessOwner=] is a ..."
-	concept ProcessOwner :> foundation:Role
+	concept ProcessOwner < foundation:Role
 	
 	@rdfs:label "Managed Process"
 	@dc:description "A [=ManagedProcess=]..."
-	concept ManagedProcess :> foundation:Process
+	concept ManagedProcess < foundation:Process
 	
 	@rdfs:label "Procedure"
 	@dc:description "A [=Procedure=]..."
-	concept Procedure :> info:PrescriptiveInformationEntity [
-		restricts all relation info:prescribes to foundation:Process
-		restricts some relation info:prescribes to foundation:Process
+	concept Procedure < info:PrescriptiveInformationEntity [
+		restricts all info:prescribes to foundation:Process
+		restricts some info:prescribes to foundation:Process
 	]
 	
 	@rdfs:label "Plan"
 	@dc:description "A [=Plan=]..."
-	concept Plan :> info:PrescriptiveInformationEntity [
-		restricts all relation info:prescribes to foundation:Process
-		restricts some relation info:prescribes to foundation:Process
-		restricts some relation foundation:contains to Procedure
+	concept Plan < info:PrescriptiveInformationEntity [
+		restricts all info:prescribes to foundation:Process
+		restricts some info:prescribes to foundation:Process
+		restricts some foundation:contains to Procedure
 	]
 	
 	
@@ -137,7 +137,7 @@ vocabulary <http://uaontologies.com/UA_Core/UA_Agent#> as UA_Agent {
 	
 	@rdfs:label "Is Role Of"
 	@dc:description "[=IsRoleOf=] is a..."
-	relation entity IsRoleOf :> foundation:GenericallyDependentOn [
+	relation entity IsRoleOf [
 		from foundation:Role
 		to Agent
 		@rdfs:label "is role of"
@@ -147,6 +147,7 @@ vocabulary <http://uaontologies.com/UA_Core/UA_Agent#> as UA_Agent {
 		asymmetric
 		irreflexive
 	]
+	< foundation:GenericallyDependentOn
 	
 	@rdfs:label "Has Organizational Context"
 	@dc:description "[=HasOrganizationContext=] is a "
@@ -182,7 +183,7 @@ vocabulary <http://uaontologies.com/UA_Core/UA_Agent#> as UA_Agent {
 	
 	///// Redefined Concepts
 		
-	ref concept foundation:Process :> Producer, Consumer
+	ref concept foundation:Process < Producer, Consumer
 	
 	
 	

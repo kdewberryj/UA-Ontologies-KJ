@@ -43,29 +43,29 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Manuf_IFeatures#> as UA_Manuf_I
 	
 	///// Concepts
 	
-	concept IFeature :> info:DescriptiveInformationEntity [
-		restricts some relation info:describes to man_p:PFeature
-		restricts all relation info:describes to man_p:PFeature
+	concept IFeature < info:DescriptiveInformationEntity [
+		restricts some info:describes to man_p:PFeature
+		restricts all info:describes to man_p:PFeature
 	]
 	
-	concept WeldSymbol :> IFeature [
-		restricts some relation info:describes to man_p:Weld
-		restricts all relation info:describes to man_p:Weld
-		restricts some relation foundation:contains to WeldSymbol_WeldSize
-		restricts some relation foundation:contains to WeldSymbol_WeldIntermittance
-		restricts some relation foundation:contains to WeldSymbol_WeldFinish
+	concept WeldSymbol < IFeature [
+		restricts some info:describes to man_p:Weld
+		restricts all info:describes to man_p:Weld
+		restricts some foundation:contains to WeldSymbol_WeldSize
+		restricts some foundation:contains to WeldSymbol_WeldIntermittance
+		restricts some foundation:contains to WeldSymbol_WeldFinish
 	]
 	
-	concept WeldSymbol_WeldSize :> meas:SimpleMeasurement [
-		restricts some relation meas:measurementOf to man_p:WeldSize
+	concept WeldSymbol_WeldSize < meas:SimpleMeasurement [
+		restricts some meas:measurementOf to man_p:WeldSize
 	]
 	
-	concept WeldSymbol_WeldIntermittance :> meas:SimpleMeasurement [
-		restricts some relation meas:measurementOf to man_p:WeldIntermittance
+	concept WeldSymbol_WeldIntermittance < meas:SimpleMeasurement [
+		restricts some meas:measurementOf to man_p:WeldIntermittance
 	]
 	
-	concept WeldSymbol_WeldFinish :> meas:SimpleMeasurement [
-		restricts some relation meas:measurementOf to man_p:WeldFinish
+	concept WeldSymbol_WeldFinish < meas:SimpleMeasurement [
+		restricts some meas:measurementOf to man_p:WeldFinish
 	]
 	
 }

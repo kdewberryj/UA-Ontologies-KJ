@@ -22,7 +22,7 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Requirements#> as UA_Requiremen
 	extends <http://uaontologies.com/UA_Core/UA_Information#> as info
 	//extends <http://uaontologies.com/UA_Core/UA_Agent#> as agent
 	//extends <http://uaontologies.com/UA_Core/UA_Event#> as event
-	//extends <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
+	extends <http://uaontologies.com/UA_Core/UA_Measurement#> as meas
 	//extends <http://uaontologies.com/UA_Core/UA_Provenance#> as prov
 	
 	
@@ -42,34 +42,45 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Requirements#> as UA_Requiremen
 	
 	@rdfs:label "Requirement"
 	@dc:description "A [=Requirement=]..."
-	concept Requirement :> info:PrescriptiveInformationEntity
+	concept Requirement < info:PrescriptiveInformationEntity
 	
 	@rdfs:label "Objective"
 	@dc:description "A [=Objective=]..."
-	concept Objective :> info:PrescriptiveInformationEntity
+	concept Objective < info:PrescriptiveInformationEntity
 	
 	@rdfs:label "Constraint"
 	@dc:description "A [=Constraint=]..."
-	concept Constraint :> info:PrescriptiveInformationEntity
+	concept Constraint < info:PrescriptiveInformationEntity
+	
+	@rdfs:label "ConstraintParameter"
+	@dc:description "A [=ConstraintParameter=]..."
+	concept ConstraintParameter < meas:Quantity
 	
 	@rdfs:label "Quantitative Requirement"
 	@dc:description "A [=QuantitativeRequirement=]..."
-	concept QuantitativeRequirement :> Requirement [
-		restricts all relation info:prescribes to foundation:Quality
+	concept QuantitativeRequirement < Requirement [
+		restricts all info:prescribes to foundation:Quality
 	]
 	
 	@rdfs:label "Functional Requirement"
 	@dc:description "A [=FunctionalRequirement=]..."
-	concept FunctionalRequirement :> Requirement
+	concept FunctionalRequirement < Requirement
 	
 	@rdfs:label "Performance Requirement"
 	@dc:description "A [=PerformanceRequirement=]..."
-	concept PerformanceRequirement :> QuantitativeRequirement
+	concept PerformanceRequirement < QuantitativeRequirement
 	
 	@rdfs:label "Physical Requirement"
 	@dc:description "A [=PhysicalRequirement=]..."
-	concept PhysicalRequirement :> QuantitativeRequirement
+	concept PhysicalRequirement < QuantitativeRequirement
 	
+	@rdfs:label "KPP"
+	@dc:description "A [=KPP=]..."
+	concept KPP < PerformanceRequirement
+	
+	@rdfs:label "KSA"
+	@dc:description "A [=KSA=]..."
+	concept KSA < QuantitativeRequirement
 	
 	
 	///// Relations
@@ -87,6 +98,20 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Requirements#> as UA_Requiremen
 		irreflexive
 	]
 	
+	@rdfs:label "Parameter Owned By"
+	@dc:description "[=ParameterOwnedBy=] is a "
+	relation entity ParameterOwnedBy  [
+		from ConstraintParameter
+		to Constraint
+		@rdfs:label "parameter owned by"
+		forward parameterOwnedBy
+		@rdfs:label "owns parameter"
+		reverse ownsParameter
+		asymmetric
+		irreflexive
+	]
+	< foundation:SpecificallyDependentOn
+	
 	@rdfs:label "Derives Requirement"
 	@dc:description "[=DerivesRequirement=] is a "
 	relation entity DerivesRequirement [
@@ -103,7 +128,7 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Requirements#> as UA_Requiremen
 	@rdfs:label "Satisfies"
 	@dc:description "[=Satisfies=] is a "
 	relation entity Satisfies [
-		from foundation:Continuant
+		from foundation:IdentifiedEntity
 		to Requirement
 		@rdfs:label "satisfies"
 		forward satisfies
@@ -126,6 +151,31 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Requirements#> as UA_Requiremen
 		irreflexive
 	]
 	
+	@rdfs:label "Has Threshold Value"
+	@dc:description "[=HasThresholdValue=] is a "
+	relation entity HasThresholdValue [
+		from QuantitativeRequirement
+		to meas:SimpleMeasurement
+		@rdfs:label "has threshold value"
+		forward hasThresholdValue
+		@rdfs:label "is threshold value of"
+		reverse isThresholdValueOf
+		asymmetric
+		irreflexive
+	]
+	
+	@rdfs:label "Has Objective Value"
+	@dc:description "[=HasObjectiveValue=] is a "
+	relation entity HasObjectiveValue [
+		from QuantitativeRequirement
+		to meas:SimpleMeasurement
+		@rdfs:label "has objective value"
+		forward hasObjectiveValue
+		@rdfs:label "is objective value of"
+		reverse isObjectiveValueOf
+		asymmetric
+		irreflexive
+	]
 	
 	
 	///// Scalar Properties

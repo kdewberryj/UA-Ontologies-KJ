@@ -20,12 +20,12 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-        classpath 'io.opencaesar.owl:owl-fuseki-gradle:1.+'
-        classpath 'io.opencaesar.owl:owl-query-gradle:1.+'
-        classpath 'io.opencaesar.owl:owl-load-gradle:1.+'
-        classpath 'io.opencaesar.owl:owl-reason-gradle:1.+'
-        classpath 'io.opencaesar.oml:oml-merge-gradle:1.+'
-        classpath 'io.opencaesar.adapters:oml2owl-gradle:1.+'
+        classpath 'io.opencaesar.owl:owl-fuseki-gradle:+'
+        classpath 'io.opencaesar.owl:owl-query-gradle:+'
+        classpath 'io.opencaesar.owl:owl-load-gradle:+'
+        classpath 'io.opencaesar.owl:owl-reason-gradle:+'
+        classpath 'io.opencaesar.oml:oml-merge-gradle:+'
+        classpath 'io.opencaesar.adapters:oml2owl-gradle:+'
 	}
 }
 
@@ -58,7 +58,7 @@ configurations {
  * Dependency versions
  */
 ext { 
-    coreVersion = '3.+'
+    coreVersion = '5.+'
     //imceVersion = '+'
     UAFoundationVersion = '+'
     UACoreVersion = '+'

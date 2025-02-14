@@ -22,34 +22,46 @@ description <http://uaontologies.com/UA_Libraries/Dimensions#> as Dimensions {
 	
 	///////////////////////////////////////////////////////////////////////////////////
 
-	ci Dimensionless : meas:Dimension
+	instance Dimensionless : meas:Dimension
 	
-	ci Length : meas:Dimension
+	instance Length : meas:Dimension
 	
-	ci Time : meas:Dimension
+	instance Time : meas:Dimension
 	
-	ci Mass : meas:Dimension
+	instance Mass : meas:Dimension
 	
-	ci Force : meas:Dimension
+	instance Force : meas:Dimension
 	
-	ci Temperature : meas:Dimension
+	instance Temperature : meas:Dimension
 	
-	ci Area : meas:Dimension
+	instance Area : meas:Dimension
 	
-	ci Volume : meas:Dimension
+	instance Volume : meas:Dimension
 	
-	ci Power : meas:Dimension
+	instance Power : meas:Dimension
 	
-	ci Capacity : meas:Dimension
+	instance Capacity : meas:Dimension
 	
-	ci Efficiency : meas:Dimension
+	instance Efficiency : meas:Dimension
 	
-	ci Angle : meas:Dimension
+	instance Angle : meas:Dimension
 	
-	ci Probability : meas:Dimension
+	instance Probability : meas:Dimension
 	
-	ci Boolean : meas:Dimension
+	instance Boolean : meas:Dimension
 	
-	ci Cost : meas:Dimension
+	instance Cost : meas:Dimension
+	
+	instance Speed : meas:Dimension
+	
+	instance MassFlow : meas:Dimension
+	
+	instance Acceleration : meas:Dimension
+	
+	instance Frequency : meas:Dimension
+	
+	instance Gain : meas:Dimension
+	
+	instance DataRate : meas:Dimension
 
 }

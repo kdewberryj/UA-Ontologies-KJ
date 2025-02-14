@@ -55,117 +55,117 @@ vocabulary <http://uaontologies.com/DoD_TEMP_Framework/TEMP_Responsibility#> as 
 	
 	@rdfs:label "Produce TE Procedure"
 	@dc:description "A [=ProduceTEProcedure=] is a..."
-	concept ProduceTEProcedure :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:DOTE
-		restricts some relation foundation:specificallyDependentOn to temp_org:DOTE
-		restricts all relation sa:canOutput to test:TestProcedure
+	concept ProduceTEProcedure < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:DOTE
+		restricts some foundation:specificallyDependentOn to temp_org:DOTE
+		restricts all sa:canOutput to test:TestProcedure
 	]
 	
 	@rdfs:label "TE Procedure Production"
 	@dc:description "A [=TEProcedureProduction=] is a..."
-	concept TEProcedureProduction :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to ProduceTEProcedure
-		restricts some relation event:isManifestationOf to ProduceTEProcedure
-		restricts some relation agent:hasOutput to test:TestProcedure 
+	concept TEProcedureProduction < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to ProduceTEProcedure
+		restricts some event:isManifestationOf to ProduceTEProcedure
+		restricts some agent:hasOutput to test:TestProcedure 
 	]
 	
 	@rdfs:label "TE Framework Approval"
 	@dc:description "A [=TEFrameworkApproval=] is a..."
-	concept TEFrameworkApproval :> sa:FunctionOccurrence	
+	concept TEFrameworkApproval < sa:FunctionOccurrence	
 	
 	@rdfs:label "Approve DTE Framework"
 	@dc:description "A [=ApproveDTEFramework=] is a..."
-	concept ApproveDTEFramework :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:USDRE
-		restricts some relation foundation:specificallyDependentOn to temp_org:USDRE
-		restricts all relation sa:canOutput to temp_tpf:DevelopmentalEvaluationFramework
-		restricts all relation sa:canInput to temp_tpf:DevelopmentalEvaluationFramework
+	concept ApproveDTEFramework < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:USDRE
+		restricts some foundation:specificallyDependentOn to temp_org:USDRE
+		restricts all sa:canOutput to temp_tpf:DevelopmentalEvaluationFramework
+		restricts all sa:canInput to temp_tpf:DevelopmentalEvaluationFramework
 	]
 	
 	@rdfs:label "DTE Framework Approval"
 	@dc:description "A [=DTEFrameworkApproval=] is a..."
-	concept DTEFrameworkApproval :> TEFrameworkApproval [
-		restricts all relation event:isManifestationOf to ApproveDTEFramework
-		restricts some relation event:isManifestationOf to ApproveDTEFramework
-		restricts some relation agent:hasOutput to temp_tpf:DevelopmentalEvaluationFramework
-		restricts some relation agent:hasInput to temp_tpf:DevelopmentalEvaluationFramework 
+	concept DTEFrameworkApproval < TEFrameworkApproval [
+		restricts all event:isManifestationOf to ApproveDTEFramework
+		restricts some event:isManifestationOf to ApproveDTEFramework
+		restricts some agent:hasOutput to temp_tpf:DevelopmentalEvaluationFramework
+		restricts some agent:hasInput to temp_tpf:DevelopmentalEvaluationFramework 
 	]
 	
 	@rdfs:label "Approve OTE Framework"
 	@dc:description "A [=ApproveOTEFramework=] is a..."
-	concept ApproveOTEFramework :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:DOTE
-		restricts some relation foundation:specificallyDependentOn to temp_org:DOTE
-		restricts all relation sa:canOutput to temp_tpf:OperationalEvaluationFramework
-		restricts all relation sa:canInput to temp_tpf:OperationalEvaluationFramework
+	concept ApproveOTEFramework < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:DOTE
+		restricts some foundation:specificallyDependentOn to temp_org:DOTE
+		restricts all sa:canOutput to temp_tpf:OperationalEvaluationFramework
+		restricts all sa:canInput to temp_tpf:OperationalEvaluationFramework
 	]
 	
 	@rdfs:label "OTE Framework Approval"
 	@dc:description "A [=OTEFrameworkApproval=] is a..."
-	concept OTEFrameworkApproval :> TEFrameworkApproval [
-		restricts all relation event:isManifestationOf to ApproveOTEFramework
-		restricts some relation event:isManifestationOf to ApproveOTEFramework
-		restricts some relation agent:hasOutput to temp_tpf:OperationalEvaluationFramework
-		restricts some relation agent:hasInput to temp_tpf:OperationalEvaluationFramework 
+	concept OTEFrameworkApproval < TEFrameworkApproval [
+		restricts all event:isManifestationOf to ApproveOTEFramework
+		restricts some event:isManifestationOf to ApproveOTEFramework
+		restricts some agent:hasOutput to temp_tpf:OperationalEvaluationFramework
+		restricts some agent:hasInput to temp_tpf:OperationalEvaluationFramework 
 	]
 	
 	@rdfs:label "Approve LFTE Framework"
 	@dc:description "A [=ApproveLFTEFramework=] is a..."
-	concept ApproveLFTEFramework :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:DOTE
-		restricts some relation foundation:specificallyDependentOn to temp_org:DOTE
-		restricts all relation sa:canOutput to temp_tpf:LiveFireTestProgramFramework
-		restricts all relation sa:canInput to temp_tpf:LiveFireTestProgramFramework
+	concept ApproveLFTEFramework < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:DOTE
+		restricts some foundation:specificallyDependentOn to temp_org:DOTE
+		restricts all sa:canOutput to temp_tpf:LiveFireTestProgramFramework
+		restricts all sa:canInput to temp_tpf:LiveFireTestProgramFramework
 	]
 	
 	@rdfs:label "LFTE Framework Approval"
 	@dc:description "A [=OTEFrameworkApproval=] is a..."
-	concept LFTEFrameworkApproval :> TEFrameworkApproval [
-		restricts all relation event:isManifestationOf to ApproveLFTEFramework
-		restricts some relation event:isManifestationOf to ApproveLFTEFramework
-		restricts some relation agent:hasOutput to temp_tpf:LiveFireTestProgramFramework
-		restricts some relation agent:hasInput to temp_tpf:LiveFireTestProgramFramework 
+	concept LFTEFrameworkApproval < TEFrameworkApproval [
+		restricts all event:isManifestationOf to ApproveLFTEFramework
+		restricts some event:isManifestationOf to ApproveLFTEFramework
+		restricts some agent:hasOutput to temp_tpf:LiveFireTestProgramFramework
+		restricts some agent:hasInput to temp_tpf:LiveFireTestProgramFramework 
 	]
 	
 	@rdfs:label "Generate TE Oversight List"
 	@dc:description "A [=GenerateTEOversightList=] is a..."
-	concept GenerateTEOversightList :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:DOTE
-		restricts some relation foundation:specificallyDependentOn to temp_org:DOTE
-		restricts all relation sa:canOutput to TEOversightList
+	concept GenerateTEOversightList < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:DOTE
+		restricts some foundation:specificallyDependentOn to temp_org:DOTE
+		restricts all sa:canOutput to TEOversightList
 	]
 	
 	@rdfs:label "TE Oversight List Generation"
 	@dc:description "A [=TEProcedureProduction=] is a..."
-	concept TEOversightListGeneration :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to GenerateTEOversightList
-		restricts some relation event:isManifestationOf to GenerateTEOversightList
-		restricts some relation agent:hasOutput to TEOversightList 
+	concept TEOversightListGeneration < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to GenerateTEOversightList
+		restricts some event:isManifestationOf to GenerateTEOversightList
+		restricts some agent:hasOutput to TEOversightList 
 	]
 	
 	@rdfs:label "TE Oversight List"
 	@dc:description "A [=TEOversightList=] is a..."
-	concept TEOversightList :> info:DescriptiveInformationEntity
+	concept TEOversightList < info:DescriptiveInformationEntity
 	
 	@rdfs:label "Produce TE Report"
 	@dc:description "A [=ProduceTEReport=] is a..."
-	concept ProduceTEReport :> foundation:Function [
-		restricts all relation foundation:specificallyDependentOn to temp_org:DOTE
-		restricts some relation foundation:specificallyDependentOn to temp_org:DOTE
-		restricts all relation sa:canOutput to TEReport
+	concept ProduceTEReport < foundation:Function [
+		restricts all foundation:specificallyDependentOn to temp_org:DOTE
+		restricts some foundation:specificallyDependentOn to temp_org:DOTE
+		restricts all sa:canOutput to TEReport
 	]
 	
 	@rdfs:label "TE Report Production"
 	@dc:description "A [=TEReportProduction=] is a..."
-	concept TEReportProduction :> sa:FunctionOccurrence [
-		restricts all relation event:isManifestationOf to ProduceTEReport
-		restricts some relation event:isManifestationOf to ProduceTEReport
-		restricts some relation agent:hasOutput to TEReport 
+	concept TEReportProduction < sa:FunctionOccurrence [
+		restricts all event:isManifestationOf to ProduceTEReport
+		restricts some event:isManifestationOf to ProduceTEReport
+		restricts some agent:hasOutput to TEReport 
 	]
 	
 	@rdfs:label "TE Report"
 	@dc:description "A [=TEReport=] is a..."
-	concept TEReport :> info:DescriptiveInformationEntity
+	concept TEReport < info:DescriptiveInformationEntity
 	
 	
 			

@@ -53,44 +53,44 @@ vocabulary <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure
 	
 	@rdfs:label "Entrance Criteria"
 	@dc:description "An [=EntranceCriteria=] is a..."
-	concept EntranceCriteria :> req:Requirement [
-		restricts all relation info:prescribes to temp_tpp:TestAndEvaluationProgram
-		restricts some relation info:prescribes to temp_tpp:TestAndEvaluationProgram
+	concept EntranceCriteria < req:Requirement [
+		restricts all info:prescribes to temp_tpp:TestAndEvaluationProgram
+		restricts some info:prescribes to temp_tpp:TestAndEvaluationProgram
 	]
 	
 	@rdfs:label "Exit Criteria"
 	@dc:description "An [=ExitCriteria=] is a..."
-	concept ExitCriteria :> req:Requirement [
-		restricts all relation info:prescribes to temp_tpp:TestAndEvaluationProgram
-		restricts some relation info:prescribes to temp_tpp:TestAndEvaluationProgram
+	concept ExitCriteria < req:Requirement [
+		restricts all info:prescribes to temp_tpp:TestAndEvaluationProgram
+		restricts some info:prescribes to temp_tpp:TestAndEvaluationProgram
 	]
 	
 	@rdfs:label "Developmental TE Program"
 	@dc:description "An [=DevelopmentalTEProgram=] is a..."
-	concept DevelopmentalTEProgram :> temp_tpp:TestAndEvaluationProgram
+	concept DevelopmentalTEProgram < temp_tpp:TestAndEvaluationProgram
 	
 	@rdfs:label "Operational TE Program"
 	@dc:description "An [=OperationalTEProgram=] is a..."
-	concept OperationalTEProgram :> temp_tpp:TestAndEvaluationProgram
+	concept OperationalTEProgram < temp_tpp:TestAndEvaluationProgram
 	
 	@rdfs:label "Initial Operational TE Program"
 	@dc:description "An [=InitialOperationalTEProgram=] is a..."
-	concept InitialOperationalTEProgram :> OperationalTEProgram
+	concept InitialOperationalTEProgram < OperationalTEProgram
 	
 	@rdfs:label "Live Fire TE Program"
 	@dc:description "An [=LiveFireTEProgram=] is a..."
-	concept LiveFireTEProgram :> temp_tpp:TestAndEvaluationProgram
+	concept LiveFireTEProgram < temp_tpp:TestAndEvaluationProgram
 	
 	@rdfs:label "Full Rate Production"
 	@dc:description "An [=FullRateProduction=] is a..."
-	concept FullRateProduction :> pm:Program [
-		restricts some relation foundation:contains to InitialOperationalTEProgram
-		restricts some relation foundation:isContainedIn to temp_tpp:MajorDefenceAcquisitionProgram
+	concept FullRateProduction < pm:Program [
+		restricts some foundation:contains to InitialOperationalTEProgram
+		restricts some foundation:isContainedIn to temp_tpp:MajorDefenceAcquisitionProgram
 	]
 		
 	@rdfs:label "ProgramManager"
 	@dc:description "A [=ProgramManager=] is a..."
-	concept ProgramManager :> foundation:Role
+	concept ProgramManager < foundation:Role
 					
 
 
@@ -130,10 +130,10 @@ vocabulary <http://uaontologies.com/DoD_TEMP_Framework/TEMP_TestProgramStructure
 	
 	///// Redefine Concepts
 	
-	ref concept temp_tpp:IntegratedTestProgram [
-		restricts some relation foundation:contains to OperationalTEProgram
-		restricts some relation foundation:contains to DevelopmentalTEProgram
-		restricts some relation foundation:contains to LiveFireTEProgram
+	ref concept temp_tpp:IntegratedTestProgram < temp_tpp:TestAndEvaluationProgram [
+		restricts some foundation:contains to OperationalTEProgram
+		restricts some foundation:contains to DevelopmentalTEProgram
+		restricts some foundation:contains to LiveFireTEProgram
 	]
 	
 	

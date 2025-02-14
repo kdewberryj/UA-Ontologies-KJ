@@ -6,6 +6,7 @@
   <testsuite name="Satisfiability">
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#TemporalRegion"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#RealizableEntity"/>
+    <testcase name="http://www.w3.org/2002/07/owl#Thing"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Site"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#MaterialEntity"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#IndependentContinuant"/>
@@ -14,6 +15,7 @@
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#ContainedElement"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#IdentifiedEntity"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Object"/>
+    <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#GDCCarrier"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Container"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#GenericallyDependentOn"/>
     <testcase name="http://uaontologies.com/UA_Foundation/UA_Foundation#Process"/>

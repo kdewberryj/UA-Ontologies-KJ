@@ -23,21 +23,29 @@ description <http://uaontologies.com/UA_Libraries/SoftwareTools#> as SWT {
 		
 	///////////////////////////////////////////////////////////////////////////////////
 
-	ci Jama : sw:Software
+	instance CEA_24x : sw:Software
 	
-	ci Jira : sw:Software
+	instance Jama : sw:Software
 	
-	ci Valispace : sw:Software
+	instance Jira : sw:Software
 	
-	ci Duro : sw:Software
+	instance Valispace : sw:Software
 	
-	ci GMAT : sw:Software
+	instance Duro : sw:Software
 	
-	ci Violet : sw:Software
+	instance GENESYS : sw:Software
 	
-	ci Sedaro : sw:Software
+	instance GMAT : sw:Software
 	
-	ci JupyterLab : sw:Software
+	instance Violet : sw:Software
+	
+	instance Sedaro : sw:Software
+	
+	instance JupyterLab : sw:Software
+	
+	instance JupyterLab_SysMLv2 : sw:Software
+	
+	instance SatCatalog : sw:Software
 
 	
 	
