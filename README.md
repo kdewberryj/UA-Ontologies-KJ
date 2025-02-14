@@ -38,7 +38,7 @@ The **UA Ontology Stack** leverages five **Core Ontologies** to model fundamenta
 
 ## 🔹 UA Domain Ontologies  
 
-The **UA Ontology Stack** extends into **14 Domain Ontologies**, each supporting a specific area of digital engineering:  
+The **UA Ontology Stack** extends into **13 Domain Ontologies**, each supporting a specific area of digital engineering:  
 
 - 📦 **Acquisition**
 - 🔗 **Bayesian Networks**
