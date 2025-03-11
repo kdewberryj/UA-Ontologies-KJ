@@ -200,7 +200,3 @@ vocabulary <http://uaontologies.com/UA_Domain/UA_Test#> as UA_Test {
 	// add a rule that if a test is a verification method of a requirement, and the test output contains a BooleanTestResult, then the BooleanTestResult is about that requirement
     
     }
-	
-	// add a rule that if a test is a verification method of a requirement, and the test output contains a BooleanTestResult, then the BooleanTestResult is about that requirement
-    
-    }
